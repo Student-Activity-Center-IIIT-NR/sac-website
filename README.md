@@ -21,7 +21,9 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 The following directory structure should be followed strictly
 
 ## Contribution Guidelines
+
 You need to madatorily read and follow the contribution guidelines. You can find these guidelines in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
