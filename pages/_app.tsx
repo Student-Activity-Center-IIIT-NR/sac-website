@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@emotion/react";
+import defaultTheme from "../themes/default";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       It adds CSS properties like "box-sizing: border-box" and "margin : 0"
       */}
       <CssBaseline />
-      <Component {...pageProps} />
+      <ThemeProvider theme={defaultTheme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

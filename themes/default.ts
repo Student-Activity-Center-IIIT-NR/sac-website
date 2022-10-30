@@ -30,7 +30,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-const theme = createTheme({
+const defaultTheme = createTheme({
   palette: {
     mode: "light",
     neutral: {
@@ -116,4 +116,4 @@ const theme = createTheme({
   },
 });
 
-export default theme;
+export default defaultTheme;
