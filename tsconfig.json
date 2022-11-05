@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "features/home/components/News.tsx", "features/home/components/ClubsOverview.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "features/home/components/News.tsx",
+    "features/home/components/ClubsOverview.tsx"
+  ],
   "exclude": ["node_modules"]
 }
