@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import News from "../features/home/components/News";
+import BaseLayout from "../layouts/BaseLayout";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +14,9 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <News />
+      <BaseLayout>
+        <News />
+      </BaseLayout>
     </>
   );
 };

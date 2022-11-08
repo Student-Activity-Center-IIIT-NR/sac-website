@@ -84,6 +84,10 @@ const defaultTheme = createTheme({
     text: {
       secondary: "#000000",
     },
+    background: {
+      paper: "#FFFFFF",
+      default: "#F8FAFC",
+    },
   },
   typography: {
     fontFamily: ["Rubik", "Playfair Display", "sans-serif"].join(","),
