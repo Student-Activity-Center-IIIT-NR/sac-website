@@ -3,8 +3,9 @@ import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
 import { BrandInViewContext } from "../contexts/HeaderContext";
 import NavBar from "../components/NavBar";
+import { ReactNode } from "react";
 type Props = {
-  children?: JSX.Element;
+  children?: ReactNode;
 };
 
 function BaseLayout({ children }: Props) {
