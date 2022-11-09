@@ -12,12 +12,12 @@ const SacBranding = React.forwardRef((props: StackProps, ref) => {
         height={props.height as number}
         width={props.width as number}
         priority={true}
-        alt = "SAC IIITNR Branding"
+        alt="SAC IIITNR Branding"
       />
     </Stack>
   );
 });
 
-SacBranding.displayName = "SacBranding"
+SacBranding.displayName = "SacBranding";
 
 export default SacBranding;
