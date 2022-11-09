@@ -2,7 +2,7 @@ import { Box, styled, Typography, useTheme } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
 import ElevatedLogo from "../common/ElevatedLogo";
-import iiitLogo from "../../assets/iiitnr_logo.jpg";
+import iiitLogo from "../../assets/iiitnr_logo.png";
 
 type Props = {};
 

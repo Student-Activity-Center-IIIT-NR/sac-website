@@ -10,17 +10,14 @@ type Props = {};
 
 const StyledHeader = styled(Stack)({
   boxShadow: `
-    -40px 40px 80px rgba(230, 230, 230, 0.2), 
-    40px -40px 80px rgba(230, 230, 230, 0.2), 
-    -40px -40px 80px rgba(255, 255, 255, 0.9), 
-    40px 40px 100px rgba(230, 230, 230, 0.9), 
-    inset 2px 2px 3px rgba(255, 255, 255, 0.3), 
-    inset -2px -2px 3px rgba(230, 230, 230, 0.5)40px 40px 100px rgba(235, 235, 235, 0.9)`,
+    -40px 40px 40px rgba(230, 230, 230, 0.1), 
+    10px 10px 10px rgba(230, 230, 230, 0.4)`,
   height: "60px",
   position: "sticky",
   top: 0,
   background: "#FFFFFF",
   marginBottom: "50px",
+  zIndex: 1000,
 });
 
 function NavBar({}: Props) {
