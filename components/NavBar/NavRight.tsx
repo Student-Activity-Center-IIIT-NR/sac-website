@@ -20,6 +20,8 @@ const NavRightContainer = styled(Stack)({
   transitionProperty: "all",
   transitionDuration: "250ms",
   background: "white",
+  height: "60px",
+  alignItems: "center",
 });
 type Props = {
   wideSpacing?: boolean;
@@ -39,9 +41,9 @@ function NavRight({ wideSpacing }: Props) {
           </NavItem>
         );
       })}
-      <DarkModeButton>
+      <NavItem>
         <DarkMode />
-      </DarkModeButton>
+      </NavItem>
     </NavRightContainer>
   );
 }
