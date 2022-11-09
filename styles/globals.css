@@ -3,3 +3,7 @@
 * {
     color: black
 }
+
+body {
+    min-width: 930px;
+}
