@@ -18,12 +18,13 @@ const ElevatedLogoContainer = styled(Stack)({
 });
 type Props = {
   src: string | StaticImageData;
+  alt?: string;
 };
 
-function ElevatedLogo({ src = "" }: Props) {
+function ElevatedLogo({ src = "", alt }: Props) {
   return (
     <ElevatedLogoContainer>
-      <Image src={src} width="64px" height="64px" />
+      <Image src={src} width="64px" height="64px" priority={true} alt={alt} />
     </ElevatedLogoContainer>
   );
 }

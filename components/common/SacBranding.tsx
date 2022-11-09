@@ -4,12 +4,20 @@ import Image from "next/image";
 import React from "react";
 import sacBranding from "../../assets/sac_branding.svg";
 
-function SacBranding(props: StackProps) {
+const SacBranding = React.forwardRef((props: StackProps, ref) => {
   return (
-    <Stack alignItems="center"  gap="19px" {...props}>
-      <Image src={sacBranding} />
+    <Stack component="div" ref={ref} {...props}>
+      <Image
+        src={sacBranding}
+        height={props.height as number}
+        width={props.width as number}
+        priority={true}
+        alt = "SAC IIITNR Branding"
+      />
     </Stack>
   );
-}
+});
+
+SacBranding.displayName = "SacBranding"
 
 export default SacBranding;

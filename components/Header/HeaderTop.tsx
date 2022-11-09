@@ -6,11 +6,6 @@ import iiitLogo from "../../assets/iiitnr_logo.jpg";
 
 type Props = {};
 
-const LogoContainer = styled(Stack)({
-  flexDirection: "row",
-  justifyContent: "space-between",
-});
-
 function HeaderTop({}: Props) {
   return (
     <Stack
@@ -20,10 +15,15 @@ function HeaderTop({}: Props) {
       paddingTop="20px"
     >
       <Stack direction="row" alignItems="center" gap="9px">
-        <ElevatedLogo src={iiitLogo} />
+        <ElevatedLogo src={iiitLogo} alt="IIIT Naya Raipur Logo" />
         <Typography variant="subtitle1">IIIT Naya Raipur</Typography>
       </Stack>
-      <Typography variant="subtitle1" color="neutral-700">
+      <Typography
+        color="#334155"
+        fontWeight="300"
+        fontSize="20px"
+        lineHeight="24px"
+      >
         Welcome To
       </Typography>
       <Stack direction="row" alignItems="center" gap="9px">
@@ -32,7 +32,7 @@ function HeaderTop({}: Props) {
           <br />
           Center
         </Typography>
-        <ElevatedLogo src="" />
+        <ElevatedLogo src="" alt="SAC Logo" />
       </Stack>
     </Stack>
   );

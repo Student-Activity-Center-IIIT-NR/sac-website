@@ -1,42 +1,38 @@
 import { styled } from "@mui/system";
 import { Container, Stack, Typography } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import SacBranding from "../common/SacBranding";
 import NavBar from "../NavBar";
 import HeaderTop from "./HeaderTop";
 import { useInView } from "react-intersection-observer";
-import { HeaderBrandingContext } from "../../contexts/HeaderContext";
+import { BrandInViewContext } from "../../contexts/HeaderContext";
 
 const StyledHeader = styled(Stack)({
-  background: "#FFFFFF",
   boxShadow: `
     -40px 40px 80px rgba(235, 235, 235, 0.2), 
     40px -40px 80px rgba(235, 235, 235, 0.2), 
     -40px -40px 80px rgba(255, 255, 255, 0.9), 
     40px 40px 100px rgba(235, 235, 235, 0.9)`,
-  marginBottom: "50px",
 });
 
 type Props = {};
 
-function Header({}: Props) {
-  const { ref, inView, entry } = useInView();
+const Header = React.forwardRef(({}: Props, ref) => {
   return (
-    <HeaderBrandingContext.Provider
-      value={{ inView, HeadBoundingRect: entry?.boundingClientRect }}
-    >
-      <StyledHeader height="324px" color="white" px="20px">
-        <Container maxWidth="xl">
+    <StyledHeader color="white" px="20px">
+      <Container maxWidth="xl" disableGutters>
+        <Stack height="264px">
           <HeaderTop />
-          <Stack gap="19px" position="sticky">
-            <SacBranding ref={ref} />
+          <Stack gap="19px" ref={ref}>
+            <SacBranding height="125px" />
             <Typography alignSelf="center">Since 2018</Typography>
           </Stack>
-          <NavBar />
-        </Container>
-      </StyledHeader>
-    </HeaderBrandingContext.Provider>
+        </Stack>
+      </Container>
+    </StyledHeader>
   );
-}
+});
+
+Header.displayName = "Header";
 
 export default Header;

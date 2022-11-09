@@ -1,19 +1,48 @@
+import { Button, styled } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
+import DarkMode from "../common/DarkMode";
 import NavItem from "./NavItem";
 import navLinks from "./navLinks";
 
-type Props = {};
+const DarkModeButton = styled(Button)({
+  aspectRatio: 1,
+  ":hover": {
+    background: "#394B73",
+    fill: "yellow",
+  },
+  position: "relative",
+  left: "25px",
+});
 
-function NavRight({}: Props) {
+const NavRightContainer = styled(Stack)({
+  transition: "ease-in",
+  transitionProperty: "all",
+  transitionDuration: "250ms",
+  background: "white",
+});
+type Props = {
+  wideSpacing?: boolean;
+};
+
+function NavRight({ wideSpacing }: Props) {
   return (
-    <Stack direction="row" mx="auto">
+    <NavRightContainer
+      minWidth={wideSpacing ? "100%" : "45%"}
+      direction="row"
+      px="22px"
+    >
       {navLinks.map((link, index) => {
-        return <NavItem key={index} href={link.url} >
-          {link.name}
-        </NavItem>;
+        return (
+          <NavItem key={index} href={link.url} mx="auto">
+            {link.name}
+          </NavItem>
+        );
       })}
-    </Stack>
+      <DarkModeButton>
+        <DarkMode />
+      </DarkModeButton>
+    </NavRightContainer>
   );
 }
 
