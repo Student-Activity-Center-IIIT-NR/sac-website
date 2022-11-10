@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import { BrandInViewContext } from "../contexts/HeaderContext";
 import NavBar from "../components/NavBar";
 import { ReactNode } from "react";
+import Footer from "../components/footer/Footer";
+
 type Props = {
   children?: ReactNode;
 };
@@ -16,6 +18,7 @@ function BaseLayout({ children }: Props) {
         <Header ref={ref} />
         <NavBar />
         <Container maxWidth="xl">{children}</Container>
+        <Footer />
       </BrandInViewContext.Provider>
     </Stack>
   );
