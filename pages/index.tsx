@@ -3,6 +3,7 @@ import Head from "next/head";
 import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
+import SacOverview from "../features/home/components/SacOverview"
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       </Head>
 
       <BaseLayout>
+        <SacOverview />
         <ClubsOverview />
         <News />
       </BaseLayout>
