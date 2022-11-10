@@ -4,6 +4,7 @@ import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
 import Footer from "../components/Footer/Footer";
+import SacOverview from "../features/home/components/SacOverview"
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BaseLayout>
+        <SacOverview />
         <ClubsOverview />
         <News />
       </BaseLayout>
