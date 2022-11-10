@@ -3,6 +3,7 @@ import Head from "next/head";
 import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
+import Footer from "../components/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -16,11 +17,12 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=1200, minimum-scale=0.25" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <BaseLayout>
         <ClubsOverview />
         <News />
       </BaseLayout>
+      <Footer/>
+      
     </>
   );
 };
