@@ -183,6 +183,7 @@ const Footer = () => {
           </Box>
         </Container>
         <Box
+          py="10px"
           sx={{
             textAlign: "center",
             backgroundColor: "#F8FAFC",
@@ -194,7 +195,6 @@ const Footer = () => {
             fontStyle="normal"
             fontWeight={400}
             fontSize="14px"
-            lineHeight={"36px"}
             color={"#000000"}
           >
             <strong>Design and Developed by</strong> Sudhanshu Tripathi, Soumya
@@ -206,7 +206,6 @@ const Footer = () => {
             fontStyle="normal"
             fontWeight={300}
             fontSize="14px"
-            lineHeight={"36px"}
             color={"#475569"}
           >
             Copyright &copy; Student Activity Center, International Institute of
