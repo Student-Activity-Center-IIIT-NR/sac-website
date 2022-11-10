@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Footer from "../components/footer/Footer";
 import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <BaseLayout>
         <ClubsOverview />
         <News />
+        <Footer />
       </BaseLayout>
     </>
   );

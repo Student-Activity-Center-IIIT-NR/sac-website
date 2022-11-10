@@ -87,7 +87,7 @@ const News = () => {
   };
   return (
     <>
-      <Container maxWidth="lg" disableGutters>
+      <Container maxWidth="lg">
         <Box>
           <Typography
             variant="h1"
