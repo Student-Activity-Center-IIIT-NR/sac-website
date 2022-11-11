@@ -7,7 +7,7 @@ import SingleDate from "./SingleDate";
 const Calendar = () => {
   return (
     <>
-      <Container maxWidth={"lg"} sx={{ mt: "140px" }}>
+      <Container maxWidth={"lg"} sx={{ mt: "40px" }}>
         <Typography
           variant="h1"
           color="#334155"
