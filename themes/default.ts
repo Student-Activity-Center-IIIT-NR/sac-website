@@ -34,6 +34,7 @@ const defaultTheme = createTheme({
   palette: {
     mode: "light",
     neutral: {
+      main: "#3362CC",
       50: "#F8FAFC",
       100: "#F1F5F9",
       200: "#E2E8F0",
@@ -46,6 +47,7 @@ const defaultTheme = createTheme({
       900: "#0F172A",
     },
     primary: {
+      main: "#3362CC",
       50: "#D7DEE8",
       300: "#B4C8E2",
       500: "#355389",
