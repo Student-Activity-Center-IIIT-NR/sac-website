@@ -3,7 +3,8 @@ import Head from "next/head";
 import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
-import SacOverview from "../features/home/components/SacOverview"
+import SacOverview from "../features/home/components/SacOverview";
+import Calendar from "../components/EventCalendar/Calendar";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <BaseLayout>
         <SacOverview />
         <ClubsOverview />
+        <Calendar />
         <News />
       </BaseLayout>
     </>
