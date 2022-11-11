@@ -87,7 +87,12 @@ const News = () => {
   };
   return (
     <>
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{
+          mt: "120px",
+        }}
+      >
         <Box>
           <Typography
             variant="h1"
