@@ -17,7 +17,7 @@ const Overview = () => {
       direction="row"
       maxWidth={"lg"}
       mx="auto"
-      my={"78px"}
+      mt={"78px"}
       justifyContent="space-between"
       alignItems="center"
       gap="24px"

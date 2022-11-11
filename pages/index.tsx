@@ -4,7 +4,9 @@ import ClubsOverview from "../features/home/components/ClubsOverview";
 import News from "../features/home/components/News";
 import BaseLayout from "../layouts/BaseLayout";
 import SacOverview from "../features/home/components/SacOverview";
+import ContactUs from "../features/home/components/ContactUs";
 import Calendar from "../components/EventCalendar/Calendar";
+
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +26,7 @@ const Home: NextPage = () => {
         <ClubsOverview />
         <Calendar />
         <News />
+        <ContactUs />
       </BaseLayout>
     </>
   );

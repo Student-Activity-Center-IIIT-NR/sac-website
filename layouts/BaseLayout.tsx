@@ -17,7 +17,9 @@ function BaseLayout({ children }: Props) {
       <BrandInViewContext.Provider value={{ inView }}>
         <Header ref={ref} />
         <NavBar />
-        <Container maxWidth="xl">{children}</Container>
+        <Container maxWidth="xl">
+          <Stack gap="78px">{children}</Stack>
+        </Container>
         <Footer />
       </BrandInViewContext.Provider>
     </Stack>
