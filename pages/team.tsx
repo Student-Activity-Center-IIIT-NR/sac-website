@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Card from "../features/team/components/Card";
-import {MuiNavBar} from "../features/team/components/Pill"
+import {Pill} from "../features/team/components/Pill"
 
 const Team = () => {
   return (
@@ -11,7 +11,7 @@ const Team = () => {
       </Head>
       {/* <div>Welcome to the team page</div> */}
       <Card />
-      <MuiNavBar/>
+      <Pill/>
     </>
   );
 };
