@@ -5,40 +5,47 @@ import { useState } from 'react'
 
 export const Pill = () => {
         
-    const [value,setValue]=useState(1);
+    const [value,setValue]=useState(0);
     const handleChange=(event: React.ChangeEvent<{}>,newValue: number)=>{
         setValue(newValue);
     }
     const style={ 
-        overflow:"visible",
-        overflowX:"visible",
-        "& a": {
+          "& a": {
             fontFamily:"Rubik",
             fontWeight:400,
             fontSize:"14px",   
             color:"#272727", 
             height:"60px",
             width:"160px",
-            justifyitems:"center",
             zIndex:2,
-        },
-        '& .MuiTabs-indicator':{
+            paddingTop:"25px",
+           },
+          "& .css-1xf5rt2-MuiButtonBase-root-MuiTab-root.Mui-selected":{
+            color:"#355389",
+          },
+          '& .MuiTabs-indicator':{
             height:"60px",
             width:"160px",
             borderRadius:"1000px",
             backgroundColor:"#FFFFFF",
             boxShadow:"-5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5)",
-        },
+            marginBottom:"9px",
+          },
+        '& .css-8je8zh-MuiTouchRipple-root':{
+            position:"relative",
+          },
         '& .css-heg063-MuiTabs-flexContainer':{
             gap:"1.8rem",
         },
-        '& .MuiTabs-scroller':{
-            overflowX:"visible",
-        },
         '& .css-o0i26b-MuiTabs-indicator':{
-            transition:"all 700ms cubic-bezier(0.5, 1.2, 0.5, 1.2) 2ms",
+            transition:"all 700ms cubic-bezier(0.4, 0.9, 0.5, 1.2) 2ms",
         },  
-    }   
+        '& .css-jpln7h-MuiTabs-scroller':{
+          height:"76px",
+          width:"1100px",
+          paddingLeft:"92px",
+        },
+   }   
 
   return (
  <AppBar position='static' sx={{
@@ -57,13 +64,11 @@ export const Pill = () => {
                 onChange={handleChange}
                 sx={style}
          >          
-                    <Tab disabled/>
                     <Tab  label="ALL" href='#card'/>
                     <Tab  label="WEBSITE" href="#"/>
                     <Tab  label="APP" href="#"/>
                     <Tab  label="DESIGN" href="#"/>
                     <Tab  label="CONTENT" href="#"/>
-                    <Tab disabled/>
         </Tabs>
 </AppBar>
     )
