@@ -1,31 +1,33 @@
-import React from "react";
-import HedaerBox from "./HedaerBox";
-import { Box, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Year from "./YearCard";
 
 function TeamHeader() {
   return (
     <>
-      <Box style={{width:'56%',margin:'auto'}}>
-        <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}> 
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          columnGap: "80px",
+        }}
+      >
         <Typography
-          variant={"h1"}
-          fontWeight={"450"}
-          fontSize={"4.5rem"}
-          fontFamily={"Work Sans"}
-          lineHeight={"4.2rem"}
-          textAlign={"center"}
+          variant={"h2"}
+          fontWeight={"400"}
+          fontSize={"64px"}
+          fontFamily={"Playfair Display"}
+          lineHeight={"85px"}
           fontStyle={"normal"}
-          padding={"1rem"}
+          color={"#272727"}
+          letterSpacing={"0.03571em"}
+          width={"494px"}
         >
-          Not just a team
-          <br />
-          but a big family
+          Not just a team, but a big family.
         </Typography>
-        <div style={{padding:'1rem'}}>
-          <HedaerBox />
-        </div>
-        </div>
-        
+        <Year />
       </Box>
     </>
   );
