@@ -1,19 +1,40 @@
+// import Head from "next/head";
+// import React from "react";
+// import Card from "../features/team/components/Card";
+
+// const Team = () => {
+//   return (
+//     <>
+//       <Head>
+//         <title>SAC Team</title>
+//       </Head>
+//       {/* <div>Welcome to the team page</div> */}
+//       <Card />
+//     </>
+//   );
+// };
+
+// export default Team;
+
 import Head from "next/head";
 import React from "react";
 import Card from "../features/team/components/Card";
-import {Pill} from "../features/team/components/Pill"
+import TeamContent from "../features/team/components/TeamContent";
+import TeamLayout from "../layouts/TeamLayout";
 
-const Team = () => {
+function Team() {
   return (
-    <>
+    <div>
       <Head>
-        <title>SAC Team</title>
+        <title>SAC | Team</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div>Welcome to the team page</div> */}
-      <Card />
-      <Pill/>
-    </>
-  );
-};
 
-export default Team;
+      <TeamLayout>
+        <TeamContent/>
+      </TeamLayout>
+    </div>
+  )
+}
+
+export default Team
