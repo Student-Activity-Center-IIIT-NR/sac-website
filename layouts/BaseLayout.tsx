@@ -1,4 +1,4 @@
-import { Container, Stack } from "@mui/system";
+import { Container, Stack } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
 import { BrandInViewContext } from "../contexts/HeaderContext";

@@ -1,12 +1,11 @@
-import { useState } from "react";
-import { Container, Stack } from "@mui/system";
+import { ReactNode } from "react";
+import { Container, Stack } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { BrandInViewContext } from "../contexts/HeaderContext";
 import NavBar from "../components/NavBar";
 import TeamHeader from "../features/team/components/TeamHeader/TeamHeader";
-import { ReactNode } from "react";
 import Footer from "../components/footer/Footer";
-import TeamNavbar from "../features/team/components/TeamNavbar";
+import Pill from "../features/team/components/Pill";
 
 type Props = {
   children?: ReactNode;
@@ -15,20 +14,13 @@ type Props = {
 function TeamLayout({ children }: Props) {
   const { ref, inView } = useInView({ threshold: 0 });
 
-  const [value, setValue] = useState("All");
-
-  const handleTabs = (tabvalue:any ) => {
-    setValue(tabvalue);
-    console.log(value)
-  }
-
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
-        <TeamHeader />
-        <TeamNavbar handleTabs={handleTabs} value={value} setValue = {setValue} />
         <Container maxWidth="xl">
+          <TeamHeader />
+          <Pill />
           <Stack gap="78px">{children}</Stack>
         </Container>
         <Footer />
