@@ -8,7 +8,7 @@ import icon_linkedin from "../../../assets/icon_linkedin.svg";
 const Card = () => {
   return (
     <>
-      <Stack direction={"column"}>
+      <Stack direction={"column"} id="card">
         <Box
           sx={{
             width: "262px",
