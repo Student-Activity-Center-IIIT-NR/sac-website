@@ -55,10 +55,12 @@ const Year = () => {
               pt: "10px",
               pb: "4px",
               objectFit: "contain",
+              cursor: "pointer",
               visibility: year !== new Date().getFullYear() ? "block" : "none",
             }}
+            onClick={resetYear}
           >
-            <Box sx={{cursor: "pointer"}} onClick={resetYear}>
+            <Box>
               {year !== new Date().getFullYear() ? (
                 <Image src={iconReset} height={"24px"} width={"24px"} alt=""  />
               ) : null}
