@@ -17,17 +17,17 @@ function TeamLayout({ children }: Props) {
 
   const [value, setValue] = useState("All");
 
-  const handleTabs = (tabvalue:any ) => {
+  const handleTabs = (tabvalue: any) => {
     setValue(tabvalue);
-    console.log(value)
-  }
+    console.log(value);
+  };
 
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
         <TeamHeader />
-        <TeamNavbar handleTabs={handleTabs} value={value} setValue = {setValue} />
+        <TeamNavbar />
         <Container maxWidth="xl">
           <Stack gap="78px">{children}</Stack>
         </Container>
