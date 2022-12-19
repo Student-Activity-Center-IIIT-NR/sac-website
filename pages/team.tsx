@@ -1,17 +1,20 @@
 import Head from "next/head";
-import React from "react";
-import Card from "../features/team/components/Card";
+import TeamContent from "../features/team/components/TeamContent";
+import TeamLayout from "../layouts/TeamLayout";
 
-const Team = () => {
+function Team() {
   return (
-    <>
+    <div>
       <Head>
-        <title>SAC Team</title>
+        <title>SAC | Team</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div>Welcome to the team page</div> */}
-      <Card />
-    </>
+
+      <TeamLayout>
+        <TeamContent />
+      </TeamLayout>
+    </div>
   );
-};
+}
 
 export default Team;
