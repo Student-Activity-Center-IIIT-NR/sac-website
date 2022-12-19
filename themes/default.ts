@@ -47,7 +47,8 @@ const defaultTheme = createTheme({
       900: "#0F172A",
     },
     primary: {
-      main: "#3362CC",
+      // main: "#3362CC",
+      main: "#355389",
       50: "#D7DEE8",
       300: "#B4C8E2",
       500: "#355389",

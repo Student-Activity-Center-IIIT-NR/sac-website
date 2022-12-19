@@ -1,45 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import TeamLinks from "./TeamLinks";
-import { Box, Tab } from "@mui/material";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
-function TeamNavbar({ handleTabs,value,setValue } : {handleTabs:any,value:any,setValue:any}) {
+const TeamNavbar = () => {
+  const [value, setValue] = useState("All");
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
 
   return (
     <>
-      <Box
-        sx={{
-          width: "56.5%",
-          bgcolor: "#F6F6F6",
-          borderRadius: "30px",
-          py: 1,
-          my: 5,
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        centered
+        variant="standard"
+        indicatorColor="primary"
+        TabIndicatorProps={{
+          sx: {
+            height: "60px",
+            background: "#ffffff",
+            boxShadow:
+              "-5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5)",
+            borderRadius: "1000px",
+          },
         }}
-        m="auto"
+        sx={{
+          maxWidth: "939px",
+          bgcolor: "#f6f6f6",
+          borderRadius: "1000px",
+          m: "auto",
+          py: "7px",
+          px: "8px",
+          my: "70px",
+          ".MuiTabs-flexContainer": {
+            justifyContent: "space-between",
+            columnGap: "31px",
+          },
+        }}
       >
-        <div
-          className="tab_animation"
-          style={{ display: "flex", justifyContent: "space-around" }}
-        >
-          {TeamLinks.map((item, index) => {
-            return (
-              <>
-                <Tab key={index}
-                  label={item.name}
-                  sx={{
-                    background: value == item.name ? "white" : null,
-                    borderRadius: value == item.name ? "30px" : null,
-                    transition:
-                      value == item.name ? "transform .5s ease" : null,
-                  }}
-                  onClick={() => handleTabs(item.name)}
-                />
-              </>
-            );
-          })}
-        </div>
-      </Box>
+        {TeamLinks.map((item, index) => {
+          return (
+            <Tab
+              disableRipple
+              label={item.name}
+              value={item.name}
+              key={index}
+              sx={{
+                width: "160px",
+                height: "60px",
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "14px",
+                lineHeight: "17px",
+                textAlign: "center",
+                letterSpacing: "0.08929em",
+                textTransform: "uppercase",
+                color: "#272727",
+                zIndex: 1,
+              }}
+            />
+          );
+        })}
+      </Tabs>
     </>
   );
-}
+};
 
 export default TeamNavbar;

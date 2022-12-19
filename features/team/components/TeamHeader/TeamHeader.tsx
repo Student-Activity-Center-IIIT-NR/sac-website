@@ -23,7 +23,7 @@ function TeamHeader() {
           fontStyle={"normal"}
           color={"#272727"}
           letterSpacing={"0.03571em"}
-          width={"494px"}
+          maxWidth={"494px"}
         >
           Not just a team, but a big family.
         </Typography>
