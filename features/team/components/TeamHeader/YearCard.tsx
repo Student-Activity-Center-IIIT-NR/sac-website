@@ -21,6 +21,10 @@ const Year = () => {
     year < new Date().getFullYear() ? setYear(year + 1) : null;
   };
 
+  const resetYear = () => {
+    setYear(new Date().getFullYear());
+  }
+  
   return (
     <>
       <Card
@@ -55,7 +59,7 @@ const Year = () => {
             }}
           >
             {year !== new Date().getFullYear() ? (
-              <Image src={iconReset} height={"24px"} width={"24px"} alt="" />
+              <Image src={iconReset} height={"24px"} width={"24px"} alt="" onClick={resetYear} />
             ) : null}
           </Box>
           <Box
