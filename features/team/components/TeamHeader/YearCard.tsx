@@ -21,6 +21,10 @@ const Year = () => {
     year < new Date().getFullYear() ? setYear(year + 1) : null;
   };
 
+  const resetYear = () => {
+    setYear(new Date().getFullYear());
+  };
+
   return (
     <>
       <Card
@@ -54,9 +58,11 @@ const Year = () => {
               visibility: year !== new Date().getFullYear() ? "block" : "none",
             }}
           >
-            {year !== new Date().getFullYear() ? (
-              <Image src={iconReset} height={"24px"} width={"24px"} alt="" />
-            ) : null}
+            <Box sx={{cursor: "pointer"}} onClick={resetYear}>
+              {year !== new Date().getFullYear() ? (
+                <Image src={iconReset} height={"24px"} width={"24px"} alt=""  />
+              ) : null}
+            </Box>
           </Box>
           <Box
             sx={{
