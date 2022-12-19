@@ -1,13 +1,14 @@
-import { Box, Stack, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import React from "react";
 import testImg from "../../../assets/test/test.jpeg";
 import icon_linkedin from "../../../assets/icon_linkedin.svg";
 
 const Card = () => {
   return (
     <>
-      <Stack direction={"column"}>
+      <Stack direction={"column"} id="card">
         <Box
           sx={{
             width: "262px",
