@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import TeamLinks from "./TeamLinks";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 function TeamContent() {
@@ -11,7 +11,13 @@ function TeamContent() {
         {TeamLinks.map((item, index) => {
           return (
             <>
-              <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2} key={index}>
+              <Grid2
+                xs={2.99}
+                display="flex"
+                flexDirection={"column"}
+                gap={2}
+                key={index}
+              >
                 <Card />
               </Grid2>
             </>
@@ -31,7 +37,6 @@ function TeamContent() {
               fontStyle={"normal"}
               key={index}
             >
-              
               {item.teamName}
             </Typography>
 

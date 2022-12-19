@@ -8,19 +8,17 @@ import Image from "next/image";
 import Stack from "@mui/material/Stack";
 
 const Year = () => {
+  const sacEstdYear = 2018;
+
   const [year, setYear] = useState(new Date().getFullYear());
   const [isHovered, setIsHovered] = useState(false);
 
   const yearDecrement = () => {
-    year > 2018 ? setYear(year - 1) : null;
-    if (year != new Date().getFullYear()) {
-    }
+    year > sacEstdYear ? setYear(year - 1) : null;
   };
 
   const yearIncrement = () => {
     year < new Date().getFullYear() ? setYear(year + 1) : null;
-    if (year != new Date().getFullYear()) {
-    }
   };
 
   return (
@@ -95,7 +93,6 @@ const Year = () => {
               mt={isHovered ? "10px" : "0px"}
               mx={isHovered ? "20px" : "0px"}
               sx={{
-                verticalAlign: "middle",
                 transition: "all",
                 transitionDuration: "300ms",
               }}
