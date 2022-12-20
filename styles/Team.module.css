@@ -1,0 +1,16 @@
+.name {
+  position: relative;
+}
+
+.name::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -104%;
+  left: 0px;
+  background-image: url("../assets/bg_pattern.svg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.2;
+}

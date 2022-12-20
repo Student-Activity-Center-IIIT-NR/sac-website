@@ -1,5 +1,4 @@
 import Head from "next/head";
-import TeamContent from "../features/team/components/TeamContent";
 import TeamLayout from "../layouts/TeamLayout";
 
 function Team() {
@@ -10,9 +9,7 @@ function Team() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <TeamLayout>
-        <TeamContent />
-      </TeamLayout>
+      <TeamLayout />
     </div>
   );
 }

@@ -1,7 +1,25 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import TeamLinks from "./TeamLinks";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import ScrollContainer from "./ScrollContainer";
+
+interface TabPanelProps {
+  children?: ReactNode;
+  index: string;
+  value: string;
+}
+
+const TabPanel = (props: TabPanelProps) => {
+  const { children, value, index, ...rest } = props;
+
+  return (
+    <Box hidden={value !== index} {...rest}>
+      {value === index && <Box>{children}</Box>}
+    </Box>
+  );
+};
 
 const TeamNavbar = () => {
   const [value, setValue] = useState("All");
@@ -66,6 +84,53 @@ const TeamNavbar = () => {
           );
         })}
       </Tabs>
+
+      <TabPanel value={value} index={TeamLinks[0].name}>
+        <ScrollContainer
+          teamName=""
+          gradient="linear-gradient(90deg, #757F9A 0%, #D7DDE8 100%)"
+        />
+        <ScrollContainer
+          teamName="Website Management Team"
+          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+        />
+        <ScrollContainer
+          teamName="App Management Team"
+          gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+        />
+        <ScrollContainer
+          teamName="Design Team"
+          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+        />
+        <ScrollContainer
+          teamName="Content Writer Team"
+          gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={TeamLinks[1].name}>
+        <ScrollContainer
+          teamName="Website Management Team"
+          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={TeamLinks[2].name}>
+        <ScrollContainer
+          teamName="App Management Team"
+          gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={TeamLinks[3].name}>
+        <ScrollContainer
+          teamName="Design Team"
+          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={TeamLinks[4].name}>
+        <ScrollContainer
+          teamName="Content Writer Team"
+          gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+        />
+      </TabPanel>
     </>
   );
 };
