@@ -28,9 +28,7 @@ function TeamLayout({ children }: Props) {
         <NavBar />
         <TeamHeader />
         <TeamNavbar />
-        <Container maxWidth="xl">
           <Stack gap="78px">{children}</Stack>
-        </Container>
         <Footer />
       </BrandInViewContext.Provider>
     </Stack>
