@@ -101,7 +101,7 @@ const ClubsOverview = () => {
               textTransform={"uppercase"}
               fontStyle={"normal"}
               sx={{
-                transition: "all ease-in-out",
+                transition: "all ease-in-out 400ms",
               }}
             >
               Technical
@@ -152,6 +152,9 @@ const ClubsOverview = () => {
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
+              sx={{
+                transition: "all ease-in-out 400ms",
+              }}
             >
               Cultural
             </Typography>
@@ -197,6 +200,9 @@ const ClubsOverview = () => {
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
+              sx={{
+                transition: "all ease-in-out 400ms",
+              }}
             >
               Sports
             </Typography>

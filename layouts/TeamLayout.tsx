@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Container, Stack } from "@mui/system";
 import { useInView } from "react-intersection-observer";
 import { BrandInViewContext } from "../contexts/HeaderContext";
 import NavBar from "../components/NavBar";
@@ -7,6 +5,8 @@ import TeamHeader from "../features/team/components/TeamHeader/TeamHeader";
 import { ReactNode } from "react";
 import Footer from "../components/footer/Footer";
 import TeamNavbar from "../features/team/components/TeamNavbar";
+import Stack from "@mui/material/Stack";
+import Container from "@mui/material/Container";
 
 type Props = {
   children?: ReactNode;
@@ -15,13 +15,6 @@ type Props = {
 function TeamLayout({ children }: Props) {
   const { ref, inView } = useInView({ threshold: 0 });
 
-  const [value, setValue] = useState("All");
-
-  const handleTabs = (tabvalue: any) => {
-    setValue(tabvalue);
-    console.log(value);
-  };
-
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
@@ -29,7 +22,7 @@ function TeamLayout({ children }: Props) {
         <TeamHeader />
         <TeamNavbar />
         <Container maxWidth="xl">
-          <Stack gap="78px">{children}</Stack>
+          <Stack>{children}</Stack>
         </Container>
         <Footer />
       </BrandInViewContext.Provider>
