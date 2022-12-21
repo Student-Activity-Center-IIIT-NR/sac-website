@@ -1,11 +1,7 @@
 import Box from "@mui/material/Box";
 
 const ClubOverview = () => {
-  return (
-    <>
-
-    </>
-  );
+  return <></>;
 };
 
 export default ClubOverview;
