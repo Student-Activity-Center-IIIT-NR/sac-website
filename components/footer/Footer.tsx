@@ -14,7 +14,6 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          mt: 11,
           boxShadow:
             "5px 5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.9), -5px 5px 13px rgba(221, 221, 221, 0.9)",
         }}
