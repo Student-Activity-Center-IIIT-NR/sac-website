@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import Footer from "../components/footer/Footer";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
+import SportsLayout from "../features/club/Sports/SportsLayout";
 
 type Props = {
   children?: ReactNode;
@@ -17,9 +18,10 @@ function ClubsLayout({ children }: Props) {
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
-        <Container maxWidth="xl">
+         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>
+         <SportsLayout/>
         <Footer />
       </BrandInViewContext.Provider>
     </Stack>
