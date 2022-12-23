@@ -1,5 +1,5 @@
 import React from "react";
-import club_background from "../../../../assets/club_background.png";
+import club_background from "../../../assets/club_background.png";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 

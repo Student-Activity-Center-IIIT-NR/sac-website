@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Index from "../features/club/technical/Index";
-import CulturalClub from "../features/club/components/CulturalClub/CulturalClub";
+import CulturalClub from "../features/club/cultural/CulturalClub";
 
 type Props = {
   children?: ReactNode;

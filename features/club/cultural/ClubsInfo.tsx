@@ -1,4 +1,4 @@
-import Indradhanush from "../../../../assets/indradhanush.png";
+import Indradhanush from "../../../assets/indradhanush.png";
 
 const clubs = [
   {

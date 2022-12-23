@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import starIcon from "../../../../assets/icon_star.png";
+import starIcon from "../../../assets/icon_star.png";
 import Card from "@mui/material/Card";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import clubs from "./ClubsInfo";
-import ClubStyle from "../../../../styles/Clubs.module.css"
+import ClubStyle from "../../../styles/Clubs.module.css";
 
-function ClubHeader({setClubName} : {setClubName : any}) {
+function ClubHeader({ setClubName }: { setClubName: any }) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
@@ -16,41 +16,7 @@ function ClubHeader({setClubName} : {setClubName : any}) {
   };
 
   const handleClubName = (name: string) => {
-    setClubName(name)
-  }
-
-  const BoxComponent = () => {
-    return (
-      <>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            columnGap: "13.11px",
-            cursor: "pointer",
-          }}
-          onClick={handleShow}
-          py={3}
-        >
-          <Typography
-            variant={"h1"}
-            fontWeight={"400"}
-            fontSize={"17.4867px"}
-            fontFamily={"Baskervville"}
-            lineHeight={"15px"}
-            fontStyle={"normal"}
-            color={"#000000"}
-            maxWidth={"494px"}
-            sx={{ textDecoration: "underline" }}
-          >
-            Cultural Clubs
-          </Typography>
-          <Image src={starIcon} alt="" height={"17.5px"} width={"17.5px"} />
-        </Box>
-      </>
-    );
+    setClubName(name);
   };
 
   return (
@@ -69,17 +35,46 @@ function ClubHeader({setClubName} : {setClubName : any}) {
             zIndex: "1",
           }}
         >
-          {show ? (
-            <Card
+          <Card
+            sx={{
+              width: "799.47px",
+              height: show ? "247px" : "70px",
+              borderRadius: "13.115px",
+              pr: 3,
+              background: "rgba(255,255,255,0.8)",
+              boxShadow: show
+                ? "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+                : "0px 0px 0px 0px",
+            }}
+          >
+            <Box
               sx={{
-                width: "799.47px",
-                height: "247px",
-                borderRadius: "13.115px",
-                pr: 3,
-                background: "rgba(255,255,255,0.8)",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                columnGap: "13.11px",
+                cursor: "pointer",
               }}
+              onClick={handleShow}
+              py={3}
             >
-              <BoxComponent />
+              <Typography
+                variant={"h1"}
+                fontWeight={"400"}
+                fontSize={"17.4867px"}
+                fontFamily={"Baskervville"}
+                lineHeight={"15px"}
+                fontStyle={"normal"}
+                color={"#000000"}
+                maxWidth={"494px"}
+                sx={{ textDecoration: "underline" }}
+              >
+                Cultural Clubs
+              </Typography>
+              <Image src={starIcon} alt="" height={"17.5px"} width={"17.5px"} />
+            </Box>
+            {show ? (
               <Grid2
                 container
                 columnSpacing={"13.11px"}
@@ -96,7 +91,7 @@ function ClubHeader({setClubName} : {setClubName : any}) {
                         onClick={() => handleClubName(item.name)}
                       >
                         <Typography
-                          className= {ClubStyle.name}
+                          className={ClubStyle.name}
                           variant={"h2"}
                           fontWeight={"400"}
                           fontSize={"16.35px"}
@@ -112,10 +107,8 @@ function ClubHeader({setClubName} : {setClubName : any}) {
                   );
                 })}
               </Grid2>
-            </Card>
-          ) : (
-            <BoxComponent />
-          )}
+            ) : null}
+          </Card>
         </div>
       </div>
     </>

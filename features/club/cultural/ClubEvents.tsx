@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import clubs from "./ClubsInfo";
 import Image from "next/image";
-import starIcon from "../../../../assets/icon_star.png";
+import starIcon from "../../../assets/icon_star.png";
 
 export default function ClubEvents({ clubName }: { clubName: any }) {
   const club_for_event = clubs
