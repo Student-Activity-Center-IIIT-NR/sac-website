@@ -1,7 +1,9 @@
 import React from 'react'
-import { Stack,Typography} from "@mui/material";
+import { Stack,Typography,Box} from "@mui/material";
 import Image from "next/image";
-import AtharvLogo from "../../../assets/atharvLogo.png";
+import AtharvLogo from "../../../assets/atharv_logo.png";
+import UpcomingEvents from './UpcomingEvents';
+import { EventData } from './EventData';
 
 
 const SportsHeading = () => {
@@ -27,9 +29,21 @@ const SportsHeading = () => {
       </Typography>  
       </Stack>
      </Stack>
-      <Typography fontSize={"64px"}  fontFamily="Touchdown Font" fontStyle="regular" color="#000000"  fontWeight={1000}>
-      Upcoming Events
+     <Stack rowGap="50px" width="42%">
+      <Typography fontSize={"48px"} textAlign="right" fontFamily="Touchdown Font" fontStyle="regular" color="#000000"  fontWeight={1000}>
+       UPCOMING EVENTS
       </Typography>
+      <Box 
+      sx={{
+        display:"flex",
+        flexDirection:"column",
+        rowGap:"16px"
+      }}
+      >
+        <UpcomingEvents IconName={require('../../../assets/atharv_event1_icon.svg')} Date={EventData[0].Date} EventNo={EventData[0].event} Content={EventData[0].Info}/>
+        <UpcomingEvents IconName={require('../../../assets/atharv_event2_icon.svg')} Date={EventData[1].Date} EventNo={EventData[1].event} Content={EventData[1].Info}/>
+       </Box>
+     </Stack>
   </Stack>
   </>
   )

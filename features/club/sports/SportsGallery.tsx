@@ -39,7 +39,6 @@ const SportsGallery = () => {
         }
   });
   }
-
   const style={
     fontSize:"16px",
     lineHeight:"28px",
