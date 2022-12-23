@@ -6,6 +6,7 @@ import Footer from "../components/footer/Footer";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Index from "../features/club/technical/Index";
+import CulturalClub from "../features/club/components/CulturalClub/CulturalClub";
 
 type Props = {
   children?: ReactNode;
@@ -18,7 +19,8 @@ function ClubsLayout({ children }: Props) {
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
-        <Index />
+        {/* <Index /> */}
+        <CulturalClub/>
         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>

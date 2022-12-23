@@ -15,3 +15,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.name::first-letter {
+  text-decoration: underline;
+}
+
+.name:hover::first-letter {
+  text-decoration: none;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
