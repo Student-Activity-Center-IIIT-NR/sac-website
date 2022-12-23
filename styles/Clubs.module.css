@@ -1,0 +1,17 @@
+.bgtop {
+  background-image: url("../assets/bg_tech_top.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgmiddle {
+  background-image: url("../assets/bg_tech_middle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgbottom {
+  background-image: url("../assets/bg_tech_bottom.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

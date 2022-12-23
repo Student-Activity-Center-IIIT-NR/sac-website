@@ -46,7 +46,7 @@ const ScrollContainer = ({
           className={hovered ? TeamStyle.name : ""}
           sx={{
             height: "530px",
-            width: "1280px",
+            maxWidth: "1280px",
             mx: "auto",
             display: "flex",
             flexDirection: "row",
