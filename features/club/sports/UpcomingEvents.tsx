@@ -1,78 +1,82 @@
-import React from 'react'
-import { Stack,Typography,styled,Box} from "@mui/material";
-import Image, { StaticImageData } from 'next/image';
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material";
+import Image, { StaticImageData } from "next/image";
 
-
-const CustomStyling = styled(Stack)({
-    justifyContent:"space-between",
-    maxWidth: "95%",
+const StyledStack = styled(Stack)({
+  justifyContent: "space-between",
 });
 
-interface Iprops{
-    IconName:StaticImageData
-    Date?:string
-    EventNo?:number
-    Content?:string
+interface Props {
+  icon: StaticImageData;
+  date: string;
+  name: string;
+  content?: string;
 }
-  
-const UpcomingEvents:React.FC<Iprops> = ({IconName,Date,EventNo,Content}) => {
 
-return (
-     <Box  sx={{
-               display:"flex",
-               flexDirection:"column",
-               rowGap:"15px" 
-            }}
-     >
-    <CustomStyling direction="row">
-        <Box sx={{
-            display:"flex",
-            gap:"16px",
-        }}> 
-        <Image src={IconName}/>
-        <Typography
-        sx={{
-            fontFamily:"Lato",
-            lineHeight:"28px",
-            color:"#565A6E",
-            fontSize:"24px",
-            fontWeight:"700"
-        }} 
-        >
-            Event&nbsp;{EventNo}
-        </Typography>
-        </Box>     
-    <Typography
-    sx={{
-        fontFamily:"Lato",
-        lineHeight:"28px",
-        color:"#565A6E",
-        fontSize:"16px",
-        textAlign:"right",
-        fontWeight:"700"
-        }}
-        >
-       {Date}
-    </Typography>
-    </CustomStyling>
-    <Box sx={{
-        width:"380px",
-        textAlign:"left",
-        marginX:"auto"
-    }}>
-    <Typography
-    sx={{
-        fontSize:"16px",
-        color:"#6B7280",
-        lineHeight:"28px",
-        fontFamily:"Lato"
-    }}
+const UpcomingEvents: React.FC<Props> = ({
+  icon,
+  date,
+  name,
+  content,
+}: Props) => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        rowGap: "15px",
+      }}
     >
-    {Content}
-    </Typography>
-    </Box>    
- </Box> 
-)
-}
+      <StyledStack direction="row">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            columnGap: "16px",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Image src={icon} alt="" width={"20px"} objectFit="contain" />
+          <Typography
+            fontFamily="Lato"
+            fontStyle="normal"
+            fontWeight="700"
+            fontSize="24px"
+            lineHeight="28px"
+            color="#565A6E"
+          >
+            {name}
+          </Typography>
+        </Box>
+        <Typography
+          fontFamily="Lato"
+          fontStyle="normal"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="28px"
+          color="#565A6E"
+        >
+          {date}
+        </Typography>
+      </StyledStack>
 
-export default UpcomingEvents
+      <Typography
+        fontFamily="Lato"
+        fontStyle="normal"
+        fontWeight="400"
+        fontSize="16px"
+        lineHeight="28px"
+        color="#6B7280"
+        px={"30px"}
+        mx={"auto"}
+      >
+        {content}
+      </Typography>
+    </Box>
+  );
+};
+
+export default UpcomingEvents;

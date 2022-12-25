@@ -1,21 +1,17 @@
-import React from 'react'
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Image from "next/image";
 import { ReactNode } from "react";
 
 interface Props {
-  img:string;
+  img: string;
   title: string;
   children: ReactNode;
 }
 
 const SportsTeam = () => {
-
-const Item = ({ img, title, children}:Props) => {
+  const Item = ({ img, title, children }: Props) => {
     return (
       <Stack
         spacing={1}
@@ -53,123 +49,107 @@ const Item = ({ img, title, children}:Props) => {
       </Stack>
     );
   };
+
   return (
     <>
-      <Container
-        maxWidth="lg"
+      <Box
         sx={{
           mt: "140px",
-          mb:"50px",
+          mb: "50px",
+          px: "30px",
         }}
       >
-          <Typography fontSize={"64px"}  fontFamily="Touchdown Font" color="#000000" textAlign="center" fontWeight={800}>
-            TEAM
-          </Typography>
+        <Typography
+          fontFamily="Touchdown Font"
+          fontStyle={"normal"}
+          fontWeight={400}
+          fontSize={"64px"}
+          color="#000000"
+          textAlign="center"
+        >
+          TEAM
+        </Typography>
         <Box
           sx={{
-              mt: "80px",
-            }}
+            mt: "80px",
+            display: "flex",
+            flexDirection: "row",
+            gap: "120px 26px",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <Grid2 container rowSpacing={14}  justifyContent="center">
-          <Grid2 xs={6} display="flex" flexDirection={"row"} gap={2} justifyContent="center">
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-            </Grid2>
-            <Grid2 xs={15} display="flex" flexDirection={"row"} gap={2}>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-            </Grid2>
-             <Grid2 xs={15} display="flex" flexDirection={"row"} gap={2}>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-            </Grid2>
-            <Grid2 xs={15} display="flex" flexDirection={"row"} gap={2}>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-              <Item
-                img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-                title={"Dr Vivek Tiwari"}
-              >
-              faculty mentor
-              </Item>
-            </Grid2>
-          </Grid2>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
+          <Item
+            img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            title={"Dr Vivek Tiwari"}
+          >
+            faculty mentor
+          </Item>
         </Box>
-      </Container>
-    </>  
-  )
-}
+      </Box>
+    </>
+  );
+};
 
-export default SportsTeam
-
- 
+export default SportsTeam;
