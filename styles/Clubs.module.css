@@ -18,18 +18,21 @@
 
 .name::first-letter {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+  text-decoration-style: solid;
+  text-underline-offset: 3px;
 }
-
-.name:hover::first-letter {
-  text-decoration: none;
-}
-
 
 .name {
   text-decoration: none;
+  transition: all 0.5s ease-in;
 }
 
 .name:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+  text-decoration-style: solid;
+  text-underline-offset: 3px;
 }
-

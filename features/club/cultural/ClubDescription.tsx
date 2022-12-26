@@ -3,8 +3,9 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import clubs from "./ClubsInfo";
+import Link from "next/link";
 
-function ClubDescription({ clubName }: { clubName: any }) {
+function ClubDescription({ clubName }: { clubName: string }) {
   return (
     <>
       {clubs
@@ -19,48 +20,54 @@ function ClubDescription({ clubName }: { clubName: any }) {
                   justifyContent: "center",
                   alignItems: "center",
                   columnGap: "71px",
-                  marginTop:"87px"
+                  mt: "10px",
                 }}
+                key={index}
               >
-                <div>
-                  <Image src={data.image} alt="" />
-                </div>
+                <Image
+                  src={data.image}
+                  alt=""
+                  width={"400px"}
+                  objectFit={"contain"}
+                />
 
-                <Box width={"643px"} height={"272px"}>
+                <Box width={"643px"}>
                   <Typography
-                    variant={"h1"}
+                    fontFamily={"Baskervville"}
+                    fontStyle={"normal"}
                     fontWeight={"400"}
                     fontSize={"16px"}
-                    fontFamily={"Baskervville"}
-                    lineHeight={"21px"}
-                    fontStyle={"normal"}
                     textAlign={"justify"}
                   >
                     {data.description}
                   </Typography>
-
                   <Box
                     sx={{
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
                       columnGap: "24px",
-                      marginTop: "12px",
+                      marginTop: "20px",
                     }}
                   >
                     {["Instagram", "Linkedin", "Youtube"].map((item, index) => {
                       return (
                         <>
-                          <Typography
-                            variant={"h1"}
-                            fontWeight={"400"}
-                            fontSize={"16px"}
-                            fontFamily={"Baskervville"}
-                            lineHeight={"21px"}
-                            fontStyle={"italic"}
-                          >
-                            {item}
-                          </Typography>
+                          <Link href={""} key={index}>
+                            <Typography
+                              fontFamily={"Baskervville"}
+                              fontStyle={"italic"}
+                              fontWeight={"400"}
+                              fontSize={"16px"}
+                              textAlign="center"
+                              color={"#000000"}
+                              sx={{
+                                cursor: "pointer",
+                              }}
+                            >
+                              {item}
+                            </Typography>
+                          </Link>
                         </>
                       );
                     })}

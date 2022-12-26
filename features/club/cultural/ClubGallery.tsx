@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import filter from "../../../assets/icon_filter.png";
-import event_image from "../../../assets/EventPhoto.png";
+import filter from "../../../assets/icon_arrow.svg";
+import event_image from "../../../assets/test/test.jpeg";
 import clubs from "./ClubsInfo";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
@@ -40,7 +40,7 @@ function ClubGallery({ clubName }: { clubName: any }) {
         fontFamily={"Baskervville"}
         lineHeight={"62px"}
         fontStyle={"Regular"}
-        sx={{ marginTop: "329px", display: "flex", justifyContent: "center" }}
+        sx={{ marginTop: "129px", display: "flex", justifyContent: "center" }}
       >
         Gallery
       </Typography>
@@ -57,10 +57,9 @@ function ClubGallery({ clubName }: { clubName: any }) {
       >
         Event Log
       </Typography>
-
       <Box
         display={"flex"}
-        marginTop={"21px"}
+        my={"21px"}
         columnGap={"140px"}
         position="relative"
         padding={"10px 80px"}
@@ -160,7 +159,12 @@ function ClubGallery({ clubName }: { clubName: any }) {
                 padding: "12px",
               }}
             >
-              <Pagination count={5} page={page} onChange={handleChangePage} sx={{textDecoration:'underline'}}/>
+              <Pagination
+                count={5}
+                page={page}
+                onChange={handleChangePage}
+                sx={{ textDecoration: "underline" }}
+              />
             </div>
           </Box>
         </div>

@@ -1,15 +1,19 @@
 import React from "react";
-import club_background from "../../../assets/club_background.png";
+import club_background from "../../../assets/cultural_clubs_bg/club_background.png";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-function ClubBanner({clubName} : {clubName : any}) {
+interface Props {
+  clubName: string;
+}
+
+function ClubBanner({ clubName }: Props) {
   return (
     <>
       <Box
-        height={"272px"}
+        height={"320px"}
         sx={{
-          marginTop: "97.23px",
+          marginTop: "80px",
           maxWidth: "100vw",
           background: `url(${club_background.src}) no-repeat`,
           backgroundSize: "cover",
@@ -19,12 +23,10 @@ function ClubBanner({clubName} : {clubName : any}) {
         }}
       >
         <Typography
-          variant={"h1"}
+          fontFamily={"Rubik"}
+          fontStyle={"normal"}
           fontWeight={"400"}
           fontSize={"96px"}
-          fontFamily={"Cotta"}
-          lineHeight={"28px"}
-          fontStyle={"normal"}
           color={"#FFFFFF"}
         >
           {clubName}

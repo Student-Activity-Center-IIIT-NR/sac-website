@@ -7,23 +7,21 @@ import ClubCrew from "./ClubCrew";
 import ClubGallery from "./ClubGallery";
 
 function CulturalClub() {
-
-  const [clubName,setClubName] = useState("Indradhanush")
+  const [clubName, setClubName] = useState("Indradhanush");
 
   return (
     <>
-      <ClubHeader setClubName={setClubName}/>
+      <ClubHeader setClubName={setClubName} />
 
-      <ClubBanner clubName={clubName}/>
+      <ClubBanner clubName={clubName} />
 
-      <ClubDescription clubName={clubName}/>
+      <ClubDescription clubName={clubName} />
 
-      <ClubEvents clubName={clubName}/>
+      <ClubEvents clubName={clubName} />
 
-      <ClubCrew/>
+      <ClubCrew />
 
-      <ClubGallery clubName={clubName}/>
-
+      <ClubGallery clubName={clubName} />
     </>
   );
 }
