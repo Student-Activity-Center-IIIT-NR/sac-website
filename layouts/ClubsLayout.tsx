@@ -8,6 +8,7 @@ import Container from "@mui/material/Container";
 import Index from "../features/club/technical/Index";
 import CulturalClub from "../features/club/cultural/CulturalClub";
 
+
 type Props = {
   children?: ReactNode;
 };
