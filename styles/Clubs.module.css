@@ -36,3 +36,27 @@
   text-decoration-style: solid;
   text-underline-offset: 3px;
 }
+
+.culturalOverview , .culturalOverview1{
+  display: inline-block;
+  position: relative;
+}
+
+ .culturalOverview::before , .culturalOverview1::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 8%;
+  height: 0.5px;
+  background-color: white;
+  margin: 5px;
+  transition: width 0.25s ease-out;
+}
+
+.culturalOverview1:hover::before {
+  width:85%;
+} 
+.culturalOverview:hover::before {
+  width:100%;
+}
