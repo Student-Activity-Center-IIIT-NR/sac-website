@@ -1,5 +1,13 @@
+import SportsOverview from "./SportsOverview";
+import TechnicalOverview from "./TechnicalOverview";
+
 const ClubOverview = () => {
-  return <></>;
+  return (
+    <>
+      <TechnicalOverview />
+      <SportsOverview />
+    </>
+  );
 };
 
 export default ClubOverview;

@@ -9,8 +9,7 @@ import Index from "../features/club/technical/Index";
 import SportsLayout from "../features/club/sports/SportsLayout";
 import SportsOverview from "../features/club/SportsOverview";
 import CulturalClub from "../features/club/cultural/CulturalClub";
-
-
+import ClubOverview from "../features/club/ClubOverview";
 
 type Props = {
   children?: ReactNode;
@@ -24,7 +23,8 @@ function ClubsLayout({ children }: Props) {
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
         {/* <Index /> */}
-        <SportsOverview/>
+        {/* <SportsOverview/> */}
+        <ClubOverview />
         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>
