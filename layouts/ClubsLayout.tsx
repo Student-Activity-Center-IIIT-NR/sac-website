@@ -9,6 +9,7 @@ import Index from "../features/club/technical/Index";
 import SportsLayout from "../features/club/sports/SportsLayout";
 import SportsOverview from "../features/club/SportsOverview";
 import CulturalClub from "../features/club/cultural/CulturalClub";
+import CulturalOverview from "../features/club/CulturalOverview";
 
 
 
@@ -24,7 +25,9 @@ function ClubsLayout({ children }: Props) {
       <BrandInViewContext.Provider value={{ inView }}>
         <NavBar />
         {/* <Index /> */}
+        <CulturalOverview/>
         <SportsOverview/>
+        {/* <CulturalClub/> */}
         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>
