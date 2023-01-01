@@ -8,7 +8,6 @@ import { useState } from "react";
 import Image from "next/image";
 import test from "../../assets/test/test.jpeg"; //remove in prod
 
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
