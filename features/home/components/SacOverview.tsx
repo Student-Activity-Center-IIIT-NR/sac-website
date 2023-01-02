@@ -23,15 +23,15 @@ const Overview = () => {
       gap="24px"
     >
       <DescriptionContainerStyled>
-        <Image src={infoIcon} priority />
+        <Image src={infoIcon} priority alt="" />
         <Typography fontSize={"14px"} lineHeight="17px">
           SAC is a student body established in the year 2018 which aims to
           support, develop and promote student activities at IIIT Naya Raipur
         </Typography>
       </DescriptionContainerStyled>
-      <Image src={overviewArt} priority />
+      <Image src={overviewArt} priority alt="" />
       <DescriptionContainerStyled>
-        <Image src={aimIcon} priority />
+        <Image src={aimIcon} priority alt="" />
         <Typography fontSize={"14px"} lineHeight="17px">
           Our aim is to enhance the aesthetic, invasive, artistic, intellectual
           and social development of the undergraduates
