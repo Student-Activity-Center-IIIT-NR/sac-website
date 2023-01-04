@@ -62,7 +62,7 @@ const Footer = () => {
                 </Typography>
                 <Link href={"#"}>About</Link>
                 <Link href={"/team"}>Teams</Link>
-                <Link href={"club"}>Clubs</Link>
+                <Link href={"clubs"}>Clubs</Link>
                 <Link href={"/gallery"}>Gallery</Link>
                 <Link href={"events"}>Events</Link>
               </Box>

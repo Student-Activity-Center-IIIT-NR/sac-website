@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ClubsLayout from "../layouts/ClubsLayout";
+import ClubOverview from "../features/club/ClubOverview";
 
 const Clubs = () => {
   return (
@@ -10,7 +11,9 @@ const Clubs = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ClubsLayout />
+      <ClubsLayout>
+        <ClubOverview />
+      </ClubsLayout>
     </>
   );
 };

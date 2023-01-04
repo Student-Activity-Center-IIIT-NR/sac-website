@@ -3,18 +3,34 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import clubs from "./ClubsInfo";
-import ClubStyle from "../../../styles/Clubs.module.css";
 import { styled } from "@mui/material";
+import Link from "next/link";
 
 const StyledTypography = styled(Typography)({
   fontFamily: "Baskervville",
   fontStyle: "italic",
   fontWeight: "400",
   fontSize: "18px",
-  lineHeight: "47px",
   color: "#000000",
   cursor: "pointer",
+  width: "fit-content",
+  position: "relative",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    width: "100%",
+    transform: "scaleX(0.1)",
+    height: "1px",
+    bottom: "0",
+    left: "0",
+    backgroundColor: "#000",
+    transformOrigin: "bottom left",
+    transition: "transform 0.3s ease-out",
+  },
+  "&:hover::after": {
+    transform: "scaleX(1)",
+    transformOrigin: "bottom left",
+  },
 });
 
 function ClubHeader({ setClubName }: { setClubName: any }) {
@@ -85,14 +101,14 @@ function ClubHeader({ setClubName }: { setClubName: any }) {
                 sx={{
                   width: "17px",
                   height: "17px",
-                  transition: "all .5s ease",
+                  transition: "all .5s",
                 }}
               >
                 <StarIcon fill={show ? "none" : "black"} />
               </Box>
             </Box>
             {show ? (
-              <Grid2 container mt={"25px"}>
+              <Grid2 container mt={"25px"} rowGap={"30px"}>
                 {clubs.map((item, index) => {
                   return (
                     <>
@@ -101,12 +117,11 @@ function ClubHeader({ setClubName }: { setClubName: any }) {
                         onClick={() => handleClubName(item.name)}
                         key={index}
                       >
-                        <StyledTypography
-                          className={ClubStyle.name}
-                          onClick={handleShow}
-                        >
-                          {item.name}
-                        </StyledTypography>
+                        <Link href={item.url}>
+                          <StyledTypography onClick={handleShow}>
+                            {item.name}
+                          </StyledTypography>
+                        </Link>
                       </Grid2>
                     </>
                   );
@@ -139,3 +154,14 @@ const StarIcon = ({ fill }: { fill: string }) => {
     </svg>
   );
 };
+
+const clubs = [
+  { name: "Indradhanush", url: "/clubs/cultural/indradhanush" },
+  { name: "Capriccio", url: "/clubs/cultural/capriccio" },
+  { name: "ShutterBug", url: "/clubs/cultural/shutterbug" },
+  { name: "Club De Theatre", url: "/clubs/cultural/cdt" },
+  { name: "Igniters", url: "/clubs/cultural/igniters" },
+  { name: "Cover to Cover", url: "/clubs/cultural/c2c" },
+  { name: "Take da bait", url: "/clubs/cultural/tdb" },
+  { name: "Model United Nations", url: "/clubs/cultural/mun" },
+];

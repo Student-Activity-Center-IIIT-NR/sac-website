@@ -131,7 +131,7 @@ const SportsOverview = () => {
           ))}
         </ImageList>
       </Stack>
-      <Link href="">
+      <Link href="/clubs/sports">
         <Typography
           textAlign="center"
           sx={{
