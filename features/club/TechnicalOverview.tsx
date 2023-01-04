@@ -193,7 +193,15 @@ export default TechnicalOverview;
 const clubs = [
   { name: "// TSOC", url: "/clubs/technical/tsoc", color: "#7AA2F7" },
   { name: "// AIML", url: "/clubs/technical/aiml", color: "#73DACA" },
-  { name: "// CipherCell", url: "/clubs/technical/ciphercell", color: "#F7768E" },
-  { name: "// Inquizitive", url: "/clubs/technical/inquizitive", color: "#BB9AF7" },
+  {
+    name: "// CipherCell",
+    url: "/clubs/technical/ciphercell",
+    color: "#F7768E",
+  },
+  {
+    name: "// Inquizitive",
+    url: "/clubs/technical/inquizitive",
+    color: "#BB9AF7",
+  },
   { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
 ];
