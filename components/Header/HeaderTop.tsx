@@ -1,8 +1,9 @@
-import { Box, styled, Typography, useTheme } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
 import ElevatedLogo from "../common/ElevatedLogo";
 import iiitLogo from "../../assets/iiitnr_logo.png";
+import sacLogo from "../../assets/sac_logo.png";
 
 type Props = {};
 
@@ -32,7 +33,7 @@ function HeaderTop({}: Props) {
           <br />
           Center
         </Typography>
-        <ElevatedLogo src="" alt="SAC Logo" />
+        <ElevatedLogo src={sacLogo} alt="SAC Logo" />
       </Stack>
     </Stack>
   );

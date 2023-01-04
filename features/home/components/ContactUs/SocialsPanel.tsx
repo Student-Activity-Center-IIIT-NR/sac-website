@@ -1,4 +1,4 @@
-import { Stack, styled } from "@mui/system";
+import { Stack, styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import fbIcon from "../../../../assets/icon_col_fb.svg";
@@ -29,10 +29,34 @@ const SocialsContainerStyled = styled(Stack)({
 function SocialsPanel({}: Props) {
   return (
     <SocialsContainerStyled>
-      <Image src={fbIcon} />
-      <Image src={twitterIcon} />
-      <Image src={instaIcon} />
-      <Image src={linkedinIcon} />
+      <a
+        href={"https://www.facebook.com/IIITNROfficial/"}
+        target={"_blank"}
+        rel={"noreferrer"}
+      >
+        <Image src={fbIcon} alt="" />
+      </a>
+      <a
+        href={"https://twitter.com/IIITNayaRaipur"}
+        target={"_blank"}
+        rel={"noreferrer"}
+      >
+        <Image src={twitterIcon} alt="" />
+      </a>
+      <a
+        href={"https://www.instagram.com/sac_iiitnr/"}
+        target={"_blank"}
+        rel={"noreferrer"}
+      >
+        <Image src={instaIcon} alt="" />
+      </a>
+      <a
+        href={"https://www.linkedin.com/school/iiitnrofficial/"}
+        target={"_blank"}
+        rel={"noreferrer"}
+      >
+        <Image src={linkedinIcon} alt="" />
+      </a>
     </SocialsContainerStyled>
   );
 }

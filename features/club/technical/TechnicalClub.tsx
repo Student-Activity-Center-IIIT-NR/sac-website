@@ -1,5 +1,4 @@
 import Box from "@mui/material/Box";
-import clubStyles from "../../../styles/Clubs.module.css";
 import BasicMenu from "./BasicMenu";
 import Stack from "@mui/material/Stack";
 import Image from "next/image";
@@ -9,6 +8,7 @@ import iconCall from "../../../assets/icon_call.svg";
 import iconMail from "../../../assets/icon_mail.svg";
 import Link from "next/link";
 import { styled } from "@mui/material";
+import bgTechTop from "../../../assets/bg_tech_top.svg";
 
 const StyledLink = styled(Typography)({
   fontFamily: "Rubik",
@@ -77,7 +77,15 @@ const TechnicalClub = () => {
 
   return (
     <>
-      <Box className={clubStyles.bgtop} sx={{ height: "670px", mt: "-50px" }}>
+      <Box
+        sx={{
+          height: "670px",
+          mt: "-50px",
+          background: `url(${bgTechTop.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <Box
           sx={{
             float: "right",

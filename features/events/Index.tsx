@@ -3,6 +3,7 @@ import Calendar from "../../components/EventCalendar/Calendar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import MajorEvents from "./MajorEvents";
+import MonthlyCalendar from "./MonthlyCalendar";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
         </Typography>
         <Calendar />
         <MajorEvents />
+        <MonthlyCalendar />
       </Box>
     </>
   );

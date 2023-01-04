@@ -1,14 +1,17 @@
-import { Typography } from "@mui/material";
-import { Stack, StackProps } from "@mui/system";
-import Image from "next/image";
+import { Stack, StackProps } from "@mui/material";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import sacBranding from "../../assets/sac_branding.svg";
 
-const SacBranding = React.forwardRef((props: StackProps, ref) => {
+interface Props extends StackProps {
+  url?: StaticImageData;
+}
+
+const SacBranding = React.forwardRef((props: Props, ref) => {
   return (
     <Stack component="div" ref={ref} {...props}>
       <Image
-        src={sacBranding}
+        src={props.url ? props.url : sacBranding}
         height={props.height as number}
         width={props.width as number}
         priority={true}

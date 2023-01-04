@@ -84,12 +84,12 @@ const CulturalOverview = () => {
 export default CulturalOverview;
 
 const clubs = [
-  { name: "Indradhanush", url: "/clubs//" },
-  { name: "Capriccio", url: "/clubs/" },
-  { name: "ShutterBug", url: "/clubs/" },
-  { name: "Club De Theatre", url: "/clubs/" },
-  { name: "Igniters", url: "/clubs/" },
-  { name: "Cover to Cover", url: "/clubs/" },
-  { name: "Take da bait", url: "/clubs/" },
-  { name: "Model United Nations", url: "/clubs/" },
+  { name: "Indradhanush", url: "/clubs/cultural/indradhanush" },
+  { name: "Capriccio", url: "/clubs/cultural/capriccio" },
+  { name: "ShutterBug", url: "/clubs/cultural/shutterbug" },
+  { name: "Club De Theatre", url: "/clubs/cultural/cdt" },
+  { name: "Igniters", url: "/clubs/cultural/igniters" },
+  { name: "Cover to Cover", url: "/clubs/cultural/c2c" },
+  { name: "Take da bait", url: "/clubs/cultural/tdb" },
+  { name: "Model United Nations", url: "/clubs/cultural/mun" },
 ];

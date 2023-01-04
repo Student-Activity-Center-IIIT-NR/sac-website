@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 import { BrandInViewContext } from "../../contexts/HeaderContext";
 import SacBranding from "../common/SacBranding";
 import NavRight from "./NavRight";
+import sacLogo from "../../assets/sac_logo.png";
 
 type Props = {};
 
@@ -31,8 +32,8 @@ function NavBar({}: Props) {
           justifyContent="space-between"
         >
           <SacBranding
-            width="95px"
-            height="40px"
+            width="45px"
+            height="45px"
             sx={{
               opacity: headInView ? 0 : 1,
               height: headInView ? "30px" : "40px",
@@ -40,6 +41,7 @@ function NavBar({}: Props) {
               transitionProperty: "opacity height",
               transitionDuration: "200ms",
             }}
+            url={sacLogo}
           />
           <NavRight wideSpacing={headInView} />
         </Stack>

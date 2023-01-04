@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import BoxIcon from "../../../assets/icon_box.svg";
+import Link from "next/link";
 
 const StyledTypography = styled(Typography)({
   fontFamily: "JetBrains Mono",
@@ -24,9 +25,6 @@ const StyledTypographyLink = styled(Typography)({
   fontSize: "24px",
   lineHeight: "28px",
   color: "#565A6E",
-  "&:hover": {
-    color: "#73DACA",
-  },
 });
 
 const BasicMenu = () => {
@@ -106,44 +104,51 @@ const BasicMenu = () => {
           },
         }}
       >
-        <MenuItem
-          onClick={handleClose}
-          disableRipple
-          //   onMouseEnter={(e) => (e.target.style.backgroundColor = "transparent")}
-        >
-          <StyledTypographyLink>{"// TSOC"}</StyledTypographyLink>
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-          disableRipple
-          //   onMouseEnter={(e) => (e.target.style.backgroundColor = "transparent")}
-        >
-          <StyledTypographyLink>{"// AIML"}</StyledTypographyLink>
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-          disableRipple
-          //   onMouseEnter={(e) => (e.target.style.backgroundColor = "transparent")}
-        >
-          <StyledTypographyLink>{"// CipherCell"}</StyledTypographyLink>
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-          disableRipple
-          //   onMouseEnter={(e) => (e.target.style.backgroundColor = "transparent")}
-        >
-          <StyledTypographyLink>{"// Inquizitive"}</StyledTypographyLink>
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-          disableRipple
-          //   onMouseEnter={(e) => (e.target.style.backgroundColor = "transparent")}
-        >
-          <StyledTypographyLink>{"// Comet"}</StyledTypographyLink>
-        </MenuItem>
+        {clubs.map((item, index) => {
+          return (
+            <>
+              <MenuItem
+                onClick={handleClose}
+                disableRipple
+                key={index}
+                // onMouseEnter={(e) =>
+                //   (e.target.style.backgroundColor = "transparent")
+                // }
+              >
+                <Link href={item.url}>
+                  <StyledTypographyLink
+                    sx={{
+                      "&:hover": {
+                        color: item.color,
+                      },
+                    }}
+                  >
+                    {item.name}
+                  </StyledTypographyLink>
+                </Link>
+              </MenuItem>
+            </>
+          );
+        })}
       </Menu>
     </Box>
   );
 };
 
 export default BasicMenu;
+
+const clubs = [
+  { name: "// TSOC", url: "/clubs/technical/tsoc", color: "#7AA2F7" },
+  { name: "// AIML", url: "/clubs/technical/aiml", color: "#73DACA" },
+  {
+    name: "// CipherCell",
+    url: "/clubs/technical/ciphercell",
+    color: "#F7768E",
+  },
+  {
+    name: "// Inquizitive",
+    url: "/clubs/technical/inquizitive",
+    color: "#BB9AF7",
+  },
+  { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
+];

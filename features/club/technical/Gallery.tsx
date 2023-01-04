@@ -13,8 +13,7 @@ import Image from "next/image";
 
 const Gallery = () => {
   const DropDown = () => {
-    const currYear = new Date().getFullYear();
-    const [year, setYear] = useState(String(currYear));
+    const [year, setYear] = useState("");
 
     const handleChange = (event: SelectChangeEvent) => {
       setYear(event.target.value as string);
