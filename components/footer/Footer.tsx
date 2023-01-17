@@ -2,14 +2,21 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Image from "next/image";
 import sac_branding from "../../assets/sac_branding.svg";
+import sac_branding_mob from "../../assets/sac_brancing_mob.png"
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import LinkedInIcon from "../../assets/icon_linkedin.svg";
 import TwitterIcon from "../../assets/icon_twitter.svg";
 import FacebookIcon from "../../assets/icon_facebook.svg";
 import InstagramIcon from "../../assets/icon_instagram.svg";
+import { useWindowSize } from "../../WindowSize";
+import { Divider } from "@mui/material";
+
 
 const Footer = () => {
+  
+  let MinSize:(number|any)=useWindowSize().width;
+
   return (
     <>
       <Box
@@ -18,32 +25,56 @@ const Footer = () => {
             "5px 5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.9), -5px 5px 13px rgba(221, 221, 221, 0.9)",
         }}
       >
+        
         <Container maxWidth="lg" disableGutters>
           <Box
             sx={{
-              display: "flex",
+              display: `${ MinSize<=900?"":"flex"}`,
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
               px: "44px",
               py: "19px",
+              textAlign: `${ MinSize<=900?"center":""}`,
             }}
           >
             <Image
-              src={sac_branding}
+              src={MinSize<=900?sac_branding_mob:sac_branding}
               alt=""
-              height="186px"
+              height={MinSize<=900?"200px":"186px"}
               width="357px"
               objectFit="contain"
-            />
+              />
+            {
+           MinSize<=900? 
+           <Typography
+              variant="body1"
+              fontFamily={"Lato"}
+              fontWeight={400}
+              lineHeight={"36px"}
+              textAlign="center"
+              fontSize="15px"
+            >
+              Student Activity Center
+            </Typography>:""
+            
+            }
+           {
+           MinSize<=900? 
+           <Box sx={{width:"90%",margin:"25px auto"}}>
+           <Divider/>
+          </Box>:null
+          }
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-around",
-                gap: "0 143px",
+                gap: `${ MinSize<=900?"":"0 143px"}`,
+
               }}
             >
+              
               <Box
                 sx={{
                   display: "flex",
@@ -89,25 +120,30 @@ const Footer = () => {
               </Box>
             </Box>
           </Box>
+          {MinSize<=900? <Box sx={{width:"80%",margin:"20px auto"}}>
+        <Divider/>
+        </Box>:null}
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
+              justifyContent:`${ MinSize<=900? "space-around": "space-between"}`,
               alignItems: "center",
-              pb: "28px",
-              pl: "29px",
-              pr: "155px",
+              pb: `${ MinSize<=900?"":"28px"}`,
+              pl: `${ MinSize<=900?"":"29px"}`,
+              pr: `${ MinSize<=900?"":"155px"}`,
             }}
-          >
-            <Typography
-              variant="body1"
-              fontFamily={"Lato"}
-              fontWeight={400}
-              lineHeight={"36px"}
+            >
+           {
+             MinSize>=900? 
+           <Typography
+           variant="body1"
+           fontFamily={"Lato"}
+           fontWeight={400}
+           lineHeight={"36px"}
             >
               Student Activity Center
-            </Typography>
+            </Typography>:""
+            }
             <Box>
               <Typography
                 variant="body1"
@@ -115,6 +151,7 @@ const Footer = () => {
                 fontWeight={400}
                 lineHeight={"36px"}
                 color={"#1E293B"}
+                sx={{textAlign:`${ MinSize<=900?"center":""}`,mb:`${ MinSize<=900?"10px":""}`}}
               >
                 Socials
               </Typography>
@@ -123,6 +160,7 @@ const Footer = () => {
                   display: "flex",
                   flexDirection: "row",
                   gap: "0 20px",
+                  mx:"auto"
                 }}
               >
                 <a
@@ -181,6 +219,9 @@ const Footer = () => {
             </Box>
           </Box>
         </Container>
+       {MinSize<=900? <Box sx={{width:"80%",margin:"25px auto"}}>
+        <Divider/>
+        </Box>:null}
         <Box
           py="10px"
           sx={{
@@ -188,6 +229,7 @@ const Footer = () => {
             backgroundColor: "#F8FAFC",
           }}
         >
+          
           <Typography
             variant="body1"
             fontFamily={"Rubik"}
@@ -195,6 +237,12 @@ const Footer = () => {
             fontWeight={400}
             fontSize="14px"
             color={"#000000"}
+            sx={{
+              pl:`${MinSize<=900?"25px":""}`,
+              pr:`${MinSize<=900?"25px":""}`,
+              lineHeight:`${MinSize<=900?"36px":""}`,
+              mt:`${MinSize<=900?"15px":""}`
+            }}
           >
             <strong>Design and Developed by</strong> Sudhanshu Tripathi, Soumya
             Ranjan Patnaik, and Sai Prabhat Gubbala
@@ -206,6 +254,12 @@ const Footer = () => {
             fontWeight={300}
             fontSize="14px"
             color={"#475569"}
+            sx={{
+              pl:`${MinSize<=900?"25px":""}`,
+              pr:`${MinSize<=900?"25px":""}`,
+              lineHeight:`${MinSize<=900?"36px":""}`,
+              mt:`${MinSize<=900?"15px":""}`
+            }}
           >
             Copyright &copy; Student Activity Center, International Institute of
             Information Technology Naya Raipur, 2023.
