@@ -4,6 +4,8 @@ import NavBar from "../components/NavBar";
 import { ReactNode } from "react";
 import Footer from "../components/footer/Footer";
 import Stack from "@mui/material/Stack";
+import MobNav from "../components/NavBar/MobNav";
+import { useWindowSize } from "../WindowSize";
 
 type Props = {
   children?: ReactNode;
@@ -15,7 +17,14 @@ function ClubsLayout({ children }: Props) {
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
-        <NavBar />
+        {
+        useWindowSize().width<=900?
+        <>
+        <MobNav/>
+        </>
+        :
+          <NavBar />
+        }
         <Stack>{children}</Stack>
         <Footer />
       </BrandInViewContext.Provider>

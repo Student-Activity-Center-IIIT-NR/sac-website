@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
+import { useWindowSize } from "../../WindowSize";
 
 type Props = {
   children: ReactNode;
@@ -40,24 +41,38 @@ function NavLink({ children, href, ...restProps }: Props & LinkProps) {
       color=""
       {...restProps}
     >
-      <Button
-        sx={{
-          height: "34px",
-          paddingX: "24px",
-          marginX: "10px",
-          color: "black",
-          transition: "all 200ms",
-          "&:hover": {
-            height: "44px",
-            paddingX: "34px",
-            marginX: "0",
-            background: "#394B73",
-            color: "white",
-          },
-        }}
-      >
-        {children}
-      </Button>
+      {useWindowSize().width<=900 ? 
+    <Button sx={{
+        pt:"20px",
+        pb:"15px",
+        color:"black",
+        "&:hover": {
+          background: "white",
+        },
+    }} disableRipple>
+      {children}
+    </Button>
+   :
+   <Button
+   sx={{
+     height: "34px",
+     paddingX: "24px",
+     marginX: "10px",
+     color: "black",
+     transition: "all 200ms",
+     "&:hover": {
+       height: "44px",
+       paddingX: "34px",
+       marginX: "0",
+       background: "#394B73",
+       color: "white",
+     },
+   }}
+ >
+   {children}
+ </Button>
+    }
+     
     </MuiLink>
   );
 }

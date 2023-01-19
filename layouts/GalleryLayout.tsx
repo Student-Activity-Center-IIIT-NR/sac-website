@@ -5,6 +5,9 @@ import Container from "@mui/material/Container";
 import Footer from "../components/footer/Footer";
 import { ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
+import MobNav from "../components/NavBar/MobNav";
+import { useWindowSize } from "../WindowSize";
+
 
 type Props = {
   children?: ReactNode;
@@ -16,7 +19,12 @@ const GalleryLayout = ({ children }: Props) => {
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
-        <NavBar />
+      {
+        useWindowSize().width<=900?
+        <MobNav/>
+        :
+          <NavBar />
+        }
         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>

@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 import Footer from "../components/footer/Footer";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
+import MobNav from "../components/NavBar/MobNav";
+import { useWindowSize } from "../WindowSize";
 
 type Props = {
   children?: ReactNode;
@@ -16,7 +18,12 @@ function TeamLayout({ children }: Props) {
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
-        <NavBar />
+        {
+        useWindowSize().width<=900?
+        <MobNav/>
+        :
+          <NavBar />
+        }
         <Container maxWidth="xl">
           <Stack>{children}</Stack>
         </Container>
