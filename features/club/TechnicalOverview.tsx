@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import Link from "next/link";
-import bg from "../../assets/bg_techoverview.svg";
+import bg from "../../assets/overview_bg/bg_techoverview.svg";
 
 const StyledTypography = styled(Typography)({
   fontFamily: "JetBrains Mono",
@@ -72,10 +72,11 @@ const TechnicalOverview = () => {
               fontSize={"20px"}
               color={"#565A6E"}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              accumsan metus pulvinar, fringilla sapien sed, faucibus neque.
-              Proin dignissim tincidunt sapien, vitae tristique velit vehicula
-              a.
+              The technical clubs under SAC promote hands-on and cooperative
+              learning and also engages students in problem-solving and
+              higher-order thinking. They conduct various events and provide
+              networking opportunities through hackathons, contests, workshops,
+              seminars, conventions, and teaching sessions.
             </Typography>
           </Stack>
           <Box
@@ -193,7 +194,15 @@ export default TechnicalOverview;
 const clubs = [
   { name: "// TSOC", url: "/clubs/technical/tsoc", color: "#7AA2F7" },
   { name: "// AIML", url: "/clubs/technical/aiml", color: "#73DACA" },
-  { name: "// CipherCell", url: "/clubs/technical/ciphercell", color: "#F7768E" },
-  { name: "// Inquizitive", url: "/clubs/technical/inquizitive", color: "#BB9AF7" },
+  {
+    name: "// CipherCell",
+    url: "/clubs/technical/ciphercell",
+    color: "#F7768E",
+  },
+  {
+    name: "// Inquizitive",
+    url: "/clubs/technical/inquizitive",
+    color: "#BB9AF7",
+  },
   { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
 ];

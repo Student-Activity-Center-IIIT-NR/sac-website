@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import bg from "../../assets/bg_culturaloverview.svg";
+import bg from "../../assets/overview_bg/bg_culturaloverview.svg";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
@@ -62,7 +62,8 @@ const CulturalOverview = () => {
             color={"#fff"}
             mt={"16px"}
           >
-            Art, Dance, Singing, Poetry, Photography, Debate, Literary
+            Music, Art, Dance, Photography, Debate, Discussions, Poetry and
+            Drama
           </Typography>
           <Grid2 container sx={{ px: "80px", mt: "100px" }} rowGap={"96px"}>
             {clubs.map((club, index) => {

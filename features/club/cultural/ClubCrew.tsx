@@ -1,11 +1,11 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import club_background from "../../../assets/cultural_clubs_bg/club_background.png";
+// import club_background from "../../../assets/cultural_clubs_bg/club_background.png";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import crew1 from "../../../assets/test/test.jpeg";
+import crew1 from "../../../assets/test/test.jpeg"; //remove
 import Stack from "@mui/system/Stack";
-import iconArrow from "../../../assets/icon_arrow_long.svg";
+import iconArrow from "../../../assets/icon/icon_arrow_long.svg";
 
 function ClubCrew() {
   const CrewCard = () => {

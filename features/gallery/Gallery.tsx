@@ -11,7 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Divider from "@mui/material/Divider";
-import layerIcon from "../../assets/icon_layer.svg";
+import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Link from "next/link";
@@ -171,7 +171,7 @@ const Gallery = () => {
               width: "166px",
             }}
           >
-            <InputLabel>Year</InputLabel>
+            <InputLabel disabled>Year</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
               <MenuItem value={2018}>2018</MenuItem>
               <MenuItem value={2019}>2019</MenuItem>
@@ -185,10 +185,13 @@ const Gallery = () => {
               width: "166px",
             }}
           >
-            <InputLabel>Clubs</InputLabel>
+            <InputLabel disabled>Clubs</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
               <MenuItem value={2018}>TSOC</MenuItem>
               <MenuItem value={2019}>AIML</MenuItem>
+              <MenuItem value={2019}>CipherCell</MenuItem>
+              <MenuItem value={2019}>Inquizitive</MenuItem>
+              <MenuItem value={2019}>Comet</MenuItem>
             </Select>
           </FormControl>
         </Stack>

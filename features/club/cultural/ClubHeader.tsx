@@ -33,15 +33,11 @@ const StyledTypography = styled(Typography)({
   },
 });
 
-function ClubHeader({ setClubName }: { setClubName: any }) {
+function ClubHeader() {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
     setShow(!show);
-  };
-
-  const handleClubName = (name: string) => {
-    setClubName(name);
   };
 
   return (
@@ -112,11 +108,7 @@ function ClubHeader({ setClubName }: { setClubName: any }) {
                 {clubs.map((item, index) => {
                   return (
                     <>
-                      <Grid2
-                        xs={3}
-                        onClick={() => handleClubName(item.name)}
-                        key={index}
-                      >
+                      <Grid2 xs={3} key={index}>
                         <Link href={item.url}>
                           <StyledTypography onClick={handleShow}>
                             {item.name}

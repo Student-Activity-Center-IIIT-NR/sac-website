@@ -61,6 +61,9 @@ const Carousel = () => {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        style={{
+          borderRadius: "24px",
+        }}
       >
         {images.map((step, index) => (
           <div key={step.label}>

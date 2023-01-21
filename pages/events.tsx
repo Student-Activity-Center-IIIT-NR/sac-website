@@ -1,8 +1,9 @@
 import Head from "next/head";
 import EventsLayout from "../layouts/EventsLayout";
 import Index from "../features/events/Index";
+import { NextPage } from "next";
 
-const Events = () => {
+const Events: NextPage = () => {
   return (
     <>
       <Head>

@@ -42,14 +42,18 @@ const RecentClubEvents = () => {
           direction={"row"}
           mt={"84px"}
           alignItems={"center"}
-          justifyContent={"center"}
-          columnGap={"18px"}
+          justifyContent={"space-between"}
         >
           <AutoPlaySwipeableViews
             axis={theme.direction === "rtl" ? "x-reverse" : "x"}
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
+            style={{
+              width: "270px",
+              height: "270px",
+              borderRadius: "24px",
+            }}
           >
             {images.map((step, index) => (
               <div key={step.label}>
@@ -82,6 +86,11 @@ const RecentClubEvents = () => {
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
+            style={{
+              width: "356px",
+              height: "356px",
+              borderRadius: "24px",
+            }}
           >
             {images.map((step, index) => (
               <div key={step.label}>
@@ -114,6 +123,11 @@ const RecentClubEvents = () => {
             index={activeStep}
             onChangeIndex={handleStepChange}
             enableMouseEvents
+            style={{
+              width: "270px",
+              height: "270px",
+              borderRadius: "24px",
+            }}
           >
             {images.map((step, index) => (
               <div key={step.label}>

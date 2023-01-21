@@ -4,9 +4,11 @@ import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
 import Crew from "../../../features/club/technical/Crew";
-import Gallery from "../../../features/club/technical/Gallery";
-import bgTechBottom from "../../../assets/bg_tech_bottom.svg";
-import AIMLDescImage from "../../../assets/aiml_desc_img.png";
+import Gallery from "../../../features/club/common/Gallery";
+import tsocBg from "../../../assets/technical_clubs_bg/tsoc.png";
+import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";
+import tsocBgBottom from "../../../assets/technical_clubs_bg/bg_tsoc_bottom.svg";
+import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
 
 interface TSOCProps {}
 
@@ -14,23 +16,31 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
   return (
     <>
       <ClubsLayout>
-        <TechnicalClub />
-        <ClubDescription url={AIMLDescImage}>
-          We were born in the age of internet and are now evolving to the age of
-          Artificial Intelligence, and here is where we develop it. Here in the
-          AI/ML club, we learn how to go from an admirer of this new technology
-          to a capable and complete developer in this new technology. We will
-          build projects from scratch with open source tools like TensorFlow and
-          Keras with application development in Python environments, all while
-          attending competitions, hackathons and maybe even contributing to the
-          open source technology that we work with!
+        <TechnicalClub
+          name="TSOC"
+          desc="The Society of Coders"
+          bgTop={tsocBgTop}
+          logo={tsocLogo}
+          color={"#7AA2F7"}
+        />
+        <ClubDescription bg={tsocBg}>
+          The Society of Coders at IIIT-Naya Raipur is a student-run club that
+          aims to foster a culture of coding at the college by hosting various
+          events such as hackathons, workshops, and competitions. The club
+          emphasizes hands-on learning and provides a platform for students to
+          share their ideas and experiences with programming in a supportive
+          environment. It also serves as a forum for people to share their
+          ideas, thoughts, and ambitions regarding programming in an encouraging
+          and conducive environment. It&apos;s a club that welcomes everyone
+          from first-time coders to experienced veterans of the trade.
         </ClubDescription>
         <Box
           sx={{
-            height: "1900px",
-            background: `url(${bgTechBottom.src})`,
+            height: "fit-content",
+            background: `url(${tsocBgBottom.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            pb: 6,
           }}
         >
           <Crew />

@@ -1,13 +1,13 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Image from "next/image";
-import sac_branding from "../../assets/sac_branding.svg";
+import sac_branding from "../../assets/sac_iiit_logo/sac_logo_alt.png";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import LinkedInIcon from "../../assets/icon_linkedin.svg";
-import TwitterIcon from "../../assets/icon_twitter.svg";
-import FacebookIcon from "../../assets/icon_facebook.svg";
-import InstagramIcon from "../../assets/icon_instagram.svg";
+import LinkedInIcon from "../../assets/icon/icon_linkedin.svg";
+import TwitterIcon from "../../assets/icon/icon_twitter.svg";
+import FacebookIcon from "../../assets/icon/icon_facebook.svg";
+import InstagramIcon from "../../assets/icon/icon_instagram.svg";
 
 const Footer = () => {
   return (
@@ -31,9 +31,9 @@ const Footer = () => {
           >
             <Image
               src={sac_branding}
-              alt=""
-              height="186px"
-              width="357px"
+              alt="sac_logo"
+              height="170px"
+              width="170px"
               objectFit="contain"
             />
             <Box
@@ -58,10 +58,10 @@ const Footer = () => {
                   fontWeight={400}
                   lineHeight={"36px"}
                 >
-                  About
+                  Quick Links
                 </Typography>
-                <Link href={"#"}>About</Link>
-                <Link href={"/team"}>Teams</Link>
+                <Link href={"/"}>Home</Link>
+                <Link href={"/team"}>Team</Link>
                 <Link href={"clubs"}>Clubs</Link>
                 <Link href={"/gallery"}>Gallery</Link>
                 <Link href={"events"}>Events</Link>
@@ -82,7 +82,9 @@ const Footer = () => {
                 >
                   Useful links
                 </Typography>
-                <Link href={"#"}>Dummy link</Link>
+                <Link href={sac_branding.src} download>
+                  Dummy link
+                </Link>
                 <Link href={"#"}>Dummy link</Link>
                 <Link href={"#"}>Dummy link</Link>
                 <Link href={"#"}>Dummy link</Link>
@@ -96,8 +98,8 @@ const Footer = () => {
               justifyContent: "space-between",
               alignItems: "center",
               pb: "28px",
-              pl: "29px",
-              pr: "155px",
+              pl: "60px",
+              pr: "180px",
             }}
           >
             <Typography
@@ -196,8 +198,16 @@ const Footer = () => {
             fontSize="14px"
             color={"#000000"}
           >
-            <strong>Design and Developed by</strong> Sudhanshu Tripathi, Soumya
-            Ranjan Patnaik, and Sai Prabhat Gubbala
+            <strong>Design and Developed by</strong>
+            <a
+              href={"https://linkedin.com/in/sudhanshu1309"}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              {" "}
+              Sudhanshu Tripathi
+            </a>
+            , Soumya Ranjan Patnaik, and Sai Prabhat Gubbala
           </Typography>
           <Typography
             variant="body1"

@@ -2,8 +2,8 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 import React from "react";
 import ElevatedLogo from "../common/ElevatedLogo";
-import iiitLogo from "../../assets/iiitnr_logo.png";
-import sacLogo from "../../assets/sac_logo.png";
+import iiitLogo from "../../assets/sac_iiit_logo/iiitnr_logo.png";
+import sacLogo from "../../assets/sac_iiit_logo/sac_logo.png";
 
 type Props = {};
 

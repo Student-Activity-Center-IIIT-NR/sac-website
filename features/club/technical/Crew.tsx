@@ -2,8 +2,8 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/system/Stack";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import testImg from "../../../assets/test/test.jpeg";
-import iconArrow from "../../../assets/icon_arrow_long.svg";
+import testImg from "../../../assets/test/test.jpeg"; //remove
+import iconArrow from "../../../assets/icon/icon_arrow_long.svg";
 
 const Crew = () => {
   const CrewCard = () => {

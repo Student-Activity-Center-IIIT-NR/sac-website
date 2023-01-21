@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AtharvLogo from "../../../assets/atharv_logo.png";
+import AtharvLogo from "../../../assets/sports_icons/atharv_logo.png";
 import UpcomingEvents from "./UpcomingEvents";
 import { EventData } from "./EventData";
 import Stack from "@mui/material/Stack";

@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import Image from "next/image";
 import React from "react";
-import darkModeIcon from "../../assets/dark_mode.svg";
+import darkModeIcon from "../../assets/static/dark_mode.svg";
 
 type Props = {
   color?: string;

@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import { BrandInViewContext } from "../../contexts/HeaderContext";
 import SacBranding from "../common/SacBranding";
 import NavRight from "./NavRight";
-import sacLogo from "../../assets/sac_logo.png";
+import sacLogo from "../../assets/sac_iiit_logo/sac_logo.png";
 
 type Props = {};
 
@@ -32,8 +32,8 @@ function NavBar({}: Props) {
           justifyContent="space-between"
         >
           <SacBranding
-            width="45px"
-            height="45px"
+            width="40px"
+            height="40px"
             sx={{
               opacity: headInView ? 0 : 1,
               height: headInView ? "30px" : "40px",

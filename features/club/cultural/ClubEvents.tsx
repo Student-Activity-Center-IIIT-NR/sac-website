@@ -1,13 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import clubs from "./ClubsInfo";
 import Image from "next/image";
-import starIcon from "../../../assets/icon_star.svg";
+import starIcon from "../../../assets/icon/icon_star.svg";
 import Stack from "@mui/material/Stack";
 import Link from "next/link";
 
-const Event = () => {
+interface EventProps {
+  name: string;
+  date: string;
+  children: ReactNode;
+  link: string;
+}
+
+const Event = ({ name, date, children, link }: EventProps) => {
   return (
     <>
       <Stack
@@ -31,7 +37,7 @@ const Event = () => {
             textAlign="center"
             color="#000000"
           >
-            Event 1
+            {name}
           </Typography>
           <Image src={starIcon} alt="" width={"17px"} objectFit="contain" />
           <Typography
@@ -43,7 +49,7 @@ const Event = () => {
             textAlign="center"
             color="#000000"
           >
-            12/1/23
+            {date}
           </Typography>
         </Stack>
         <Typography
@@ -55,12 +61,7 @@ const Event = () => {
           textAlign="center"
           color="#000000"
         >
-          In a technical institute like ours we aim at bringing out the hidden
-          artists in IIIT-NR. We bring together all forms of art- digital art,
-          canvas painting, pencil art, mandala art, pen art, doodling and the
-          list goes on. {"We're"} also a bridge that connects art to craft. To
-          name a few craft work that artists in the club practice are quilling,
-          origami and handicraft.
+          {children}
         </Typography>
         <Typography
           fontFamily="Baskervville"
@@ -71,19 +72,14 @@ const Event = () => {
           textAlign="center"
           color="#000000"
         >
-          Form:
-          <Link href={""}>&nbsp; https://bit.ly/3WrawB6</Link>
+          <Link href={link}>Register</Link>
         </Typography>
       </Stack>
     </>
   );
 };
 
-function ClubEvents({ clubName }: { clubName: any }) {
-  const club_for_event = clubs
-    .filter((item) => item.name == clubName)
-    .map((data) => data.Events);
-
+function ClubEvents() {
   return (
     <>
       <Typography
@@ -94,30 +90,44 @@ function ClubEvents({ clubName }: { clubName: any }) {
         lineHeight={"62px"}
         color={"#000"}
         mx={"auto"}
-        sx={{ marginTop: "60px" }}
+        mt={"108px"}
       >
         Upcoming Events
       </Typography>
-
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          rowGap: "64px",
-          pt: "28px",
+          rowGap: "44px",
+          pt: "48px",
         }}
       >
-        {club_for_event[0]?.map((item, index) => {
-          return (
-            <>
-              <Event />
-              <Event />
-              <Event />
-            </>
-          );
-        })}
+        <Event name="Event1" date={"12/01/2023"} link="">
+          In a technical institute like ours we aim at bringing out the hidden
+          artists in IIIT-NR. We bring together all forms of art- digital art,
+          canvas painting, pencil art, mandala art, pen art, doodling and the
+          list goes on. We are also a bridge that connects art to craft. To name
+          a few craft work that artists in the club practice are quilling,
+          origami and handicraft.
+        </Event>
+        <Event name="Event1" date={"12/01/2023"} link="">
+          In a technical institute like ours we aim at bringing out the hidden
+          artists in IIIT-NR. We bring together all forms of art- digital art,
+          canvas painting, pencil art, mandala art, pen art, doodling and the
+          list goes on. We are also a bridge that connects art to craft. To name
+          a few craft work that artists in the club practice are quilling,
+          origami and handicraft.
+        </Event>
+        <Event name="Event1" date={"12/01/2023"} link="">
+          In a technical institute like ours we aim at bringing out the hidden
+          artists in IIIT-NR. We bring together all forms of art- digital art,
+          canvas painting, pencil art, mandala art, pen art, doodling and the
+          list goes on. We are also a bridge that connects art to craft. To name
+          a few craft work that artists in the club practice are quilling,
+          origami and handicraft.
+        </Event>
       </Box>
     </>
   );
