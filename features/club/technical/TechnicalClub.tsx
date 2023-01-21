@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { styled } from "@mui/material";
+import bgTechTop from "../../../assets/bg_tech_top.svg";
 
 interface Props {
   name: string;

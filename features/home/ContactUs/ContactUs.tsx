@@ -13,8 +13,14 @@ import SocialsPanel from "./SocialsPanel";
 import artContactus from "../../../assets/static/art_contactus.svg";
 import Image from "next/image";
 import Snackbar from "@mui/material/Snackbar";
+import { AlertColor } from "@mui/material";
 
 type Props = {};
+
+interface ErrorProps {
+  icon: AlertColor;
+  msg: string;
+}
 
 const VectorBoxTop = styled(Box)({
   position: "absolute",
@@ -87,7 +93,7 @@ function ContactUsForm() {
   const { name, email, message } = values;
 
   const [open, setOpen] = useState(false);
-  const [error, setError] = useState({
+  const [error, setError] = useState<ErrorProps>({
     icon: "success",
     msg: "",
   });
