@@ -8,7 +8,9 @@ import {
 import React from "react";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
-type Props = {};
+type Props = {
+  clear?: any;
+};
 
 function InputField(props: Props & TextFieldProps) {
   const theme = useTheme();
@@ -20,8 +22,13 @@ function InputField(props: Props & TextFieldProps) {
           paddingLeft: "10px",
         },
         endAdornment: (
-          <InputAdornment position="end">
-            <IconButton>
+          <InputAdornment
+            position="end"
+            sx={{
+              pb: 1,
+            }}
+          >
+            <IconButton onClick={props.clear}>
               <HighlightOffIcon />
             </IconButton>
           </InputAdornment>

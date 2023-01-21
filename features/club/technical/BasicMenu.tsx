@@ -6,7 +6,7 @@ import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
-import BoxIcon from "../../../assets/icon_box.svg";
+import BoxIcon from "../../../assets/icon/icon_box.svg";
 import Link from "next/link";
 
 const StyledTypography = styled(Typography)({

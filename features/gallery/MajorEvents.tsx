@@ -3,8 +3,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Carousel from "./Carousel";
 import Image from "next/image";
-import galleryThubmnail from "../../assets/gallery_thumbnail.svg";
-import Divider from "@mui/material/Divider";
+import galleryThubmnail from "../../assets/static/gallery_thumbnail.svg";
 
 const MajorEvents = () => {
   return (

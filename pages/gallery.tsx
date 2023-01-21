@@ -1,8 +1,9 @@
 import Head from "next/head";
 import GalleryLayout from "../layouts/GalleryLayout";
 import Index from "../features/gallery/Index";
+import { NextPage } from "next";
 
-const Gallery = () => {
+const Gallery: NextPage = () => {
   return (
     <>
       <Head>

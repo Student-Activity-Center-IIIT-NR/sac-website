@@ -1,5 +1,5 @@
-import { Button, styled } from "@mui/material";
-import { Stack } from "@mui/system";
+import { styled } from "@mui/material";
+import Stack from "@mui/material/Stack";
 import React from "react";
 import DarkMode from "../common/DarkMode";
 import NavItem from "./NavItem";

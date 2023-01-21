@@ -1,21 +1,22 @@
 import React from "react";
-import club_background from "../../../assets/cultural_clubs_bg/club_background.png";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { StaticImageData } from "next/image";
 
 interface Props {
   clubName: string;
+  bg: StaticImageData;
 }
 
-function ClubBanner({ clubName }: Props) {
+function ClubBanner({ clubName, bg }: Props) {
   return (
     <>
       <Box
-        height={"320px"}
         sx={{
+          height: "320px",
           marginTop: "80px",
           maxWidth: "100vw",
-          background: `url(${club_background.src}) no-repeat`,
+          background: `url(${bg.src}) no-repeat`,
           backgroundSize: "cover",
           display: "flex",
           justifyContent: "center",
@@ -27,7 +28,7 @@ function ClubBanner({ clubName }: Props) {
           fontStyle={"normal"}
           fontWeight={"400"}
           fontSize={"96px"}
-          color={"#FFFFFF"}
+          color={"#fff"}
         >
           {clubName}
         </Typography>

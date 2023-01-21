@@ -1,7 +1,7 @@
 import { Stack, StackProps } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import sacBranding from "../../assets/sac_branding.svg";
+import sacBranding from "../../assets/sac_iiit_logo/sac_branding.svg";
 
 interface Props extends StackProps {
   url?: StaticImageData;

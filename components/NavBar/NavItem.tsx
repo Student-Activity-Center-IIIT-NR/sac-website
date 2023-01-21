@@ -1,14 +1,7 @@
-import React, { ReactNode, useMemo } from "react";
+import React, { ReactNode } from "react";
 import NextLink from "next/link";
-import {
-  ButtonProps,
-  Link as MuiLink,
-  LinkProps,
-  styled,
-  useTheme,
-} from "@mui/material";
+import { Link as MuiLink, LinkProps } from "@mui/material";
 import { Button } from "@mui/material";
-import { Box } from "@mui/system";
 
 type Props = {
   children: ReactNode;

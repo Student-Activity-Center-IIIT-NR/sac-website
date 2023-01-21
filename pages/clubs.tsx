@@ -1,8 +1,11 @@
 import Head from "next/head";
 import ClubsLayout from "../layouts/ClubsLayout";
-import ClubOverview from "../features/club/ClubOverview";
+import { NextPage } from "next";
+import TechnicalOverview from "../features/club/TechnicalOverview";
+import SportsOverview from "../features/club/SportsOverview";
+import CulturalOverview from "../features/club/CulturalOverview";
 
-const Clubs = () => {
+const Clubs: NextPage = () => {
   return (
     <>
       <Head>
@@ -12,7 +15,9 @@ const Clubs = () => {
       </Head>
 
       <ClubsLayout>
-        <ClubOverview />
+        <TechnicalOverview />
+        <CulturalOverview />
+        <SportsOverview />
       </ClubsLayout>
     </>
   );

@@ -1,82 +1,93 @@
-import React from "react";
-import Image from "next/image";
+import React, { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import clubs from "./ClubsInfo";
 import Link from "next/link";
 
-function ClubDescription({ clubName }: { clubName: string }) {
+interface Props {
+  children: ReactNode;
+  img: StaticImageData;
+}
+
+function ClubDescription({ children, img }: Props) {
   return (
     <>
-      {clubs
-        .filter((item) => item.name == clubName)
-        .map((data, index) => {
-          return (
-            <>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  columnGap: "71px",
-                  mt: "10px",
-                }}
-                key={index}
-              >
-                <Image
-                  src={data.image}
-                  alt=""
-                  width={"400px"}
-                  objectFit={"contain"}
-                />
-
-                <Box width={"643px"}>
-                  <Typography
-                    fontFamily={"Baskervville"}
-                    fontStyle={"normal"}
-                    fontWeight={"400"}
-                    fontSize={"16px"}
-                    textAlign={"justify"}
-                  >
-                    {data.description}
-                  </Typography>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      columnGap: "24px",
-                      marginTop: "20px",
-                    }}
-                  >
-                    {["Instagram", "Linkedin", "Youtube"].map((item, index) => {
-                      return (
-                        <>
-                          <Link href={""} key={index}>
-                            <Typography
-                              fontFamily={"Baskervville"}
-                              fontStyle={"italic"}
-                              fontWeight={"400"}
-                              fontSize={"16px"}
-                              textAlign="center"
-                              color={"#000000"}
-                              sx={{
-                                cursor: "pointer",
-                              }}
-                            >
-                              {item}
-                            </Typography>
-                          </Link>
-                        </>
-                      );
-                    })}
-                  </Box>
-                </Box>
-              </Box>
-            </>
-          );
-        })}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          columnGap: "71px",
+          mt: "87px",
+        }}
+      >
+        <Box
+          sx={{
+            width: "360px",
+            height: "360px",
+          }}
+        >
+          <Image
+            style={{
+              borderRadius: "24px",
+            }}
+            src={img}
+            alt=""
+            objectFit={"contain"}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            justifyContent: "center",
+            maxWidth: 600,
+          }}
+        >
+          <Typography
+            fontFamily={"Baskerville"}
+            fontStyle={"normal"}
+            fontWeight={"400"}
+            fontSize={"16px"}
+            textAlign={"justify"}
+          >
+            {children}
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              columnGap: "24px",
+              marginTop: "20px",
+            }}
+          >
+            {["Instagram", "Linkedin", "Youtube"].map((item, index) => {
+              return (
+                <>
+                  <Link href={""} key={index}>
+                    <Typography
+                      fontFamily={"Baskervville"}
+                      fontStyle={"italic"}
+                      fontWeight={"400"}
+                      fontSize={"16px"}
+                      textAlign="center"
+                      color={"#000000"}
+                      sx={{
+                        cursor: "pointer",
+                      }}
+                    >
+                      {item}
+                    </Typography>
+                  </Link>
+                </>
+              );
+            })}
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }

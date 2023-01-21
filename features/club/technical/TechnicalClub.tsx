@@ -1,26 +1,65 @@
 import Box from "@mui/material/Box";
 import BasicMenu from "./BasicMenu";
 import Stack from "@mui/material/Stack";
-import Image from "next/image";
-import AimlLogo from "../../../assets/aiml_logo.svg";
+import Image, { StaticImageData } from "next/image";
 import Typography from "@mui/material/Typography";
-import iconCall from "../../../assets/icon_call.svg";
-import iconMail from "../../../assets/icon_mail.svg";
 import Link from "next/link";
 import { styled } from "@mui/material";
 import bgTechTop from "../../../assets/bg_tech_top.svg";
 
-const StyledLink = styled(Typography)({
-  fontFamily: "Rubik",
-  fontStyle: "italic",
-  fontWeight: "700",
-  fontSize: "20px",
-  lineHeight: "28px",
-  color: "#73DACA",
-  cursor: "pointer",
-});
+interface Props {
+  name: string;
+  desc: string;
+  bgTop: StaticImageData;
+  logo: StaticImageData;
+  color: string;
+}
 
-const TechnicalClub = () => {
+const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
+  const StyledLink = styled(Typography)({
+    fontFamily: "Rubik",
+    fontStyle: "italic",
+    fontWeight: "700",
+    fontSize: "20px",
+    lineHeight: "28px",
+    color: color,
+    cursor: "pointer",
+  });
+
+  const IconMail = () => {
+    return (
+      <svg
+        width="27"
+        height="22"
+        viewBox="0 0 27 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24.3 0H2.7C1.215 0 0.0135 1.2375 0.0135 2.75L0 19.25C0 20.7625 1.215 22 2.7 22H24.3C25.785 22 27 20.7625 27 19.25V2.75C27 1.2375 25.785 0 24.3 0ZM24.3 5.5L13.5 12.375L2.7 5.5V2.75L13.5 9.625L24.3 2.75V5.5Z"
+          fill={color}
+        />
+      </svg>
+    );
+  };
+
+  const IconCall = () => {
+    return (
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.6396 21.2374C17.2382 21.2374 14.9 20.7001 12.625 19.6254C10.35 18.5515 8.33681 17.1345 6.58542 15.3744C4.83403 13.6136 3.42136 11.6001 2.34742 9.33375C1.27275 7.06814 0.73542 4.73464 0.73542 2.33325C0.73542 1.86381 0.893587 1.47561 1.20992 1.16867C1.52553 0.861724 1.90903 0.708252 2.36042 0.708252H6.74792C7.23542 0.708252 7.63734 0.834641 7.95367 1.08742C8.26928 1.3402 8.48125 1.70131 8.58959 2.17075L9.26667 5.63742C9.35695 6.0527 9.35695 6.41814 9.26667 6.73375C9.17639 7.05009 8.99584 7.33464 8.725 7.58742L6.01667 10.1062C6.68473 11.2256 7.51095 12.2772 8.49534 13.2608C9.479 14.2452 10.5486 15.0895 11.7042 15.7937L14.3583 13.1937C14.6472 12.9228 14.9722 12.7376 15.3333 12.6379C15.6944 12.539 16.0736 12.5256 16.4708 12.5978L19.8021 13.3291C20.2715 13.4374 20.6326 13.6404 20.8854 13.9379C21.1382 14.2362 21.2646 14.6201 21.2646 15.0895V19.5853C21.2646 20.0548 21.1068 20.4473 20.7912 20.7629C20.4748 21.0793 20.091 21.2374 19.6396 21.2374Z"
+          fill={color}
+        />
+      </svg>
+    );
+  };
+
   const EventList = () => {
     return (
       <>
@@ -81,7 +120,7 @@ const TechnicalClub = () => {
         sx={{
           height: "670px",
           mt: "-50px",
-          background: `url(${bgTechTop.src})`,
+          background: `url(${bgTop.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -119,7 +158,7 @@ const TechnicalClub = () => {
               alignItems="center"
               color="#343B58"
             >
-              # AIML
+              # {name}
             </Typography>
             <Stack direction={"row"} justifyContent={"center"} columnGap="24px">
               <Box
@@ -129,7 +168,7 @@ const TechnicalClub = () => {
                 }}
               >
                 <Image
-                  src={AimlLogo}
+                  src={logo}
                   width="262px"
                   height="258px"
                   alt=""
@@ -166,7 +205,7 @@ const TechnicalClub = () => {
                     lineHeight="28px"
                     color="#565A6E"
                   >
-                    Artificial Intelligence and Machine Learning{" "}
+                    {desc}
                   </Typography>
                 </Box>
                 <Stack direction={"row"} columnGap={"24px"}>
@@ -174,7 +213,7 @@ const TechnicalClub = () => {
                     sx={{
                       width: "166px",
                       height: "128px",
-                      border: "1px solid #73DACA",
+                      border: `1px solid ${color}`,
                       borderRadius: "24px",
                       p: "8px 18px",
                       display: "flex",
@@ -198,7 +237,7 @@ const TechnicalClub = () => {
                       sx={{
                         width: "72px",
                         height: "48px",
-                        border: "1px solid #73DACA",
+                        border: `1px solid ${color}`,
                         borderRadius: "24px",
                         display: "flex",
                         justifyContent: "center",
@@ -206,18 +245,13 @@ const TechnicalClub = () => {
                         cursor: "pointer",
                       }}
                     >
-                      <Image
-                        src={iconMail}
-                        width={"27px"}
-                        height={"22px"}
-                        alt=""
-                      />
+                      <IconMail />
                     </Box>
                     <Box
                       sx={{
                         width: "72px",
                         height: "48px",
-                        border: "1px solid #73DACA",
+                        border: `1px solid ${color}`,
                         borderRadius: "24px",
                         display: "flex",
                         justifyContent: "center",
@@ -225,12 +259,7 @@ const TechnicalClub = () => {
                         cursor: "pointer",
                       }}
                     >
-                      <Image
-                        src={iconCall}
-                        width={"27px"}
-                        height={"22px"}
-                        alt=""
-                      />
+                      <IconCall />
                     </Box>
                   </Stack>
                 </Stack>

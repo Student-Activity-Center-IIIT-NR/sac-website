@@ -1,12 +1,12 @@
 import Image from "next/image";
-import AtharvLogo from "../../assets/atharv_logo.png";
+import AtharvLogo from "../../assets/sports_icons/atharv_logo.png";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { itemData } from "../club/sports/SportsGalleryData";
-import swipe from "../../assets/icon_arrow_longBlack.svg";
+import swipe from "../../assets/icon/icon_arrow_longBlack.svg";
 import Link from "next/link";
 
 const SportsOverview = () => {
