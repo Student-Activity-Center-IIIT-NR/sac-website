@@ -20,6 +20,12 @@ const Inquizitive = () => {
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"
+          event1Name="Kaggle Competition"
+          event1Date="18 Feb 2023"
+          event1Desc="Competition on Kaggle"
+          event2Name="Hackathon/Quiz"
+          event2Date="25 March 2023"
+          event2Desc="AIML Hackathon"
         />
         <ClubDescription bg={inquizitiveBg}>
           True to its name, Inquisitive is the abode of the most curious minds
@@ -42,8 +48,8 @@ const Inquizitive = () => {
             pb: 6,
           }}
         >
-          <Crew />
-          <Gallery />
+          {/* <Crew />
+          <Gallery /> */}
         </Box>
       </ClubsLayout>
     </>

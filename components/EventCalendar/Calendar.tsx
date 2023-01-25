@@ -7,10 +7,18 @@ import { calendarData } from "./EventCalendarData";
 
 const Calendar = () => {
   const currDate = new Date();
+  const currentDate = currDate.toJSON().slice(0, 10);
+
+  let dateToFilter;
 
   const filteredData = calendarData.filter((item) => {
-    return item.date.slice(0, 2) >= currDate.getDate().toString();
+    dateToFilter = new Date(item.date.split("-").reverse().join("-"));
+    return dateToFilter >= new Date(currentDate);
   });
+
+  // const filteredData = calendarData.filter(()=>{
+
+  // })
 
   return (
     <>

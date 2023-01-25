@@ -32,7 +32,7 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

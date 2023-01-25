@@ -8,6 +8,9 @@ import LinkedInIcon from "../../assets/icon/icon_linkedin.svg";
 import TwitterIcon from "../../assets/icon/icon_twitter.svg";
 import FacebookIcon from "../../assets/icon/icon_facebook.svg";
 import InstagramIcon from "../../assets/icon/icon_instagram.svg";
+import logo1 from "../../assets/footer/logo1.png";
+import logo2 from "../../assets/footer/logo2.png";
+import { appendFile } from "fs";
 
 const Footer = () => {
   return (
@@ -32,8 +35,8 @@ const Footer = () => {
             <Image
               src={sac_branding}
               alt="sac_logo"
-              height="170px"
-              width="170px"
+              height="210px"
+              width="210px"
               objectFit="contain"
             />
             <Box
@@ -82,13 +85,43 @@ const Footer = () => {
                 >
                   Useful links
                 </Typography>
-                <Link href={sac_branding.src} download>
+                <a href={logo2.src} download target={"_blank"} rel="noreferrer">
                   The SAC Logo
-                </Link>
-                <Link href={"#"}>Grievance Form</Link>
-                <Link href={"#"}>Resource Issue Form</Link>
-                <Link href={"#"}>Leave Application Form</Link>
-                <Link href={"#"}>Event Proposal Form</Link>
+                </a>
+                <a
+                  href={"https://bit.ly/IIITNR_GP"}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Grievance Form
+                </a>
+                <a
+                  href={
+                    "https://docs.google.com/document/d/15rKCq-n7H4Ok589xPMYibAY82XnjydwcPZM16ZBDWSE/edit?usp=share_link"
+                  }
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Resource Issue Form
+                </a>
+                <a
+                  href={
+                    "https://docs.google.com/document/d/1COgFRoRAHwcpUZrhA7T5Z00ZrI-VZt1d/edit?usp=share_link&ouid=116076346421774934176&rtpof=true&sd=true"
+                  }
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Leave Application Form
+                </a>
+                <a
+                  href={
+                    "https://docs.google.com/document/d/1hkHSPtazp0gqNbDiZkT13WnBBh1YCDJW/edit?usp=share_link&ouid=116076346421774934176&rtpof=true&sd=true"
+                  }
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Event Proposal Form
+                </a>
               </Box>
             </Box>
           </Box>
@@ -99,18 +132,17 @@ const Footer = () => {
               justifyContent: "space-between",
               alignItems: "center",
               pb: "28px",
-              pl: "60px",
-              pr: "180px",
+              ml: 96,
             }}
           >
-            <Typography
+            {/* <Typography
               variant="body1"
               fontFamily={"Lato"}
               fontWeight={400}
               lineHeight={"36px"}
             >
               Student Activity Center
-            </Typography>
+            </Typography> */}
             <Box>
               <Typography
                 variant="body1"

@@ -34,7 +34,7 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

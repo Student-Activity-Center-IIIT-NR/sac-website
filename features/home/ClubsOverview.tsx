@@ -4,7 +4,9 @@ import Typography from "@mui/material/Typography";
 import { ReactNode, useState } from "react";
 import Zoom from "@mui/material/Zoom";
 import Image, { StaticImageData } from "next/image";
-import techSvg from "../../assets/test/Frame.png"; //remove
+import artSports from "../../assets/static/art_sports.png";
+import artCultural from "../../assets/static/art_cultural.png";
+import artTechnical from "../../assets/static/art_technical.png";
 
 interface Props {
   title: string;
@@ -112,7 +114,7 @@ const ClubsOverview = () => {
             <Box mx={8}>
               <OverviewData
                 title="Coding, Hacking, Problem Solving, Machine Learning, Circuits"
-                img={techSvg}
+                img={artTechnical}
               >
                 The technical clubs under SAC promote hands-on and cooperative
                 learning and also engages students in problem-solving and
@@ -166,7 +168,7 @@ const ClubsOverview = () => {
             <Box mx={8}>
               <OverviewData
                 title="Music, Art, Dance, Photography, Debate, Discussions, Poetry and Drama"
-                img={techSvg}
+                img={artCultural}
               >
                 Cultural clubs under SAC IIIT Naya Raipur, provide a way for
                 students to explore and engage in activities outside their
@@ -216,7 +218,7 @@ const ClubsOverview = () => {
             <Box mx={8}>
               <OverviewData
                 title="Passion, Commitment, Dedication, Enthusiasm, Team spirit"
-                img={techSvg}
+                img={artSports}
               >
                 Sports clubs provide a way for students to connect with others
                 who share their interests and build a sense of community within

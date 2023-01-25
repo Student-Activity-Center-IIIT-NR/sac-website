@@ -20,7 +20,7 @@ const Index = () => {
           textAlign={"center"}
           mb={"104px"}
         >
-          EVENTS
+          &nbsp;EVENTS
         </Typography>
         <Calendar />
         <MajorEvents />

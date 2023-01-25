@@ -7,12 +7,21 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Pagination from "@mui/material/Pagination";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import test from "../../../assets/test/test.jpeg"; //remove
 
-const Gallery = () => {
+interface Props {
+  props: GalleryProps[];
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+const Gallery = ({ props }: Props) => {
   const DropDown = () => {
     const [year, setYear] = useState("");
 
@@ -23,6 +32,7 @@ const Gallery = () => {
     return (
       <>
         <FormControl
+          disabled
           sx={{
             width: "128px",
           }}
@@ -42,11 +52,16 @@ const Gallery = () => {
 
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("");
+  const [event, setEvent] = useState(props[0]);
 
-  const count = Math.ceil(images.length / 4);
+  const count = Math.ceil(event.img.length / 4);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
+  };
+
+  const handleClickEvent = (index: number) => {
+    setEvent(props[index]);
   };
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -90,7 +105,7 @@ const Gallery = () => {
             <Stack
               direction={"row"}
               justifyContent={"space-between"}
-              width={"60%"}
+              width={"50%"}
             >
               <Typography
                 fontFamily="Rubik"
@@ -100,7 +115,7 @@ const Gallery = () => {
                 lineHeight="28px"
                 color="#565A6E"
               >
-                Event Name
+                {event.name}
               </Typography>
               <Typography
                 fontFamily="Rubik"
@@ -110,52 +125,63 @@ const Gallery = () => {
                 lineHeight="28px"
                 color="#565A6E"
               >
-                Event Date
+                {event.date}
               </Typography>
             </Stack>
           </Stack>
           <Stack direction={"row"} mt={"52px"} justifyContent={"space-between"}>
-            <Stack direction={"column"} rowGap={"40px"} width={"30%"}>
-              <Typography
-                fontFamily="Rubik"
-                fontStyle="normal"
-                fontWeight="700"
-                fontSize="20px"
-                lineHeight="28px"
-                color="#565A6E"
-              >
-                Event 1
-              </Typography>
-              <Divider />
-              <Typography
-                fontFamily="Rubik"
-                fontStyle="normal"
-                fontWeight="700"
-                fontSize="20px"
-                lineHeight="28px"
-                color="#565A6E"
-              >
-                Event 2
-              </Typography>
+            <Stack direction={"column"} gap={6} width={"30%"}>
+              {props.map((step, index) => {
+                return (
+                  <Box key={index}>
+                    <Typography
+                      fontFamily="Rubik"
+                      fontStyle="normal"
+                      fontWeight="700"
+                      fontSize="20px"
+                      lineHeight="28px"
+                      color="#565A6E"
+                      sx={{ cursor: "pointer" }}
+                      onClick={() => {
+                        handleClickEvent(index);
+                      }}
+                    >
+                      {step.name}
+                    </Typography>
+                    <Divider />
+                  </Box>
+                );
+              })}
             </Stack>
-            <Stack direction={"column"} maxWidth={"60%"}>
+            <Stack direction={"column"} maxWidth={"50%"}>
               <Grid2 container spacing={3} justifyContent={"space-between"}>
-                {images.slice((page - 1) * 4, (page - 1) * 4 + 4).map(() => {
-                  return (
-                    <>
-                      <Grid2 xs={6} maxWidth={"fit-content"}>
-                        <Image
-                          alt=""
-                          src={test}
-                          objectFit={"cover"}
-                          style={{
-                            borderRadius: "8px",
-                          }}
-                        />
-                      </Grid2>
-                    </>
-                  );
-                })}
+                {event.img
+                  .slice((page - 1) * 4, (page - 1) * 4 + 4)
+                  .map((step) => {
+                    return (
+                      <>
+                        <Grid2 xs={6} maxWidth={"fit-content"}>
+                          <Box
+                            sx={{
+                              width: "311px",
+                              height: "232px",
+                            }}
+                          >
+                            <Image
+                              alt=""
+                              width="311px"
+                              height="232px"
+                              src={step}
+                              objectFit={"cover"}
+                              style={{
+                                borderRadius: "8px",
+                              }}
+                            />
+                          </Box>
+                        </Grid2>
+                      </>
+                    );
+                  })}
               </Grid2>
               <Box display={"flex"} justifyContent={"center"}>
                 <div
@@ -182,66 +208,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-const images = [
-  {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    title: "Tomato basil",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-  },
-];

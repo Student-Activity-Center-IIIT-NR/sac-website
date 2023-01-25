@@ -6,9 +6,10 @@ interface SingleDateProps {
   date: string;
   icon?: StaticImageData;
   name: string;
+  flag?: boolean;
 }
 
-const SingleDate = ({ date, icon, name }: SingleDateProps) => {
+const SingleDate = ({ date, icon, name, flag }: SingleDateProps) => {
   const currDate = new Date();
 
   return (
@@ -22,7 +23,9 @@ const SingleDate = ({ date, icon, name }: SingleDateProps) => {
           fontSize={"24px"}
           lineHeight={"28px"}
           color={
-            Number(date.slice(3, 5)) == currDate.getMonth() + 1
+            flag
+              ? ""
+              : Number(date.slice(3, 5)) == currDate.getMonth() + 1
               ? "#000000"
               : "#A3A3A3"
           }
@@ -37,10 +40,11 @@ const SingleDate = ({ date, icon, name }: SingleDateProps) => {
               height={"8px"}
               width={"8px"}
               style={{
-                opacity:
-                  Number(date.slice(3, 5)) == currDate.getMonth() + 1
-                    ? "1"
-                    : ".5",
+                opacity: flag
+                  ? ""
+                  : Number(date.slice(3, 5)) == currDate.getMonth() + 1
+                  ? "1"
+                  : ".5",
               }}
             />
           )}
@@ -53,7 +57,9 @@ const SingleDate = ({ date, icon, name }: SingleDateProps) => {
             lineHeight={"13px"}
             maxWidth={"103px"}
             color={
-              Number(date.slice(3, 5)) == currDate.getMonth() + 1
+              flag
+                ? ""
+                : Number(date.slice(3, 5)) == currDate.getMonth() + 1
                 ? "#000000"
                 : "#A3A3A3"
             }

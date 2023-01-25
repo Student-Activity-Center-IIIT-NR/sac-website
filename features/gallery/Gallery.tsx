@@ -61,6 +61,7 @@ const Gallery = () => {
   const handleClickName = (name: Name) => {
     setName(name);
   };
+
   const handleClickEvent = (index: number) => {
     setEvent(ClubEvents[name][index]);
   };

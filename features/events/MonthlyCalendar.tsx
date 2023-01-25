@@ -1,4 +1,5 @@
 import Stack from "@mui/material/Stack";
+import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconTriangle from "../../assets/calendar_icons/triangle.svg";
@@ -12,6 +13,12 @@ import SingleDate from "../../components/EventCalendar/SingleDate";
 import { calendarData } from "../../components/EventCalendar/EventCalendarData";
 import { NextPage } from "next";
 
+interface MonthlyCalendarProps {
+  date: string;
+  eventName: string;
+  icon: StaticImageData;
+}
+
 interface ItemProps {
   name: string;
   icon: StaticImageData;
@@ -19,11 +26,57 @@ interface ItemProps {
 }
 
 const MonthlyCalendar: NextPage = () => {
-  const currDate = new Date();
+  let date = new Date();
+  const currentDate = date.toJSON().slice(0, 10);
+  let dateToFilter: Date;
 
   const filteredData = calendarData.filter((item) => {
-    return item.date.slice(0, 2) >= currDate.getDate().toString();
+    dateToFilter = new Date(item.date.split("-").reverse().join("-"));
+    return dateToFilter >= new Date(currentDate);
   });
+
+  const [monthWiseData, setMonthWiseData] = useState<{
+    [key: number]: MonthlyCalendarProps[];
+  }>();
+
+  const monthsName = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const splitCalendarData = (filteredData: MonthlyCalendarProps[]) => {
+    return filteredData.reduce(
+      (
+        months: { [key: number]: MonthlyCalendarProps[] },
+        event: MonthlyCalendarProps
+      ) => {
+        const month = new Date(
+          event.date.split("-").reverse().join("-")
+        ).getMonth();
+
+        if (!months[month]) {
+          months[month] = [];
+        }
+        months[month].push(event);
+        return months;
+      },
+      []
+    );
+  };
+
+  useEffect(() => {
+    return setMonthWiseData(splitCalendarData(filteredData));
+  }, []);
 
   const Item = ({ name, icon, color }: ItemProps) => {
     return (
@@ -62,31 +115,45 @@ const MonthlyCalendar: NextPage = () => {
     return (
       <>
         <Stack mt={"80px"}>
-          <Typography
-            fontFamily={"Rubik"}
-            fontStyle={"normal"}
-            fontWeight={500}
-            fontSize={"24px"}
-            lineHeight={"28px"}
-            color={"#000"}
-          >
-            {currDate.toLocaleString("default", { month: "long" })}
-          </Typography>
-          <Divider
-            sx={{
-              mt: "9px",
-              border: "1px solid #000000",
-            }}
-          />
-          <Grid2 container rowGap={"80px"} mt={"80px"}>
-            <Grid2 xs={2}>
-              <SingleDate
-                date={calendarData[0].date}
-                name={calendarData[0].eventName}
-                icon={calendarData[0].icon}
-              />
-            </Grid2>
-          </Grid2>
+          {monthWiseData &&
+            monthWiseData[0].map((_item: any, index: number) => {
+              return (
+                <>
+                  <Typography
+                    fontFamily={"Rubik"}
+                    fontStyle={"normal"}
+                    fontWeight={500}
+                    fontSize={"24px"}
+                    lineHeight={"28px"}
+                    color={"#000"}
+                  >
+                    {monthsName[index]}
+                  </Typography>
+                  <Divider
+                    sx={{
+                      mt: "9px",
+                      border: "1px solid #000000",
+                    }}
+                  />
+                  <Grid2 container rowGap={"80px"} my={"80px"}>
+                    {monthWiseData[index].map((data, index) => {
+                      return (
+                        <>
+                          <Grid2 xs={2} key={index}>
+                            <SingleDate
+                              date={data.date}
+                              name={data.eventName}
+                              icon={data.icon}
+                              flag={true}
+                            />
+                          </Grid2>
+                        </>
+                      );
+                    })}
+                  </Grid2>
+                </>
+              );
+            })}
         </Stack>
       </>
     );
@@ -124,9 +191,7 @@ const MonthlyCalendar: NextPage = () => {
             );
           })}
         </Stack>
-        {filteredData.map((step, index) => {
-          return <Month props={step} key={index} />;
-        })}
+        <Month />
       </Stack>
     </>
   );

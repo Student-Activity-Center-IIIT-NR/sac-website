@@ -3,12 +3,21 @@ import ClubsLayout from "../../../layouts/ClubsLayout";
 import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
+import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/technical/Crew";
 import Gallery from "../../../features/club/common/Gallery";
 import aimlBg from "../../../assets/technical_clubs_bg/aiml.jpeg";
 import aimlBgTop from "../../../assets/technical_clubs_bg/bg_aiml_top.svg";
 import aimlBgBottom from "../../../assets/technical_clubs_bg/bg_aiml_bottom.svg";
 import aimlLogo from "../../../assets/technical_clubs_bg/aiml_logo.svg";
+
+// import team members
+import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
+import Sainath from "../../../assets/team_22-23/Sainath.jpeg";
+import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+import Shivaibhav from "../../../assets/team_22-23/Shivaibhav.jpeg";
+import saiprabhat from "../../../assets/team_22-23/saiprabhat.jpeg";
+import Lakshya_Garg from "../../../assets/team_22-23/Lakshya_Garg.jpeg";
 
 const Aiml = () => {
   return (
@@ -20,6 +29,12 @@ const Aiml = () => {
           bgTop={aimlBgTop}
           logo={aimlLogo}
           color="#73DACA"
+          event1Name="Kaggle Competition"
+          event1Date="18 Feb 2023"
+          event1Desc="Competition on Kaggle"
+          event2Name="Hackathon/Quiz"
+          event2Date="25 March 2023"
+          event2Desc="AIML Hackathon"
         />
         <ClubDescription bg={aimlBg}>
           The AI/ML club is focused on helping individuals evolve from admirers
@@ -42,8 +57,8 @@ const Aiml = () => {
             pb: 6,
           }}
         >
-          <Crew />
-          <Gallery />
+          <Crew props={crew} />
+          <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
     </>
@@ -51,3 +66,75 @@ const Aiml = () => {
 };
 
 export default Aiml;
+
+interface CrewProps {
+  img: StaticImageData;
+  name: string;
+  post: string;
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+const crew: CrewProps[] = [
+  {
+    img: Ghanta_Sai_Krishna,
+    name: "G. Sai Krishna",
+    post: "Club Secretary",
+  },
+  {
+    img: Sainath,
+    name: "S. Sainath Reddy",
+    post: "Vice Secretary",
+  },
+  {
+    img: A_Bhumika_Rao,
+    name: "Bhumika Rao",
+    post: "Core Member",
+  },
+  {
+    img: Shivaibhav,
+    name: "Shivaibhav",
+    post: "Core Member",
+  },
+  {
+    img: saiprabhat,
+    name: "Sai Prabhat",
+    post: "Core Member",
+  },
+  {
+    img: Lakshya_Garg,
+    name: "Lakshya Garg",
+    post: "Core Member",
+  },
+];
+
+const gallery: GalleryProps[] = [
+  {
+    name: "SCIη′TFIC",
+    date: "14 January 2023",
+    img: [
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+    ],
+  },
+  {
+    name: "Test",
+    date: "14 January 2023",
+    img: [
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+    ],
+  },
+];
