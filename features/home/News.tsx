@@ -6,11 +6,10 @@ import Container from "@mui/material/Container";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import testImage from "../../assets/test/test.jpeg"; //test image; remove in production
+import { NextPage } from "next";
+import newsData from "./NewsData";
 
-// TODO: change the news data as json input from a file rendered by map function
-
-interface Props {
+interface NewsProps {
   img?: StaticImageData;
   title: string;
   children: ReactNode;
@@ -18,23 +17,31 @@ interface Props {
   author?: string;
 }
 
-const News = () => {
-  const Item = ({ img, title, children, authorImg, author }: Props) => {
+const News: NextPage = () => {
+  const Item = ({ img, title, children, authorImg, author }: NewsProps) => {
     return (
       <Stack
         spacing={1.2}
         sx={{
           justifyContent: "center",
+          maxHeight: 600,
         }}
       >
         {img && (
-          <Image
-            src={img}
-            alt=""
-            height="208px"
-            width="262px"
-            objectFit="cover"
-          />
+          <Box
+            sx={{
+              height: "208px",
+              width: "262px",
+            }}
+          >
+            <Image
+              src={img}
+              alt=""
+              height="208px"
+              width="262px"
+              objectFit="cover"
+            />
+          </Box>
         )}
         <Typography
           variant="title1"
@@ -49,6 +56,7 @@ const News = () => {
           fontFamily={"Playfair Display"}
           fontWeight={400}
           lineHeight={"33px"}
+          overflow={"hidden"}
         >
           {children}
         </Typography>
@@ -115,105 +123,81 @@ const News = () => {
           <Grid2 container spacing={1.5} justifyContent="center">
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[0].img}
+                title={newsData[0].title}
+                authorImg={newsData[0].authImg}
+                author={newsData[0].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[0].text}
               </Item>
               <Divider orientation="horizontal" />
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[1].img}
+                title={newsData[1].title}
+                authorImg={newsData[1].authImg}
+                author={newsData[1].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[1].text}
               </Item>
             </Grid2>
             <Divider orientation="vertical" flexItem />
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[2].img}
+                title={newsData[2].title}
+                authorImg={newsData[2].authImg}
+                author={newsData[2].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[2].text}
               </Item>
               <Divider orientation="horizontal" />
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[3].img}
+                title={newsData[3].title}
+                authorImg={newsData[3].authImg}
+                author={newsData[3].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[3].text}
               </Item>
             </Grid2>
             <Divider orientation="vertical" flexItem />
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[4].img}
+                title={newsData[4].title}
+                authorImg={newsData[4].authImg}
+                author={newsData[4].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[4].text}
               </Item>
               <Divider orientation="horizontal" />
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[5].img}
+                title={newsData[5].title}
+                authorImg={newsData[5].authImg}
+                author={newsData[5].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[5].text}
               </Item>
             </Grid2>
             <Divider orientation="vertical" flexItem />
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[6].img}
+                title={newsData[6].title}
+                authorImg={newsData[6].authImg}
+                author={newsData[6].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[6].text}
               </Item>
               <Divider orientation="horizontal" />
               <Item
-                img={testImage}
-                title={"Garba Night Celebration"}
-                authorImg={testImage}
-                author={"Author"}
+                img={newsData[7].img}
+                title={newsData[7].title}
+                authorImg={newsData[7].authImg}
+                author={newsData[7].authName}
               >
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful before final copy is
-                available.
+                {newsData[7].text}
               </Item>
             </Grid2>
           </Grid2>

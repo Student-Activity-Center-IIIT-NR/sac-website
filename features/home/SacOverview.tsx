@@ -2,7 +2,7 @@ import { Stack, Typography, styled } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import infoIcon from "../../assets/icon/icon_info.svg";
-import overviewArt from "../../assets/static/art_overview.svg";
+import overviewArt from "../../assets/static/art_overview.png";
 import aimIcon from "../../assets/icon/icon_aim.svg";
 
 const DescriptionContainerStyled = styled(Stack)({

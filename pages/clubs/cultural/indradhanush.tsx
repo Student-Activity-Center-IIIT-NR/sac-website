@@ -29,7 +29,7 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

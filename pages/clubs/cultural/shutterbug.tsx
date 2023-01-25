@@ -29,7 +29,7 @@ const ShutterBug: FunctionComponent<ShutterBugProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

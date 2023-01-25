@@ -13,9 +13,27 @@ interface Props {
   bgTop: StaticImageData;
   logo: StaticImageData;
   color: string;
+  event1Name: string;
+  event2Name: string;
+  event1Date: string;
+  event2Date: string;
+  event1Desc?: string;
+  event2Desc?: string;
 }
 
-const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
+const TechnicalClub = ({
+  name,
+  desc,
+  bgTop,
+  logo,
+  color,
+  event1Name,
+  event2Name,
+  event1Date,
+  event2Date,
+  event1Desc,
+  event2Desc,
+}: Props) => {
   const StyledLink = styled(Typography)({
     fontFamily: "Rubik",
     fontStyle: "italic",
@@ -60,7 +78,15 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
     );
   };
 
-  const EventList = () => {
+  const EventList = ({
+    name,
+    date,
+    desc,
+  }: {
+    name: string;
+    date: string;
+    desc?: string;
+  }) => {
     return (
       <>
         <Box
@@ -87,7 +113,7 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
                 color: "#565A6E",
               }}
             >
-              Event 1
+              {name}
             </li>
             <Typography
               fontFamily="Rubik"
@@ -96,7 +122,7 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
               fontSize="20px"
               color="#565A6E"
             >
-              DD/MM/YYYY
+              {date}
             </Typography>
           </Stack>
           <Typography
@@ -107,7 +133,7 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
             lineHeight="28px"
             color="#565A6E"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            {desc}
           </Typography>
         </Box>
       </>
@@ -291,8 +317,8 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
             >
               Upcoming Events
             </Typography>
-            <EventList />
-            <EventList />
+            <EventList name={event1Name} date={event1Date} desc={event1Desc} />
+            <EventList name={event2Name} date={event2Date} desc={event2Desc} />
           </Box>
         </Stack>
       </Box>

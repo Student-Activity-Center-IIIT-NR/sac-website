@@ -16,10 +16,16 @@ const Ciphercell = () => {
       <ClubsLayout>
         <TechnicalClub
           name="Ciphercell"
-          desc=""
+          desc="The Information Security Club"
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
+          event1Name="Kaggle Competition"
+          event1Date="18 Feb 2023"
+          event1Desc="Competition on Kaggle"
+          event2Name="Hackathon/Quiz"
+          event2Date="25 March 2023"
+          event2Desc="AIML Hackathon"
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of
@@ -45,8 +51,8 @@ const Ciphercell = () => {
             pb: 6,
           }}
         >
-          <Crew />
-          <Gallery />
+          {/* <Crew />
+          <Gallery /> */}
         </Box>
       </ClubsLayout>
     </>

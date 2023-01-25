@@ -16,10 +16,16 @@ const Comet = () => {
       <ClubsLayout>
         <TechnicalClub
           name="Comet"
-          desc=""
+          desc="Community of Electronics"
           bgTop={cometBgTop}
           logo={cometLogo}
           color="#FF9E64"
+          event1Name="Kaggle Competition"
+          event1Date="18 Feb 2023"
+          event1Desc="Competition on Kaggle"
+          event2Name="Hackathon/Quiz"
+          event2Date="25 March 2023"
+          event2Desc="AIML Hackathon"
         />
         <ClubDescription bg={cometBg}>
           The club was established in 2018 under the name CECoT (Community of
@@ -42,8 +48,8 @@ const Comet = () => {
             pb: 6,
           }}
         >
-          <Crew />
-          <Gallery />
+          {/* <Crew />
+          <Gallery /> */}
         </Box>
       </ClubsLayout>
     </>

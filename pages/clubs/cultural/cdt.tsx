@@ -31,7 +31,7 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

@@ -1,10 +1,25 @@
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import starIcon from "../../assets/calendar_icons/star.svg";
+import Image, { StaticImageData } from "next/image";
 
-const PaperItem = () => {
+interface PaperItemProps {
+  startDate: string;
+  endDate: string;
+  startName: string;
+  endName: string;
+  startIcon?: StaticImageData;
+  endIcon?: StaticImageData;
+}
+
+const PaperItem = ({
+  startDate,
+  endDate,
+  startName,
+  endName,
+  startIcon,
+  endIcon,
+}: PaperItemProps) => {
   return (
     <>
       <Paper
@@ -34,7 +49,7 @@ const PaperItem = () => {
               fontSize={"36px"}
               lineHeight={"43px"}
             >
-              07
+              {startDate}
             </Typography>
             <Typography
               variant="body1"
@@ -50,20 +65,24 @@ const PaperItem = () => {
               fontSize={"36px"}
               lineHeight={"43px"}
             >
-              09
+              {endDate}
             </Typography>
           </Stack>
           <Stack spacing={2}>
             <Stack direction={"row"} spacing={"48px"} alignItems={"center"}>
-              <Image src={starIcon} alt="" height={"24px"} width={"24px"} />
+              {startIcon && (
+                <Image src={startIcon} alt="" height={"24px"} width={"24px"} />
+              )}
               <Typography variant="body1" maxWidth={"138px"}>
-                Ethnic Day (Ganesh Chaturthi)
+                {startName}
               </Typography>
             </Stack>
             <Stack direction={"row"} spacing={"48px"} alignItems={"center"}>
-              <Image src={starIcon} alt="" height={"24px"} width={"24px"} />
+              {endIcon && (
+                <Image src={endIcon} alt="" height={"24px"} width={"24px"} />
+              )}
               <Typography variant="body1" maxWidth={"138px"}>
-                Ethnic Day (Ganesh Chaturthi)
+                {endName}
               </Typography>
             </Stack>
           </Stack>

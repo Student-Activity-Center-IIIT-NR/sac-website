@@ -33,7 +33,7 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
         </ClubDescription>
         <ClubEvents />
         <ClubCrew />
-        <Gallery />
+        {/* <Gallery /> */}
       </ClubsLayout>
     </>
   );

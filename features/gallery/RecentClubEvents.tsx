@@ -6,18 +6,19 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
-import test from "../../assets/test/test.jpeg"; //remove in prod
+import { recentClubEvents } from "./GalleryData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const RecentClubEvents = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-  //   const maxSteps = images.length;
 
   const handleStepChange = (step: number) => {
     setActiveStep(step);
   };
+
+  const len = recentClubEvents.length;
 
   return (
     <>
@@ -55,8 +56,8 @@ const RecentClubEvents = () => {
               borderRadius: "24px",
             }}
           >
-            {images.map((step, index) => (
-              <div key={step.label}>
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box
                     sx={{
@@ -66,9 +67,12 @@ const RecentClubEvents = () => {
                     }}
                   >
                     <Image
-                      // src={step.imgPath}
-                      src={test}
-                      alt={step.label}
+                      src={
+                        index === 0
+                          ? recentClubEvents[len - 1].img
+                          : recentClubEvents[index - 1].img
+                      }
+                      alt={""}
                       height={"270px"}
                       width={"270px"}
                       objectFit={"cover"}
@@ -92,8 +96,8 @@ const RecentClubEvents = () => {
               borderRadius: "24px",
             }}
           >
-            {images.map((step, index) => (
-              <div key={step.label}>
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box
                     sx={{
@@ -103,9 +107,8 @@ const RecentClubEvents = () => {
                     }}
                   >
                     <Image
-                      // src={step.imgPath}
-                      src={test}
-                      alt={step.label}
+                      src={step.img}
+                      alt={step.name}
                       height={"356px"}
                       width={"356px"}
                       objectFit={"cover"}
@@ -129,8 +132,8 @@ const RecentClubEvents = () => {
               borderRadius: "24px",
             }}
           >
-            {images.map((step, index) => (
-              <div key={step.label}>
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box
                     sx={{
@@ -140,9 +143,12 @@ const RecentClubEvents = () => {
                     }}
                   >
                     <Image
-                      // src={step.imgPath}
-                      src={test}
-                      alt={step.label}
+                      src={
+                        index === len - 1
+                          ? recentClubEvents[0].img
+                          : recentClubEvents[index + 1].img
+                      }
+                      alt={""}
                       height={"270px"}
                       width={"270px"}
                       objectFit={"cover"}
@@ -166,7 +172,7 @@ const RecentClubEvents = () => {
           color={"#000000"}
           mt={"24px"}
         >
-          {images[activeStep].label}
+          {recentClubEvents[activeStep].name}
         </Typography>
         <Typography
           fontFamily={"Rubik"}
@@ -178,7 +184,7 @@ const RecentClubEvents = () => {
           color={"#000000"}
           mt={"10px"}
         >
-          {images[activeStep].label}
+          {recentClubEvents[activeStep].clubName}
         </Typography>
         <Typography
           fontFamily={"Rubik"}
@@ -190,7 +196,7 @@ const RecentClubEvents = () => {
           color={"#4B5563"}
           mt={"10px"}
         >
-          {images[activeStep].label}
+          {recentClubEvents[activeStep].date}
         </Typography>
       </Box>
     </>
@@ -198,31 +204,3 @@ const RecentClubEvents = () => {
 };
 
 export default RecentClubEvents;
-
-const images = [
-  {
-    label: "TECHNOVATE 2022",
-    imgPath: "./assets/test/test.jpeg",
-    date: "5-7 Nov",
-  },
-  {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: "https://images.unsplash.com/photo-1537944434965-cf4679d1a598",
-    date: "112/21/21",
-  },
-  {
-    label: "Bird",
-    imgPath: "https://images.unsplash.com/photo-1538032746644-0212e812a9e7",
-    date: "12/211/21",
-  },
-  {
-    label: "Bali, Indonesia",
-    imgPath: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
-    date: "12/21/211",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-];

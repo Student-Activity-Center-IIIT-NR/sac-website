@@ -1,12 +1,21 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/system/Stack";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import testImg from "../../../assets/test/test.jpeg"; //remove
+import Image, { StaticImageData } from "next/image";
 import iconArrow from "../../../assets/icon/icon_arrow_long.svg";
 
-const Crew = () => {
-  const CrewCard = () => {
+interface CrewProps {
+  name: string;
+  img: StaticImageData;
+  post: string;
+}
+
+interface Props {
+  props: CrewProps[];
+}
+
+const Crew = ({ props }: Props) => {
+  const CrewCard = ({ name, img, post }: CrewProps) => {
     return (
       <>
         <Stack direction={"column"} rowGap={"12px"}>
@@ -17,7 +26,7 @@ const Crew = () => {
             }}
           >
             <Image
-              src={testImg}
+              src={img}
               width={"286px"}
               height={"394px"}
               alt=""
@@ -32,7 +41,7 @@ const Crew = () => {
             lineHeight="137.5%"
             color="#565A6E"
           >
-            Dr. Vivek Tiwari
+            {name}
           </Typography>
           <Typography
             fontFamily="JetBrains Mono"
@@ -42,7 +51,7 @@ const Crew = () => {
             lineHeight="137.5%"
             color="#565A6E"
           >
-            Faculty Mentor
+            {post}
           </Typography>
         </Stack>
       </>
@@ -104,10 +113,16 @@ const Crew = () => {
               pr: "30px",
             }}
           >
-            <CrewCard />
-            <CrewCard />
-            <CrewCard />
-            <CrewCard />
+            {props.map((step, index) => {
+              return (
+                <CrewCard
+                  name={step.name}
+                  img={step.img}
+                  post={step.post}
+                  key={index}
+                />
+              );
+            })}
           </Box>
         </Box>
         <Typography

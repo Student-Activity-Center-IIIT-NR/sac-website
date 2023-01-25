@@ -1,9 +1,17 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import starIcon from "../../assets/calendar_icons/star.svg";
+import Image, { StaticImageData } from "next/image";
 
-const SingleDate = () => {
+interface SingleDateProps {
+  date: string;
+  icon?: StaticImageData;
+  name: string;
+  flag?: boolean;
+}
+
+const SingleDate = ({ date, icon, name, flag }: SingleDateProps) => {
+  const currDate = new Date();
+
   return (
     <>
       <Stack spacing={2}>
@@ -14,11 +22,32 @@ const SingleDate = () => {
           fontWeight={500}
           fontSize={"24px"}
           lineHeight={"28px"}
+          color={
+            flag
+              ? ""
+              : Number(date.slice(3, 5)) == currDate.getMonth() + 1
+              ? "#000000"
+              : "#A3A3A3"
+          }
         >
-          04
+          {date.slice(0, 2)}
         </Typography>
         <Stack direction={"row"} spacing={1}>
-          <Image src={starIcon} alt="" height={"8px"} width={"8px"} />
+          {icon && (
+            <Image
+              src={icon}
+              alt=""
+              height={"8px"}
+              width={"8px"}
+              style={{
+                opacity: flag
+                  ? ""
+                  : Number(date.slice(3, 5)) == currDate.getMonth() + 1
+                  ? "1"
+                  : ".5",
+              }}
+            />
+          )}
           <Typography
             variant="body1"
             fontFamily={"Inter"}
@@ -27,8 +56,15 @@ const SingleDate = () => {
             fontSize={"11px"}
             lineHeight={"13px"}
             maxWidth={"103px"}
+            color={
+              flag
+                ? ""
+                : Number(date.slice(3, 5)) == currDate.getMonth() + 1
+                ? "#000000"
+                : "#A3A3A3"
+            }
           >
-            Double Elimination Chess Tournament (1-DAY)
+            {name}
           </Typography>
         </Stack>
       </Stack>
