@@ -16,7 +16,7 @@ const Inquizitive = () => {
       <ClubsLayout>
         <TechnicalClub
           name="Inquizitive"
-          desc=""
+          desc="The Quiz club"
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"

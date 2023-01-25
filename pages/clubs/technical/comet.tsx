@@ -16,7 +16,7 @@ const Comet = () => {
       <ClubsLayout>
         <TechnicalClub
           name="Comet"
-          desc=""
+          desc="Community of Electronics"
           bgTop={cometBgTop}
           logo={cometLogo}
           color="#FF9E64"

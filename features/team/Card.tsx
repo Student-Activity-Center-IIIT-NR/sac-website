@@ -4,11 +4,13 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import testImg from "../../assets/test/test.jpeg"; //remove
 import icon_linkedin from "../../assets/icon/icon_linkedin.svg";
+import icon_call from "../../assets/icon/icon_call.svg";
+import icon_mail from "../../assets/icon/icon_mail.svg";
 
 const Card = () => {
   return (
     <>
-      <Stack direction={"column"} id="card">
+      <Stack direction={"column"}>
         <Box
           sx={{
             width: "262px",
@@ -70,27 +72,67 @@ const Card = () => {
           SAC is a student body established in the year 2018 which aims to
           support, develop and promote student activities at IIIT Naya Raipur
         </Typography>
-        <Box
-          sx={{
-            width: "22px",
-            height: "22px",
-            mt: "10px",
-          }}
-        >
-          <a
-            href="https://www.linkedin.com/in/sudhanshu1309/"
-            rel="noreferrer"
-            target={"_blank"}
+        <Stack direction={"row"} gap={2} mt={"10px"}>
+          <Box
+            sx={{
+              width: "22px",
+              height: "22px",
+            }}
           >
-            <Image
-              src={icon_linkedin}
-              width="22px"
-              height="22px"
-              alt={"linkedin"}
-              objectFit="cover"
-            />
-          </a>
-        </Box>
+            <a
+              href="https://www.linkedin.com/in/sudhanshu1309/"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              <Image
+                src={icon_linkedin}
+                width="22px"
+                height="22px"
+                alt={"linkedin"}
+                objectFit="cover"
+              />
+            </a>
+          </Box>
+          <Box
+            sx={{
+              width: "22px",
+              height: "22px",
+            }}
+          >
+            <a
+              href="https://www.linkedin.com/in/sudhanshu1309/"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              <Image
+                src={icon_call}
+                width="22px"
+                height="22px"
+                alt={"linkedin"}
+                objectFit="cover"
+              />
+            </a>
+          </Box>
+          <Box
+            sx={{
+              height: "22px",
+              width: "22px",
+            }}
+          >
+            <a
+              href="https://www.linkedin.com/in/sudhanshu1309/"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              <Image
+                src={icon_mail}
+                height="22px"
+                alt={"linkedin"}
+                objectFit="cover"
+              />
+            </a>
+          </Box>
+        </Stack>
       </Stack>
     </>
   );

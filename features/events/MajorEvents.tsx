@@ -4,43 +4,16 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
-import test from "../../assets/test/test.jpeg"; //remove in prod
 import { Button, Stack, useTheme } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import { recentMajorEventsData } from "./RecentMajorEventsData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const images = [
-  {
-    url: "",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia.  Nunc at erat feugiat, sodales justo quis, convallis urna. Nam non molestie nibh, ac luctus tellus. Vivamus quis sem ac elit gravida lacinia. Vestibulum malesuada augue vitae odio varius venenatis. Nulla dapibus purus quam, quis ultrices elit suscipit ac. Cras dictum ante sem, ut scelerisque ligula venenatis et. Nam congue leo purus, at varius justo lobortis in.`,
-  },
-  {
-    url: "",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia.  Nunc at erat feugiat, sodales justo quis, convallis urna. Nam non molestie nibh, ac luctus tellus. Vivamus quis sem ac elit gravida lacinia. Vestibulum malesuada augue vitae odio varius venenatis. Nulla dapibus purus quam, quis ultrices elit suscipit ac. Cras dictum ante sem, ut scelerisque ligula venenatis et. Nam congue leo purus, at varius justo lobortis in.`,
-  },
-  {
-    url: "",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia.  Nunc at erat feugiat, sodales justo quis, convallis urna. Nam non molestie nibh, ac luctus tellus. Vivamus quis sem ac elit gravida lacinia. Vestibulum malesuada augue vitae odio varius venenatis. Nulla dapibus purus quam, quis ultrices elit suscipit ac. Cras dictum ante sem, ut scelerisque ligula venenatis et. Nam congue leo purus, at varius justo lobortis in.`,
-  },
-  {
-    url: "",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia.  Nunc at erat feugiat, sodales justo quis, convallis urna. Nam non molestie nibh, ac luctus tellus. Vivamus quis sem ac elit gravida lacinia. Vestibulum malesuada augue vitae odio varius venenatis. Nulla dapibus purus quam, quis ultrices elit suscipit ac. Cras dictum ante sem, ut scelerisque ligula venenatis et. Nam congue leo purus, at varius justo lobortis in.`,
-  },
-  {
-    url: "",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia.  Nunc at erat feugiat, sodales justo quis, convallis urna. Nam non molestie nibh, ac luctus tellus. Vivamus quis sem ac elit gravida lacinia. Vestibulum malesuada augue vitae odio varius venenatis. Nulla dapibus purus quam, quis ultrices elit suscipit ac. Cras dictum ante sem, ut scelerisque ligula venenatis et. Nam congue leo purus, at varius justo lobortis in.`,
-  },
-  {
-    url: "",
-    text: `test.`,
-  },
-];
 
 const MajorEvents = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-  const maxSteps = images.length;
+  const maxSteps = recentMajorEventsData.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -96,17 +69,17 @@ const MajorEvents = () => {
             onChangeIndex={handleStepChange}
             enableMouseEvents
           >
-            {images.map((step, index) => (
+            {recentMajorEventsData.map((step, index) => (
               <Stack
                 direction={"row"}
                 alignItems={"center"}
                 justifyContent={"center"}
                 columnGap={"120px"}
-                key={step.text}
+                key={step.desc}
               >
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Image
-                    src={test}
+                    src={step.poster}
                     height={"358px"}
                     width={"358px"}
                     objectFit={"cover"}
@@ -125,7 +98,7 @@ const MajorEvents = () => {
                   color={"#000"}
                   maxWidth={"453px"}
                 >
-                  {step.text}
+                  {step.desc}
                 </Typography>
               </Stack>
             ))}

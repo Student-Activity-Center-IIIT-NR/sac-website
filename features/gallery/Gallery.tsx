@@ -5,7 +5,6 @@ import Stack from "@mui/material/Stack";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Pagination from "@mui/material/Pagination";
 import Image from "next/image";
-import test from "../../assets/test/test.jpeg"; //remove in prod
 import { styled } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
@@ -14,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Link from "next/link";
+import { ClubEvents } from "./GalleryData";
 
 const StyledButton = styled(Button)({
   fontFamily: "Rubik",
@@ -51,12 +50,22 @@ const StyledTypography = styled(Typography)({
   maxWidth: "fit-content",
 });
 
+type Name = "cultural" | "technical" | "sports";
+
 const Gallery = () => {
-  const currYear = new Date().getFullYear();
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("");
+  const [name, setName] = useState<Name>("cultural");
+  const [event, setEvent] = useState(ClubEvents[name][0]);
 
-  const count = Math.ceil(images.length / 6);
+  const handleClickName = (name: Name) => {
+    setName(name);
+  };
+  const handleClickEvent = (index: number) => {
+    setEvent(ClubEvents[name][index]);
+  };
+
+  const count = Math.ceil(event.img.length / 6);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
@@ -82,7 +91,7 @@ const Gallery = () => {
             lineHeight={"28px"}
             color={"#000000"}
           >
-            Project Cognitio
+            {event.name}
           </Typography>
           <Typography
             fontFamily={"Rubik"}
@@ -92,7 +101,7 @@ const Gallery = () => {
             lineHeight={"28px"}
             color={"#000000"}
           >
-            Date
+            {event.date}
           </Typography>
         </Stack>
         <Grid2
@@ -101,18 +110,27 @@ const Gallery = () => {
           mt={"24px"}
           justifyContent={"space-between"}
         >
-          {images.slice((page - 1) * 6, (page - 1) * 6 + 6).map(() => {
+          {event.img.slice((page - 1) * 6, (page - 1) * 6 + 6).map((step) => {
             return (
               <>
                 <Grid2 xs={4} maxWidth={"fit-content"}>
-                  <Image
-                    alt=""
-                    src={test}
-                    objectFit={"cover"}
-                    style={{
-                      borderRadius: "8px",
+                  <Box
+                    sx={{
+                      width: "357px",
+                      height: "266px",
                     }}
-                  />
+                  >
+                    <Image
+                      src={step}
+                      alt=""
+                      width={"357px"}
+                      height={"266px"}
+                      objectFit={"cover"}
+                      style={{
+                        borderRadius: "8px",
+                      }}
+                    />
+                  </Box>
                 </Grid2>
               </>
             );
@@ -154,10 +172,34 @@ const Gallery = () => {
               width={"22px"}
               objectFit={"contain"}
             />
-            <StyledButton>Major Events</StyledButton>
-            <StyledButton>Cultural</StyledButton>
-            <StyledButton>Technical</StyledButton>
-            <StyledButton>Sports</StyledButton>
+            <StyledButton
+              onClick={() => {
+                scrollTo(0, 280);
+              }}
+            >
+              Major Events
+            </StyledButton>
+            <StyledButton
+              onClick={() => {
+                handleClickName("cultural");
+              }}
+            >
+              Cultural
+            </StyledButton>
+            <StyledButton
+              onClick={() => {
+                handleClickName("technical");
+              }}
+            >
+              Technical
+            </StyledButton>
+            <StyledButton
+              onClick={() => {
+                handleClickName("sports");
+              }}
+            >
+              Sports
+            </StyledButton>
           </Stack>
         </Box>
         <Stack
@@ -167,25 +209,24 @@ const Gallery = () => {
           columnGap={"24px"}
         >
           <FormControl
+            disabled
             sx={{
               width: "166px",
             }}
           >
-            <InputLabel disabled>Year</InputLabel>
+            <InputLabel>Year</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
-              <MenuItem value={2018}>2018</MenuItem>
-              <MenuItem value={2019}>2019</MenuItem>
-              <MenuItem value={2020}>2020</MenuItem>
-              <MenuItem value={2021}>2021</MenuItem>
               <MenuItem value={2022}>2022</MenuItem>
+              <MenuItem value={2023}>2023</MenuItem>
             </Select>
           </FormControl>
           <FormControl
+            disabled
             sx={{
               width: "166px",
             }}
           >
-            <InputLabel disabled>Clubs</InputLabel>
+            <InputLabel>Clubs</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
               <MenuItem value={2018}>TSOC</MenuItem>
               <MenuItem value={2019}>AIML</MenuItem>
@@ -201,42 +242,21 @@ const Gallery = () => {
           mt={"42px"}
           justifyContent={"space-between"}
         >
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 1</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 2</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 3</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 4</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 5</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
-          <Grid2 xs={4}>
-            <Link href="">
-              <StyledTypography>Event 6</StyledTypography>
-            </Link>
-            <Divider color={"#C0CAF5"} />
-          </Grid2>
+          {ClubEvents[name].map((step, index) => {
+            return (
+              <Grid2 xs={4} key={index}>
+                <StyledTypography
+                  onClick={() => {
+                    handleClickEvent(index);
+                    scrollTo(0, 1830);
+                  }}
+                >
+                  {step.name}
+                </StyledTypography>
+                <Divider color={"#C0CAF5"} />
+              </Grid2>
+            );
+          })}
         </Grid2>
       </Box>
     </>
@@ -244,51 +264,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-const images = [
-  {
-    label: "TECHNOVATE 2022",
-    imgPath: "./assets/test/test.jpeg",
-    date: "5-7 Nov",
-  },
-  {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: "https://images.unsplash.com/photo-1537944434965-cf4679d1a598",
-    date: "112/21/21",
-  },
-  {
-    label: "Bird",
-    imgPath: "https://images.unsplash.com/photo-1538032746644-0212e812a9e7",
-    date: "12/211/21",
-  },
-  {
-    label: "Bali, Indonesia",
-    imgPath: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
-    date: "12/21/211",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-];

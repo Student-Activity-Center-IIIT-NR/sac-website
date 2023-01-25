@@ -42,9 +42,10 @@ const CulturalOverview = () => {
           backgroundImage: `url(${bg.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <Stack alignItems={"center"} my={"300px"}>
+        <Stack alignItems={"center"} my={"250px"}>
           <Typography
             fontFamily={"Cotta"}
             fontStyle={"normal"}
@@ -55,17 +56,37 @@ const CulturalOverview = () => {
             Cultural Clubs
           </Typography>
           <Typography
+            fontFamily={"Cotta"}
+            fontStyle={"normal"}
+            fontWeight={400}
+            fontSize={"20px"}
+            lineHeight={"26px"}
+            textAlign={"center"}
+            color={"#fff"}
+            maxWidth={800}
+            my={2}
+          >
+            Cultural clubs under SAC IIIT Naya Raipur, provide a way for
+            students to explore and engage in activities outside their academic
+            studies. These clubs can foster a sense of community and belonging,
+            which can be especially important for students in technical fields
+            who may spend much time working independently. They also provide
+            opportunities for students to develop leadership skills,
+            organizational skills, and teamwork abilities, which can be
+            beneficial for their future careers.
+          </Typography>
+          <Typography
             fontFamily={"Baskervville"}
             fontStyle={"normal"}
             fontWeight={400}
             fontSize={"32px"}
             color={"#fff"}
-            mt={"16px"}
+            mt={"26px"}
           >
             Music, Art, Dance, Photography, Debate, Discussions, Poetry and
             Drama
           </Typography>
-          <Grid2 container sx={{ px: "80px", mt: "100px" }} rowGap={"96px"}>
+          <Grid2 container sx={{ px: "80px", mt: "70px" }} rowGap={"76px"}>
             {clubs.map((club, index) => {
               return (
                 <Link href={club.url} key={index}>

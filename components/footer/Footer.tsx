@@ -83,11 +83,12 @@ const Footer = () => {
                   Useful links
                 </Typography>
                 <Link href={sac_branding.src} download>
-                  Dummy link
+                  The SAC Logo
                 </Link>
-                <Link href={"#"}>Dummy link</Link>
-                <Link href={"#"}>Dummy link</Link>
-                <Link href={"#"}>Dummy link</Link>
+                <Link href={"#"}>Grievance Form</Link>
+                <Link href={"#"}>Resource Issue Form</Link>
+                <Link href={"#"}>Leave Application Form</Link>
+                <Link href={"#"}>Event Proposal Form</Link>
               </Box>
             </Box>
           </Box>

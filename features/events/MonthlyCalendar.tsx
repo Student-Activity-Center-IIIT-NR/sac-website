@@ -1,6 +1,4 @@
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import { FunctionComponent } from "react";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconTriangle from "../../assets/calendar_icons/triangle.svg";
@@ -11,8 +9,8 @@ import iconCircle from "../../assets/calendar_icons/circle.svg";
 import Divider from "@mui/material/Divider";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SingleDate from "../../components/EventCalendar/SingleDate";
-
-interface MonthlyCalendarProps {}
+import { calendarData } from "../../components/EventCalendar/EventCalendarData";
+import { NextPage } from "next";
 
 interface ItemProps {
   name: string;
@@ -20,7 +18,13 @@ interface ItemProps {
   color: string;
 }
 
-const MonthlyCalendar: FunctionComponent<MonthlyCalendarProps> = () => {
+const MonthlyCalendar: NextPage = () => {
+  const currDate = new Date();
+
+  const filteredData = calendarData.filter((item) => {
+    return item.date.slice(0, 2) >= currDate.getDate().toString();
+  });
+
   const Item = ({ name, icon, color }: ItemProps) => {
     return (
       <>
@@ -66,7 +70,7 @@ const MonthlyCalendar: FunctionComponent<MonthlyCalendarProps> = () => {
             lineHeight={"28px"}
             color={"#000"}
           >
-            AUGUST
+            {currDate.toLocaleString("default", { month: "long" })}
           </Typography>
           <Divider
             sx={{
@@ -76,31 +80,11 @@ const MonthlyCalendar: FunctionComponent<MonthlyCalendarProps> = () => {
           />
           <Grid2 container rowGap={"80px"} mt={"80px"}>
             <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
-            </Grid2>
-            <Grid2 xs={2}>
-              <SingleDate />
+              <SingleDate
+                date={calendarData[0].date}
+                name={calendarData[0].eventName}
+                icon={calendarData[0].icon}
+              />
             </Grid2>
           </Grid2>
         </Stack>
@@ -140,7 +124,9 @@ const MonthlyCalendar: FunctionComponent<MonthlyCalendarProps> = () => {
             );
           })}
         </Stack>
-        <Month />
+        {filteredData.map((step, index) => {
+          return <Month props={step} key={index} />;
+        })}
       </Stack>
     </>
   );

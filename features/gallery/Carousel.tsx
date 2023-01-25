@@ -6,42 +6,14 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
-import test from "../../assets/test/test.jpeg"; //remove in prod
+import { majorEvents } from "./GalleryData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const images = [
-  {
-    label: "TECHNOVATE 2022",
-    imgPath: "./assets/test/test.jpeg",
-    date: "5-7 Nov",
-  },
-  {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: "https://images.unsplash.com/photo-1537944434965-cf4679d1a598",
-    date: "112/21/21",
-  },
-  {
-    label: "Bird",
-    imgPath: "https://images.unsplash.com/photo-1538032746644-0212e812a9e7",
-    date: "12/211/21",
-  },
-  {
-    label: "Bali, Indonesia",
-    imgPath: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
-    date: "12/21/211",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath: "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8",
-    date: "12/21/121",
-  },
-];
 
 const Carousel = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-  const maxSteps = images.length;
+  const maxSteps = majorEvents.length;
 
   const handleStepChange = (step: number) => {
     setActiveStep(step);
@@ -65,12 +37,11 @@ const Carousel = () => {
           borderRadius: "24px",
         }}
       >
-        {images.map((step, index) => (
+        {majorEvents.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Image
-                // src={step.imgPath}
-                src={test}
+                src={step.img}
                 alt={step.label}
                 height={"520px"}
                 objectFit={"cover"}
@@ -99,7 +70,7 @@ const Carousel = () => {
         color={"#000000"}
         mt={"40px"}
       >
-        {images[activeStep].label}
+        {majorEvents[activeStep].label}
       </Typography>
       <Typography
         fontFamily={"Rubik"}
@@ -111,7 +82,7 @@ const Carousel = () => {
         color={"#4B5563"}
         mt={"12px"}
       >
-        {images[activeStep].date}
+        {majorEvents[activeStep].date}
       </Typography>
     </Box>
   );

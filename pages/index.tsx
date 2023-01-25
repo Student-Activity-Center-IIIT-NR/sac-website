@@ -33,6 +33,7 @@ const ToastInfo = ({ title, msg, uri }: ToastProps) => {
           width={"80px"}
           height={"80px"}
           alt=""
+          priority
           objectFit="cover"
           style={{
             borderRadius: "4px",
@@ -101,7 +102,10 @@ const Home: NextPage = () => {
         <ContactUs />
       </BaseLayout>
       <ToastContainer
+        position="bottom-right"
         autoClose={8000}
+        hideProgressBar={false}
+        rtl={false}
         style={{
           width: "fit-content",
           margin: "0px",

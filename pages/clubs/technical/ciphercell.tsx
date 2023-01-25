@@ -16,7 +16,7 @@ const Ciphercell = () => {
       <ClubsLayout>
         <TechnicalClub
           name="Ciphercell"
-          desc=""
+          desc="The Information Security Club"
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
