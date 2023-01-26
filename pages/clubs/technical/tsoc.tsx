@@ -3,7 +3,7 @@ import ClubsLayout from "../../../layouts/ClubsLayout";
 import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
-import Crew from "../../../features/club/technical/Crew";
+import Crew from "../../../features/club/common/Crew";
 import Gallery from "../../../features/club/common/Gallery";
 import tsocBg from "../../../assets/technical_clubs_bg/tsoc.png";
 import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";

@@ -4,10 +4,22 @@ import ClubHeader from "../../../features/club/cultural/ClubHeader";
 import ClubBanner from "../../../features/club/cultural/ClubBanner";
 import ClubDescription from "../../../features/club/cultural/ClubDescription";
 import ClubEvents from "../../../features/club/cultural/ClubEvents";
-import ClubCrew from "../../../features/club/cultural/ClubCrew";
 import Gallery from "../../../features/club/common/Gallery";
 import munBg from "../../../assets/cultural_clubs_bg/mun.png";
 import munLogo from "../../../assets/cultural_clubs_bg/mun_logo.png";
+import { StaticImageData } from "next/image";
+
+import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
+import Crew from "../../../features/club/common/Crew";
+
+import Navneet_Chaubey from "../../../assets/team_22-23/navneet_chaubey.jpeg"
+import Ganesh_Prajapati from "../../../assets/team_22-23/Ganesh_Prajapati.jpeg"
+import Nanditha_S from "../../../assets/team_22-23/Sagam_Reddy_Nanditha.jpeg"
+import Sahil_Nimsarkar from "../../../assets/team_22-23/Sahil_Ashish_Nimsarkar.jpeg"
+import Aaditya_Tripathi from "../../../assets/team_22-23/Aaditya_Tripathi.jpeg"
+import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg"
+
 
 interface ModelUnitedNationProps {}
 
@@ -30,11 +42,84 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
           provide a platform to step into the shoes of UN ambassadors.
         </ClubDescription>
         <ClubEvents />
-        <ClubCrew />
         {/* <Gallery /> */}
+        <Crew  props={crew}/>
+          <Gallery props={gallery}/> 
       </ClubsLayout>
     </>
   );
 };
 
 export default ModelUnitedNation;
+
+interface CrewProps {
+  img: StaticImageData;
+  name: string;
+  post: string;
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+const crew: CrewProps[] = [
+  {
+    img: Navneet_Chaubey,
+    name: "Navneet Chaubey",
+    post: "Club Secretary",
+  },
+  {
+      img: Ganesh_Prajapati,
+      name: "Ganesh Prajapati",
+      post: "Vice Secretary",
+    },
+    {
+      img: Nanditha_S,
+      name: "Nanditha S",
+      post: "Core Member",
+    },
+    {
+      img: Sahil_Nimsarkar,
+      name: "Sahil Nimsarkar",
+      post: "Core Member",
+    },
+    {
+      img: Aaditya_Tripathi,
+      name: "Aaditya Tripathi",
+      post: "Core Member",
+    },
+    {
+      img: Aadi_Juvekar,
+      name: "Aadi Juvekar",
+      post: "Core Member",
+    }
+];
+
+const gallery: GalleryProps[] = [
+  {
+    name: "SCIη′TFIC",
+    date: "14 January 2023",
+    img: [
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+    ],
+  },
+  {
+    name: "Test",
+    date: "14 January 2023",
+    img: [
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+    ],
+  },
+]
