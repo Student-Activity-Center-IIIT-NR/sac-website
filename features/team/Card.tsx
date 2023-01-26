@@ -6,8 +6,19 @@ import testImg from "../../assets/test/test.jpeg"; //remove
 import icon_linkedin from "../../assets/icon/icon_linkedin.svg";
 import icon_call from "../../assets/icon/icon_call.svg";
 import icon_mail from "../../assets/icon/icon_mail.svg";
+import { StaticImageData } from "next/image";
 
-const Card = () => {
+interface Props {
+  Name: string;
+  Post: string;
+  img:StaticImageData
+}
+
+const Card = ({
+  Name,
+  Post,
+  img
+}: Props) => {
   return (
     <>
       <Stack direction={"column"}>
@@ -18,7 +29,7 @@ const Card = () => {
           }}
         >
           <Image
-            src={testImg}
+            src={img}
             width="262px"
             height={"309px"}
             alt={""}
@@ -29,7 +40,7 @@ const Card = () => {
           variant="body2"
           mt={"15px"}
           sx={{
-            width: "124px",
+            // width: "124px",
             fontFamily: "Rubik",
             fontStyle: "normal",
             fontWeight: 400,
@@ -38,13 +49,13 @@ const Card = () => {
             color: "#000000",
           }}
         >
-          Himanshu Yadav
+          {Name}
         </Typography>
         <Typography
           variant="body2"
           mt={"6px"}
           sx={{
-            width: "187px",
+            // width: "187px",
             fontFamily: "Playfair Display",
             fontStyle: "normal",
             fontWeight: 800,
@@ -54,9 +65,9 @@ const Card = () => {
             color: "#000000",
           }}
         >
-          UG Representative (Boys)
+          {Post}
         </Typography>
-        <Typography
+        {/* <Typography
           variant="body2"
           mt={"5px"}
           sx={{
@@ -71,7 +82,7 @@ const Card = () => {
         >
           SAC is a student body established in the year 2018 which aims to
           support, develop and promote student activities at IIIT Naya Raipur
-        </Typography>
+        </Typography> */}
         <Stack direction={"row"} gap={2} mt={"10px"}>
           <Box
             sx={{
