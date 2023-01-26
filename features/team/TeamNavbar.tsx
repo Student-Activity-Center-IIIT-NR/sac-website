@@ -91,7 +91,6 @@ const TeamNavbar = () => {
       </Tabs>
 
       <TabPanel value={value} index={TeamLinks[0].name}>
-
         <ScrollContainer
           teamName="Core Team"
           gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
@@ -106,19 +105,16 @@ const TeamNavbar = () => {
           teamName="Social Media Management Team"
           gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
           teamData={SocialMedia}
-
         />
         <ScrollContainer
           teamName="Design Team"
           gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
           teamData={Design}
-
         />
         <ScrollContainer
           teamName="Documentation Team"
           gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
           teamData={ContentWriterTeam}
-
         />
       </TabPanel>
       <TabPanel value={value} index={TeamLinks[1].name}>
@@ -126,7 +122,6 @@ const TeamNavbar = () => {
           teamName="Website Management Team"
           gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
           teamData={WebsiteManagementTeam}
-
         />
       </TabPanel>
       <TabPanel value={value} index={TeamLinks[2].name}>
@@ -134,7 +129,6 @@ const TeamNavbar = () => {
           teamName="Social Media Management Team"
           gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
           teamData={SocialMedia}
-
         />
       </TabPanel>
       <TabPanel value={value} index={TeamLinks[3].name}>
@@ -142,7 +136,6 @@ const TeamNavbar = () => {
           teamName="Design Team"
           gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
           teamData={Design}
-
         />
       </TabPanel>
       <TabPanel value={value} index={TeamLinks[4].name}>
@@ -150,7 +143,6 @@ const TeamNavbar = () => {
           teamName="Documentation Team"
           gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
           teamData={ContentWriterTeam}
-
         />
       </TabPanel>
     </>

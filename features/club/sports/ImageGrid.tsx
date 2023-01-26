@@ -7,7 +7,6 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
 const ImageGrid = () => {
-
   interface CrewProps {
     img: StaticImageData;
   }
@@ -20,7 +19,7 @@ const ImageGrid = () => {
         sx={{ boxShadow: "0px -5px 40px 50px rgba(255, 255, 255, 1)" }}
       />
       <ImageList variant="woven" cols={2} gap={25}>
-        {itemData.map((item,index) => (
+        {itemData.map((item, index) => (
           <ImageListItem key={index}>
             <Image
               src={item.img}

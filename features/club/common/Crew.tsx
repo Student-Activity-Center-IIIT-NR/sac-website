@@ -67,7 +67,7 @@ const Crew = ({ props }: Props) => {
             flexDirection: "row",
           }}
         >
-          <Box  
+          <Box
             sx={{
               display: "flex",
               flexDirection: "column",
