@@ -9,7 +9,7 @@ const TeamLinks = [
   },
   {
     // teamName: "App Management Team",
-    name: "App",
+    name: "Social",
   },
   {
     // teamName: "Design Team",
@@ -17,7 +17,7 @@ const TeamLinks = [
   },
   {
     // teamName: "Content Writer Team",
-    name: "Content",
+    name: "Documentation",
   },
 ];
 

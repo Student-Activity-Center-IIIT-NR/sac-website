@@ -18,9 +18,8 @@ const StyledTypography = styled(Typography)({
 });
 
 const SportsGallery = () => {
-  const ArambhEstd = 2018;
+  const ArambhEstd = 2022;
   const [year, setYear] = useState(new Date().getFullYear());
-  // const [hover, isHover] = useState(false);
 
   const yearDecrement = () => {
     year > ArambhEstd ? setYear(year - 1) : null;
@@ -96,7 +95,8 @@ const SportsGallery = () => {
             color="#000000"
             mx={"20px"}
           >
-            ARAMBH &nbsp;{year}
+            ARAMBH &nbsp;{ArambhEstd}
+            {/*ArambhEstd is constant Change it to "year"  for current data*/}
           </Typography>
           <Image
             src={iconArrow}

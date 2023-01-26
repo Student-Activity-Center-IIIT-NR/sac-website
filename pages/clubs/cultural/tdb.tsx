@@ -8,15 +8,14 @@ import Gallery from "../../../features/club/common/Gallery";
 import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 
-
 import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
 import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
 import Crew from "../../../features/club/common/Crew";
 
-import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg"
-import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Male-member.jpeg"
-import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg"
-import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg"
+import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg";
+import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Yash_Vardhan.jpeg";
+import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
+import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg";
 
 import { StaticImageData } from "next/image";
 // Deepesh_Agrawal
@@ -46,15 +45,14 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
         </ClubDescription>
         <ClubEvents />
         {/* <Gallery /> */}
-        <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+        <Crew props={crew} />
+        <Gallery props={gallery} />
       </ClubsLayout>
     </>
   );
 };
 
 export default TakeDaBait;
-
 
 interface CrewProps {
   img: StaticImageData;
@@ -75,20 +73,20 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Yash_Vardhan_Gautam,
-      name: "Yash Vardhan Gautam",
-      post: "Vice Secretary",
-    },
-    {
-      img: Sontu_Akshath_Rishi,
-      name: "Sontu Akshath Rishi",
-      post: "Core Member",
-    },
-    {
-      img: Deepesh_Agrawal,
-      name: "Deepesh Agrawal",
-      post: "Core Member",
-    }
+    img: Yash_Vardhan_Gautam,
+    name: "Yash Vardhan Gautam",
+    post: "Vice Secretary",
+  },
+  {
+    img: Sontu_Akshath_Rishi,
+    name: "Sontu Akshath Rishi",
+    post: "Core Member",
+  },
+  {
+    img: Deepesh_Agrawal,
+    name: "Deepesh Agrawal",
+    post: "Core Member",
+  },
 ];
 
 const gallery: GalleryProps[] = [
@@ -116,4 +114,4 @@ const gallery: GalleryProps[] = [
       Ghanta_Sai_Krishna,
     ],
   },
-]
+];
