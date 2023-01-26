@@ -11,12 +11,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Stack, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import test from "../assets/test/test.jpeg"; //remove
 
 interface ToastProps {
   title: string;
   msg: string;
-  uri: StaticImageData;
+  uri?: StaticImageData | null;
 }
 
 const ToastInfo = ({ title, msg, uri }: ToastProps) => {
@@ -28,17 +27,19 @@ const ToastInfo = ({ title, msg, uri }: ToastProps) => {
         gap={"15px"}
         alignItems={"center"}
       >
-        <Image
-          src={uri}
-          width={"80px"}
-          height={"80px"}
-          alt=""
-          priority
-          objectFit="cover"
-          style={{
-            borderRadius: "4px",
-          }}
-        />
+        {uri && (
+          <Image
+            src={uri}
+            width={"80px"}
+            height={"80px"}
+            alt=""
+            priority
+            objectFit="cover"
+            style={{
+              borderRadius: "4px",
+            }}
+          />
+        )}
 
         <Stack direction={"column"} columnGap={"6px"}>
           <Typography
@@ -72,7 +73,7 @@ const ToastInfo = ({ title, msg, uri }: ToastProps) => {
 
 const Home: NextPage = () => {
   const notify = () => {
-    message.map((item) => {
+    message.map((item, index) => {
       return toast(
         <ToastInfo title={item.title} msg={item.msg} uri={item.uri} />,
         {
@@ -123,14 +124,14 @@ export default Home;
 const message = [
   {
     id: 1,
-    uri: test,
-    title: "scintfic registration starts!",
-    msg: "Our aim is to enhance the aesthetic, invasive, artistic, intellectual and social development of the undergraduates",
+    uri: null,
+    title: "Inauguration of the SAC Office!",
+    msg: "The SAC office was inaugurated on the auspicious occasion of Saraswati Puja on 26th January 2023 by hon'ble director Dr. P.K. Sinha.",
   },
   {
     id: 2,
-    uri: test,
-    title: "Sac Website launched!",
+    uri: null,
+    title: "SAC Website launched!",
     msg: "SAC is a student body established in the year 2018 that aims to support, develop and promote student activities at IIIT Naya Raipur",
   },
 ];

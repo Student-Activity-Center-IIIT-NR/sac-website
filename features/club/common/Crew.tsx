@@ -125,7 +125,7 @@ const Crew = ({ props }: Props) => {
             })}
           </Box>
         </Box>
-        <Typography
+        {/* <Typography
           fontFamily="Rubik"
           fontStyle="italic"
           fontWeight="700"
@@ -140,7 +140,7 @@ const Crew = ({ props }: Props) => {
           “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh
           mi, pellentesque sit amet ullamcorper id, varius nec nisi. Donec
           posuere euismod diam, eget scelerisque est finibus ac. ” - Name
-        </Typography>
+        </Typography> */}
       </Stack>
     </>
   );

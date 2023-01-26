@@ -9,14 +9,21 @@ import ignitersBg from "../../../assets/cultural_clubs_bg/igniters.png";
 import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import { StaticImageData } from "next/image";
 
-import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
-import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
-
-import Akriti_Dhurandhar from "../../../assets/team_22-23/Akriti_Igniters.jpeg"
-import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg"
-import Sonali_Tudu from "../../../assets/team_22-23/Sonali_Tudu.jpeg"
-import Eshita_Pradhan from "../../../assets/team_22-23/Eshita_Pradhan.jpeg"
+// import crew
+import Akriti_Dhurandhar from "../../../assets/team_22-23/Akriti_Igniters.jpeg";
+import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
+import Sonali_Tudu from "../../../assets/team_22-23/Sonali_Tudu.jpeg";
+import Eshita_Pradhan from "../../../assets/team_22-23/Eshita_Pradhan.jpeg";
 import Crew from "../../../features/club/common/Crew";
+
+// import events
+import dance1 from "../../../assets/club_event_pics/cultural/dance1.jpeg";
+import dance2 from "../../../assets/club_event_pics/cultural/dance2.jpeg";
+import dance3 from "../../../assets/club_event_pics/cultural/dance3.jpeg";
+import dance4 from "../../../assets/club_event_pics/cultural/dance4.jpeg";
+import mellow1 from "../../../assets/club_event_pics/cultural/mellow1.jpeg";
+import mellow2 from "../../../assets/club_event_pics/cultural/mellow2.jpeg";
+import mellow3 from "../../../assets/club_event_pics/cultural/mellow3.jpeg";
 
 interface IgnitersProps {}
 
@@ -38,10 +45,9 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
           all skill levels and encourages everyone to join in the journey and
           let the art of dance bring them joy and expression.
         </ClubDescription>
-        <ClubEvents />
-        {/* <Gallery /> */}
-        <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+        <ClubEvents props={eventDetails} />
+        <Crew props={crew} />
+        <Gallery props={gallery} />
       </ClubsLayout>
     </>
   );
@@ -68,45 +74,47 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Sontu_Akshath_Rishi,
-      name: "Sontu Akshath Rishi",
-      post: "Vice Secretary",
-    },
-    {
-      img: Sonali_Tudu,
-      name: "Sonali Tudu",
-      post: "Choreographer",
-    },
-    {
-      img: Eshita_Pradhan,
-      name: "Eshita Pradhan",
-      post: "Social Media Manager",
-    },
+    img: Sontu_Akshath_Rishi,
+    name: "Sontu Akshath Rishi",
+    post: "Vice Secretary",
+  },
+  {
+    img: Sonali_Tudu,
+    name: "Sonali Tudu",
+    post: "Choreographer",
+  },
+  {
+    img: Eshita_Pradhan,
+    name: "Eshita Pradhan",
+    post: "Social Media Manager",
+  },
 ];
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
+    name: "Dance Workshop",
+    date: "7 Jan 2023",
+    img: [dance1, dance2, dance3, dance4],
   },
   {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Mellow Response",
+    date: "9 May 2022",
+    img: [mellow1, mellow2, mellow3],
+  },
+];
+
+interface EventProps {
+  name: string;
+  date: string;
+  desc: string;
+  link: string;
+}
+
+const eventDetails: EventProps[] = [
+  {
+    name: "Intra-College Dance Contest",
+    date: "February 11, 2023",
+    desc: "Dance Competition",
+    link: "",
   },
 ];

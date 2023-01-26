@@ -7,19 +7,20 @@ import ClubEvents from "../../../features/club/cultural/ClubEvents";
 import Gallery from "../../../features/club/common/Gallery";
 import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
-
-
-import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
-import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
 import Crew from "../../../features/club/common/Crew";
-
-import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg"
-import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Male-member.jpeg"
-import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg"
-import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg"
-
 import { StaticImageData } from "next/image";
-// Deepesh_Agrawal
+
+// import crew
+import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg";
+import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Male-member.jpeg";
+import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
+import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg";
+
+// import events
+import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
+import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
+import yet3 from "../../../assets/club_event_pics/cultural/yet3.jpeg";
+import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
 
 interface TakeDaBaitProps {}
 
@@ -44,17 +45,15 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           discussing and debating important issues, members will be better
           equipped to be informed citizens and future leaders.
         </ClubDescription>
-        <ClubEvents />
-        {/* <Gallery /> */}
-        <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+        <ClubEvents props={eventDetails} />
+        <Crew props={crew} />
+        <Gallery props={gallery} />
       </ClubsLayout>
     </>
   );
 };
 
 export default TakeDaBait;
-
 
 interface CrewProps {
   img: StaticImageData;
@@ -75,45 +74,48 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Yash_Vardhan_Gautam,
-      name: "Yash Vardhan Gautam",
-      post: "Vice Secretary",
-    },
-    {
-      img: Sontu_Akshath_Rishi,
-      name: "Sontu Akshath Rishi",
-      post: "Core Member",
-    },
-    {
-      img: Deepesh_Agrawal,
-      name: "Deepesh Agrawal",
-      post: "Core Member",
-    }
+    img: Yash_Vardhan_Gautam,
+    name: "Yash Vardhan Gautam",
+    post: "Vice Secretary",
+  },
+  {
+    img: Sontu_Akshath_Rishi,
+    name: "Sontu Akshath Rishi",
+    post: "Core Member",
+  },
+  {
+    img: Deepesh_Agrawal,
+    name: "Deepesh Agrawal",
+    post: "Core Member",
+  },
 ];
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
+    name: "Yet to be Decided",
+    date: "20 Jan 2023",
+    img: [yet1, yet2, yet3, yet4],
+  },
+];
+
+interface EventProps {
+  name: string;
+  date: string;
+  desc: string;
+  link: string;
+}
+
+const eventDetails: EventProps[] = [
+  {
+    name: "Picture Perception & Discussion",
+    date: "February 6, 2023",
+    desc: "Story making based on given picture",
+    link: "",
   },
   {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Swaying with Sniggers Debate",
+    date: "February 17, 2023",
+    desc: "Debate Competition",
+    link: "",
   },
-]
+];

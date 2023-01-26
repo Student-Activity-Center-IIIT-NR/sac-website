@@ -18,6 +18,16 @@ import Suyash_Sinha from "../../../assets/team_22-23/Suyash_Sinha.jpeg";
 import Vedica_Mishra from "../../../assets/team_22-23/Vedica_Mishra.jpeg";
 import Kapil_Soni from "../../../assets/team_22-23/Kapil_Soni.jpeg";
 
+// import events
+import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
+import bit2 from "../../../assets/club_event_pics/technical/bit2.jpeg";
+import bit3 from "../../../assets/club_event_pics/technical/bit3.jpeg";
+import bit4 from "../../../assets/club_event_pics/technical/bit4.jpeg";
+import bit5 from "../../../assets/club_event_pics/technical/bit5.jpeg";
+import bit6 from "../../../assets/club_event_pics/technical/bit6.jpeg";
+import bit7 from "../../../assets/club_event_pics/technical/bit7.jpeg";
+import bit8 from "../../../assets/club_event_pics/technical/bit8.jpeg";
+
 interface TSOCProps {}
 
 const TSOC: FunctionComponent<TSOCProps> = () => {
@@ -108,8 +118,8 @@ const crew: CrewProps[] = [
 ];
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [],
+    name: "Bit-2-Byte",
+    date: "9-10 April 2022",
+    img: [bit1, bit2, bit3, bit4, bit5, bit6, bit7, bit8],
   },
 ];

@@ -10,16 +10,19 @@ import cometBgTop from "../../../assets/technical_clubs_bg/bg_comet_top.svg";
 import cometBgBottom from "../../../assets/technical_clubs_bg/bg_comet_bottom.svg";
 import cometLogo from "../../../assets/technical_clubs_bg/comet_logo.png";
 import { StaticImageData } from "next/image";
-import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+
+// import crew
 import Anmol_Agrawal from "../../../assets/team_22-23/Anmol_Agrawal.jpeg";
-import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
 import Ganesh_Prajapati from "../../../assets/team_22-23/Ganesh_Prajapati.jpeg";
 import Aaditya_Tripathi from "../../../assets/team_22-23/Aaditya_Tripathi.jpeg";
 import Dheeraj_U from "../../../assets/team_22-23/Male-member.jpeg";
 import Ojas_Dubey from "../../../assets/team_22-23/Ojas_Dubey.jpeg";
 
-
-
+// import events
+import arduino1 from "../../../assets/club_event_pics/technical/arduino1.jpeg";
+import arduino2 from "../../../assets/club_event_pics/technical/arduino2.jpeg";
+import arduino3 from "../../../assets/club_event_pics/technical/arduino3.jpeg";
+import arduino4 from "../../../assets/club_event_pics/technical/arduino4.jpeg";
 
 const Comet = () => {
   return (
@@ -31,12 +34,12 @@ const Comet = () => {
           bgTop={cometBgTop}
           logo={cometLogo}
           color="#FF9E64"
-          event1Name="Kaggle Competition"
-          event1Date="18 Feb 2023"
-          event1Desc="Competition on Kaggle"
-          event2Name="Hackathon/Quiz"
-          event2Date="25 March 2023"
-          event2Desc="AIML Hackathon"
+          event1Name="Treasure Hunt"
+          event1Date="March 26, 2023"
+          event1Desc="Combined event of Comet and Inquizitive"
+          event2Name="Raspberry Pi Workshop"
+          event2Date="April 10, 2023"
+          event2Desc="Workshop on R-pi"
         />
         <ClubDescription bg={cometBg}>
           The club was established in 2018 under the name CECoT (Community of
@@ -59,8 +62,8 @@ const Comet = () => {
             pb: 6,
           }}
         >
-             <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+          <Crew props={crew} />
+          <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
     </>
@@ -81,7 +84,6 @@ interface GalleryProps {
   date: string;
 }
 
-
 const crew: CrewProps[] = [
   {
     img: Anmol_Agrawal,
@@ -89,51 +91,31 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Ganesh_Prajapati,
-      name: "Ganesh Prajapati",
-      post: "Vice Secretary",
-    },
-    {
-      img: Aaditya_Tripathi,
-      name: "Aaditya Tripathi",
-      post: "Core Member",
-    },
-    {
-      img: Dheeraj_U,
-      name: "Dheeraj U",
-      post: "Core Member",
-    },
-    {
-      img: Ojas_Dubey,
-      name: "Ojas Dubey",
-      post: "Core Member",
-    }
+    img: Ganesh_Prajapati,
+    name: "Ganesh Prajapati",
+    post: "Vice Secretary",
+  },
+  {
+    img: Aaditya_Tripathi,
+    name: "Aaditya Tripathi",
+    post: "Core Member",
+  },
+  {
+    img: Dheeraj_U,
+    name: "Dheeraj U",
+    post: "Core Member",
+  },
+  {
+    img: Ojas_Dubey,
+    name: "Ojas Dubey",
+    post: "Core Member",
+  },
 ];
-
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
-  },
-  {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Arduino Workshop",
+    date: "Jan 2023",
+    img: [arduino2, arduino1, arduino4, arduino3],
   },
 ];

@@ -19,6 +19,12 @@ import Shivaibhav from "../../../assets/team_22-23/Shivaibhav.jpeg";
 import saiprabhat from "../../../assets/team_22-23/saiprabhat.jpeg";
 import Lakshya_Garg from "../../../assets/team_22-23/Lakshya_Garg.jpeg";
 
+// import events
+import intro_aiml1 from "../../../assets/club_event_pics/technical/intro_aiml1.jpeg";
+import intro_aiml2 from "../../../assets/club_event_pics/technical/intro_aiml2.jpeg";
+import intro_aiml3 from "../../../assets/club_event_pics/technical/intro_aiml3.jpeg";
+import intro_aiml4 from "../../../assets/club_event_pics/technical/intro_aiml4.jpeg";
+
 const Aiml = () => {
   return (
     <>
@@ -114,27 +120,8 @@ const crew: CrewProps[] = [
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
-  },
-  {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Introdunction to AIML",
+    date: "29 Nov 2022",
+    img: [intro_aiml1, intro_aiml2, intro_aiml3, intro_aiml4],
   },
 ];
