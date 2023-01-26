@@ -76,9 +76,9 @@ const SportsHeading = () => {
               date={EventData[0].Date}
               name={EventData[0].event}
               content={EventData[0].Info}
-            />
+              />
             <UpcomingEvents
-              icon={require("../../../assets/sports_icons/icon_remote.svg")}
+              icon={require("../../../assets/sports_icons/icon_knight.svg")}
               date={EventData[1].Date}
               name={EventData[1].event}
               content={EventData[1].Info}

@@ -10,9 +10,10 @@ import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
+
 // import crew
 import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg";
-import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Male-member.jpeg";
+import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Yash_Vardhan.jpeg";
 import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
 import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg";
 
