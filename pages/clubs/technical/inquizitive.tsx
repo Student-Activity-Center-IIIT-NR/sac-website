@@ -10,12 +10,17 @@ import inquizitiveBgTop from "../../../assets/technical_clubs_bg/bg_inquizitive_
 import inquizitiveBgBottom from "../../../assets/technical_clubs_bg/bg_inquizitive_bottom.svg";
 import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo.jpg";
 import { StaticImageData } from "next/image";
+
+// import crew
 import Shivam_Kushwaha from "../../../assets/team_22-23/Shivam_Kushwaha.jpeg";
 import AnirudhSinghBhakar from "../../../assets/team_22-23/AnirudhSinghBhakar.jpeg";
 import Rigved_Atul_Desai from "../../../assets/team_22-23/Rigved_Atul_Desai.jpeg";
-import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
-import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
 
+// import events
+import quiz1 from "../../../assets/club_event_pics/technical/quiz1.jpeg";
+import quiz2 from "../../../assets/club_event_pics/technical/quiz2.jpeg";
+import quiz3 from "../../../assets/club_event_pics/technical/quiz3.jpeg";
+import quiz4 from "../../../assets/club_event_pics/technical/quiz4.jpeg";
 
 const Inquizitive = () => {
   return (
@@ -27,12 +32,12 @@ const Inquizitive = () => {
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"
-          event1Name="Kaggle Competition"
-          event1Date="18 Feb 2023"
-          event1Desc="Competition on Kaggle"
-          event2Name="Hackathon/Quiz"
-          event2Date="25 March 2023"
-          event2Desc="AIML Hackathon"
+          event1Name="Fun Quiz"
+          event1Date="February 12, 2023"
+          event1Desc="Fun based quiz competition"
+          event2Name="Treasure Hunt"
+          event2Date="March 26, 2023"
+          event2Desc="Combined event of Inquizitive and Comet"
         />
         <ClubDescription bg={inquizitiveBg}>
           True to its name, Inquisitive is the abode of the most curious minds
@@ -55,8 +60,8 @@ const Inquizitive = () => {
             pb: 6,
           }}
         >
-             <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+          <Crew props={crew} />
+          <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
     </>
@@ -64,7 +69,6 @@ const Inquizitive = () => {
 };
 
 export default Inquizitive;
-
 
 interface CrewProps {
   img: StaticImageData;
@@ -85,40 +89,21 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Rigved_Atul_Desai,
-      name: "Rigved",
-      post: "Vice Secretary",
-    },
-    {
-      img: AnirudhSinghBhakar,
-      name: "Anirudh",
-      post: "Core Member",
-    }
+    img: Rigved_Atul_Desai,
+    name: "Rigved",
+    post: "Vice Secretary",
+  },
+  {
+    img: AnirudhSinghBhakar,
+    name: "Anirudh",
+    post: "Core Member",
+  },
 ];
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
-  },
-  {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Quizadry",
+    date: "15 Oct 2022",
+    img: [quiz1, quiz2, quiz3, quiz4],
   },
 ];

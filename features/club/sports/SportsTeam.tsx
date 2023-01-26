@@ -23,8 +23,6 @@ interface Props {
   children: ReactNode;
 }
 
-
-
 const SportsTeam = () => {
   const Item = ({ img, title, children }: Props) => {
     return (
@@ -96,11 +94,11 @@ const SportsTeam = () => {
           }}
         >
           {crew.map((data, index) => {
-            return(
+            return (
               <Item img={data.img} title={data.name} key={index}>
-              {data.post}
+                {data.post}
               </Item>
-              )
+            );
           })}
         </Box>
       </Box>

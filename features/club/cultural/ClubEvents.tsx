@@ -13,6 +13,17 @@ interface EventProps {
   link: string;
 }
 
+interface Props {
+  name: string;
+  date: string;
+  desc: string;
+  link: string;
+}
+
+interface ClubEventProps {
+  props: Props[];
+}
+
 const Event = ({ name, date, children, link }: EventProps) => {
   return (
     <>
@@ -79,7 +90,7 @@ const Event = ({ name, date, children, link }: EventProps) => {
   );
 };
 
-function ClubEvents() {
+function ClubEvents({ props }: ClubEventProps) {
   return (
     <>
       <Typography
@@ -104,30 +115,18 @@ function ClubEvents() {
           pt: "48px",
         }}
       >
-        <Event name="Event1" date={"12/01/2023"} link="">
-          In a technical institute like ours we aim at bringing out the hidden
-          artists in IIIT-NR. We bring together all forms of art- digital art,
-          canvas painting, pencil art, mandala art, pen art, doodling and the
-          list goes on. We are also a bridge that connects art to craft. To name
-          a few craft work that artists in the club practice are quilling,
-          origami and handicraft.
-        </Event>
-        <Event name="Event1" date={"12/01/2023"} link="">
-          In a technical institute like ours we aim at bringing out the hidden
-          artists in IIIT-NR. We bring together all forms of art- digital art,
-          canvas painting, pencil art, mandala art, pen art, doodling and the
-          list goes on. We are also a bridge that connects art to craft. To name
-          a few craft work that artists in the club practice are quilling,
-          origami and handicraft.
-        </Event>
-        <Event name="Event1" date={"12/01/2023"} link="">
-          In a technical institute like ours we aim at bringing out the hidden
-          artists in IIIT-NR. We bring together all forms of art- digital art,
-          canvas painting, pencil art, mandala art, pen art, doodling and the
-          list goes on. We are also a bridge that connects art to craft. To name
-          a few craft work that artists in the club practice are quilling,
-          origami and handicraft.
-        </Event>
+        {props.map((event, key) => {
+          return (
+            <Event
+              name={event.name}
+              date={event.date}
+              link={event.link}
+              key={key}
+            >
+              {event.desc}
+            </Event>
+          );
+        })}
       </Box>
     </>
   );

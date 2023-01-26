@@ -10,14 +10,16 @@ import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { StaticImageData } from "next/image";
+
+// import crew
 import Aman_Sahu from "../../../assets/team_22-23/Aman_Sahu.jpeg";
 import Rishabh_Verma from "../../../assets/team_22-23/Rishabh_Verma.jpeg";
-import  Male_member from "../../../assets/team_22-23/Male-member.jpeg";
+import Male_member from "../../../assets/team_22-23/Male-member.jpeg";
 import Ayushman_Tripathi from "../../../assets/team_22-23/Ayushman_Tripathi.jpeg";
 import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg";
-import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
-import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
 
+// import events
+import ctf from "../../../assets/club_event_pics/technical/ctf.jpeg";
 
 const Ciphercell = () => {
   return (
@@ -29,12 +31,12 @@ const Ciphercell = () => {
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
-          event1Name="Kaggle Competition"
-          event1Date="18 Feb 2023"
-          event1Desc="Competition on Kaggle"
-          event2Name="Hackathon/Quiz"
-          event2Date="25 March 2023"
-          event2Desc="AIML Hackathon"
+          event1Name="Cryptic Hunt"
+          event1Date="February 19, 2023"
+          event1Desc="Introduction to Cryptography"
+          event2Name="CTF Workshop"
+          event2Date="April 2, 20233"
+          event2Desc="Workshop on Capture The Flag"
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of
@@ -60,8 +62,8 @@ const Ciphercell = () => {
             pb: 6,
           }}
         >
-           <Crew  props={crew}/>
-          <Gallery props={gallery}/> 
+          <Crew props={crew} />
+          <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
     </>
@@ -69,7 +71,6 @@ const Ciphercell = () => {
 };
 
 export default Ciphercell;
-
 
 interface CrewProps {
   img: StaticImageData;
@@ -90,51 +91,31 @@ const crew: CrewProps[] = [
     post: "Club Secretary",
   },
   {
-      img: Rishabh_Verma,
-      name: "Rishab Verma",
-      post: "Vice Secretary",
-    },
-    {
-      img: Male_member,
-      name: "Sankar S Bhardwaj",
-      post: "Core Member",
-    },
-    {
-      img: Ayushman_Tripathi,
-      name: "Ayushman Tripathi",
-      post: "Core Member",
-    },
-    {
-      img: Aadi_Juvekar,
-      name: "Aadi Juvekar",
-      post: "Core Member",
-    }
+    img: Rishabh_Verma,
+    name: "Rishab Verma",
+    post: "Vice Secretary",
+  },
+  {
+    img: Male_member,
+    name: "Sankar S Bhardwaj",
+    post: "Core Member",
+  },
+  {
+    img: Ayushman_Tripathi,
+    name: "Ayushman Tripathi",
+    post: "Core Member",
+  },
+  {
+    img: Aadi_Juvekar,
+    name: "Aadi Juvekar",
+    post: "Core Member",
+  },
 ];
-
 
 const gallery: GalleryProps[] = [
   {
-    name: "SCIη′TFIC",
-    date: "14 January 2023",
-    img: [
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-      A_Bhumika_Rao,
-    ],
-  },
-  {
-    name: "Test",
-    date: "14 January 2023",
-    img: [
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-      Ghanta_Sai_Krishna,
-    ],
+    name: "Intra College CTF",
+    date: "28 March 2022",
+    img: [ctf],
   },
 ];

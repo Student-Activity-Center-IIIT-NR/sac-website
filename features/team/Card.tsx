@@ -11,14 +11,10 @@ import { StaticImageData } from "next/image";
 interface Props {
   Name: string;
   Post: string;
-  img:StaticImageData
+  img: StaticImageData;
 }
 
-const Card = ({
-  Name,
-  Post,
-  img
-}: Props) => {
+const Card = ({ Name, Post, img }: Props) => {
   return (
     <>
       <Stack direction={"column"}>
