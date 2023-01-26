@@ -4,10 +4,22 @@ import ClubHeader from "../../../features/club/cultural/ClubHeader";
 import ClubBanner from "../../../features/club/cultural/ClubBanner";
 import ClubDescription from "../../../features/club/cultural/ClubDescription";
 import ClubEvents from "../../../features/club/cultural/ClubEvents";
-import ClubCrew from "../../../features/club/cultural/ClubCrew";
 import c2cBg from "../../../assets/cultural_clubs_bg/c2c.png";
 import c2cLogo from "../../../assets/cultural_clubs_bg/c2c_logo.png";
 import Gallery from "../../../features/club/common/Gallery";
+import Crew from "../../../features/club/common/Crew";
+import { StaticImageData } from "next/image";
+import Ananya_Pateriya from "../../../assets/team_22-23/Ananya_Pateriya.jpeg";
+import Sai_Prabhat from "../../../assets/team_22-23/saiprabhat.jpeg";
+import  Shubham_Khilari from "../../../assets/team_22-23/Shubham_khilari.jpeg";
+import Nidhi_Bhaskar from "../../../assets/team_22-23/nidhibhaskar.jpeg";
+import Aryansh_Verma from "../../../assets/team_22-23/Male-member.jpeg";
+import Aditya_Oza  from "../../../assets/team_22-23/Aditya_Oza.jpeg";
+import Jay_Deep_Singh  from "../../../assets/team_22-23/Jay_Deep_Singh.jpeg";
+import Gautam_Gupta  from "../../../assets/team_22-23/Gautam.jpeg";
+import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
+
 
 interface CoverToCoverProps {}
 
@@ -32,11 +44,96 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
           transformative way.
         </ClubDescription>
         <ClubEvents />
-        <ClubCrew />
-        {/* <Gallery /> */}
+        {/* <ClubCrew /> */}
+          <Crew  props={crew}/>
+          <Gallery props={gallery}/> 
       </ClubsLayout>
     </>
   );
 };
 
 export default CoverToCover;
+
+
+interface CrewProps {
+  img: StaticImageData;
+  name: string;
+  post: string;
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+
+const crew: CrewProps[] = [
+  {
+    img: Ananya_Pateriya,
+    name: "Ananya Pateriya",
+    post: "Club Secretary",
+  },
+  {
+      img: Sai_Prabhat,
+      name: "Sai Prabhat",
+      post: "Vice Secretary",
+    },
+    {
+      img:Shubham_Khilari,
+      name: "Shubham Khilari",
+      post: "Social Media Manager",
+    },
+    {
+      img: Nidhi_Bhaskar,
+      name: "Nidhi Bhaskar",
+      post: "Core Member",
+    },
+    {
+      img: Aryansh_Verma,
+      name: "Aryansh Verma",
+      post: "Core Member",
+    },
+    {
+      img: Aditya_Oza,
+      name: "Aditya Oza",
+      post: "Core Member",
+    },
+    {
+      img: Jay_Deep_Singh,
+      name: "Jay Deep Singh",
+      post: "Core Member",
+    },
+    {
+      img: Gautam_Gupta,
+      name: "Gautam Gupta",
+      post: "Core Member",
+    },
+];
+
+const gallery: GalleryProps[] = [
+  {
+    name: "SCIη′TFIC",
+    date: "14 January 2023",
+    img: [
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+    ],
+  },
+  {
+    name: "Test",
+    date: "14 January 2023",
+    img: [
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+    ],
+  },
+];

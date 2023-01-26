@@ -3,12 +3,19 @@ import ClubsLayout from "../../../layouts/ClubsLayout";
 import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
-import Crew from "../../../features/club/technical/Crew";
+import Crew from "../../../features/club/common/Crew";
 import Gallery from "../../../features/club/common/Gallery";
 import inquizitiveBg from "../../../assets/technical_clubs_bg/inquizitive.png";
 import inquizitiveBgTop from "../../../assets/technical_clubs_bg/bg_inquizitive_top.svg";
 import inquizitiveBgBottom from "../../../assets/technical_clubs_bg/bg_inquizitive_bottom.svg";
 import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo.jpg";
+import { StaticImageData } from "next/image";
+import Shivam_Kushwaha from "../../../assets/team_22-23/Shivam_Kushwaha.jpeg";
+import AnirudhSinghBhakar from "../../../assets/team_22-23/AnirudhSinghBhakar.jpeg";
+import Rigved_Atul_Desai from "../../../assets/team_22-23/Rigved_Atul_Desai.jpeg";
+import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
+import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+
 
 const Inquizitive = () => {
   return (
@@ -48,8 +55,8 @@ const Inquizitive = () => {
             pb: 6,
           }}
         >
-          {/* <Crew />
-          <Gallery /> */}
+             <Crew  props={crew}/>
+          <Gallery props={gallery}/> 
         </Box>
       </ClubsLayout>
     </>
@@ -57,3 +64,61 @@ const Inquizitive = () => {
 };
 
 export default Inquizitive;
+
+
+interface CrewProps {
+  img: StaticImageData;
+  name: string;
+  post: string;
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+const crew: CrewProps[] = [
+  {
+    img: Shivam_Kushwaha,
+    name: "Shivam Kushwaha",
+    post: "Club Secretary",
+  },
+  {
+      img: Rigved_Atul_Desai,
+      name: "Rigved",
+      post: "Vice Secretary",
+    },
+    {
+      img: AnirudhSinghBhakar,
+      name: "Anirudh",
+      post: "Core Member",
+    }
+];
+
+const gallery: GalleryProps[] = [
+  {
+    name: "SCIη′TFIC",
+    date: "14 January 2023",
+    img: [
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+    ],
+  },
+  {
+    name: "Test",
+    date: "14 January 2023",
+    img: [
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+    ],
+  },
+];

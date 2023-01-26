@@ -4,10 +4,22 @@ import ClubHeader from "../../../features/club/cultural/ClubHeader";
 import ClubBanner from "../../../features/club/cultural/ClubBanner";
 import ClubDescription from "../../../features/club/cultural/ClubDescription";
 import ClubEvents from "../../../features/club/cultural/ClubEvents";
-import ClubCrew from "../../../features/club/cultural/ClubCrew";
 import Gallery from "../../../features/club/common/Gallery";
 import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
+
+
+import A_Bhumika_Rao from "../../../assets/team_22-23/A_Bhumika_Rao.jpeg";
+import Ghanta_Sai_Krishna from "../../../assets/team_22-23/Ghanta_Sai_Krishna.jpeg";
+import Crew from "../../../features/club/common/Crew";
+
+import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg"
+import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Male-member.jpeg"
+import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg"
+import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg"
+
+import { StaticImageData } from "next/image";
+// Deepesh_Agrawal
 
 interface TakeDaBaitProps {}
 
@@ -33,11 +45,75 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           equipped to be informed citizens and future leaders.
         </ClubDescription>
         <ClubEvents />
-        <ClubCrew />
         {/* <Gallery /> */}
+        <Crew  props={crew}/>
+          <Gallery props={gallery}/> 
       </ClubsLayout>
     </>
   );
 };
 
 export default TakeDaBait;
+
+
+interface CrewProps {
+  img: StaticImageData;
+  name: string;
+  post: string;
+}
+
+interface GalleryProps {
+  name: string;
+  img: StaticImageData[];
+  date: string;
+}
+
+const crew: CrewProps[] = [
+  {
+    img: Vipulesh,
+    name: "Vipulesh",
+    post: "Club Secretary",
+  },
+  {
+      img: Yash_Vardhan_Gautam,
+      name: "Yash Vardhan Gautam",
+      post: "Vice Secretary",
+    },
+    {
+      img: Sontu_Akshath_Rishi,
+      name: "Sontu Akshath Rishi",
+      post: "Core Member",
+    },
+    {
+      img: Deepesh_Agrawal,
+      name: "Deepesh Agrawal",
+      post: "Core Member",
+    }
+];
+
+const gallery: GalleryProps[] = [
+  {
+    name: "SCIη′TFIC",
+    date: "14 January 2023",
+    img: [
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+      A_Bhumika_Rao,
+    ],
+  },
+  {
+    name: "Test",
+    date: "14 January 2023",
+    img: [
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+      Ghanta_Sai_Krishna,
+    ],
+  },
+]

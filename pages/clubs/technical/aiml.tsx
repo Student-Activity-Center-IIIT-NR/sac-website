@@ -4,7 +4,7 @@ import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
 import { StaticImageData } from "next/image";
-import Crew from "../../../features/club/technical/Crew";
+import Crew from "../../../features/club/common/Crew";
 import Gallery from "../../../features/club/common/Gallery";
 import aimlBg from "../../../assets/technical_clubs_bg/aiml.jpeg";
 import aimlBgTop from "../../../assets/technical_clubs_bg/bg_aiml_top.svg";
