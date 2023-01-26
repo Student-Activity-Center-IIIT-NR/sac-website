@@ -6,11 +6,11 @@ import { itemData } from "./SportsGalleryData";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-const ImageGrid = () => {
-  interface CrewProps {
-    img: StaticImageData;
-  }
+interface CrewProps {
+  img: StaticImageData;
+}
 
+const ImageGrid = () => {
   return (
     <Stack width="860px" sx={{ transform: "rotateY(180deg)" }}>
       <Box

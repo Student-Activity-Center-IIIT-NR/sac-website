@@ -27,6 +27,14 @@ import whatif1 from "../../../assets/club_event_pics/cultural/whatif1.jpeg";
 import whatif2 from "../../../assets/club_event_pics/cultural/whatif2.jpeg";
 import whatif3 from "../../../assets/club_event_pics/cultural/whatif3.jpeg";
 import whatif4 from "../../../assets/club_event_pics/cultural/whatif4.jpeg";
+import munc1 from "../../../assets/club_event_pics/cultural/munc1.jpeg";
+import munc2 from "../../../assets/club_event_pics/cultural/munc2.jpeg";
+import munc3 from "../../../assets/club_event_pics/cultural/munc3.jpeg";
+import munc4 from "../../../assets/club_event_pics/cultural/munc4.jpeg";
+import munc5 from "../../../assets/club_event_pics/cultural/munc5.jpeg";
+import munc6 from "../../../assets/club_event_pics/cultural/munc6.jpeg";
+import munc7 from "../../../assets/club_event_pics/cultural/munc7.jpeg";
+import munc8 from "../../../assets/club_event_pics/cultural/munc8.jpeg";
 
 interface ModelUnitedNationProps {}
 
@@ -104,6 +112,11 @@ const crew: CrewProps[] = [
 ];
 
 const gallery: GalleryProps[] = [
+  {
+    name: "MUN Conference 2022",
+    date: "7-8 May 2022",
+    img: [munc1, munc2, munc3, munc4, munc5, munc6, munc7, munc8],
+  },
   {
     name: "Chai Pe Charcha",
     date: "19 Jan 2023",

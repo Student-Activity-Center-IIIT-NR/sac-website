@@ -3,10 +3,10 @@ import { styled } from "@mui/material";
 import ImageGrid from "./ImageGrid";
 import Image from "next/image";
 import iconArrow from "../../../assets/icon/icon_arrow.svg";
-import { Data } from "./SportsGalleryData";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import { data } from "./SportsGalleryData";
 
 const StyledTypography = styled(Typography)({
   fontFamily: "Lato",
@@ -17,35 +17,31 @@ const StyledTypography = styled(Typography)({
   color: "#6B7280",
 });
 
+interface dataProps {
+  name: string;
+  intro: string;
+  winner: string;
+}
+
 const SportsGallery = () => {
-  const ArambhEstd = 2022;
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [values, setValues] = useState<dataProps>(data[0]);
+
+  const len = data.length;
+  const index = len - 1;
 
   const yearDecrement = () => {
-    year > ArambhEstd ? setYear(year - 1) : null;
+    if (index <= 0) {
+      return;
+    }
+    setValues(data[index - 1]);
   };
 
   const yearIncrement = () => {
-    year < new Date().getFullYear() ? setYear(year + 1) : null;
+    if (index >= len - 1) {
+      return;
+    }
+    setValues(data[index + 1]);
   };
-
-  let element = {
-    Year: 2022,
-    Introduction:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia. ",
-    Winners:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et sagittis massa. Cras neque ante, iaculis ac massa in, maximus egestas erat. Nullam pellentesque quam sit amet suscipit varius. Sed at cursus eros, eu ornare enim. Suspendisse potenti. Ut quis velit sed lorem convallis lacinia. ",
-  };
-
-  if (year !== element.Year) {
-    Data.forEach((e) => {
-      if (e.Year === year) {
-        element = e;
-        console.log(element);
-        return;
-      }
-    });
-  }
 
   return (
     <Stack
@@ -63,7 +59,6 @@ const SportsGallery = () => {
           fontSize={"64px"}
           color="#000000"
           textAlign="left"
-          mt="130px"
         >
           GALLERY
         </Typography>
@@ -95,8 +90,7 @@ const SportsGallery = () => {
             color="#000000"
             mx={"20px"}
           >
-            ARAMBH &nbsp;{ArambhEstd}
-            {/*ArambhEstd is constant Change it to "year"  for current data*/}
+            {values.name}
           </Typography>
           <Image
             src={iconArrow}
@@ -110,11 +104,11 @@ const SportsGallery = () => {
             }}
           />
         </Box>
-        <StyledTypography pr={"20px"}>{element.Introduction}</StyledTypography>
+        <StyledTypography pr={"20px"}>{values.intro}</StyledTypography>
         <StyledTypography>
-          <strong>WINNERS</strong>
+          <strong>WINNER</strong>
         </StyledTypography>
-        <StyledTypography pr={"20px"}>{element.Winners}</StyledTypography>
+        <StyledTypography pr={"20px"}>{values.winner}</StyledTypography>
       </Stack>
       <ImageGrid />
     </Stack>

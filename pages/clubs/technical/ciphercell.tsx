@@ -19,7 +19,10 @@ import Ayushman_Tripathi from "../../../assets/team_22-23/Ayushman_Tripathi.jpeg
 import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg";
 
 // import events
-import ctf from "../../../assets/club_event_pics/technical/ctf.jpeg";
+import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
+import ctf2 from "../../../assets/club_event_pics/technical/ctf2.jpeg";
+import ctf3 from "../../../assets/club_event_pics/technical/ctf3.jpeg";
+import ctf4 from "../../../assets/club_event_pics/technical/ctf4.jpeg";
 
 const Ciphercell = () => {
   return (
@@ -116,6 +119,6 @@ const gallery: GalleryProps[] = [
   {
     name: "Intra College CTF",
     date: "28 March 2022",
-    img: [ctf],
+    img: [ctf1, ctf2, ctf3, ctf4],
   },
 ];

@@ -47,9 +47,10 @@ const SportsHeading = () => {
               fontSize={"16px"}
               color={"#6B7280"}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              accumsan metus pulvinar, fringilla sapien sed, faucibus neque
-              Proin dignissim tincidunt sapien, vitae tristique velit vehicula a
+              Atharv is the sports club at IIIT-NR. It is responsible for
+              organizing and conducting sports and eSports events and
+              competitions within the college, such as basketball
+              leagues,cricket, football, CS:GO Valorant & Fifa tournaments.
             </Typography>
           </Stack>
         </Stack>
