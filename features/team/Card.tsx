@@ -30,6 +30,9 @@ const Card = ({ Name, Post, img }: Props) => {
             height={"309px"}
             alt={""}
             objectFit="cover"
+            style={{
+              borderRadius: "12px",
+            }}
           />
         </Box>
         <Typography
@@ -51,7 +54,7 @@ const Card = ({ Name, Post, img }: Props) => {
           variant="body2"
           mt={"6px"}
           sx={{
-            // width: "187px",
+            width: "200px",
             fontFamily: "Playfair Display",
             fontStyle: "normal",
             fontWeight: 800,

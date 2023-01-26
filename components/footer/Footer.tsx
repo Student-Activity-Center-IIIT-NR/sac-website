@@ -10,7 +10,6 @@ import FacebookIcon from "../../assets/icon/icon_facebook.svg";
 import InstagramIcon from "../../assets/icon/icon_instagram.svg";
 import logo1 from "../../assets/footer/logo1.png";
 import logo2 from "../../assets/footer/logo2.png";
-import { appendFile } from "fs";
 
 const Footer = () => {
   return (

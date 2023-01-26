@@ -52,16 +52,18 @@ const ScrollContainer = ({
           </Typography>
         )}
         <Box
-          className={hovered ? TeamStyle.name : ""}
+          // className={hovered ? TeamStyle.name : ""}
           sx={{
-            height: "530px",
+            // height: "530px",
             maxWidth: "fit-content",
             mx: "auto",
             display: "flex",
             flexDirection: "row",
-            overflowX: "scroll",
+            // overflowX: "scroll",
+            flexWrap: "wrap",
             alignItems: "center",
-            columnGap: "72px",
+            justifyContent: "center",
+            gap: "72px",
             scrollBehavior: "smooth",
           }}
           onMouseEnter={() => {
