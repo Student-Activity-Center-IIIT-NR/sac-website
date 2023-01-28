@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Card from "./Card";
-import TeamStyle from "../../styles/Team.module.css";
 import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import { StaticImageData } from "next/image";
@@ -15,6 +14,9 @@ interface CrewProps {
   img: StaticImageData;
   name: string;
   post: string;
+  linkedin?: string;
+  call?: number;
+  mail?: string;
 }
 
 const ScrollContainer = ({
@@ -52,14 +54,11 @@ const ScrollContainer = ({
           </Typography>
         )}
         <Box
-          // className={hovered ? TeamStyle.name : ""}
           sx={{
-            // height: "530px",
             maxWidth: "fit-content",
             mx: "auto",
             display: "flex",
             flexDirection: "row",
-            // overflowX: "scroll",
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",
@@ -79,6 +78,9 @@ const ScrollContainer = ({
                 Name={data.name}
                 Post={data.post}
                 img={data.img}
+                linkedin={data.linkedin}
+                call={data.call}
+                mail={data.mail}
                 key={index}
               />
             );

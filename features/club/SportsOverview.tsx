@@ -67,13 +67,15 @@ const SportsOverview = () => {
         direction={"row"}
         alignItems={"flex-start"}
         mt={"82px"}
-        ml={"80px"}
-        mr={"100px"}
         justifyContent={"space-between"}
         mb={"120px"}
       >
-        <Box>
-          <Stack direction={"row"} gap={"20px"}>
+        <Box maxWidth={1055} ml={10}>
+          <Stack
+            direction={"row"}
+            justifyContent={"space-between"}
+            gap={"20px"}
+          >
             <Stack maxWidth={600} gap={"24px"}>
               <Typography
                 fontFamily={"Rubik"}
@@ -238,8 +240,12 @@ const SportsOverview = () => {
             <a href="" target={"_blank"} rel="noreferrer">
               <Image src={twitter} alt="" />
             </a>
-            <a href="" target={"_blank"} rel="noreferrer">
-              <Image src={insta} alt="" />
+            <a
+              href="https://www.instagram.com/atharv_iiitnr/"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <Image src={insta} alt="icon_instagram" />
             </a>
           </Stack>
         </Stack>

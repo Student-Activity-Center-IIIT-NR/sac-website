@@ -14,7 +14,6 @@ import Ojas_Dubey from "../../assets/team_22-23/Ojas_Dubey.jpeg";
 import Aman_Singh from "../../assets/team_22-23/Aman_Singh.jpeg";
 import Vinayak_Shrivastava from "../../assets/team_22-23/Vinayak_Shrivastava.jpeg";
 import saiprabhat from "../../assets/team_22-23/saiprabhat.jpeg";
-import Ganesh_Prajapati from "../../assets/team_22-23/Ganesh_Prajapati.jpeg";
 import Shubham_khilari from "../../assets/team_22-23/Shubham_khilari.jpeg";
 import nidhibhaskar from "../../assets/team_22-23/nidhibhaskar.jpeg";
 import navneet_chaubey from "../../assets/team_22-23/navneet_chaubey.jpeg";
@@ -26,6 +25,9 @@ interface CrewProps {
   img: StaticImageData;
   name: string;
   post: string;
+  linkedin?: string;
+  call?: number;
+  mail?: string;
 }
 
 export const CoreTeam: CrewProps[] = [
@@ -86,6 +88,9 @@ export const WebsiteManagementTeam: CrewProps[] = [
     img: Sudhanshu_Tripathi,
     name: "Sudhanshu Tripathi",
     post: "Vice-Head",
+    linkedin: "https://www.linkedin.com/in/sudhanshu1309/",
+    call: 9696800234,
+    mail: "sudhanshutripathi008@gmail.com",
   },
   {
     img: Deepesh_Agrawal,
@@ -121,11 +126,6 @@ export const Design: CrewProps[] = [
   {
     img: saiprabhat,
     name: "Sai Prabhat",
-    post: "Member",
-  },
-  {
-    img: Ganesh_Prajapati,
-    name: "Ganesh Prajapati",
     post: "Member",
   },
   {

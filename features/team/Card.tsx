@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import testImg from "../../assets/test/test.jpeg"; //remove
 import icon_linkedin from "../../assets/icon/icon_linkedin.svg";
 import icon_call from "../../assets/icon/icon_call.svg";
 import icon_mail from "../../assets/icon/icon_mail.svg";
@@ -12,9 +11,12 @@ interface Props {
   Name: string;
   Post: string;
   img: StaticImageData;
+  linkedin?: string;
+  call?: number;
+  mail?: string;
 }
 
-const Card = ({ Name, Post, img }: Props) => {
+const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
   return (
     <>
       <Stack direction={"column"}>
@@ -30,6 +32,7 @@ const Card = ({ Name, Post, img }: Props) => {
             height={"309px"}
             alt={""}
             objectFit="cover"
+            objectPosition={"center"}
             style={{
               borderRadius: "12px",
             }}
@@ -39,7 +42,6 @@ const Card = ({ Name, Post, img }: Props) => {
           variant="body2"
           mt={"15px"}
           sx={{
-            // width: "124px",
             fontFamily: "Rubik",
             fontStyle: "normal",
             fontWeight: 400,
@@ -89,11 +91,7 @@ const Card = ({ Name, Post, img }: Props) => {
               height: "22px",
             }}
           >
-            <a
-              href="https://www.linkedin.com/in/sudhanshu1309/"
-              rel="noreferrer"
-              target={"_blank"}
-            >
+            <a href={linkedin} rel="noreferrer" target={"_blank"}>
               <Image
                 src={icon_linkedin}
                 width="22px"
@@ -109,16 +107,12 @@ const Card = ({ Name, Post, img }: Props) => {
               height: "22px",
             }}
           >
-            <a
-              href="https://www.linkedin.com/in/sudhanshu1309/"
-              rel="noreferrer"
-              target={"_blank"}
-            >
+            <a href={`tel:+91${call}`} rel="noreferrer" target={"_blank"}>
               <Image
                 src={icon_call}
                 width="22px"
                 height="22px"
-                alt={"linkedin"}
+                alt={""}
                 objectFit="cover"
               />
             </a>
@@ -129,17 +123,8 @@ const Card = ({ Name, Post, img }: Props) => {
               width: "22px",
             }}
           >
-            <a
-              href="https://www.linkedin.com/in/sudhanshu1309/"
-              rel="noreferrer"
-              target={"_blank"}
-            >
-              <Image
-                src={icon_mail}
-                height="22px"
-                alt={"linkedin"}
-                objectFit="cover"
-              />
+            <a href={`mailto:${mail}`} rel="noreferrer" target={"_blank"}>
+              <Image src={icon_mail} height="22px" alt={""} objectFit="cover" />
             </a>
           </Box>
         </Stack>
