@@ -1,5 +1,5 @@
 import Stack from "@mui/material/Stack";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconTriangle from "../../assets/calendar_icons/triangle.svg";
@@ -38,7 +38,7 @@ const MonthlyCalendar: NextPage = () => {
   const [monthWiseData, setMonthWiseData] = useState<{
     map(
       arg0: (_item: any, index: number) => JSX.Element
-    ): import("react").ReactNode;
+    ): ReactNode;
     [key: number]: MonthlyCalendarProps[];
   }>();
 
