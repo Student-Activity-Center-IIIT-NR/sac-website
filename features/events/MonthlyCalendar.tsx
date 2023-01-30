@@ -1,5 +1,5 @@
 import Stack from "@mui/material/Stack";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconTriangle from "../../assets/calendar_icons/triangle.svg";
@@ -36,6 +36,9 @@ const MonthlyCalendar: NextPage = () => {
   });
 
   const [monthWiseData, setMonthWiseData] = useState<{
+    map(
+      arg0: (_item: any, index: number) => JSX.Element
+    ): ReactNode;
     [key: number]: MonthlyCalendarProps[];
   }>();
 
@@ -55,23 +58,17 @@ const MonthlyCalendar: NextPage = () => {
   ];
 
   const splitCalendarData = (filteredData: MonthlyCalendarProps[]) => {
-    return filteredData.reduce(
-      (
-        months: { [key: number]: MonthlyCalendarProps[] },
-        event: MonthlyCalendarProps
-      ) => {
-        const month = new Date(
-          event.date.split("-").reverse().join("-")
-        ).getMonth();
+    return filteredData.reduce((months: any, event) => {
+      const month = new Date(
+        event.date.split("-").reverse().join("-")
+      ).getMonth();
 
-        if (!months[month]) {
-          months[month] = [];
-        }
-        months[month].push(event);
-        return months;
-      },
-      []
-    );
+      if (!months[month]) {
+        months[month] = [];
+      }
+      months[month].push(event);
+      return months;
+    }, []);
   };
 
   useEffect(() => {
@@ -116,9 +113,9 @@ const MonthlyCalendar: NextPage = () => {
       <>
         <Stack mt={"80px"}>
           {monthWiseData &&
-            monthWiseData[0].map((_item: any, index: number) => {
+            monthWiseData.map((_item: any, index: number) => {
               return (
-                <>
+                <div key={index}>
                   <Typography
                     fontFamily={"Rubik"}
                     fontStyle={"normal"}
@@ -151,7 +148,7 @@ const MonthlyCalendar: NextPage = () => {
                       );
                     })}
                   </Grid2>
-                </>
+                </div>
               );
             })}
         </Stack>
