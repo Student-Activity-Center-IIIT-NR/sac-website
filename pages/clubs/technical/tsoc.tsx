@@ -17,6 +17,7 @@ import anisha from "../../../assets/team_22-23/anisha.jpeg";
 import Suyash_Sinha from "../../../assets/team_22-23/Suyash_Sinha.jpeg";
 import Vedica_Mishra from "../../../assets/team_22-23/Vedica_Mishra.jpeg";
 import Kapil_Soni from "../../../assets/team_22-23/Kapil_Soni.jpeg";
+import Gaurish_Ojha from "../../../assets/team_22-23/Gaurish_Ojha.jpeg";
 
 // import events
 import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
@@ -113,6 +114,11 @@ const crew: CrewProps[] = [
   {
     img: Kapil_Soni,
     name: "Kapil Soni",
+    post: "Core Member",
+  },
+  {
+    img: Gaurish_Ojha,
+    name: "Gaurish Ojha",
     post: "Core Member",
   },
 ];
