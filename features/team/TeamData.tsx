@@ -18,7 +18,7 @@ import Shubham_khilari from "../../assets/team_22-23/Shubham_khilari.jpeg";
 import nidhibhaskar from "../../assets/team_22-23/nidhibhaskar.jpeg";
 import navneet_chaubey from "../../assets/team_22-23/navneet_chaubey.jpeg";
 import Jay_Deep_Singh from "../../assets/team_22-23/Jay_Deep_Singh.jpeg";
-import manoj_SacP from "../../assets/team_22-23/manoj.jpg";
+import manoj_SacP from "../../assets/team_22-23/manoj.jpeg";
 import Karan_Agrawal from "../../assets/team_22-23/Karan_Agrawal.jpeg";
 
 interface CrewProps {
@@ -33,7 +33,7 @@ interface CrewProps {
 export const CoreTeam: CrewProps[] = [
   {
     img: manoj_SacP,
-    name: "MANOJ KUMAR MAJUMDER ",
+    name: "Dr. MANOJ KUMAR MAJUMDER",
     post: "SAC President",
   },
   {
