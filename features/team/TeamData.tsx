@@ -43,6 +43,7 @@ import Tavisha from "../../assets/team_21-22/Tavisha.jpg";
 import Sonal_Singh from "../../assets/team_21-22/PSX_20200229_183102.jpg";
 import Shubham from "../../assets/team_21-22/Shubham.jpg";
 import Bhupendra_Chouhan from "../../assets/team_21-22/Bhupendra Chouhan_.jpg";
+
 // 2020-2021
 import prince_yadav from "../../assets/team_20-21/prince_yadav.jpg";
 import Vidhi_Sharma from "../../assets/team_20-21/vidhi_sharma.jpg";
@@ -65,7 +66,6 @@ import shivangini_prasad from "../../assets/team_20-21/shivangini_prasad.jpg";
 import sonal_singh from "../../assets/team_20-21/sonal_singh.jpg";
 
 // 2019-2020
-
 import nitin_chandra from "../../assets/team_19-20/nitin_chandra.jpg";
 import sriyuta_srivastava from "../../assets/team_19-20/sriyuta_srivastava.jpg";
 import jatin_aditya_reddy from "../../assets/team_19-20/jatin_aditya_reddy.jpg";
@@ -94,599 +94,492 @@ interface CrewProps {
   mail?: string;
 }
 
-interface YearWise {
-  CoreTeam?: CrewProps[];
-  WebsiteManagementTeam?: CrewProps[];
-  SocialMedia?: CrewProps[];
-  Design?: CrewProps[];
-  ContentWriterTeam?: CrewProps[];
+interface TeamDataProps {
+  22_23: {
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
+  21_22: {
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
+  20_21: {
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
+  19_20: {
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
+  18_19: {
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
 }
 
-interface SessionProps {
-  Year: string;
-  Data: YearWise;
-}
+// Data should follow a order => core, web, design, documentation, social
 
-export const Session: SessionProps[] = [
-  {
-    Year: "22_23",
-    Data: {
-      CoreTeam: [
-        {
-          img: manoj_SacP,
-          name: "Dr. MANOJ KUMAR MAJUMDER",
-          post: "SAC President",
-        },
-        {
-          img: HimanshuYadav_UG_2022,
-          name: "Himanshu Yadav",
-          post: "UG Representative (Boys)",
-        },
-        {
-          img: SristhiSahooUG,
-          name: "Sristhi Sahoo",
-          post: "UG Representative (Girls)",
-        },
-        {
-          img: Nishok,
-          name: "Nishoak Kosaraju",
-          post: "Science and Technology Secretary (Boys)",
-        },
-        {
-          img: Supriya,
-          name: "Kundrapu Supriya",
-          post: "Science and Technology Secretary (Girls)",
-        },
-        {
-          img: Aaditya_Kumar,
-          name: "Aaditya Kumar",
-          post: "Arts, Cultural and Literary Secretary (Boys)",
-        },
-        {
-          img: SonaliB,
-          name: "Sonali Banjare",
-          post: "Arts, Cultural and Literary Secretary (Girls)",
-        },
-        {
-          img: Kishan_Mishra,
-          name: "Kishan Gopal Mishra",
-          post: "Sports Secretary (Boys)",
-        },
-        {
-          img: Nidhi_Vaishnav,
-          name: "Nidhi Vaishnav",
-          post: "Sports Secretary (Girls)",
-        },
-      ],
-      WebsiteManagementTeam: [
-        {
-          img: Soumya_min,
-          name: "Soumya Ranjan Patnaik",
-          post: "Head",
-        },
-        {
-          img: Sudhanshu_Tripathi,
-          name: "Sudhanshu Tripathi",
-          post: "Vice-Head",
-          linkedin: "https://www.linkedin.com/in/sudhanshu1309/",
-          call: 9696800234,
-          mail: "sudhanshutripathi008@gmail.com",
-        },
-        {
-          img: Deepesh_Agrawal,
-          name: "Deepesh Agrawal",
-          post: "Core Member",
-        },
-        {
-          img: Ojas_Dubey,
-          name: "Ojas Dubey",
-          post: "Core Member",
-        },
-      ],
-      SocialMedia: [
-        {
-          img: Karan_Agrawal,
-          name: "Karan Agrawal",
-          post: "Head",
-        },
-      ],
-      Design: [
-        {
-          img: Aman_Singh,
-          name: "Aman Singh",
-          post: "Head",
-        },
-        {
-          img: Vinayak_Shrivastava,
-          name: "Vinayak Shrivastava",
-          post: "Vice-Head",
-        },
-        {
-          img: saiprabhat,
-          name: "Sai Prabhat",
-          post: "Member",
-        },
-        {
-          img: Shubham_khilari,
-          name: "Shubham Khilari",
-          post: "Member",
-        },
-        {
-          img: nidhibhaskar,
-          name: "Nidhi Bhaskar",
-          post: "Member",
-        },
-      ],
-      ContentWriterTeam: [
-        {
-          img: navneet_chaubey,
-          name: "Navneet Chaubey",
-          post: "Member",
-        },
-        {
-          img: Jay_Deep_Singh,
-          name: "Jay Deep",
-          post: "Member",
-        },
-      ],
-    },
+export const TeamData: TeamDataProps = {
+  22_23: {
+    core: [
+      {
+        img: manoj_SacP,
+        name: "Dr. MANOJ KUMAR MAJUMDER",
+        post: "SAC President",
+      },
+      {
+        img: HimanshuYadav_UG_2022,
+        name: "Himanshu Yadav",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: SristhiSahooUG,
+        name: "Sristhi Sahoo",
+        post: "UG Representative (Girls)",
+      },
+      {
+        img: Nishok,
+        name: "Nishoak Kosaraju",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: Supriya,
+        name: "Kundrapu Supriya",
+        post: "Science and Technology Secretary (Girls)",
+      },
+      {
+        img: Aaditya_Kumar,
+        name: "Aaditya Kumar",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: SonaliB,
+        name: "Sonali Banjare",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+      {
+        img: Kishan_Mishra,
+        name: "Kishan Gopal Mishra",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: Nidhi_Vaishnav,
+        name: "Nidhi Vaishnav",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
+    web: [
+      {
+        img: Soumya_min,
+        name: "Soumya Ranjan Patnaik",
+        post: "Head",
+      },
+      {
+        img: Sudhanshu_Tripathi,
+        name: "Sudhanshu Tripathi",
+        post: "Vice-Head",
+        linkedin: "https://www.linkedin.com/in/sudhanshu1309/",
+        call: 9696800234,
+        mail: "sudhanshutripathi008@gmail.com",
+      },
+      {
+        img: Deepesh_Agrawal,
+        name: "Deepesh Agrawal",
+        post: "Core Member",
+      },
+      {
+        img: Ojas_Dubey,
+        name: "Ojas Dubey",
+        post: "Core Member",
+      },
+    ],
+    design: [
+      {
+        img: Aman_Singh,
+        name: "Aman Singh",
+        post: "Head",
+      },
+      {
+        img: Vinayak_Shrivastava,
+        name: "Vinayak Shrivastava",
+        post: "Vice-Head",
+      },
+      {
+        img: saiprabhat,
+        name: "Sai Prabhat",
+        post: "Member",
+      },
+      {
+        img: Shubham_khilari,
+        name: "Shubham Khilari",
+        post: "Member",
+      },
+      {
+        img: nidhibhaskar,
+        name: "Nidhi Bhaskar",
+        post: "Member",
+      },
+    ],
+    documentation: [
+      {
+        img: navneet_chaubey,
+        name: "Navneet Chaubey",
+        post: "Member",
+      },
+      {
+        img: Jay_Deep_Singh,
+        name: "Jay Deep",
+        post: "Member",
+      },
+    ],
+    social: [
+      {
+        img: Karan_Agrawal,
+        name: "Karan Agrawal",
+        post: "Head",
+      },
+    ],
   },
-  // ***************************************************************************************************************************
-  {
-    Year: "21_22",
-    Data: {
-      CoreTeam: [
-        {
-          img: Dr_Venkanna,
-          name: "Dr. Venkanna U",
-          post: "SAC President",
-        },
-        {
-          img: ketan,
-          name: "Ketan Agrawal",
-          post: "UG Representative (Boys)",
-        },
-        {
-          img: Sakshi_Verma,
-          name: "Sakshi Verma",
-          post: "UG Representative (Girls)",
-        },
-        {
-          img: abheeshth,
-          name: "Abheeshth Mishra",
-          post: "Science and Technology Secretary (Boys)",
-        },
-        {
-          img: saumya,
-          name: "Saumya Singh",
-          post: "Science and Technology Secretary (Girls)",
-        },
-        {
-          img: ayush_tirkey,
-          name: "Ayush Tirkey",
-          post: "Arts, Cultural and Literary Secretary (Boys)",
-        },
-        {
-          img: Meetiksha,
-          name: "Meetiksha Sorgile",
-          post: "Arts, Cultural and Literary Secretary (Girls)",
-        },
-        {
-          img: gunateja,
-          name: "Gunateja Polamarasetti",
-          post: "Sports Secretary (Boys)",
-        },
-        {
-          img: Roopa_navya,
-          name: "Roopa Navya Muthi",
-          post: "Sports Secretary (Girls)",
-        },
-      ],
-      WebsiteManagementTeam: [
-        {
-          img: shashank,
-          name: "Shashank Kumar",
-          post: "Website Management Head",
-        },
-        {
-          img: Suraj,
-          name: "Suraj Jaiswal",
-          post: "Website Management Head",
-        },
-        {
-          img: Anupam,
-          name: "USP Anupam",
-          post: "Website Management Head",
-        },
-        {
-          img: amogh,
-          name: "Amogh Dubey",
-          post: "Website Management Team Member",
-        },
-        {
-          img: Himanshu,
-          name: "Himanshu Yadav",
-          post: "Website Management Team Member",
-        },
-        {
-          img: Soumya,
-          name: "Soumya Ranjan Patnaik",
-          post: "Website Management Team Member",
-        },
-        {
-          img: Tavisha,
-          name: "Tavisha Thaware",
-          post: "Website Management Team Member",
-        },
-      ],
-      Design: [
-        {
-          img: Sonal_Singh,
-          name: "Sonal Singh",
-          post: "Designing Team Head",
-        },
-        {
-          img: Shubham,
-          name: "Shubham Raj Sahu",
-          post: "Designing Team",
-        },
-        {
-          img: Vinayak_Shrivastava,
-          name: "Vinayak Shrivastava",
-          post: "Designing Team",
-        },
-        {
-          img: Bhupendra_Chouhan,
-          name: "Bhupendra Chouhan",
-          post: "Designing Team",
-        },
-      ],
-    },
+
+  // 2021-22
+  21_22: {
+    core: [
+      {
+        img: Dr_Venkanna,
+        name: "Dr. Venkanna U",
+        post: "SAC President",
+      },
+      {
+        img: ketan,
+        name: "Ketan Agrawal",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: Sakshi_Verma,
+        name: "Sakshi Verma",
+        post: "UG Representative (Girls)",
+      },
+      {
+        img: abheeshth,
+        name: "Abheeshth Mishra",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: saumya,
+        name: "Saumya Singh",
+        post: "Science and Technology Secretary (Girls)",
+      },
+      {
+        img: ayush_tirkey,
+        name: "Ayush Tirkey",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: Meetiksha,
+        name: "Meetiksha Sorgile",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+      {
+        img: gunateja,
+        name: "Gunateja Polamarasetti",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: Roopa_navya,
+        name: "Roopa Navya Muthi",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
+    web: [
+      {
+        img: shashank,
+        name: "Shashank Kumar",
+        post: "Website Management Head",
+      },
+      {
+        img: Suraj,
+        name: "Suraj Jaiswal",
+        post: "Website Management Head",
+      },
+      {
+        img: Anupam,
+        name: "USP Anupam",
+        post: "Website Management Head",
+      },
+      {
+        img: amogh,
+        name: "Amogh Dubey",
+        post: "Website Management Team Member",
+      },
+      {
+        img: Himanshu,
+        name: "Himanshu Yadav",
+        post: "Website Management Team Member",
+      },
+      {
+        img: Soumya,
+        name: "Soumya Ranjan Patnaik",
+        post: "Website Management Team Member",
+      },
+      {
+        img: Tavisha,
+        name: "Tavisha Thaware",
+        post: "Website Management Team Member",
+      },
+    ],
+    design: [
+      {
+        img: Sonal_Singh,
+        name: "Sonal Singh",
+        post: "Designing Team Head",
+      },
+      {
+        img: Shubham,
+        name: "Shubham Raj Sahu",
+        post: "Designing Team",
+      },
+      {
+        img: Vinayak_Shrivastava,
+        name: "Vinayak Shrivastava",
+        post: "Designing Team",
+      },
+      {
+        img: Bhupendra_Chouhan,
+        name: "Bhupendra Chouhan",
+        post: "Designing Team",
+      },
+    ],
   },
-  // ********************************************************************************************************************
-  {
-    Year: "20_21",
-    Data: {
-      CoreTeam: [
-        {
-          img: Dr_Venkanna,
-          name: "Dr. Venkanna U",
-          post: "SAC President",
-        },
-        {
-          img: prince_yadav,
-          name: "Prince Yadav",
-          post: "UG Representative (Boys)",
-        },
-        {
-          img: Vidhi_Sharma,
-          name: "Vidhi Sharma",
-          post: "UG Representative (Girls)",
-        },
-        {
-          img: alluri_lsv_siddhartha_varma,
-          name: "Alluri LSV Siddhartha Varma",
-          post: "Science and Technology Secretary (Boys)",
-        },
-        {
-          img: sakshi_kumari,
-          name: "Sakshi Kumari",
-          post: "Science and Technology Secretary (Girls)",
-        },
-        {
-          img: samar_lal,
-          name: "Samar Lal",
-          post: "Arts, Cultural and Literary Secretary (Boys)",
-        },
-        {
-          img: palak_chandrakar,
-          name: "Palak Chandrakar",
-          post: "Arts, Cultural and Literary Secretary (Girls)",
-        },
-        {
-          img: abhay_bagh,
-          name: "Abhay Bagh",
-          post: "Sports Secretary (Boys)",
-        },
-        {
-          img: rashi_bagga,
-          name: "Rashi Bagga",
-          post: "Sports Secretary (Girls)",
-        },
-      ],
-      WebsiteManagementTeam: [
-        {
-          img: saumya_bhatnagar,
-          name: "Saumya Bhatnagar",
-          post: "Website Management Head",
-        },
-        {
-          img: himanshu_patel,
-          name: "Himanshu Patel",
-          post: "Website Management Head",
-        },
-        {
-          img: siddharth_singh,
-          name: "Siddarth Singh",
-          post: "Website Management Head",
-        },
-        {
-          img: vipul_sangode,
-          name: "Vipul Sangode",
-          post: "Website Management Team Member",
-        },
-        {
-          img: ankit_sharma,
-          name: "Ankit Sharma",
-          post: "Website Management Team Member",
-        },
-        {
-          img: annapragada_nishant,
-          name: "Annapragada Nishant",
-          post: "Website Management Team Member",
-        },
-      ],
-      Design: [
-        {
-          img: shreyas_lall,
-          name: "Shreyas Lall",
-          post: "Designing Team Head",
-        },
-        {
-          img: apurv_rai,
-          name: "Apurv Rai",
-          post: "Designing Team",
-        },
-        {
-          img: ayush_tirkey,
-          name: "Ayush Tirkey",
-          post: "Designing Team",
-        },
-        {
-          img: shalini_lodhi,
-          name: "Shalini Lodha",
-          post: "Designing Team",
-        },
-        {
-          img: shivangini_prasad,
-          name: "Shivangini Prasad",
-          post: "Designing Team",
-        },
-        {
-          img: sonal_singh,
-          name: "Sonal Singh",
-          post: "Designing Team",
-        },
-      ],
-    },
+
+  // 2020-21
+  20_21: {
+    core: [
+      {
+        img: Dr_Venkanna,
+        name: "Dr. Venkanna U",
+        post: "SAC President",
+      },
+      {
+        img: prince_yadav,
+        name: "Prince Yadav",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: Vidhi_Sharma,
+        name: "Vidhi Sharma",
+        post: "UG Representative (Girls)",
+      },
+      {
+        img: alluri_lsv_siddhartha_varma,
+        name: "Alluri LSV Siddhartha Varma",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: sakshi_kumari,
+        name: "Sakshi Kumari",
+        post: "Science and Technology Secretary (Girls)",
+      },
+      {
+        img: samar_lal,
+        name: "Samar Lal",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: palak_chandrakar,
+        name: "Palak Chandrakar",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+      {
+        img: abhay_bagh,
+        name: "Abhay Bagh",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: rashi_bagga,
+        name: "Rashi Bagga",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
+    web: [
+      {
+        img: saumya_bhatnagar,
+        name: "Saumya Bhatnagar",
+        post: "Website Management Head",
+      },
+      {
+        img: himanshu_patel,
+        name: "Himanshu Patel",
+        post: "Website Management Head",
+      },
+      {
+        img: siddharth_singh,
+        name: "Siddarth Singh",
+        post: "Website Management Head",
+      },
+      {
+        img: vipul_sangode,
+        name: "Vipul Sangode",
+        post: "Website Management Team Member",
+      },
+      {
+        img: ankit_sharma,
+        name: "Ankit Sharma",
+        post: "Website Management Team Member",
+      },
+      {
+        img: annapragada_nishant,
+        name: "Annapragada Nishant",
+        post: "Website Management Team Member",
+      },
+    ],
+    design: [
+      {
+        img: shreyas_lall,
+        name: "Shreyas Lall",
+        post: "Designing Team Head",
+      },
+      {
+        img: apurv_rai,
+        name: "Apurv Rai",
+        post: "Designing Team",
+      },
+      {
+        img: ayush_tirkey,
+        name: "Ayush Tirkey",
+        post: "Designing Team",
+      },
+      {
+        img: shalini_lodhi,
+        name: "Shalini Lodha",
+        post: "Designing Team",
+      },
+      {
+        img: shivangini_prasad,
+        name: "Shivangini Prasad",
+        post: "Designing Team",
+      },
+      {
+        img: sonal_singh,
+        name: "Sonal Singh",
+        post: "Designing Team",
+      },
+    ],
   },
-  // ****************************************************************************************************************
-  {
-    Year: "19_20",
-    Data: {
-      CoreTeam: [
-        {
-          img: Dr_Venkanna,
-          name: "Dr. Venkanna U",
-          post: "SAC President",
-        },
-        {
-          img: nitin_chandra,
-          name: "Nitin Chandra",
-          post: "UG Representative (Boys)",
-        },
-        {
-          img: sriyuta_srivastava,
-          name: "Sriyuta Srivastava",
-          post: "UG Representative (Girls)",
-        },
-        {
-          img: jatin_aditya_reddy,
-          name: "Jatin Aditya Reddy",
-          post: "Science and Technology Secretary (Boys)",
-        },
-        {
-          img: tina_sahu,
-          name: "Tina Sahu",
-          post: "Science and Technology Secretary (Girls)",
-        },
-        {
-          img: rituraj_kushwaha,
-          name: "Rituraj Kushwaha",
-          post: "Arts, Cultural and Literary Secretary (Boys)",
-        },
-        {
-          img: manorama_singh_rathore,
-          name: "Manorama Singh Rathore",
-          post: "Arts, Cultural and Literary Secretary (Girls)",
-        },
-        {
-          img: pushpak_singh_tawar,
-          name: "Pushpak Singh Tawar",
-          post: "Sports Secretary (Boys)",
-        },
-        {
-          img: likitha_bonda,
-          name: "Likitha Bonda",
-          post: "Sports Secretary (Girls)",
-        },
-      ],
-    },
+
+  // 2019-20
+  19_20: {
+    core: [
+      {
+        img: Dr_Venkanna,
+        name: "Dr. Venkanna U",
+        post: "SAC President",
+      },
+      {
+        img: nitin_chandra,
+        name: "Nitin Chandra",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: sriyuta_srivastava,
+        name: "Sriyuta Srivastava",
+        post: "UG Representative (Girls)",
+      },
+      {
+        img: jatin_aditya_reddy,
+        name: "Jatin Aditya Reddy",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: tina_sahu,
+        name: "Tina Sahu",
+        post: "Science and Technology Secretary (Girls)",
+      },
+      {
+        img: rituraj_kushwaha,
+        name: "Rituraj Kushwaha",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: manorama_singh_rathore,
+        name: "Manorama Singh Rathore",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+      {
+        img: pushpak_singh_tawar,
+        name: "Pushpak Singh Tawar",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: likitha_bonda,
+        name: "Likitha Bonda",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
   },
-  // **************************************************************************************************************
-  {
-    Year: "18_19",
-    Data: {
-      CoreTeam: [
-        {
-          img: Dr_Venkanna,
-          name: "Dr. Venkanna U",
-          post: "SAC President",
-        },
-        {
-          img: vishal_pallagani,
-          name: "Vishal Pallagani",
-          post: "UG Representative (Boys)",
-        },
-        {
-          img: ankita_jha,
-          name: "Ankita Jha",
-          post: "UG Representative (Girls)",
-        },
-        {
-          img: kushashwa_ravi_shrimali,
-          name: "Kushashwa Ravi Shrimali",
-          post: "Science and Technology Secretary (Boys)",
-        },
-        {
-          img: priyanka_mall,
-          name: "Priyanka Mall",
-          post: "Science and Technology Secretary (Girls)",
-        },
-        {
-          img: rasheed_ahmed,
-          name: "Rasheed Ahmed",
-          post: "Arts, Cultural and Literary Secretary (Boys)",
-        },
-        {
-          img: aditia_agrahari,
-          name: "Aditi Agrahari",
-          post: "Arts, Cultural and Literary Secretary (Girls)",
-        },
-        {
-          img: nirbhay_giri,
-          name: "Nirbhay Giri",
-          post: "Sports Secretary (Boys)",
-        },
-        {
-          img: minakshee_shukla,
-          name: "Minakshee Shukla",
-          post: "Sports Secretary (Girls)",
-        },
-      ],
-    },
+
+  // 2018-19
+  18_19: {
+    core: [
+      {
+        img: Dr_Venkanna,
+        name: "Dr. Venkanna U",
+        post: "SAC President",
+      },
+      {
+        img: vishal_pallagani,
+        name: "Vishal Pallagani",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: ankita_jha,
+        name: "Ankita Jha",
+        post: "UG Representative (Girls)",
+      },
+      {
+        img: kushashwa_ravi_shrimali,
+        name: "Kushashwa Ravi Shrimali",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: priyanka_mall,
+        name: "Priyanka Mall",
+        post: "Science and Technology Secretary (Girls)",
+      },
+      {
+        img: rasheed_ahmed,
+        name: "Rasheed Ahmed",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: aditia_agrahari,
+        name: "Aditi Agrahari",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+      {
+        img: nirbhay_giri,
+        name: "Nirbhay Giri",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: minakshee_shukla,
+        name: "Minakshee Shukla",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
   },
-];
-
-// export const CoreTeam: CrewProps[] = [
-//   {
-//     img: manoj_SacP,
-//     name: "Dr. MANOJ KUMAR MAJUMDER",
-//     post: "SAC President",
-//   },
-//   {
-//     img: HimanshuYadav_UG_2022,
-//     name: "Himanshu Yadav",
-//     post: "UG Representative (Boys)",
-//   },
-//   {
-//     img: SristhiSahooUG,
-//     name: "Sristhi Sahoo",
-//     post: "UG Representative (Girls)",
-//   },
-//   {
-//     img: Nishok,
-//     name: "Nishoak Kosaraju",
-//     post: "Science and Technology Secretary (Boys)",
-//   },
-//   {
-//     img: Supriya,
-//     name: "Kundrapu Supriya",
-//     post: "Science and Technology Secretary (Girls)",
-//   },
-//   {
-//     img: Aaditya_Kumar,
-//     name: "Aaditya Kumar",
-//     post: "Arts, Cultural and Literary Secretary (Boys)",
-//   },
-//   {
-//     img: SonaliB,
-//     name: "Sonali Banjare",
-//     post: "Arts, Cultural and Literary Secretary (Girls)",
-//   },
-//   {
-//     img: Kishan_Mishra,
-//     name: "Kishan Gopal Mishra",
-//     post: "Sports Secretary (Boys)",
-//   },
-//   {
-//     img: Nidhi_Vaishnav,
-//     name: "Nidhi Vaishnav",
-//     post: "Sports Secretary (Girls)",
-//   },
-// ];
-
-// export const WebsiteManagementTeam: CrewProps[] = [
-//   {
-//     img: Soumya_min,
-//     name: "Soumya Ranjan Patnaik",
-//     post: "Head",
-//   },
-//   {
-//     img: Sudhanshu_Tripathi,
-//     name: "Sudhanshu Tripathi",
-//     post: "Vice-Head",
-//     linkedin: "https://www.linkedin.com/in/sudhanshu1309/",
-//     call: 9696800234,
-//     mail: "sudhanshutripathi008@gmail.com",
-//   },
-//   {
-//     img: Deepesh_Agrawal,
-//     name: "Deepesh Agrawal",
-//     post: "Core Member",
-//   },
-//   {
-//     img: Ojas_Dubey,
-//     name: "Ojas Dubey",
-//     post: "Core Member",
-//   },
-// ];
-
-// export const SocialMedia: CrewProps[] = [
-//   {
-//     img: Karan_Agrawal,
-//     name: "Karan Agrawal",
-//     post: "Head",
-//   },
-// ];
-
-// export const Design: CrewProps[] = [
-//   {
-//     img: Aman_Singh,
-//     name: "Aman Singh",
-//     post: "Head",
-//   },
-//   {
-//     img: Vinayak_Shrivastava,
-//     name: "Vinayak Shrivastava",
-//     post: "Vice-Head",
-//   },
-//   {
-//     img: saiprabhat,
-//     name: "Sai Prabhat",
-//     post: "Member",
-//   },
-//   {
-//     img: Shubham_khilari,
-//     name: "Shubham Khilari",
-//     post: "Member",
-//   },
-//   {
-//     img: nidhibhaskar,
-//     name: "Nidhi Bhaskar",
-//     post: "Member",
-//   },
-// ];
-
-// export const ContentWriterTeam: CrewProps[] = [
-//   {
-//     img: navneet_chaubey,
-//     name: "Navneet Chaubey",
-//     post: "Member",
-//   },
-//   {
-//     img: Jay_Deep_Singh,
-//     name: "Jay Deep",
-//     post: "Member",
-//   },
-// ];
+};

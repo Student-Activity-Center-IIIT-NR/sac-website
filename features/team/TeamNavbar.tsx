@@ -1,10 +1,9 @@
 import React, { ReactNode, useState } from "react";
-import TeamLinks from "./TeamLinks";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "./ScrollContainer";
-import { Session } from "./TeamData";
+import { TeamData } from "./TeamData";
 
 interface TabPanelProps {
   children?: ReactNode;
@@ -23,7 +22,8 @@ const TabPanel = (props: TabPanelProps) => {
 };
 
 const TeamNavbar = () => {
-  const [value, setValue] = useState("All");
+  const [value, setValue] = useState("core");
+  const [session, setSession] = useState(TeamData[22_23]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -60,12 +60,13 @@ const TeamNavbar = () => {
           },
         }}
       >
-        {TeamLinks.map((item, index) => {
+        {Object.keys(session).map((item, index) => {
           return (
             <Tab
               disableRipple
-              label={item.name}
-              value={item.name}
+              disabled={!item}
+              label={item === "core" ? "All" : item}
+              value={item}
               key={index}
               sx={{
                 width: "160px",
@@ -86,59 +87,70 @@ const TeamNavbar = () => {
         })}
       </Tabs>
 
-      <TabPanel value={value} index={TeamLinks[0].name}>
-        <ScrollContainer
-          teamName="Core Team"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={Session[0].Data.CoreTeam}
-        />
+      <TabPanel value={value} index={Object.keys(session)[0]}>
+        {session.core && (
+          <ScrollContainer
+            teamName="Core Team"
+            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+            teamData={session.core}
+          />
+        )}
+
+        {session.web && (
+          <ScrollContainer
+            teamName="Website Management Team"
+            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+            teamData={session.web}
+          />
+        )}
+        {session.design && (
+          <ScrollContainer
+            teamName="Design Team"
+            gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+            teamData={session.design}
+          />
+        )}
+        {session.documentation && (
+          <ScrollContainer
+            teamName="Documentation Team"
+            gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+            teamData={session.documentation}
+          />
+        )}
+        {session.social && (
+          <ScrollContainer
+            teamName="Social Media Management Team"
+            gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+            teamData={session.social}
+          />
+        )}
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[1]}>
         <ScrollContainer
           teamName="Website Management Team"
           gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={Session[0].Data.WebsiteManagementTeam}
+          teamData={session.web}
         />
-        <ScrollContainer
-          teamName="Social Media Management Team"
-          gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-          teamData={Session[0].Data.SocialMedia}
-        />
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[2]}>
         <ScrollContainer
           teamName="Design Team"
           gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={Session[0].Data.Design}
+          teamData={session.design}
         />
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[3]}>
         <ScrollContainer
           teamName="Documentation Team"
           gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-          teamData={Session[0].Data.ContentWriterTeam}
+          teamData={session.documentation}
         />
       </TabPanel>
-      <TabPanel value={value} index={TeamLinks[1].name}>
-        <ScrollContainer
-          teamName="Website Management Team"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={Session[0].Data.WebsiteManagementTeam}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[2].name}>
+      <TabPanel value={value} index={Object.keys(session)[4]}>
         <ScrollContainer
           teamName="Social Media Management Team"
           gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-          teamData={Session[0].Data.SocialMedia}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[3].name}>
-        <ScrollContainer
-          teamName="Design Team"
-          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={Session[0].Data.Design}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[4].name}>
-        <ScrollContainer
-          teamName="Documentation Team"
-          gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-          teamData={Session[0].Data.ContentWriterTeam}
+          teamData={session.social}
         />
       </TabPanel>
     </>

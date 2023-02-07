@@ -72,7 +72,7 @@ const ScrollContainer = ({
             setHovered(false);
           }}
         >
-          {teamData.map((data: any, index: Number) => {
+          {teamData.map((data: any, index: any) => {
             return (
               <Card
                 Name={data.name}

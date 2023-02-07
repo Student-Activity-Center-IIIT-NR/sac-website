@@ -6,9 +6,11 @@ import iconReset from "../../../assets/icon/icon_reset.svg";
 import iconArrow from "../../../assets/icon/icon_arrow.svg";
 import Image from "next/image";
 import Stack from "@mui/material/Stack";
+import { TeamData } from "../TeamData";
 
 const Year = () => {
   const sacEstdYear = 2018;
+  const len = Object.keys(TeamData).length;
 
   const [year, setYear] = useState(new Date().getFullYear());
   const [isHovered, setIsHovered] = useState(false);
