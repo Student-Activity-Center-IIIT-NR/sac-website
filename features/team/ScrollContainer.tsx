@@ -7,7 +7,7 @@ import { StaticImageData } from "next/image";
 interface Props {
   teamName: string;
   gradient: string;
-  teamData: CrewProps[];
+  teamData: any;
 }
 
 interface CrewProps {
@@ -72,7 +72,7 @@ const ScrollContainer = ({
             setHovered(false);
           }}
         >
-          {teamData.map((data, index) => {
+          {teamData.map((data: any, index: any) => {
             return (
               <Card
                 Name={data.name}

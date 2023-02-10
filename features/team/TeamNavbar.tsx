@@ -1,20 +1,20 @@
-import React, { ReactNode, useState } from "react";
-import TeamLinks from "./TeamLinks";
+import React, { ReactNode, useContext, useEffect, useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "./ScrollContainer";
-import { CoreTeam } from "./TeamData";
-import { WebsiteManagementTeam } from "./TeamData";
-import { Design } from "./TeamData";
-import { ContentWriterTeam } from "./TeamData";
-import { SocialMedia } from "./TeamData";
+import { TeamData } from "./TeamData";
+import { SessionContext } from "../../contexts/TeamContext";
+import { StaticImageData } from "next/image";
 
 interface TabPanelProps {
   children?: ReactNode;
   index: string;
   value: string;
 }
+
+// need to update on every data add
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
@@ -27,11 +27,21 @@ const TabPanel = (props: TabPanelProps) => {
 };
 
 const TeamNavbar = () => {
-  const [value, setValue] = useState("All");
+  const { year } = useContext(SessionContext);
+
+  const [value, setValue] = useState("core");
+  const [session, setSession] = useState(TeamData[2223]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    let value: any = year.toString().concat((year + 1).toString());
+    let currYear: CurrYear = value;
+    setSession(TeamData[currYear]);
+    setValue("core");
+  }, [year]);
 
   return (
     <>
@@ -64,12 +74,13 @@ const TeamNavbar = () => {
           },
         }}
       >
-        {TeamLinks.map((item, index) => {
+        {Object.keys(session).map((item, index) => {
           return (
             <Tab
               disableRipple
-              label={item.name}
-              value={item.name}
+              disabled={!item}
+              label={item === "core" ? "All" : item}
+              value={item}
               key={index}
               sx={{
                 width: "160px",
@@ -90,59 +101,70 @@ const TeamNavbar = () => {
         })}
       </Tabs>
 
-      <TabPanel value={value} index={TeamLinks[0].name}>
-        <ScrollContainer
-          teamName="Core Team"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={CoreTeam}
-        />
+      <TabPanel value={value} index={Object.keys(session)[0]}>
+        {session.core && (
+          <ScrollContainer
+            teamName="Core Team"
+            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+            teamData={session.core}
+          />
+        )}
+
+        {session.web && (
+          <ScrollContainer
+            teamName="Website Management Team"
+            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+            teamData={session.web}
+          />
+        )}
+        {session.design && (
+          <ScrollContainer
+            teamName="Design Team"
+            gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+            teamData={session.design}
+          />
+        )}
+        {session.documentation && (
+          <ScrollContainer
+            teamName="Documentation Team"
+            gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+            teamData={session.documentation}
+          />
+        )}
+        {session.social && (
+          <ScrollContainer
+            teamName="Social Media Management Team"
+            gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+            teamData={session.social}
+          />
+        )}
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[1]}>
         <ScrollContainer
           teamName="Website Management Team"
           gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={WebsiteManagementTeam}
+          teamData={session.web}
         />
-        <ScrollContainer
-          teamName="Social Media Management Team"
-          gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-          teamData={SocialMedia}
-        />
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[2]}>
         <ScrollContainer
           teamName="Design Team"
           gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={Design}
+          teamData={session.design}
         />
+      </TabPanel>
+      <TabPanel value={value} index={Object.keys(session)[3]}>
         <ScrollContainer
           teamName="Documentation Team"
           gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-          teamData={ContentWriterTeam}
+          teamData={session.documentation}
         />
       </TabPanel>
-      <TabPanel value={value} index={TeamLinks[1].name}>
-        <ScrollContainer
-          teamName="Website Management Team"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={WebsiteManagementTeam}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[2].name}>
+      <TabPanel value={value} index={Object.keys(session)[4]}>
         <ScrollContainer
           teamName="Social Media Management Team"
           gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-          teamData={SocialMedia}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[3].name}>
-        <ScrollContainer
-          teamName="Design Team"
-          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={Design}
-        />
-      </TabPanel>
-      <TabPanel value={value} index={TeamLinks[4].name}>
-        <ScrollContainer
-          teamName="Documentation Team"
-          gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-          teamData={ContentWriterTeam}
+          teamData={session.social}
         />
       </TabPanel>
     </>

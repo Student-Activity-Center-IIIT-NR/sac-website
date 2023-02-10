@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
@@ -6,24 +6,13 @@ import iconReset from "../../../assets/icon/icon_reset.svg";
 import iconArrow from "../../../assets/icon/icon_arrow.svg";
 import Image from "next/image";
 import Stack from "@mui/material/Stack";
+import { SessionContext } from "../../../contexts/TeamContext";
 
 const Year = () => {
-  const sacEstdYear = 2018;
-
-  const [year, setYear] = useState(new Date().getFullYear());
   const [isHovered, setIsHovered] = useState(false);
 
-  const yearDecrement = () => {
-    year > sacEstdYear ? setYear(year - 1) : null;
-  };
-
-  const yearIncrement = () => {
-    year < new Date().getFullYear() ? setYear(year + 1) : null;
-  };
-
-  const resetYear = () => {
-    setYear(new Date().getFullYear());
-  };
+  const { year, currentSession, yearDecrement, yearIncrement, resetYear } =
+    useContext(SessionContext);
 
   return (
     <>
@@ -41,7 +30,7 @@ const Year = () => {
         }}
         onMouseLeave={() => {
           setIsHovered(false);
-          if (year !== new Date().getFullYear()) {
+          if (year !== currentSession) {
             setIsHovered(true);
           }
         }}
@@ -56,11 +45,11 @@ const Year = () => {
               pb: "4px",
               objectFit: "contain",
               cursor: "pointer",
-              visibility: year !== new Date().getFullYear() ? "block" : "none",
+              visibility: year !== currentSession ? "block" : "none",
             }}
             onClick={resetYear}
           >
-            {year !== new Date().getFullYear() ? (
+            {year !== currentSession ? (
               <Image src={iconReset} height={"24px"} width={"24px"} alt="" />
             ) : null}
           </Box>
@@ -85,26 +74,31 @@ const Year = () => {
                 <Image src={iconArrow} height={""} width={""} alt="" />
               </Box>
             ) : null}
-            <Typography
-              fontFamily={"Rubik"}
-              fontStyle={"normal"}
-              fontWeight={"800"}
-              fontSize={isHovered ? "80px" : "96px"}
-              lineHeight={isHovered ? "95px" : "114px"}
-              letterSpacing={"0.03571em"}
-              color={isHovered ? "#272727" : "#394B73"}
-              width={isHovered ? "229px" : "273px"}
-              height={isHovered ? "95px" : "114px"}
-              textAlign={"center"}
-              mt={isHovered ? "10px" : "0px"}
-              mx={isHovered ? "20px" : "0px"}
-              sx={{
-                transition: "all",
-                transitionDuration: "300ms",
-              }}
-            >
-              {year}
-            </Typography>
+            {year && (
+              <Typography
+                fontFamily={"Rubik"}
+                fontStyle={"normal"}
+                fontWeight={"800"}
+                fontSize={isHovered ? "60px" : "80px"}
+                lineHeight={isHovered ? "95px" : "114px"}
+                letterSpacing={"0.03571em"}
+                color={isHovered ? "#272727" : "#394B73"}
+                width={isHovered ? "229px" : "273px"}
+                height={isHovered ? "95px" : "114px"}
+                textAlign={"center"}
+                mt={isHovered ? "10px" : "0px"}
+                mx={isHovered ? "20px" : "0px"}
+                sx={{
+                  transition: "all",
+                  transitionDuration: "300ms",
+                }}
+              >
+                {year
+                  .toString()
+                  .concat("-")
+                  .concat((year + 1).toString())}
+              </Typography>
+            )}
             {isHovered ? (
               <Box
                 sx={{
