@@ -1,15 +1,20 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useContext, useEffect, useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "./ScrollContainer";
 import { TeamData } from "./TeamData";
+import { SessionContext } from "../../contexts/TeamContext";
+import { StaticImageData } from "next/image";
 
 interface TabPanelProps {
   children?: ReactNode;
   index: string;
   value: string;
 }
+
+// need to update on every data add
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
@@ -22,12 +27,21 @@ const TabPanel = (props: TabPanelProps) => {
 };
 
 const TeamNavbar = () => {
+  const { year } = useContext(SessionContext);
+
   const [value, setValue] = useState("core");
-  const [session, setSession] = useState(TeamData[22_23]);
+  const [session, setSession] = useState(TeamData[2223]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    let value: any = year.toString().concat((year + 1).toString());
+    let currYear: CurrYear = value;
+    setSession(TeamData[currYear]);
+    setValue("core");
+  }, [year]);
 
   return (
     <>

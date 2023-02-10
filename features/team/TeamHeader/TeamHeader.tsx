@@ -23,8 +23,9 @@ function TeamHeader() {
           color={"#272727"}
           letterSpacing={"0.03571em"}
           maxWidth={"494px"}
+          textAlign={"justify"}
         >
-          Not just colleagues; we&apos; re a family that supports each other.
+          Not just team; we&apos;re a family that supports each other.
         </Typography>
         <Year />
       </Box>
