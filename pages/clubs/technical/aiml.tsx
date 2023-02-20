@@ -24,6 +24,14 @@ import intro_aiml1 from "../../../assets/club_event_pics/technical/intro_aiml1.j
 import intro_aiml2 from "../../../assets/club_event_pics/technical/intro_aiml2.jpeg";
 import intro_aiml3 from "../../../assets/club_event_pics/technical/intro_aiml3.jpeg";
 import intro_aiml4 from "../../../assets/club_event_pics/technical/intro_aiml4.jpeg";
+import kaggle_comp1 from "../../../assets/club_event_pics/technical/kaggle_competition1.jpeg";
+import kaggle_comp2 from "../../../assets/club_event_pics/technical/kaggle_competition2.jpeg";
+import kaggle_comp3 from "../../../assets/club_event_pics/technical/kaggle_competition3.jpeg";
+import kaggle_comp4 from "../../../assets/club_event_pics/technical/kaggle_competition4.jpeg";
+import kaggle_comp5 from "../../../assets/club_event_pics/technical/kaggle_competition5.jpeg";
+import kaggle_comp6 from "../../../assets/club_event_pics/technical/kaggle_competition6.jpeg";
+import kaggle_comp7 from "../../../assets/club_event_pics/technical/kaggle_competition7.jpeg";
+import kaggle_comp8 from "../../../assets/club_event_pics/technical/kaggle_competition8.jpeg";
 
 const Aiml = () => {
   return (
@@ -120,8 +128,22 @@ const crew: CrewProps[] = [
 
 const gallery: GalleryProps[] = [
   {
-    name: "Introdunction to AIML",
+    name: "Introduction to AIML",
     date: "29 Nov 2022",
     img: [intro_aiml1, intro_aiml2, intro_aiml3, intro_aiml4],
+  },
+  {
+    name: "Kaggle Competition",
+    date: "7 Feb 2023",
+    img: [
+      kaggle_comp1,
+      kaggle_comp2,
+      kaggle_comp3,
+      kaggle_comp4,
+      kaggle_comp5,
+      kaggle_comp6,
+      kaggle_comp7,
+      kaggle_comp8,
+    ],
   },
 ];
