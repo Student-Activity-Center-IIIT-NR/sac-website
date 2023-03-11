@@ -114,7 +114,7 @@ const Home: NextPage = () => {
           height: "fit-content",
         }}
       />
-      {notify()}
+      {/* {notify()} */}
     </>
   );
 };
