@@ -185,17 +185,17 @@ export const TeamData: TeamDataProps = {
     ],
     web: [
       {
-        img: Soumya_min,
-        name: "Soumya Ranjan Patnaik",
-        post: "Head",
-      },
-      {
         img: Sudhanshu_Tripathi,
         name: "Sudhanshu Tripathi",
-        post: "Vice-Head",
+        post: "Head",
         linkedin: "https://www.linkedin.com/in/sudhanshu1309/",
         call: 9696800234,
         mail: "sudhanshutripathi008@gmail.com",
+      },
+      {
+        img: Soumya_min,
+        name: "Soumya Ranjan Patnaik",
+        post: "Vice-Head",
       },
       {
         img: Deepesh_Agrawal,

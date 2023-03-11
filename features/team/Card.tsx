@@ -30,7 +30,7 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
             src={img}
             width="262px"
             height={"309px"}
-            alt={""}
+            alt={Name}
             objectFit="cover"
             objectPosition={"center"}
             style={{
