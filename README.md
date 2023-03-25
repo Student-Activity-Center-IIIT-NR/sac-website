@@ -24,6 +24,12 @@ The following directory structure should be followed strictly
 
 You need to madatorily read and follow the contribution guidelines. You can find these guidelines in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
+## Contributors
+
+<a href="https://github.com/Student-Activity-Center-IIIT-NR/sac-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Student-Activity-Center-IIIT-NR/sac-website" />
+</a>
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
