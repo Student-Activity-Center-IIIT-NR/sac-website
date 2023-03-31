@@ -62,6 +62,7 @@ const Gallery = ({ props }: Props) => {
 
   const handleClickEvent = (index: number) => {
     setEvent(props[index]);
+    setPage(1);
   };
 
   const handleChange = (event: SelectChangeEvent) => {
