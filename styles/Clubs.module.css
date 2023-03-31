@@ -1,0 +1,55 @@
+@supports (display: grid) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    .grid_container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 1fr auto 1fr;
+      grid-template-areas: "main";
+    }
+  }
+  .grid_item {
+    padding: 3.5em 1em;
+  }
+
+  .main {
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: all-scroll;
+  }
+
+  .items.active {
+    cursor: all-scroll;
+    transform: scale(1);
+  }
+
+  .item {
+    display: inline-block;
+    margin-right: 32px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .item {
+      min-height: 200px;
+      min-width: 200px;
+    }
+  }
+}

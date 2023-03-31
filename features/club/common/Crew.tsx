@@ -3,6 +3,7 @@ import Stack from "@mui/system/Stack";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconArrow from "../../../assets/icon/icon_arrow_long.svg";
+import Styles from "../../../styles/Clubs.module.css";
 
 interface CrewProps {
   name: string;
@@ -15,6 +16,10 @@ interface Props {
 }
 
 const Crew = ({ props }: Props) => {
+  let isDown = false;
+  let startX: number;
+  let scrollLeft: number;
+
   const CrewCard = ({ name, img, post }: CrewProps) => {
     return (
       <>
@@ -98,33 +103,54 @@ const Crew = ({ props }: Props) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                cursor: "pointer",
               }}
             >
               <Image src={iconArrow} alt="" />
             </Box>
           </Box>
-          <Box
-            sx={{
-              overflowX: "scroll",
-              display: "flex",
-              flexDirection: "row",
-              columnGap: "96px",
-              pr: "30px",
-            }}
-          >
-            {props.map((step, index) => {
-              return (
-                <CrewCard
-                  name={step.name}
-                  img={step.img}
-                  post={step.post}
-                  key={index}
-                />
-              );
-            })}
-          </Box>
+          <div className={Styles.grid_container}>
+            <main className={`${Styles.grid_item} ${Styles.main}`}>
+              <div
+                className={Styles.items}
+                onMouseDown={(e) => {
+                  isDown = true;
+                  e.currentTarget.classList.add("active");
+                  startX = e.pageX - e.currentTarget.offsetLeft;
+                  scrollLeft = e.currentTarget.scrollLeft;
+                }}
+                onMouseUp={(e) => {
+                  isDown = false;
+                  e.currentTarget.classList.remove("active");
+                }}
+                onMouseLeave={(e) => {
+                  isDown = false;
+                  e.currentTarget.classList.remove("active");
+                }}
+                onMouseMove={(e) => {
+                  if (!isDown) return;
+                  e.preventDefault();
+                  const x = e.pageX - e.currentTarget.offsetLeft;
+                  const walk = x - startX; // multiply with constant to scroll-fast (lets say 3)
+                  e.currentTarget.scrollLeft = scrollLeft - walk;
+                  console.log(walk);
+                }}
+              >
+                {props.map((step, index) => {
+                  return (
+                    <div className={Styles.item} key={index}>
+                      <CrewCard
+                        name={step.name}
+                        img={step.img}
+                        post={step.post}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </main>
+          </div>
         </Box>
+
         {/* <Typography
           fontFamily="Rubik"
           fontStyle="italic"
