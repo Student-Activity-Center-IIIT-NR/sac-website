@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import Box from "@mui/material/Box";
 
-interface FooterProps {}
+interface TeamProps {}
 
-const Footer: FunctionComponent<FooterProps> = () => {
+const Team: FunctionComponent<TeamProps> = () => {
   return (
     <>
       <Box>TODO:</Box>
@@ -11,4 +11,4 @@ const Footer: FunctionComponent<FooterProps> = () => {
   );
 };
 
-export default Footer;
+export default Team;

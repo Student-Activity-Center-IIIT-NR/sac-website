@@ -1,9 +1,14 @@
-import React from 'react'
+import { FunctionComponent } from "react";
+import Box from "@mui/material/Box";
 
-function Navbar() {
+interface NavbarProps {}
+
+const Navbar: FunctionComponent<NavbarProps> = () => {
   return (
-    <div>Mobile View Navbar</div>
-  )
-}
+    <>
+      <Box>TODO:</Box>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
