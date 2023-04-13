@@ -4,8 +4,25 @@ import SacBranding from "../../../components/common/SacBranding";
 import sacLogo from "../../../assets/sac_iiit_logo/sac_logo.png";
 import Link from "next/link";
 import navLinks from "../../../components/NavBar/navLinks";
+import { Typography } from "@mui/material";
+import NavUpdates from "./NavUpdates";
 
 interface NavbarProps {}
+
+const message = [
+  {
+    id: 1,
+    uri: null,
+    title: "Inauguration of the SAC Office!",
+    msg: "The SAC office was inaugurated on the auspicious occasion of Saraswati Puja on 26th January 2023 by hon'ble director Dr. P.K. Sinha.",
+  },
+  {
+    id: 2,
+    uri: null,
+    title: "SAC Website launched!",
+    msg: "SAC is a student body established in the year 2018 that aims to support, develop and promote student activities at IIIT Naya Raipur",
+  },
+];
 
 const Navbar: FunctionComponent<NavbarProps> = () => {
   return (
@@ -28,6 +45,22 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
               </>
             );
           })}
+          <li>
+            <Typography
+              sx={{
+                color: "#355389",
+                fontSize: "20px",
+                mt: "30px",
+                fontWeight: 600,
+                fontFamily: "Rubik",
+                lineHeight: "19px",
+              }}
+            >
+              Latest Updates
+            </Typography>
+            <NavUpdates />
+            <NavUpdates />
+          </li>
         </ul>
       </section>
     </>
