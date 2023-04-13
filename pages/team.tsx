@@ -3,20 +3,29 @@ import TeamLayout from "../layouts/TeamLayout";
 import TeamNavbar from "../features/team/TeamNavbar";
 import TeamHeader from "../features/team/TeamHeader/TeamHeader";
 import { NextPage } from "next";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import MobileTeamLayout from "../mobile_ui/layout/MobileTeamLayout";
 
 const Team: NextPage = () => {
+  const matches = useMediaQuery("(min-width:963px)");
+
   return (
     <>
       <Head>
         <title>SAC | Team</title>
-        <meta name="viewport" content="width=1200, minimum-scale=0.25" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <TeamLayout>
-        <TeamHeader />
-        <TeamNavbar />
-      </TeamLayout>
+      {matches ? (
+        <TeamLayout>
+          <TeamHeader />
+          <TeamNavbar />
+        </TeamLayout>
+      ) : (
+        <MobileTeamLayout>
+          <div>Test</div>
+        </MobileTeamLayout>
+      )}
     </>
   );
 };

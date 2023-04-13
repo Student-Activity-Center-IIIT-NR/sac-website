@@ -3,7 +3,6 @@ import type { AppProps } from "next/app";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@emotion/react";
 import defaultTheme from "../themes/default";
-import { Container } from "@mui/material";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
