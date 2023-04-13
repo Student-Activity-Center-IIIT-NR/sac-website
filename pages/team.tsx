@@ -22,9 +22,7 @@ const Team: NextPage = () => {
           <TeamNavbar />
         </TeamLayout>
       ) : (
-        <MobileTeamLayout>
-          <div>Test</div>
-        </MobileTeamLayout>
+        <MobileTeamLayout>TEST</MobileTeamLayout>
       )}
     </>
   );
