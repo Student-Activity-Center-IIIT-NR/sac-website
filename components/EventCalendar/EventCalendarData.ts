@@ -318,4 +318,10 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Independence Day",
     icon: circleIcon,
   },
+  //Jan
+  {
+    date: "26-01-2024",
+    eventName: "Republic Day",
+    icon: circleIcon,
+  },
 ];
