@@ -312,4 +312,16 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Ideawars",
     icon: rectangleIcon,
   },
+  //August
+  {
+    date: "15-08-2023",
+    eventName: "Independence Day",
+    icon: circleIcon,
+  },
+  //Jan
+  {
+    date: "26-01-2024",
+    eventName: "Republic Day",
+    icon: circleIcon,
+  },
 ];

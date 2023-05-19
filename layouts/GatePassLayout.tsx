@@ -15,9 +15,7 @@ function GatePassLayout({ children }: Props) {
   return (
     <Stack>
       <BrandInViewContext.Provider value={{ inView }}>
-        <Header ref={ref} />
         <NavBar />
-
         <Stack>{children}</Stack>
         <Footer />
       </BrandInViewContext.Provider>

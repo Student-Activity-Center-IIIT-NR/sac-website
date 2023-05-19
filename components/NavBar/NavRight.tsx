@@ -29,12 +29,9 @@ function NavRight({ wideSpacing }: Props) {
           </NavItem>
         );
       })}
-      <NavItem>
+      {/* <NavItem>
         <DarkMode />
-      </NavItem>
-      <NavItem href={"/gatepass"} mx={"auto"}>
-        <PermIdentityIcon />
-      </NavItem>
+      </NavItem> */}
     </NavRightContainer>
   );
 }
