@@ -41,14 +41,14 @@ const Calendar = () => {
         </Typography>
         <Grid2 container columnSpacing={"45px"} rowGap={"94px"} mt={"37px"}>
           <Grid2 xs={4}>
-            <PaperItem
+            {/* <PaperItem
               startDate={filteredData[0].date.slice(0, 2)}
               endDate={filteredData[1].date.slice(0, 2)}
               startName={filteredData[0].eventName}
               endName={filteredData[1].eventName}
               startIcon={filteredData[0].icon}
               endIcon={filteredData[1].icon}
-            />
+            /> */}
           </Grid2>
           <Grid2 xs={8}>
             <Typography

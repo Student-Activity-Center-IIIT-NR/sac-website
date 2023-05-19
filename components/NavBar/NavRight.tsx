@@ -4,6 +4,7 @@ import React from "react";
 import DarkMode from "../common/DarkMode";
 import NavItem from "./NavItem";
 import navLinks from "./navLinks";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 
 const NavRightContainer = styled(Stack)({
   transition: "ease-in",
@@ -30,6 +31,9 @@ function NavRight({ wideSpacing }: Props) {
       })}
       <NavItem>
         <DarkMode />
+      </NavItem>
+      <NavItem href={"/gatepass"} mx={"auto"}>
+        <PermIdentityIcon />
       </NavItem>
     </NavRightContainer>
   );
