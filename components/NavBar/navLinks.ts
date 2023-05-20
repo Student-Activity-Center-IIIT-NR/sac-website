@@ -19,6 +19,10 @@ const navLinks = [
     name: "Events",
     url: "/events",
   },
+  {
+    name: "Gatepass",
+    url: "/gatepass",
+  },
 ];
 
 export default navLinks;
