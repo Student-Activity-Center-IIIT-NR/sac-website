@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Index from "../features/gallery/Index";
 import { NextPage } from "next";
-import GatePassLayout from "../layouts/GatePassLayout";
-import LandingPage from "../features/getpass/LandingPage";
+import GatePassLayout from "../../layouts/GatePassLayout";
+import LandingPage from "../../features/getpass/LandingPage";
 
 const Gatepass: NextPage = () => {
   return (

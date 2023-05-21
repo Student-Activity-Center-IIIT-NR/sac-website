@@ -14,7 +14,6 @@ const LandingPage = () => {
           sx={{
             backgroundColor: "#54DEE7",
             width: "fit-content",
-            height: "60px",
             borderRadius: "10px",
             display: "flex",
             alignItems: "center",
@@ -30,7 +29,6 @@ const LandingPage = () => {
             letterSpacing={"0.14em"}
             color={"#FFFFFF"}
           >
-            {" "}
             INTRODUCING GATEPASS APP
           </Typography>
         </Box>
@@ -90,9 +88,27 @@ const LandingPage = () => {
             </Link>
           </Box>
         </Box>
+        <Box
+          sx={{
+            backgroundColor: "#54DEE7",
+            width: "fit-content",
+            borderRadius: "8px",
+            padding: "8px",
+            mb: 4,
+          }}
+        >
+          <Typography
+            fontFamily={"Poppins"}
+            fontWeight={"500"}
+            fontSize={"18px"}
+            letterSpacing={"0.14em"}
+          >
+            <Link href={"/gatepass/policy"}>Privacy Policy</Link>
+          </Typography>
+        </Box>
       </Box>
       <Box>
-        <Image src={Landingpg} alt="" height={"700px"} width={"700px"} />
+        <Image src={Landingpg} alt="" height={"800px"} width={"700px"} />
       </Box>
     </Stack>
   );
