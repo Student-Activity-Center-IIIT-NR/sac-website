@@ -106,9 +106,23 @@ const LandingPage = () => {
             <Link href={"/gatepass/policy"}>Privacy Policy</Link>
           </Typography>
         </Box>
+        <Typography
+          marginTop={"40px"}
+          fontSize={"20px"}
+          fontWeight={"400"}
+          lineHeight={"32px"}
+          width={"548px"}
+          height={"143px"}
+          color={"#80868B"}
+        >
+          <strong>Data Deletion:</strong> The users can simply delete their
+          accounts by logging out of the app. All the stored data will be
+          deleted after the user completes the course (4 years) without any
+          request being made.
+        </Typography>
       </Box>
       <Box>
-        <Image src={Landingpg} alt="" height={"800px"} width={"700px"} />
+        <Image src={Landingpg} alt="" height={"900px"} width={"700px"} />
       </Box>
     </Stack>
   );
