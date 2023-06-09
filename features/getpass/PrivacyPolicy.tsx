@@ -183,7 +183,10 @@ const PrivacyPolicy = () => {
             </StyledTypography>
           </li>
           <li>
-            HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
+            <StyledTypography>
+              HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
+              YOU?
+            </StyledTypography>
           </li>
         </ol>
         <Typography fontWeight={500} fontSize={"1rem"} mt={2}>
@@ -513,6 +516,14 @@ const PrivacyPolicy = () => {
           However, we may retain some information in our files to prevent fraud,
           troubleshoot problems, assist with any investigations, enforce our
           legal terms and/or comply with applicable legal requirements.
+        </StyledTypography>
+        <Typography fontWeight={500} fontSize={"1rem"} mt={2}>
+          Data Deletion
+        </Typography>
+        <StyledTypography>
+          The users can simply delete their accounts by logging out of the app.
+          All the stored data will be deleted after the user completes the
+          course (4 years) without any request being made.
         </StyledTypography>
         <StyledTypography>
           If you have questions or want to contact us mail at hmc@iiitnr.edu.in
