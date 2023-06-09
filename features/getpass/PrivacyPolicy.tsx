@@ -517,14 +517,6 @@ const PrivacyPolicy = () => {
           troubleshoot problems, assist with any investigations, enforce our
           legal terms and/or comply with applicable legal requirements.
         </StyledTypography>
-        <Typography fontWeight={500} fontSize={"1rem"} mt={2}>
-          Data Deletion
-        </Typography>
-        <StyledTypography>
-          The users can simply delete their accounts by logging out of the app.
-          All the stored data will be deleted after the user completes the
-          course (4 years) without any request being made.
-        </StyledTypography>
         <StyledTypography>
           If you have questions or want to contact us mail at hmc@iiitnr.edu.in
         </StyledTypography>
