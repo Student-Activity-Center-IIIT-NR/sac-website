@@ -11,12 +11,12 @@ import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
 
 // import crew
-import Navneet_Chaubey from "../../../assets/team_22-23/navneet_chaubey.jpeg";
-import Ganesh_Prajapati from "../../../assets/team_22-23/Ganesh_Prajapati.jpeg";
-import Nanditha_S from "../../../assets/team_22-23/Sagam_Reddy_Nanditha.jpeg";
-import Sahil_Nimsarkar from "../../../assets/team_22-23/Sahil_Ashish_Nimsarkar.jpeg";
-import Aaditya_Tripathi from "../../../assets/team_22-23/Aaditya_Tripathi.jpeg";
-import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg";
+import Kanika_Malhotra from "../../../assets/team_23-24/Kanika_Malhotra -.jpg";
+import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
+import Shreya_Tiwari from "../../../assets/team_23-24/Shreya_Tiwari.jpg";
+import Ayush_Yadav from "../../../assets/team_23-24/Ayush_Yadav.jpg";
+import Muskan_dewangan from "../../../assets/team_23-24/Muskan_Dewangan.jpg";
+import Apurva_Sahu from "../../../assets/team_23-24/Apurva_Sahu.jpg";
 
 // import events
 import chai1 from "../../../assets/club_event_pics/cultural/chai1.jpeg";
@@ -80,33 +80,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Navneet_Chaubey,
-    name: "Navneet Chaubey",
+    img: Kanika_Malhotra,
+    name: "Kanika Malhotra",
     post: "Club Secretary",
   },
   {
-    img: Ganesh_Prajapati,
-    name: "Ganesh Prajapati",
+    img: Aniket_Pandey,
+    name: "Aniket Pandey",
     post: "Vice Secretary",
   },
   {
-    img: Nanditha_S,
-    name: "Nanditha S",
+    img: Shreya_Tiwari,
+    name: "Shreya Tiwari",
     post: "Core Member",
   },
   {
-    img: Sahil_Nimsarkar,
-    name: "Sahil Nimsarkar",
+    img: Ayush_Yadav,
+    name: "Ayush Yadav",
     post: "Core Member",
   },
   {
-    img: Aaditya_Tripathi,
-    name: "Aaditya Tripathi",
+    img: Muskan_dewangan,
+    name: "Muskan Dewangan",
     post: "Core Member",
   },
   {
-    img: Aadi_Juvekar,
-    name: "Aadi Juvekar",
+    img: Apurva_Sahu,
+    name: "Apurva Sahu",
     post: "Core Member",
   },
 ];

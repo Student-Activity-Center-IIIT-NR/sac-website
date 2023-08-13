@@ -11,15 +11,13 @@ import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
 
 // import crew
-import Kapil_Soni from "../../../assets/team_22-23/Kapil_Soni.jpeg";
-import Vedica_Mishra from "../../../assets/team_22-23/Vedica_Mishra.jpeg";
-import Matta_Venkat from "../../../assets/team_22-23/Matta_Venkat_Chirag.jpeg";
-import Gautam_Gupta from "../../../assets/team_22-23/Gautam.jpeg";
-import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg";
-import Shresth_Mishra from "../../../assets/team_22-23/Shresht_Mishra.jpeg";
-import Jashwant_Vemula from "../../../assets/team_22-23/Male-member.jpeg";
-import Shristi_Tiwari from "../../../assets/team_22-23/Shristi_Tiwari.jpeg";
-import Aaditya_Tripathi from "../../../assets/team_22-23/Aaditya_Tripathi.jpeg";
+import Swastika_Satya from "../../../assets/team_23-24/Swastika_Satya.jpg";
+import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg";
+import Kanika_Malhotra from "../../../assets/team_23-24/Kanika_Malhotra -.jpg";
+import Juttuka_Saaketh from "../../../assets/team_23-24/Male-member.jpeg";
+import Anshu_kashyap from "../../../assets/team_23-24/Female-member.jpeg";
+import Krishna_aggarwal from "../../../assets/team_23-24/Krishna_Agrawal.jpg";
+
 
 // import events
 import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
@@ -71,50 +69,36 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Kapil_Soni,
-    name: "Kapil Soni",
+    img: Swastika_Satya,
+    name: "Swastika Satya",
     post: "Club Secretary",
   },
   {
-    img: Vedica_Mishra,
-    name: "Vedica Mishra",
+    img: Vishal_Sharma,
+    name: "Vishal Sharma",
     post: "Vice Secretary",
   },
   {
-    img: Matta_Venkat,
-    name: "Matta Venkat",
-    post: "Social Media Manager",
+    img: Kanika_Malhotra,
+    name: "Kanika Malhotra",
+    post: "Core member",
   },
   {
-    img: Gautam_Gupta,
-    name: "Gautam Gupta",
+    img: Juttuka_Saaketh,
+    name: "Juttuka Saaketh",
     post: "Core Member",
   },
   {
-    img: Aadi_Juvekar,
-    name: "Aadi Juvekar",
+    img: Anshu_kashyap,
+    name: "Anhsu Kashyap",
     post: "Core Member",
   },
   {
-    img: Shresth_Mishra,
-    name: "Shresth Mishra",
+    img: Krishna_aggarwal,
+    name: "Krishna Aggarwal",
     post: "Core Member",
   },
-  {
-    img: Jashwant_Vemula,
-    name: "Jashwant Vemula",
-    post: "Core Member",
-  },
-  {
-    img: Shristi_Tiwari,
-    name: "Shristi Tiwari",
-    post: "Core Member",
-  },
-  {
-    img: Aaditya_Tripathi,
-    name: "Aaditya Tripathi",
-    post: "Core Member",
-  },
+  
 ];
 
 const gallery: GalleryProps[] = [

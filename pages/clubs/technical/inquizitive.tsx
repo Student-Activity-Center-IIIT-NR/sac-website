@@ -12,9 +12,12 @@ import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo
 import { StaticImageData } from "next/image";
 
 // import crew
-import Shivam_Kushwaha from "../../../assets/team_22-23/Shivam_Kushwaha.jpeg";
-import AnirudhSinghBhakar from "../../../assets/team_22-23/AnirudhSinghBhakar.jpeg";
-import Rigved_Atul_Desai from "../../../assets/team_22-23/Rigved_Atul_Desai.jpeg";
+import Ayush_Yadav from "../../../assets/team_23-24/Ayush_Yadav.jpg";
+import Bhavik from "../../../assets/team_23-24/Male-member.jpeg";
+import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
+import Arman_Singh_Kshatri from "../../../assets/team_23-24/Male-member.jpeg";
+import Harsh_Shrivastava from "../../../assets/team_23-24/Harsh_Shrivastava.jpg";
+import Lokesh_Harmani from "../../../assets/team_23-24/Male-member.jpeg";
 
 // import events
 import quiz1 from "../../../assets/club_event_pics/technical/quiz1.jpeg";
@@ -84,18 +87,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Shivam_Kushwaha,
-    name: "Shivam Kushwaha",
+    img: Ayush_Yadav,
+    name: "Ayush Yadav",
     post: "Club Secretary",
   },
   {
-    img: Rigved_Atul_Desai,
-    name: "Rigved",
+    img: Bhavik,
+    name: "Bhavik Sachdev",
     post: "Vice Secretary",
   },
   {
-    img: AnirudhSinghBhakar,
-    name: "Anirudh",
+    img: Aniket_Pandey,
+    name: "Aniket Pandey",
+    post: "Core Member",
+  },
+  {
+    img: Arman_Singh_Kshatri,
+    name: "Arman Singh Kshatri",
+    post: "Core Member",
+  },
+  {
+    img: Harsh_Shrivastava,
+    name: "Harsh Shrivastava",
+    post: "Core Member",
+  },
+  {
+    img: Lokesh_Harmani,
+    name: "Lokesh Hariramani",
     post: "Core Member",
   },
 ];

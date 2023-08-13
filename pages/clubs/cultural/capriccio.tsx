@@ -11,14 +11,13 @@ import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Shreedhar_Tiwari from "../../../assets/team_22-23/Shreedhar_Tiwari.jpeg";
-import Jay_Deep_Singh from "../../../assets/team_22-23/Jay_Deep_Singh.jpeg";
-import Matta_Venkat from "../../../assets/team_22-23/Matta_Venkat_Chirag.jpeg";
-import Ajay_kumar_KC from "../../../assets/team_22-23/Ajay_Kumar_Koilathachetta.jpeg";
-import Sagam_Reddy_Nanditha from "../../../assets/team_22-23/Sagam_Reddy_Nanditha.jpeg";
-import Sonali_Tudu from "../../../assets/team_22-23/Sonali_Tudu.jpeg";
-import Rahul_Meshram from "../../../assets/team_22-23/Rahul_Meshram.jpeg";
-import Srijan_Oraont from "../../../assets/team_22-23/SrijanOraon.jpeg";
+import Priyanshu_Srivastava from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg";
+import Anoushka_Koul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
+import Tanisi_Jha from "../../../assets/team_23-24/Female-member.jpeg";
+import Varsha_Sri_Narla from "../../../assets/team_23-24/Varsha_Sri_Narla.jpg";
+import Akhilesh_Vajrala from "../../../assets/team_23-24/Male-member.jpeg";
+import Mohd_Kaif from "../../../assets/team_23-24/Male-member.jpeg";
+
 
 // import events
 import mellow1 from "../../../assets/club_event_pics/cultural/mellow_cap1.jpeg";
@@ -71,43 +70,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Shreedhar_Tiwari,
-    name: "Shreedhar Tiwari",
+    img: Priyanshu_Srivastava,
+    name: "Priyanshu Srivastava",
     post: "Club Secretary",
   },
   {
-    img: Jay_Deep_Singh,
-    name: "Jay Deep Singh",
+    img: Anoushka_Koul,
+    name: "Anoushka Koul",
     post: "Vice Secretary",
   },
   {
-    img: Matta_Venkat,
-    name: "Matta Venkat",
-    post: "Social Media Manager",
-  },
-  {
-    img: Ajay_kumar_KC,
-    name: "Ajay kumar KC",
+    img: Tanisi_Jha,
+    name: "Tanisi Jha",
     post: "Core Member",
   },
   {
-    img: Sagam_Reddy_Nanditha,
-    name: "Sagam Reddy Nanditha",
+    img: Varsha_Sri_Narla,
+    name: "Varsha Sri Narla",
     post: "Core Member",
   },
   {
-    img: Sonali_Tudu,
-    name: "Sonali Tudu",
+    img: Akhilesh_Vajrala,
+    name: "Akhilesh Vajrala",
     post: "Core Member",
   },
   {
-    img: Rahul_Meshram,
-    name: "Rahul Meshram",
-    post: "Core Member",
-  },
-  {
-    img: Srijan_Oraont,
-    name: "Srijan Oraont",
+    img: Mohd_Kaif,
+    name: "Mohd Kaif",
     post: "Core Member",
   },
 ];

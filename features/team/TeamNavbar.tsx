@@ -14,7 +14,7 @@ interface TabPanelProps {
 }
 
 // need to update on every data add
-type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223;
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324 ;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
@@ -30,7 +30,7 @@ const TeamNavbar = () => {
   const { year } = useContext(SessionContext);
 
   const [value, setValue] = useState("core");
-  const [session, setSession] = useState(TeamData[2223]);
+  const [session, setSession] = useState(TeamData[2324]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -111,27 +111,47 @@ const TeamNavbar = () => {
         )}
 
         {session.web && (
+          year ===23 ? (
           <ScrollContainer
+            teamName="Website Management Team (Media & IT Cell)"
+            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+            teamData={session.web}
+          />):( <ScrollContainer
             teamName="Website Management Team"
             gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
             teamData={session.web}
-          />
+          />)
         )}
-        {session.design && (
-          <ScrollContainer
-            teamName="Design Team"
-            gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-            teamData={session.design}
-          />
-        )}
+      {session.design && (
+        year ===23 ? (
+      <ScrollContainer
+      teamName="Design & Documentation Team (Media & IT Cell)"
+      gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+      teamData={session.design}
+    />
+  ) : (
+    <ScrollContainer
+      teamName="Design Team"
+      gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+      teamData={session.design}
+    />
+  )
+)}
         {session.documentation && (
-          <ScrollContainer
+          year ===23 ? (null
+          ):(<ScrollContainer
             teamName="Documentation Team"
             gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
             teamData={session.documentation}
-          />
+          />)
         )}
+        {}
         {session.social && (
+          year===23?(<ScrollContainer
+            teamName="Social Media Management Team (Media & IT Cell)"
+            gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+            teamData={session.social}
+          />):
           <ScrollContainer
             teamName="Social Media Management Team"
             gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
@@ -140,25 +160,42 @@ const TeamNavbar = () => {
         )}
       </TabPanel>
       <TabPanel value={value} index={Object.keys(session)[1]}>
+        {year ===23 ? (
         <ScrollContainer
+          teamName="Website Management Team (Media & IT Cell)"
+          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+          teamData={session.web}
+        />):(<ScrollContainer
           teamName="Website Management Team"
           gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
           teamData={session.web}
-        />
+        />)}
       </TabPanel>
       <TabPanel value={value} index={Object.keys(session)[2]}>
+        {year===23 ? (
         <ScrollContainer
+          teamName="Design & Documentation Team (Media & IT Cell)"
+          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+          teamData={session.design}
+        />):( <ScrollContainer
           teamName="Design Team"
           gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
           teamData={session.design}
-        />
+        />)}
       </TabPanel>
       <TabPanel value={value} index={Object.keys(session)[3]}>
-        <ScrollContainer
-          teamName="Documentation Team"
-          gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-          teamData={session.documentation}
-        />
+      {year === 23 ? ( // Check if it's the year 2023
+    <ScrollContainer
+      teamName="Social Media Management Team (Media & IT Cell) " // Show Social Media directly
+      gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+      teamData={session.social}
+    />
+  ) : (
+    <ScrollContainer
+      teamName="Documentation Team"
+      gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+      teamData={session.documentation}
+    />)}
       </TabPanel>
       <TabPanel value={value} index={Object.keys(session)[4]}>
         <ScrollContainer

@@ -10,10 +10,14 @@ import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Akriti_Dhurandhar from "../../../assets/team_22-23/Akriti_Igniters.jpeg";
-import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
-import Sonali_Tudu from "../../../assets/team_22-23/Sonali_Tudu.jpeg";
-import Eshita_Pradhan from "../../../assets/team_22-23/Eshita_Pradhan.jpeg";
+import Niharika_Murmu from "../../../assets/team_23-24/Niharika_Murmu.jpg";
+import Satvik_Yadav from "../../../assets/team_23-24/Satvik_Yadav.jpg";
+import RamaR_Katta from "../../../assets/team_23-24/Male-member.jpeg";
+import Aryan_Kumar_Baghel from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
+import Anuja_Singh from "../../../assets/team_23-24/Female-member.jpeg";
+import Eluri_Rithwik from "../../../assets/team_23-24/Eluri_Rithwik.jpg";
+import Muskan_Dewangan from "../../../assets/team_23-24/Muskan_Dewangan.jpg";
+
 import Crew from "../../../features/club/common/Crew";
 
 // import events
@@ -69,24 +73,39 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Akriti_Dhurandhar,
-    name: "Akriti Dhurandhar",
+    img: Niharika_Murmu,
+    name: "Niharika Murmu",
     post: "Club Secretary",
   },
   {
-    img: Sontu_Akshath_Rishi,
-    name: "Sontu Akshath Rishi",
-    post: "Vice Secretary",
+    img: Satvik_Yadav,
+    name: "Satvik Yadav",
+    post: "Co-Vice Secretary",
   },
   {
-    img: Sonali_Tudu,
-    name: "Sonali Tudu",
-    post: "Choreographer",
+    img: RamaR_Katta,
+    name: "Rama Rakshith Katta",
+    post: "Co-Vice Secretary",
   },
   {
-    img: Eshita_Pradhan,
-    name: "Eshita Pradhan",
-    post: "Social Media Manager",
+    img: Aryan_Kumar_Baghel,
+    name: "Aryan Kumar Baghel",
+    post: "core member",
+  },
+  {
+    img: Anuja_Singh,
+    name: "Anuja Singh Pandaw",
+    post: "core member",
+  },
+  {
+    img: Eluri_Rithwik,
+    name: "Elluri Rithwik",
+    post: "core member",
+  },
+  {
+    img: Muskan_Dewangan,
+    name: "Muskan Dewangan",
+    post: "core member",
   },
 ];
 

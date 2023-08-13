@@ -12,11 +12,12 @@ import cometLogo from "../../../assets/technical_clubs_bg/comet_logo.png";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Anmol_Agrawal from "../../../assets/team_22-23/Anmol_Agrawal.jpeg";
-import Ganesh_Prajapati from "../../../assets/team_22-23/Ganesh_Prajapati.jpeg";
-import Aaditya_Tripathi from "../../../assets/team_22-23/Aaditya_Tripathi.jpeg";
-import Dheeraj_U from "../../../assets/team_22-23/Male-member.jpeg";
-import Ojas_Dubey from "../../../assets/team_22-23/Ojas_Dubey.jpeg";
+import Ishita_Tegar from "../../../assets/team_23-24/Ishita_Tegar.jpg";
+import Umesh_Sinha from "../../../assets/team_23-24/Umesh_Sinha.jpg";
+import T_Srivedanarayana from "../../../assets/team_23-24/Male-member.jpeg";
+import Alankar_Saxena from "../../../assets/team_23-24/Alankar_Saxena.jpg";
+import Namita from "../../../assets/team_23-24/Namita_shah.jpg";
+import Krishna_Aggarwal from "../../../assets/team_23-24/Krishna_Agrawal.jpg";
 
 // import events
 import arduino1 from "../../../assets/club_event_pics/technical/arduino1.jpeg";
@@ -41,7 +42,7 @@ const Comet = () => {
           event2Date="April 10, 2023"
           event2Desc="Workshop on R-pi"
         />
-        <ClubDescription bg={cometBg}>
+        <ClubDescription bg={cometBg} >
           The club was established in 2018 under the name CECoT (Community of
           electronics and communication techies) and was later renamed Community
           of Electronics. The club was founded by Harsh Singh, Akhil Kumar,
@@ -86,28 +87,28 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Anmol_Agrawal,
-    name: "Anmol Agrawal",
+    img: Ishita_Tegar,
+    name: "Ishita Tegar",
     post: "Club Secretary",
   },
   {
-    img: Ganesh_Prajapati,
-    name: "Ganesh Prajapati",
+    img: Umesh_Sinha,
+    name: "Umesh Sinha",
     post: "Vice Secretary",
   },
   {
-    img: Aaditya_Tripathi,
-    name: "Aaditya Tripathi",
+    img: Alankar_Saxena,
+    name: "Alankar Saxena",
     post: "Core Member",
   },
   {
-    img: Dheeraj_U,
-    name: "Dheeraj U",
+    img: Namita,
+    name: "Namita Shah",
     post: "Core Member",
   },
   {
-    img: Ojas_Dubey,
-    name: "Ojas Dubey",
+    img: Krishna_Aggarwal,
+    name: "Krishna Aggarwal",
     post: "Core Member",
   },
 ];

@@ -4,18 +4,22 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
-import Akshit_Rana from "../../../assets/team_22-23/Akshit_Rana.jpeg";
-import Deependar_singh_bhau from "../../../assets/team_22-23/Deependar.jpeg";
-import Heera from "../../../assets/team_22-23/Heera.jpeg";
-import Abhishek_Kerketta from "../../../assets/team_22-23/Abhishek_Kerketta.jpeg";
-import Rahul_Meshram from "../../../assets/team_22-23/Rahul_Meshram.jpeg";
-import Rachit_chaddha from "../../../assets/team_22-23/Male-member.jpeg";
-import Kishan_Mishra from "../../../assets/team_22-23/Kishan_Mishra.jpeg";
-import Eshita_Pradhan from "../../../assets/team_22-23/Eshita_Pradhan.jpeg";
-import Bhavya_Alok from "../../../assets/team_22-23/Male-member.jpeg";
-import Sagam_Reddy_Nanditha from "../../../assets/team_22-23/Sagam_Reddy_Nanditha.jpeg";
-import Subhadeep_Barman from "../../../assets/team_22-23/Subhadeep_Barman.jpeg";
-import Saumya_singh from "../../../assets/team_22-23/Male-member.jpeg";
+import Suyash_Gupta from "../../../assets/team_23-24/Suyash_Gupta.jpg";
+import Yash_Raj from "../../../assets/team_23-24/Yash_Raj.jpeg";
+import Neha_Dhruw from "../../../assets/team_23-24/Neha_Dhruw.jpg";
+import Sanjana_Sori from "../../../assets/team_23-24/Sanjana_Sori.jpg";
+import Ravikant_Shrivas from "../../../assets/team_23-24/Male-member.jpeg";
+import Aditya_Raj_Banjare from "../../../assets/team_23-24/Male-member.jpeg";
+import Ravi_Vinayak from "../../../assets/team_23-24/Ravi_Vinayak.jpeg";
+import Venella_Telli from "../../../assets/team_23-24/Female-member.jpeg";
+import Ojash_E_Sports from "../../../assets/team_23-24/Male-member.jpeg";
+import Shaurya_Malhan from "../../../assets/team_23-24/Shaurya_Malhan.jpeg";
+import Deependra_Singh_Bhow from "../../../assets/team_23-24/Deependar.jpeg";
+import Lumani_Verma from "../../../assets/team_23-24/Female-member.jpeg";
+import Aman_Kumar_Singh from "../../../assets/team_23-24/Aman_Singh.jpg";
+import Mayank_Chandra from "../../../assets/team_23-24/Male-member.jpeg";
+import Neha_Dhruw_Volleyball from "../../../assets/team_23-24/Neha_Dhruw.jpg";
+import Raj_Bhattacharya from "../../../assets/team_23-24/Male-member.jpeg";
 
 interface Props {
   img: StaticImageData;
@@ -116,68 +120,88 @@ interface CrewProps {
 
 const crew: CrewProps[] = [
   {
-    img: Akshit_Rana,
-    name: "Akshit Rana",
-    post: "In-Charge",
+    img: Suyash_Gupta,
+    name: "Suyash Gupta",
+    post: "Atharv In-Charge",
   },
   {
-    img: Deependar_singh_bhau,
+    img: Yash_Raj,
+    name: "Yash Raj",
+    post: "Atharv Vice-Incharge",
+  },
+  {
+    img: Neha_Dhruw,
+    name: "Neha Dhruw",
+    post: "Atharv Vice-Incharge",
+  },
+  {
+    img: Suyash_Gupta,
+    name: "Suyash Gupta",
+    post: "Atharv Cricket InCharge",
+  },
+  {
+    img: Sanjana_Sori,
+    name: "Sanjana Sori",
+    post: "Atharv Cricket InCharge (Girls)",
+  },
+  {
+    img: Ravikant_Shrivas,
+    name: "Ravikant Shrivas",
+    post: "Atharv Basketball InCharge",
+  },
+  {
+    img: Aditya_Raj_Banjare,
+    name: "Aditya Raj Banjare",
+    post: "Atharv Kabaddi InCharge",
+  },
+  {
+    img: Ravi_Vinayak,
+    name: "Ravi Vinayak",
+    post: "Atharv Badminton InCharge",
+  },
+  {
+    img: Venella_Telli,
+    name: "Venella Telli",
+    post: "Atharv Badminton InCharge (Girls)",
+  },
+  {
+    img: Ojash_E_Sports,
+    name: "Ojash",
+    post: "Atharv E-Sports InCharge",
+  },
+  {
+    img: Shaurya_Malhan,
+    name: "Shaurya Malhan",
+    post: "Atharv Chess InCharge",
+  },
+  {
+    img: Deependra_Singh_Bhow,
     name: "Deependra Singh Bhow",
-    post: "Vice In-Charge",
+    post: "Atharv Table Tennis InCharge",
   },
   {
-    img: Heera,
-    name: "Heera Singh",
-    post: "Cricket In-Charge",
+    img: Lumani_Verma,
+    name: "Lumani Verma",
+    post: "Atharv Table Tennis InCharge (Girls)",
   },
   {
-    img: Abhishek_Kerketta,
-    name: "Abhishek Kerketta",
-    post: "Football In-Charge",
+    img: Aman_Kumar_Singh,
+    name: "Aman Kumar Singh",
+    post: "Atharv Football InCharge",
   },
   {
-    img: Rahul_Meshram,
-    name: "Rahul Meshram",
-    post: "Basketball In-Charge",
+    img: Mayank_Chandra,
+    name: "Mayank Chandra",
+    post: "Atharv Volleyball InCharge",
   },
   {
-    img: Rachit_chaddha,
-    name: "Rachit chaddha",
-    post: "Table Tennis In-Charge",
+    img: Neha_Dhruw_Volleyball,
+    name: "Neha Dhruw",
+    post: "Atharv Volleyball InCharge (Girls)",
   },
   {
-    img: Saumya_singh,
-    name: "Saumya Singh",
-    post: "Table Tennis Vice In-Charge",
-  },
-  {
-    img: Kishan_Mishra,
-    name: "Kishan Mishra",
-    post: "Badminton In-Charge",
-  },
-  {
-    img: Eshita_Pradhan,
-    name: "Eshita Pradhan",
-    post: "Badminton Vice In-Charge",
-  },
-  {
-    img: Akshit_Rana,
-    name: "Akshit Rana",
-    post: "Volleyball In-Charge",
-  },
-  {
-    img: Bhavya_Alok,
-    name: "Bhavya Alok",
-    post: "Indoor In-Charge",
-  },
-  {
-    img: Sagam_Reddy_Nanditha,
-    name: "Sagam Reddy Nanditha",
-    post: "Indoor Vice In-Charge",
-  },
-  {
-    img: Subhadeep_Barman,
-    name: "Subhadeep Barman",
-    post: "E-Sports",
+    img: Raj_Bhattacharya,
+    name: "Raj Bhattacharya",
+    post: "Atharv Mini Golf InCharge",
   },
 ];
