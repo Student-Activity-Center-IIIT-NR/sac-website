@@ -99,6 +99,26 @@ const crew: CrewProps[] = [
   {
     img: Gaurish,
     name: "Gaurish Ojha",
+    post: "Vice Secretary",
+  },
+  {
+    img: Dhyanendra,
+    name: "Dhyaanendra Tripathi",
+    post: "Core Member",
+  },
+  {
+    img: Swasti_Srivastava,
+    name: "Swasti Srivastava",
+    post: "Core Member",
+  },
+  {
+    img: Manav_Raj,
+    name: "Manav Raj Singh",
+    post: "Core Member",
+  },
+  {
+    img: Ashutosh_Jaiswal,
+    name: "Ashutosh Jaiswal",
     post: "Core Member",
   },
   {

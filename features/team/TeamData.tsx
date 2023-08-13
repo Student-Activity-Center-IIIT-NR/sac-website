@@ -23,6 +23,7 @@ import S_Chandu from "../../assets/team_23-24/Male-member.jpeg"
 import Ojash_Verma from "../../assets/team_23-24/Male-member.jpeg"
 import Tanishka from "../../assets/team_23-24/Female-member.jpeg"
 import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg"
+import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg"
 
 // 2022-2023
 import SristhiSahooUG from "../../assets/team_22-23/SristhiSahooUG.jpeg";
@@ -232,6 +233,11 @@ export const TeamData: TeamDataProps = {
         linkedin: "https://www.linkedin.com/in/ojas-dubey-1aa856226/",
         call: 8953146775,
         mail: "ojas21101@iiitnr.edu.in",
+      },
+      {
+        img: Manu_Sai,
+        name: "Manu Sai",
+        post: "Core Member",
       },
       {
         img: Shreyansh_Kushwaha,

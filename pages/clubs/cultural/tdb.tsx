@@ -93,6 +93,11 @@ const crew: CrewProps[] = [
   {
     img: Shaurya_Malhan,
     name: "Shaurya Malhan",
+
+    post: "Core Member",
+  },{
+    img: Aniket_Pandey,
+    name: "Aniket Pandey",
     post: "Core Member",
   },
 ];
