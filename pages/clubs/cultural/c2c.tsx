@@ -11,14 +11,13 @@ import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Ananya_Pateriya from "../../../assets/team_22-23/Ananya_Pateriya.jpeg";
-import Sai_Prabhat from "../../../assets/team_22-23/saiprabhat.jpeg";
-import Shubham_Khilari from "../../../assets/team_22-23/Shubham_khilari.jpeg";
-import Nidhi_Bhaskar from "../../../assets/team_22-23/nidhibhaskar.jpeg";
-import Aryansh_Verma from "../../../assets/team_22-23/Male-member.jpeg";
-import Aditya_Oza from "../../../assets/team_22-23/Aditya_Oza.jpeg";
-import Jay_Deep_Singh from "../../../assets/team_22-23/Jay_Deep_Singh.jpeg";
-import Gautam_Gupta from "../../../assets/team_22-23/Gautam.jpeg";
+import Panshul_Senapati from "../../../assets/team_23-24/Panshul_Senapati.jpg";
+import Aseem_Rai from "../../../assets/team_23-24/Aseem_Rai.jpg";
+import Ashutosh_Jaiswal from "../../../assets/team_23-24/Ashutosh_Jaiswal.jpeg";
+import Arman_Singh_Kshatri from "../../../assets/team_23-24/Male-member.jpeg";
+import Ojash_Verma from "../../../assets/team_23-24/Male-member.jpeg";
+import Simmi_Baghel from "../../../assets/team_23-24/Simmi_Baghel.jpg";
+
 
 // import events
 import ramp1 from "../../../assets/club_event_pics/cultural/ramp1.jpeg";
@@ -72,43 +71,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Ananya_Pateriya,
-    name: "Ananya Pateriya",
+    img:Panshul_Senapati ,
+    name: "Panshul Senapati",
     post: "Club Secretary",
   },
   {
-    img: Sai_Prabhat,
-    name: "Sai Prabhat",
+    img: Aseem_Rai,
+    name: "Aseem Rai",
     post: "Vice Secretary",
   },
   {
-    img: Shubham_Khilari,
-    name: "Shubham Khilari",
-    post: "Social Media Manager",
-  },
-  {
-    img: Nidhi_Bhaskar,
-    name: "Nidhi Bhaskar",
+    img: Ashutosh_Jaiswal,
+    name: "Ashutosh Jaiswal",
     post: "Core Member",
   },
   {
-    img: Aryansh_Verma,
-    name: "Aryansh Verma",
+    img: Ojash_Verma,
+    name: "Ojash Verma",
     post: "Core Member",
   },
   {
-    img: Aditya_Oza,
-    name: "Aditya Oza",
+    img: Arman_Singh_Kshatri,
+    name: "Arman Singh Kshatri",
     post: "Core Member",
   },
   {
-    img: Jay_Deep_Singh,
-    name: "Jay Deep Singh",
-    post: "Core Member",
-  },
-  {
-    img: Gautam_Gupta,
-    name: "Gautam Gupta",
+    img: Simmi_Baghel,
+    name: "Simmi Baghel",
     post: "Core Member",
   },
 ];

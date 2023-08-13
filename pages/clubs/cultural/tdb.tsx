@@ -11,10 +11,12 @@ import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Vipulesh from "../../../assets/team_22-23/Vipules.jpeg";
-import Yash_Vardhan_Gautam from "../../../assets/team_22-23/Yash_Vardhan.jpeg";
-import Sontu_Akshath_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
-import Deepesh_Agrawal from "../../../assets/team_22-23/Deepesh_Agrawal.jpeg";
+import Shreya_Tiwari from "../../../assets/team_23-24/Shreya_Tiwari.jpg";
+import Aayush_Kulkarni from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
+import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
+import Anoushka_Kaul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
+import Trisul from "../../../assets/team_23-24/Trisul.jpeg";
+import Shaurya_Malhan from "../../../assets/team_23-24/Shaurya_Malhan.jpeg";
 
 // import events
 import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
@@ -69,23 +71,28 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Vipulesh,
-    name: "Vipulesh",
+    img: Shreya_Tiwari,
+    name: "Shreya Tiwari",
     post: "Club Secretary",
   },
   {
-    img: Yash_Vardhan_Gautam,
-    name: "Yash Vardhan Gautam",
+    img: Aayush_Kulkarni,
+    name: "Aayush Kulkarni",
     post: "Vice Secretary",
   },
   {
-    img: Sontu_Akshath_Rishi,
-    name: "Sontu Akshath Rishi",
+    img: Anoushka_Kaul,
+    name: "Anoushka Kaul",
     post: "Core Member",
   },
   {
-    img: Deepesh_Agrawal,
-    name: "Deepesh Agrawal",
+    img: Trisul,
+    name: "Trisul",
+    post: "Core Member",
+  },
+  {
+    img: Shaurya_Malhan,
+    name: "Shaurya Malhan",
     post: "Core Member",
   },
 ];

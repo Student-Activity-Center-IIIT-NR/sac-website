@@ -11,17 +11,15 @@ import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Jai_Vardhan from "../../../assets/team_22-23/Male-member.jpeg";
-import Suhaan from "../../../assets/team_22-23/Male-member.jpeg";
-import Shubdeep_Barman from "../../../assets/team_22-23/Subhadeep_Barman.jpeg";
-import Ramesh_C_Bhanu from "../../../assets/team_22-23/Male-member.jpeg";
-import Ruchir_Raj_Gupta from "../../../assets/team_22-23/Male-member.jpeg";
-import Sonali_Tudu from "../../../assets/team_22-23/Sonali_Tudu.jpeg";
-import Sahil_Nimsarkar from "../../../assets/team_22-23/Sahil_Ashish_Nimsarkar.jpeg";
-import Akshith_Rishi from "../../../assets/team_22-23/Sontu_Akshath_Rishi.jpeg";
-import Abhijeet from "../../../assets/team_22-23/Male-member.jpeg";
-import Adarsh from "../../../assets/team_22-23/Male-member.jpeg";
-
+import Abhijeet_Jharbade from "../../../assets/team_23-24/Male-member.jpeg";
+import ACHANTA_SATYA_KARTHIK from "../../../assets/team_23-24/Satya_Karthik_Achanta.jpg";
+import ANKITAN_KUMAR from "../../../assets/team_23-24/Ankitan_Kumar.jpg";
+import ANUJA_SINGH_PANDAW from "../../../assets/team_23-24/Female-member.jpeg";
+import APURVA_SAHU from "../../../assets/team_23-24/Apurva_Sahu.jpg";
+import KARTHIKEYA_PRACHODRAN from "../../../assets/team_23-24/Male-member.jpeg";
+import RIMJHIM_SHARMA from "../../../assets/team_23-24/Female-member.jpeg";
+import AAYUSH_KULKARNI from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
+import ARYAN_KUMAR_BAGHEL from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
 import bharat3 from "../../../assets/club_event_pics/cultural/bharat3.jpeg";
@@ -75,54 +73,49 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Jai_Vardhan,
-    name: "Jai Vardhan",
-    post: "Club Secretary",
+    img: Abhijeet_Jharbade,
+    name: "Abhijeet Jharbade",
+    post: "Head",
   },
   {
-    img: Suhaan,
-    name: "Suhaan",
-    post: "Vice Secretary",
+    img: ACHANTA_SATYA_KARTHIK,
+    name: "Achanta Satya Karthik",
+    post: "Core member",
   },
   {
-    img: Shubdeep_Barman,
-    name: "Shubdeep Barman",
-    post: "Photography Team",
+    img: ANKITAN_KUMAR,
+    name: "Ankitan Kumar",
+    post: "Core member",
   },
   {
-    img: Ramesh_C_Bhanu,
-    name: "Ramesh C Bhanu",
-    post: "Photography Team",
+    img: ANUJA_SINGH_PANDAW,
+    name: "Anuja Singh Pandaw",
+    post: "Core member",
   },
   {
-    img: Ruchir_Raj_Gupta,
-    name: "Ruchir Raj Gupta",
-    post: "Photography Team",
+    img: APURVA_SAHU,
+    name: "Apurva Sahu",
+    post: "Core member",
   },
   {
-    img: Sonali_Tudu,
-    name: "Sonali Tudu",
-    post: "Photography Team",
+    img: KARTHIKEYA_PRACHODRAN,
+    name: "Karthikeya Prachodran",
+    post: "Core member",
   },
   {
-    img: Sahil_Nimsarkar,
-    name: "Sahil Nimsarkar",
-    post: "Photography Team",
+    img: RIMJHIM_SHARMA,
+    name: "Rimjhim Sharma",
+    post: "Core member",
   },
   {
-    img: Akshith_Rishi,
-    name: "Akshith Rishi",
-    post: "Photography Team",
+    img: AAYUSH_KULKARNI,
+    name: "Aayush Kulkarni",
+    post: "Core member",
   },
   {
-    img: Abhijeet,
-    name: "Abhijeet",
-    post: "Photography Team",
-  },
-  {
-    img: Adarsh,
-    name: "Adarsh",
-    post: "Photography Team",
+    img: ARYAN_KUMAR_BAGHEL,
+    name: "Aryan Kumar Baghel",
+    post: "Core member",
   },
 ];
 

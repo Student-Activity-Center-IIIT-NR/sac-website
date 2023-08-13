@@ -12,11 +12,12 @@ import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Aman_Sahu from "../../../assets/team_22-23/Aman_Sahu.jpeg";
-import Rishabh_Verma from "../../../assets/team_22-23/Rishabh_Verma.jpeg";
-import Male_member from "../../../assets/team_22-23/Male-member.jpeg";
-import Ayushman_Tripathi from "../../../assets/team_22-23/Ayushman_Tripathi.jpeg";
-import Aadi_Juvekar from "../../../assets/team_22-23/Aadi_Juvekar.jpeg";
+import V_Jaswanth from "../../../assets/team_23-24/Vemula_Jashwanth.jpeg";
+import Alankrit from "../../../assets/team_23-24/Alankrit_Sharma.jpg"
+import Shreyansh_Kushwaha from "../../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
+import Venkata_surya from "../../../assets/team_23-24/Venkata_Surya_Sundar_Vadali.jpg"
+import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg"
+import Priyanshu_shri from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg"
 
 // import events
 import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
@@ -89,28 +90,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Aman_Sahu,
-    name: "Aman Sahu",
+    img: V_Jaswanth,
+    name: "Jaswanth Vemula",
     post: "Club Secretary",
   },
   {
-    img: Rishabh_Verma,
-    name: "Rishab Verma",
+    img: Alankrit,
+    name: "Alankrit Sharma",
     post: "Vice Secretary",
   },
   {
-    img: Male_member,
-    name: "Sankar S Bhardwaj",
+    img:Priyanshu_shri ,
+    name: "Priyanshi Srivastava",
     post: "Core Member",
   },
   {
-    img: Ayushman_Tripathi,
-    name: "Ayushman Tripathi",
+    img: Shreyansh_Kushwaha,
+    name: "Shreyansh Kushwaha",
     post: "Core Member",
   },
   {
-    img: Aadi_Juvekar,
-    name: "Aadi Juvekar",
+    img: Venkata_surya,
+    name: "Venkata Surya Sundar Vadali",
+    post: "Core Member",
+  },
+  {
+    img: Vishal_Sharma,
+    name: "Vishal Sharma",
     post: "Core Member",
   },
 ];

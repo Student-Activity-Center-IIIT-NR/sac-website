@@ -12,12 +12,12 @@ import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
 import { StaticImageData } from "next/image";
 
 // import crew
-import Dhaval_Kumar from "../../../assets/team_22-23/Dhaval_Kumar-min.jpeg";
-import anisha from "../../../assets/team_22-23/anisha.jpeg";
-import Suyash_Sinha from "../../../assets/team_22-23/Suyash_Sinha.jpeg";
-import Vedica_Mishra from "../../../assets/team_22-23/Vedica_Mishra.jpeg";
-import Kapil_Soni from "../../../assets/team_22-23/Kapil_Soni.jpeg";
-import Gaurish_Ojha from "../../../assets/team_22-23/Gaurish_Ojha.jpeg";
+import Shivaibhav from "../../../assets/team_23-24/Shivaibhav_Dewangan.jpg";
+import Gaurish from "../../../assets/team_23-24/Gaurish_Ojha.jpg";
+import Dhyanendra from "../../../assets/team_23-24/Dhyanendra_Tripathi.jpg";
+import Swasti_Srivastava from "../../../assets/team_23-24/Swasti_Srivastava.jpeg";
+import Manav_Raj from "../../../assets/team_23-24/Manav_Raj_Singh.jpg";
+import Ashutosh_Jaiswal from "../../../assets/team_23-24/Ashutosh_Jaiswal.jpeg";
 
 // import events
 import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
@@ -92,33 +92,33 @@ interface GalleryProps {
 
 const crew: CrewProps[] = [
   {
-    img: Dhaval_Kumar,
-    name: "Dhaval Kumar",
+    img: Shivaibhav,
+    name: "Shivaibhav Dewangan",
     post: "Club Secretary",
   },
   {
-    img: anisha,
-    name: "Anisha Agrawal",
-    post: "Core Member",
-  },
-  {
-    img: Suyash_Sinha,
-    name: "Suyash Sinha",
-    post: "Core Member",
-  },
-  {
-    img: Vedica_Mishra,
-    name: "Vedica Mishra",
-    post: "Core Member",
-  },
-  {
-    img: Kapil_Soni,
-    name: "Kapil Soni",
-    post: "Core Member",
-  },
-  {
-    img: Gaurish_Ojha,
+    img: Gaurish,
     name: "Gaurish Ojha",
+    post: "Core Member",
+  },
+  {
+    img: Dhyanendra,
+    name: "Dhyaanendra Tripathi",
+    post: "Core Member",
+  },
+  {
+    img: Swasti_Srivastava,
+    name: "Swasti Srivastava",
+    post: "Core Member",
+  },
+  {
+    img: Manav_Raj,
+    name: "Manav Raj Singh",
+    post: "Core Member",
+  },
+  {
+    img: Ashutosh_Jaiswal,
+    name: "Ashutosh Jaiswal",
     post: "Core Member",
   },
 ];
