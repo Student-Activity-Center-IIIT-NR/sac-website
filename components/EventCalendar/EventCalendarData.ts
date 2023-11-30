@@ -475,20 +475,4 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Guess The Picture",
     icon: triangleIcon,
   },
-
-  // do not delete below entry
-
-  //Jan
-  // {
-  //   date: "26-01-2024",
-  //   eventName: "Republic Day",
-  //   icon: circleIcon,
-  // },
-
-  // August
-  // {
-  //   date: "15-08-2023",
-  //   eventName: "Independence Day",
-  //   icon: circleIcon,
-  // },
 ];
