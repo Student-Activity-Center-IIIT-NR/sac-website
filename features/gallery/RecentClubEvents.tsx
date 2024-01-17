@@ -1,0 +1,206 @@
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+import { useState } from "react";
+import Image from "next/image";
+import { recentClubEvents } from "./GalleryData";
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const RecentClubEvents = () => {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = useState(0);
+
+  const handleStepChange = (step: number) => {
+    setActiveStep(step);
+  };
+
+  const len = recentClubEvents.length;
+
+  return (
+    <>
+      <Box
+        sx={{
+          my: "64px",
+          mx: "80px",
+        }}
+      >
+        <Typography
+          fontFamily={"Rubik"}
+          fontStyle={"normal"}
+          fontWeight={500}
+          fontSize={"2rem"}
+          lineHeight={"38px"}
+          letterSpacing={"0.03571em"}
+          color={"#000000"}
+        >
+          Recent Club Events
+        </Typography>
+        <Stack
+          direction={"row"}
+          mt={"84px"}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+        >
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+            style={{
+              width: "270px",
+              height: "270px",
+              borderRadius: "24px",
+            }}
+          >
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    sx={{
+                      width: "270px",
+                      height: "270px",
+                      mx: "auto",
+                    }}
+                  >
+                    <Image
+                      src={
+                        index === 0
+                          ? recentClubEvents[len - 1].img
+                          : recentClubEvents[index - 1].img
+                      }
+                      alt={""}
+                      height={"270px"}
+                      width={"270px"}
+                      objectFit={"cover"}
+                      style={{
+                        borderRadius: "24px",
+                      }}
+                    />
+                  </Box>
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+            style={{
+              width: "356px",
+              height: "356px",
+              borderRadius: "24px",
+            }}
+          >
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    sx={{
+                      width: "356px",
+                      height: "356px",
+                      mx: "auto",
+                    }}
+                  >
+                    <Image
+                      src={step.img}
+                      alt={step.name}
+                      height={"356px"}
+                      width={"356px"}
+                      objectFit={"cover"}
+                      style={{
+                        borderRadius: "24px",
+                      }}
+                    />
+                  </Box>
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+            style={{
+              width: "270px",
+              height: "270px",
+              borderRadius: "24px",
+            }}
+          >
+            {recentClubEvents.map((step, index) => (
+              <div key={step.name}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    sx={{
+                      width: "270px",
+                      height: "270px",
+                      mx: "auto",
+                    }}
+                  >
+                    <Image
+                      src={
+                        index === len - 1
+                          ? recentClubEvents[0].img
+                          : recentClubEvents[index + 1].img
+                      }
+                      alt={""}
+                      height={"270px"}
+                      width={"270px"}
+                      objectFit={"cover"}
+                      style={{
+                        borderRadius: "24px",
+                      }}
+                    />
+                  </Box>
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+        </Stack>
+        <Typography
+          fontFamily={"Rubik"}
+          fontStyle={"normal"}
+          fontWeight={500}
+          fontSize={"24px"}
+          lineHeight={"28px"}
+          textAlign={"center"}
+          color={"#000000"}
+          mt={"24px"}
+        >
+          {recentClubEvents[activeStep].name}
+        </Typography>
+        <Typography
+          fontFamily={"Rubik"}
+          fontStyle={"normal"}
+          fontWeight={500}
+          fontSize={"16px"}
+          lineHeight={"19px"}
+          textAlign={"center"}
+          color={"#000000"}
+          mt={"10px"}
+        >
+          {recentClubEvents[activeStep].clubName}
+        </Typography>
+        <Typography
+          fontFamily={"Rubik"}
+          fontStyle={"italic"}
+          fontWeight={700}
+          fontSize={"14px"}
+          lineHeight={"17px"}
+          textAlign={"center"}
+          color={"#4B5563"}
+          mt={"10px"}
+        >
+          {recentClubEvents[activeStep].date}
+        </Typography>
+      </Box>
+    </>
+  );
+};
+
+export default RecentClubEvents;
