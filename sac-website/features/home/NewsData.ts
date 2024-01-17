@@ -46,8 +46,8 @@ const newsData: NewsDataProps[] = [
   },
   {
     img: scientfic,
-    title: "SCIη′TFIC 2k24",
-    text: "Scientific, IIIT-Naya Raipur’s flagship science and technology showcase designed for school students, concluded on January 14. The event boasted 57 projects showcased from schools across the country. Dr. Pradeep K Sinha, Director and Vice Chancellor IIIT-NR; Prof Ram Kumar Kakani, Director of IIM Raipur, Dr Rajarshi Mahapatra, Dean Academics IIIT-NR and Dr. Lakhindar Murmu, Coordinator of SCInTFIC 2k24 inaugurated the event.",
+    title: "SCIη′TFIC 2k23",
+    text: "Scientific, IIIT-Naya Raipur’s flagship science and technology showcase designed for school students, concluded on January 14. The event boasted 57 projects showcased from schools across the country. Dr. Pradeep K Sinha, Director and Vice Chancellor IIIT-NR; Prof Ram Kumar Kakani, Director of IIM Raipur, Dr Rajarshi Mahapatra, Dean Academics IIIT-NR and Dr. Lakhindar Murmu, Coordinator of SCInTFIC 2k23 inaugurated the event.",
     authImg: jay,
     authName: "JayDeep",
   },
@@ -84,7 +84,7 @@ const newsData: NewsDataProps[] = [
     title: "HackManthan",
     text: "To find solutions to the technical problems of the police, Chhattisgarh Police, in collaboration with IIIT-Naya Raipur, organized Hackmanthan. This event was the inaugural part of HackManthan, a joint initiative of the state police and IIIT Naya Raipur to get the best young minds in the IT field working on real-life problems threatening cyber security and resolving to make the internet a safer place.",
     authImg: jay,
-    authName: "Yash",
+    authName: "JayDeep",
   },
 ];
 

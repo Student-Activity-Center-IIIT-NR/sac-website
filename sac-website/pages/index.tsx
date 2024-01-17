@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import ClubsOverview from "../features/home/ClubsOverview";
-import News from "../features/home/News";
+//import News from "../features/home/News";
 import BaseLayout from "../layouts/BaseLayout";
 import SacOverview from "../features/home/SacOverview";
 import ContactUs from "../features/home/ContactUs";
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         <SacOverview />
         <ClubsOverview />
         <Calendar />
-        <News />
+        {/* <News /> */}
         <ContactUs />
       </BaseLayout>
       <ToastContainer
