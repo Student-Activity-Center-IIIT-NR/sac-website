@@ -40,9 +40,6 @@ const News: NextPage = () => {
               height="208px"
               width="262px"
               objectFit="cover"
-              style ={ {
-                border:'4px solid black'
-              }}
               
             />
           </Box>
