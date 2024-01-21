@@ -1,0 +1,7 @@
+{
+    img: chai,
+    title: "Chai Pe Charcha | MUN",
+    text: "MUN IIIT Naya Raipur organized a group discussion over tea in a format similar to conversations on the nukkads of our country. The participants discussed various aspects like the independence of media, the neutrality of facts, the role of media and social media in the contemporary polity, the relevance of social media trends, and media reforms, among others.",
+    authImg: navneet,
+    authName: "Navneet",
+  }
