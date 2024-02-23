@@ -141,27 +141,42 @@ const TeamNavbar = () => {
       </TabPanel>
       {year < 23 && (
         <>
-          <TabPanel value={value} index={Object.keys(session)[2]}>
-            <ScrollContainer
-              teamName="Design Team"
-              gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-              teamData={session.design}
-            />
-          </TabPanel>
-          <TabPanel value={value} index={Object.keys(session)[3]}>
-            <ScrollContainer
-              teamName="Documentation Team"
-              gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-              teamData={session.documentation}
-            />
-          </TabPanel>
-          <TabPanel value={value} index={Object.keys(session)[4]}>
-            <ScrollContainer
-              teamName="Social Media Management Team"
-              gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-              teamData={session.social}
-            />
-          </TabPanel>
+          {session.web && (
+            <TabPanel value={value} index={Object.keys(session)[1]}>
+              <ScrollContainer
+                teamName="Website Management Team"
+                gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+                teamData={session.web}
+              />
+            </TabPanel>
+          )}
+          {session.design && (
+            <TabPanel value={value} index={Object.keys(session)[2]}>
+              <ScrollContainer
+                teamName="Design Team"
+                gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+                teamData={session.design}
+              />
+            </TabPanel>
+          )}
+          {session.documentation && (
+            <TabPanel value={value} index={Object.keys(session)[3]}>
+              <ScrollContainer
+                teamName="Documentation Team"
+                gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+                teamData={session.documentation}
+              />
+            </TabPanel>
+          )}
+          {session.social && (
+            <TabPanel value={value} index={Object.keys(session)[4]}>
+              <ScrollContainer
+                teamName="Social Media Management Team"
+                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                teamData={session.social}
+              />
+            </TabPanel>
+          )}
         </>
       )}
       {year >= 23 && (
