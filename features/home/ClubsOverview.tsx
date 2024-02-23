@@ -7,6 +7,8 @@ import Image, { StaticImageData } from "next/image";
 import artSports from "../../assets/static/art_sports.png";
 import artCultural from "../../assets/static/art_cultural.png";
 import artTechnical from "../../assets/static/art_technical.png";
+import NSS from "../../assets/static/NSS.png";
+import media from "../../assets/static/media.jpg";
 
 interface Props {
   title: string;
@@ -18,6 +20,8 @@ const ClubsOverview = () => {
   const [isTechHovered, setIsTechHovered] = useState(false);
   const [isCultHovered, setIsCultHovered] = useState(false);
   const [isSportHovered, setIsSportHovered] = useState(false);
+  const [isMediaHovered, setIsMediaHovered] = useState(false);
+  const [isNssHovered, setIsNssHovered] = useState(false);
 
   const OverviewData = ({ title, children, img }: Props) => {
     return (
@@ -93,12 +97,22 @@ const ClubsOverview = () => {
               fontSize={
                 isTechHovered
                   ? "150px"
-                  : isCultHovered || isSportHovered
+                  : isCultHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
                   ? "55px"
                   : "133px"
               }
               fontFamily={"Work Sans"}
-              lineHeight={isCultHovered || isSportHovered ? "65px" : "156px"}
+              lineHeight={
+                isCultHovered ||
+                isSportHovered ||
+                isMediaHovered ||
+                isNssHovered
+                  ? "65px"
+                  : "156px"
+              }
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -127,7 +141,14 @@ const ClubsOverview = () => {
         </Box>
         <Box
           sx={{
-            mt: isSportHovered || isTechHovered || isCultHovered ? 3 : 11,
+            mt:
+              isSportHovered ||
+              isTechHovered ||
+              isCultHovered ||
+              isMediaHovered ||
+              isNssHovered
+                ? 3
+                : 11,
           }}
           onMouseEnter={() => {
             setIsCultHovered(true);
@@ -147,12 +168,22 @@ const ClubsOverview = () => {
               fontSize={
                 isCultHovered
                   ? "150px"
-                  : isTechHovered || isSportHovered
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
                   ? "55px"
                   : "133px"
               }
               fontFamily={"Work Sans"}
-              lineHeight={isTechHovered || isSportHovered ? "65px" : "156px"}
+              lineHeight={
+                isTechHovered ||
+                isSportHovered ||
+                isMediaHovered ||
+                isNssHovered
+                  ? "65px"
+                  : "156px"
+              }
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -181,7 +212,10 @@ const ClubsOverview = () => {
         </Box>
         <Box
           sx={{
-            mt: isCultHovered || isTechHovered ? 3 : 11,
+            mt:
+              isCultHovered || isTechHovered || isMediaHovered || isNssHovered
+                ? 3
+                : 11,
           }}
           onMouseEnter={() => {
             setIsSportHovered(true);
@@ -197,12 +231,19 @@ const ClubsOverview = () => {
               fontSize={
                 isSportHovered
                   ? "150px"
-                  : isTechHovered || isCultHovered
+                  : isTechHovered ||
+                    isCultHovered ||
+                    isMediaHovered ||
+                    isNssHovered
                   ? "55px"
                   : "133px"
               }
               fontFamily={"Work Sans"}
-              lineHeight={isTechHovered || isCultHovered ? "65px" : "156px"}
+              lineHeight={
+                isTechHovered || isCultHovered || isMediaHovered || isNssHovered
+                  ? "65px"
+                  : "156px"
+              }
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -224,6 +265,147 @@ const ClubsOverview = () => {
                 who share their interests and build a sense of community within
                 the institute. Being part of a team can help students develop
                 valuable leadership, communication, and teamwork skills.
+              </OverviewData>
+            </Box>
+          )}
+        </Box>
+        <a href="https://nss.iiitnr.ac.in:1101/">
+          <Box
+            sx={{
+              mt:
+                isSportHovered ||
+                isTechHovered ||
+                isCultHovered ||
+                isMediaHovered
+                  ? 3
+                  : 11,
+            }}
+            onMouseEnter={() => {
+              setIsMediaHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsMediaHovered(false);
+            }}
+          >
+            <Divider
+              textAlign={
+                isMediaHovered
+                  ? "right"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isCultHovered ||
+                    isNssHovered
+                  ? "left"
+                  : "center"
+              }
+            >
+              <Typography
+                variant={"h1"}
+                fontWeight={isMediaHovered ? 500 : 100}
+                fontSize={
+                  isMediaHovered
+                    ? "150px"
+                    : isTechHovered ||
+                      isSportHovered ||
+                      isCultHovered ||
+                      isNssHovered
+                    ? "55px"
+                    : "133px"
+                }
+                fontFamily={"Work Sans"}
+                lineHeight={
+                  isTechHovered ||
+                  isSportHovered ||
+                  isCultHovered ||
+                  isNssHovered
+                    ? "65px"
+                    : "156px"
+                }
+                textAlign={"center"}
+                textTransform={"uppercase"}
+                fontStyle={"normal"}
+                sx={{
+                  transition: "all ease-in-out 400ms",
+                }}
+              >
+                NSS
+              </Typography>
+            </Divider>
+            {/* Hidden Element; Display on Hover */}
+            {isMediaHovered && (
+              <Box mx={8}>
+                <OverviewData title="'Not Me But You'" img={NSS}>
+                  The NSS wing of IIIT Naya Raipur was initiated in 2019 with a
+                  vision of creating community awareness among the students and
+                  developing a sense of social and civic responsibility among
+                  themselves. It encourages its volunteers to utilize their
+                  knowledge in generating practical solutions to individual and
+                  community problems. The volunteers kept in mind the motto of
+                  Not Me But You.
+                </OverviewData>
+              </Box>
+            )}
+          </Box>
+        </a>
+        <Box
+          sx={{
+            mt:
+              isSportHovered || isTechHovered || isCultHovered || isMediaHovered
+                ? 3
+                : 11,
+          }}
+          onMouseEnter={() => {
+            setIsNssHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsNssHovered(false);
+          }}
+        >
+          <Divider textAlign={"left"}>
+            <Typography
+              variant={"h1"}
+              fontWeight={isNssHovered ? 500 : 100}
+              fontSize={
+                isNssHovered
+                  ? "150px"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isCultHovered ||
+                    isMediaHovered
+                  ? "55px"
+                  : "133px"
+              }
+              fontFamily={"Work Sans"}
+              lineHeight={
+                isTechHovered ||
+                isSportHovered ||
+                isCultHovered ||
+                isMediaHovered
+                  ? "65px"
+                  : "156px"
+              }
+              textAlign={"center"}
+              textTransform={"uppercase"}
+              fontStyle={"normal"}
+              sx={{
+                transition: "all ease-in-out 400ms",
+              }}
+            >
+              Media & IT Cell
+            </Typography>
+          </Divider>
+          {/* Hidden Element; Display on Hover */}
+          {isNssHovered && (
+            <Box mx={8}>
+              <OverviewData
+                title="Photography, Videography, Design, Socail Media, PR"
+                img={media}
+              >
+                The Media & IT Cell under SAC promote skills of photography,
+                videography and designing. They conduct various workshops to
+                improve one skills in the field of digital arts and content.
+                This Cell is also responsible for handling all the socail
+                platforms and website of SAC
               </OverviewData>
             </Box>
           )}

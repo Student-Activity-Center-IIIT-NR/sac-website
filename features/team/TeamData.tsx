@@ -28,7 +28,7 @@ import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg"
 // 2022-2023
 import SristhiSahooUG from "../../assets/team_22-23/SristhiSahooUG.jpeg";
 import HimanshuYadav_UG_2022 from "../../assets/team_22-23/HimanshuYadav_UG_2022.jpeg";
-import Nishok from "../../assets/team_22-23/Nishok.jpeg";
+import Nishok from "../../assets/team_22-23/Nishok.jpg";
 import Supriya from "../../assets/team_22-23/Supriya.jpeg";
 import Aaditya_Kumar from "../../assets/team_22-23/Aaditya_Kumar.jpeg";
 import SonaliB from "../../assets/team_22-23/SonaliB.jpeg";
