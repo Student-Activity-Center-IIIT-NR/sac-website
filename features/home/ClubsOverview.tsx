@@ -7,6 +7,8 @@ import Image, { StaticImageData } from "next/image";
 import artSports from "../../assets/static/art_sports.png";
 import artCultural from "../../assets/static/art_cultural.png";
 import artTechnical from "../../assets/static/art_technical.png";
+import NSS from "../../assets/static/NSS.png";
+import media from "../../assets/static/media.jpg";
 
 interface Props {
   title: string;
@@ -325,15 +327,14 @@ const ClubsOverview = () => {
           {/* Hidden Element; Display on Hover */}
           {isMediaHovered && (
             <Box mx={8}>
-              <OverviewData
-                title="Music, Art, Dance, Photography, Debate, Discussions, Poetry and Drama"
-                img={artCultural}
-              >
-                Cultural clubs under SAC IIIT Naya Raipur, provide a way for
-                students to explore and engage in activities outside their
-                academic studies. These clubs can foster a sense of community
-                and belonging, which can be especially important for students in
-                technical fields who may spend much time working independently.
+              <OverviewData title="'Not Me But You'" img={NSS}>
+                The NSS wing of IIIT Naya Raipur was initiated in 2019 with a
+                vision of creating community awareness among the students and
+                developing a sense of social and civic responsibility among
+                themselves. It encourages its volunteers to utilize their
+                knowledge in generating practical solutions to individual and
+                community problems. The volunteers kept in mind the motto of Not
+                Me But You.
               </OverviewData>
             </Box>
           )}
@@ -389,14 +390,14 @@ const ClubsOverview = () => {
           {isNssHovered && (
             <Box mx={8}>
               <OverviewData
-                title="Coding, Hacking, Problem Solving, Machine Learning, Circuits"
-                img={artTechnical}
+                title="Photography, Videography, Design, Socail Media, PR"
+                img={media}
               >
-                The technical clubs under SAC promote hands-on and cooperative
-                learning and also engages students in problem-solving and
-                higher-order thinking. They conduct various events and provide
-                networking opportunities through hackathons, contests,
-                workshops, seminars, conventions, and teaching sessions.
+                The Media & IT Cell under SAC promote skills of photography,
+                videography and designing. They conduct various workshops to
+                improve one skills in the field of digital arts and content.
+                This Cell is also responsible for handling all the socail
+                platforms and website of SAC
               </OverviewData>
             </Box>
           )}
