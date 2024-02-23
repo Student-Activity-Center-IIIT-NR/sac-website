@@ -269,76 +269,84 @@ const ClubsOverview = () => {
             </Box>
           )}
         </Box>
-        <Box
-          sx={{
-            mt:
-              isSportHovered || isTechHovered || isCultHovered || isMediaHovered
-                ? 3
-                : 11,
-          }}
-          onMouseEnter={() => {
-            setIsMediaHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsMediaHovered(false);
-          }}
-        >
-          <Divider
-            textAlign={
-              isMediaHovered
-                ? "right"
-                : isTechHovered ||
-                  isSportHovered ||
-                  isCultHovered ||
-                  isNssHovered
-                ? "left"
-                : "center"
-            }
-          >
-            <Typography
-              variant={"h1"}
-              fontWeight={isMediaHovered ? 500 : 100}
-              fontSize={
+        <a href="https://nss.iiitnr.ac.in:1101/">
+          <Box
+            sx={{
+              mt:
+                isSportHovered ||
+                isTechHovered ||
+                isCultHovered ||
                 isMediaHovered
-                  ? "150px"
+                  ? 3
+                  : 11,
+            }}
+            onMouseEnter={() => {
+              setIsMediaHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsMediaHovered(false);
+            }}
+          >
+            <Divider
+              textAlign={
+                isMediaHovered
+                  ? "right"
                   : isTechHovered ||
                     isSportHovered ||
                     isCultHovered ||
                     isNssHovered
-                  ? "55px"
-                  : "133px"
+                  ? "left"
+                  : "center"
               }
-              fontFamily={"Work Sans"}
-              lineHeight={
-                isTechHovered || isSportHovered || isCultHovered || isNssHovered
-                  ? "65px"
-                  : "156px"
-              }
-              textAlign={"center"}
-              textTransform={"uppercase"}
-              fontStyle={"normal"}
-              sx={{
-                transition: "all ease-in-out 400ms",
-              }}
             >
-              NSS
-            </Typography>
-          </Divider>
-          {/* Hidden Element; Display on Hover */}
-          {isMediaHovered && (
-            <Box mx={8}>
-              <OverviewData title="'Not Me But You'" img={NSS}>
-                The NSS wing of IIIT Naya Raipur was initiated in 2019 with a
-                vision of creating community awareness among the students and
-                developing a sense of social and civic responsibility among
-                themselves. It encourages its volunteers to utilize their
-                knowledge in generating practical solutions to individual and
-                community problems. The volunteers kept in mind the motto of Not
-                Me But You.
-              </OverviewData>
-            </Box>
-          )}
-        </Box>
+              <Typography
+                variant={"h1"}
+                fontWeight={isMediaHovered ? 500 : 100}
+                fontSize={
+                  isMediaHovered
+                    ? "150px"
+                    : isTechHovered ||
+                      isSportHovered ||
+                      isCultHovered ||
+                      isNssHovered
+                    ? "55px"
+                    : "133px"
+                }
+                fontFamily={"Work Sans"}
+                lineHeight={
+                  isTechHovered ||
+                  isSportHovered ||
+                  isCultHovered ||
+                  isNssHovered
+                    ? "65px"
+                    : "156px"
+                }
+                textAlign={"center"}
+                textTransform={"uppercase"}
+                fontStyle={"normal"}
+                sx={{
+                  transition: "all ease-in-out 400ms",
+                }}
+              >
+                NSS
+              </Typography>
+            </Divider>
+            {/* Hidden Element; Display on Hover */}
+            {isMediaHovered && (
+              <Box mx={8}>
+                <OverviewData title="'Not Me But You'" img={NSS}>
+                  The NSS wing of IIIT Naya Raipur was initiated in 2019 with a
+                  vision of creating community awareness among the students and
+                  developing a sense of social and civic responsibility among
+                  themselves. It encourages its volunteers to utilize their
+                  knowledge in generating practical solutions to individual and
+                  community problems. The volunteers kept in mind the motto of
+                  Not Me But You.
+                </OverviewData>
+              </Box>
+            )}
+          </Box>
+        </a>
         <Box
           sx={{
             mt:
