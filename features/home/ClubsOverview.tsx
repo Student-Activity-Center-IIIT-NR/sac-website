@@ -403,8 +403,8 @@ const ClubsOverview = () => {
               >
                 The Media & IT Cell under SAC promote skills of photography,
                 videography and designing. They conduct various workshops to
-                improve one skills in the field of digital arts and content.
-                This Cell is also responsible for handling all the socail
+                improve one's skills in the field of digital arts and content.
+                This Cell is also responsible for handling all the social
                 platforms and website of SAC
               </OverviewData>
             </Box>
