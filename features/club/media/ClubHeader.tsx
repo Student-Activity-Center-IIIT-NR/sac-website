@@ -58,8 +58,8 @@ function ClubHeader() {
         >
           <Card
             sx={{
-              width: show ? "800px" : "210px",
-              height: show ? "174px" : "48px",
+              width: show ? "670px" : "500px",
+              height: show ? "174px" : "60px",
               borderRadius: show ? "24px" : "13px",
               py: "14px",
               px: "30px",
@@ -91,7 +91,7 @@ function ClubHeader() {
                 color={"#000000"}
                 sx={{ textDecoration: "underline", textUnderlineOffset: "2px" }}
               >
-                Cultural Clubs
+                Media & IT Cell
               </Typography>
               <Box
                 sx={{
@@ -104,11 +104,11 @@ function ClubHeader() {
               </Box>
             </Box>
             {show ? (
-              <Grid2 container mt={"25px"} rowGap={"30px"}>
+              <Grid2 container mt={"25px"} rowGap={"10px"}>
                 {clubs.map((item, index) => {
                   return (
                     <>
-                      <Grid2 xs={3} key={index}>
+                      <Grid2 xs={6} key={index}>
                         <Link href={item.url}>
                           <StyledTypography onClick={handleShow}>
                             {item.name}
@@ -148,12 +148,11 @@ const StarIcon = ({ fill }: { fill: string }) => {
 };
 
 const clubs = [
-  { name: "Indradhanush", url: "/clubs/cultural/indradhanush" },
-  { name: "Capriccio", url: "/clubs/cultural/capriccio" },
-  { name: "Club De Theatre", url: "/clubs/cultural/cdt" },
-  { name: "Igniters", url: "/clubs/cultural/igniters" },
-  { name: "Cover to Cover", url: "/clubs/cultural/c2c" },
-  { name: "Take da bait", url: "/clubs/cultural/tdb" },
-  { name: "Model United Nations", url: "/clubs/cultural/mun" },
-  { name: "Yuva Tourism Club", url: "/clubs/cultural/ytc" },
+  { name: "-> Shutterbug Club", url: "/clubs/media/shutterbug" },
+  { name: "-> Website Team", url: "/clubs/media/website" },
+  {
+    name: "-> Design and Documentation Team",
+    url: "/clubs/media/design",
+  },
+  { name: "-> PR and Social Media Team", url: "/clubs/media/pr" },
 ];

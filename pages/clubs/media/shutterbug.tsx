@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import ClubsLayout from "../../../layouts/ClubsLayout";
-import ClubHeader from "../../../features/club/cultural/ClubHeader";
+import ClubHeader from "../../../features/club/media/ClubHeader";
 import ClubBanner from "../../../features/club/cultural/ClubBanner";
 import ClubDescription from "../../../features/club/cultural/ClubDescription";
 import ClubEvents from "../../../features/club/cultural/ClubEvents";

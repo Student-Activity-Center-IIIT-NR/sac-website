@@ -12,9 +12,6 @@ import Kusum_Patel from "../../assets/team_23-24/Kusum_Patel.jpg";
 import Jay_Padia from "../../assets/team_23-24/Jay_Padia.jpg";
 import R_Sai_Shivani from "../../assets/team_23-24/Sai_Shivani.jpg";
 import Kamal from "../../assets/team_23-24/kamal.jpeg";
-import Ojas_Dubey1 from "../../assets/team_23-24/Ojas_Dubey.jpg";
-import Yashraj from "../../assets/team_23-24/Yash_Raj.jpeg";
-import Shreyansh_Kushwaha from "../../assets/team_23-24/Shreyansh_Kushwaha.jpg";
 import Aryansh_Verma from "../../assets/team_23-24/Aryansh_Verma.jpg";
 import Raj_Bhattacharya from "../../assets/team_23-24/Male-member.jpeg";
 import Ishita_Tegar from "../../assets/team_23-24/Ishita_Tegar.jpg";
@@ -24,7 +21,6 @@ import S_Chandu from "../../assets/team_23-24/Male-member.jpeg";
 import Ojash_Verma from "../../assets/team_23-24/Male-member.jpeg";
 import Tanishka from "../../assets/team_23-24/Female-member.jpeg";
 import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg";
 
 // 2022-2023
 import SristhiSahooUG from "../../assets/team_22-23/SristhiSahooUG.jpeg";
@@ -291,30 +287,6 @@ export const TeamData: TeamDataProps = {
         name: "Kanika Chaurasia",
         post: "UG Representative (Girls)",
       },
-
-      // {
-      //   img: Ojas_Dubey1,
-      //   name: "Ojas Dubey",
-      //   post: "Head",
-      //   linkedin: "https://www.linkedin.com/in/ojas-dubey-1aa856226/",
-      //   call: 8953146775,
-      //   mail: "ojas21101@iiitnr.edu.in",
-      // },
-      // {
-      //   img: Manu_Sai,
-      //   name: "Manu Sai",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Shreyansh_Kushwaha,
-      //   name: "Shreyansh Kushwaha",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Yashraj,
-      //   name: "Yashraj",
-      //   post: "Core Member",
-      // },
     ],
     technical: [
       {
