@@ -5,8 +5,8 @@ import ClubBanner from "../../../features/club/cultural/ClubBanner";
 import ClubDescription from "../../../features/club/cultural/ClubDescription";
 import ClubEvents from "../../../features/club/cultural/ClubEvents";
 import Gallery from "../../../features/club/common/Gallery";
-import shutterbugBg from "../../../assets/cultural_clubs_bg/shutterbug.png";
-import shutterbugLogo from "../../../assets/cultural_clubs_bg/shutterbug_logo.jpeg";
+import YTCBg from "../../../assets/cultural_clubs_bg/YTC.jpg";
+import YTCLogo from "../../../assets/cultural_clubs_bg/YTC_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
 
@@ -31,33 +31,33 @@ import ganraya2 from "../../../assets/club_event_pics/cultural/ganraya2.jpeg";
 import ganraya3 from "../../../assets/club_event_pics/cultural/ganraya3.jpeg";
 import ganraya4 from "../../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
-interface ShutterBugProps {}
+interface YTCProps {}
 
-const ShutterBug: FunctionComponent<ShutterBugProps> = () => {
+const YTC: FunctionComponent<YTCProps> = () => {
   return (
     <>
       <ClubsLayout>
         <ClubHeader />
-        <ClubBanner clubName="Shutterbug" bg={shutterbugBg} />
-        <ClubDescription img={shutterbugLogo}>
-          Shutterbug is IIIT Naya Raipur&apos;s official photography club.
-          <br /> This club intends to help interested students of photography to
-          learn about the fundamentals of this field. It provides a supportive
-          environment to students of our institute to share their knowledge and
-          passion for photography. The club runs under the guidance of Dr.
-          Ramakrishna Bandi. <br /> We cover all the major events that happen in
-          our institute. Also, we organize various photography workshops,
-          exhibitions etc.
+        <ClubBanner clubName="Yuva Tourism Club ( YTC )" bg={YTCBg} />
+        <ClubDescription img={YTCLogo}>
+          Following the directions of Hon'ble Prime Minister of India, Ministry
+          of Tourism launched the campaign focusing on “YUVA Tourism Club” with
+          the strategic objective of creating interest, awareness and a sense of
+          responsibility towards our country's natural and cultural heritage /
+          tourism amongst children and youth. The vision is to nurture and
+          develop young ambassadors of Indian tourism who would become aware of
+          tourism possibilities in India, appreciate our rich cultural heritage
+          and develop an interest and passion for tourism.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
-        <Gallery props={gallery} />
+        {/* <ClubEvents props={eventDetails} /> */}
+        {/* <Crew props={crew} /> */}
+        {/* <Gallery props={gallery} /> */}
       </ClubsLayout>
     </>
   );
 };
 
-export default ShutterBug;
+export default YTC;
 
 interface CrewProps {
   img: StaticImageData;
