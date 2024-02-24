@@ -5,10 +5,10 @@ import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
 import Crew from "../../../features/club/common/Crew";
 import Gallery from "../../../features/club/common/Gallery";
-import tsocBg from "../../../assets/technical_clubs_bg/tsoc.png";
-import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";
-import tsocBgBottom from "../../../assets/technical_clubs_bg/bg_tsoc_bottom.svg";
-import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
+import IICBg from "../../../assets/technical_clubs_bg/IIC.jpg";
+import IICBgTop from "../../../assets/technical_clubs_bg/bg_IIC_top.png";
+import IICBgBottom from "../../../assets/technical_clubs_bg/bg_IIC_bottom.png";
+import IICLogo from "../../../assets/technical_clubs_bg/IIC_logo.png";
 import { StaticImageData } from "next/image";
 
 // import crew
@@ -29,54 +29,50 @@ import bit6 from "../../../assets/club_event_pics/technical/bit6.jpeg";
 import bit7 from "../../../assets/club_event_pics/technical/bit7.jpeg";
 import bit8 from "../../../assets/club_event_pics/technical/bit8.jpeg";
 
-interface TSOCProps {}
+interface IICProps {}
 
-const TSOC: FunctionComponent<TSOCProps> = () => {
+const IIC: FunctionComponent<IICProps> = () => {
   return (
     <>
       <ClubsLayout>
         <TechnicalClub
-          name="TSOC"
-          desc="The Society of Coders"
-          bgTop={tsocBgTop}
-          logo={tsocLogo}
-          color={"#7AA2F7"}
-          event1Name="Des Code"
-          event1Date="03 Feb 2023"
-          event1Desc="Coding Challenge"
-          event2Name="Bit-2-Byte"
-          event2Date="18 March 2023"
-          event2Desc="Coding Challenge"
+          name="IIC"
+          desc="Institute Innovation Council"
+          bgTop={IICBgTop}
+          logo={IICLogo}
+          color={"#BEA000"}
+          event1Name="Speaker's talk"
+          event1Date="March 2024"
+          event1Desc="Talk by Experts"
+          event2Name="Field Visit"
+          event2Date="April 2024"
+          event2Desc=""
         />
-        <ClubDescription bg={tsocBg}>
-          The Society of Coders at IIIT-Naya Raipur is a student-run club that
-          aims to foster a culture of coding at the college by hosting various
-          events such as hackathons, workshops, and competitions. The club
-          emphasizes hands-on learning and provides a platform for students to
-          share their ideas and experiences with programming in a supportive
-          environment. It also serves as a forum for people to share their
-          ideas, thoughts, and ambitions regarding programming in an encouraging
-          and conducive environment. It&apos;s a club that welcomes everyone
-          from first-time coders to experienced veterans of the trade.
+        <ClubDescription bg={IICBg}>
+          Institution's Innovation Council (IIC) program is initiative of
+          Ministry of Education (MoE) through MoE's Innovation Cell (MIC) in
+          collaboration with AICTE for Higher Educational Institutions (HEIs) to
+          systematically foster the culture of innovation and start-up ecosystem
+          in education institutions.
         </ClubDescription>
         <Box
           sx={{
             height: "fit-content",
-            background: `url(${tsocBgBottom.src})`,
+            background: `url(${IICBgBottom.src})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             pb: 6,
           }}
         >
-          <Crew props={crew} />
-          <Gallery props={gallery} />
+          {/* <Crew props={crew} />
+          <Gallery props={gallery} /> */}
         </Box>
       </ClubsLayout>
     </>
   );
 };
 
-export default TSOC;
+export default IIC;
 
 interface CrewProps {
   img: StaticImageData;
