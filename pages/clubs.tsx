@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import TechnicalOverview from "../features/club/TechnicalOverview";
 import SportsOverview from "../features/club/SportsOverview";
 import CulturalOverview from "../features/club/CulturalOverview";
+import MediaOverview from "../features/club/MediaOverview";
 
 const Clubs: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Clubs: NextPage = () => {
         <TechnicalOverview />
         <CulturalOverview />
         <SportsOverview />
+        <MediaOverview />
       </ClubsLayout>
     </>
   );
