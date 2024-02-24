@@ -165,7 +165,7 @@ const TechnicalOverview = () => {
           <Grid2 container rowGap={"92px"}>
             {clubs.map((club, index) => {
               return (
-                <Grid2 xs={4} key={index}>
+                <Grid2 xs={3} key={index}>
                   <Link href={club.url}>
                     <StyledLinkTypography
                       color={"#565A6E"}
@@ -205,4 +205,6 @@ const clubs = [
     color: "#BB9AF7",
   },
   { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
+  { name: "// BIS", url: "/clubs/technical/bis", color: "#CA50F5" },
+  { name: "// IIC", url: "/clubs/technical/iic", color: "#FFDE31" },
 ];
