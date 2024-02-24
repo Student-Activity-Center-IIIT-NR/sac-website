@@ -12,15 +12,6 @@ import Kusum_Patel from "../../assets/team_23-24/Kusum_Patel.jpg";
 import Jay_Padia from "../../assets/team_23-24/Jay_Padia.jpg";
 import R_Sai_Shivani from "../../assets/team_23-24/Sai_Shivani.jpg";
 import Kamal from "../../assets/team_23-24/kamal.jpeg";
-import Aryansh_Verma from "../../assets/team_23-24/Aryansh_Verma.jpg";
-import Raj_Bhattacharya from "../../assets/team_23-24/Male-member.jpeg";
-import Ishita_Tegar from "../../assets/team_23-24/Ishita_Tegar.jpg";
-import Trisul from "../../assets/team_23-24/Trisul.jpeg";
-import A_Satya_Kartik from "../../assets/team_23-24/Male-member.jpeg";
-import S_Chandu from "../../assets/team_23-24/Male-member.jpeg";
-import Ojash_Verma from "../../assets/team_23-24/Male-member.jpeg";
-import Tanishka from "../../assets/team_23-24/Female-member.jpeg";
-import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
 
 // 2022-2023
 import SristhiSahooUG from "../../assets/team_22-23/SristhiSahooUG.jpeg";
@@ -299,37 +290,6 @@ export const TeamData: TeamDataProps = {
         name: "Ch Swati",
         post: "Science and Technology Secretary (Girls)",
       },
-
-      // {
-      //   img: A_Satya_Kartik,
-      //   name: "A Satya Karthik",
-      //   post: "Head",
-      // },
-      // {
-      //   img: S_Chandu,
-      //   name: "S.Chandu",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Ojash_Verma,
-      //   name: "Ojash Verma",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Tanishka,
-      //   name: "Tanishka Chauhan",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Shreyansh_Kushwaha,
-      //   name: "Shreyansh Kushwaha",
-      //   post: "Core Member",
-      // },
-      // {
-      //   img: Trisul,
-      //   name: "Trishul",
-      //   post: "Core Member",
-      // },
     ],
     cultural: [
       {
@@ -342,29 +302,6 @@ export const TeamData: TeamDataProps = {
         name: "Rimjhim Sharma",
         post: "Arts, Cultural and Literary Secretary (Girls)",
       },
-
-      // {
-      //   img: Aryansh_Verma,
-      //   name: "Aryansh Verma",
-      //   post: "Head",
-      // },{
-      //   img: Aayush_Kulkarni,
-      //   name: "Aayush Kulkarni",
-      //   post: "Core member",
-      // },{
-      //   img: Raj_Bhattacharya,
-      //   name: "Raj Bhattacharya",
-      //   post: "Core member",
-      // },{
-      //   img: Ishita_Tegar,
-      //   name: "Ishita Tegar",
-      //   post: "Core member",
-      // },
-      // {
-      //   img: Trisul,
-      //   name: "Trishul",
-      //   post: "Core member",
-      // },
     ],
     sports: [
       {
