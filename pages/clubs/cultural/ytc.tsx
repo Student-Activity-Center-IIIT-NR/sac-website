@@ -40,14 +40,14 @@ const YTC: FunctionComponent<YTCProps> = () => {
         <ClubHeader />
         <ClubBanner clubName="Yuva Tourism Club ( YTC )" bg={YTCBg} />
         <ClubDescription img={YTCLogo}>
-          Following the directions of Hon'ble Prime Minister of India, Ministry
-          of Tourism launched the campaign focusing on “YUVA Tourism Club” with
-          the strategic objective of creating interest, awareness and a sense of
-          responsibility towards our country's natural and cultural heritage /
-          tourism amongst children and youth. The vision is to nurture and
-          develop young ambassadors of Indian tourism who would become aware of
-          tourism possibilities in India, appreciate our rich cultural heritage
-          and develop an interest and passion for tourism.
+          Following the directions of Hon&apos;aposble Prime Minister of India,
+          Ministry of Tourism launched the campaign focusing on “YUVA Tourism
+          Club” with the strategic objective of creating interest, awareness and
+          a sense of responsibility towards our country&apos;s natural and
+          cultural heritage / tourism amongst children and youth. The vision is
+          to nurture and develop young ambassadors of Indian tourism who would
+          become aware of tourism possibilities in India, appreciate our rich
+          cultural heritage and develop an interest and passion for tourism.
         </ClubDescription>
         {/* <ClubEvents props={eventDetails} /> */}
         {/* <Crew props={crew} /> */}
