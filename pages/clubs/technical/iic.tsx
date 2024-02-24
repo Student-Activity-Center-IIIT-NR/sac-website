@@ -49,11 +49,11 @@ const IIC: FunctionComponent<IICProps> = () => {
           event2Desc=""
         />
         <ClubDescription bg={IICBg}>
-          Institution's Innovation Council (IIC) program is initiative of
-          Ministry of Education (MoE) through MoE's Innovation Cell (MIC) in
-          collaboration with AICTE for Higher Educational Institutions (HEIs) to
-          systematically foster the culture of innovation and start-up ecosystem
-          in education institutions.
+          Institution&apos;s Innovation Council (IIC) program is initiative of
+          Ministry of Education (MoE) through MoE&apos;s Innovation Cell (MIC)
+          in collaboration with AICTE for Higher Educational Institutions (HEIs)
+          to systematically foster the culture of innovation and start-up
+          ecosystem in education institutions.
         </ClubDescription>
         <Box
           sx={{
