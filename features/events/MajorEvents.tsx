@@ -6,7 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button, Stack, useTheme } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
-import { recentMajorEventsData } from "./RecentMajorEventsData";
+import { recentMajorEventsData } from "../../data/RecentMajorEventsData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

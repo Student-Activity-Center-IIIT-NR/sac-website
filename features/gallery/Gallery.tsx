@@ -13,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { ClubEvents } from "./GalleryData";
+import { ClubEvents } from "../../data/GalleryData";
 
 const StyledButton = styled(Button)({
   fontFamily: "Rubik",

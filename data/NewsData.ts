@@ -1,19 +1,19 @@
 import { StaticImageData } from "next/image";
 
 // import from news_pics for images of news
-import chai from "../../assets/club_event_pics/cultural/chai6.jpeg";
-import scientfic from "../../assets/major_events_pics/scientfic.jpeg";
-import blood from "../../assets/news_pics/news_blood.jpeg";
-import technovate from "../../assets/news_pics/news_technovate.jpeg";
-import yet from "../../assets/club_event_pics/cultural/yet2.jpeg";
-import consti from "../../assets/news_pics/news_const.jpeg";
-import hackmanthan from "../../assets/news_pics/news_hack.jpeg";
-import chess from "../../assets/club_event_pics/sports/lakshya1.jpeg";
-import navneet from "../../assets/team_22-23/navneet_chaubey.jpeg";
-import trisul from "../../assets/team_23-24/Trisul.jpeg"
-import nano_img from "../../assets/major_events_pics/nano_tech.jpg";
-import jay from "../../assets/team_22-23/Jay_Deep_Singh.jpeg";
-import sudhanshu from "../../assets/team_22-23/Sudhanshu_Tripathi.jpeg";
+import chai from "../assets/club_event_pics/cultural/chai6.jpeg";
+import scientfic from "../assets/major_events_pics/scientfic.jpeg";
+import blood from "../assets/news_pics/news_blood.jpeg";
+import technovate from "../assets/news_pics/news_technovate.jpeg";
+import yet from "../assets/club_event_pics/cultural/yet2.jpeg";
+import consti from "../assets/news_pics/news_const.jpeg";
+import hackmanthan from "../assets/news_pics/news_hack.jpeg";
+import chess from "../assets/club_event_pics/sports/lakshya1.jpeg";
+import navneet from "../assets/team_22-23/navneet_chaubey.jpeg";
+import trisul from "../assets/team_23-24/Trisul.jpeg"
+import nano_img from "../assets/major_events_pics/nano_tech.jpg";
+import jay from "../assets/team_22-23/Jay_Deep_Singh.jpeg";
+import sudhanshu from "../assets/team_22-23/Sudhanshu_Tripathi.jpeg";
 
 interface NewsDataProps {
   img?: StaticImageData;
