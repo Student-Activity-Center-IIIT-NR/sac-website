@@ -10,14 +10,7 @@ import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";
 import tsocBgBottom from "../../../assets/technical_clubs_bg/bg_tsoc_bottom.svg";
 import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Shivaibhav from "../../../assets/team_23-24/Shivaibhav_Dewangan.jpg";
-import Gaurish from "../../../assets/team_23-24/Gaurish_Ojha.jpg";
-import Dhyanendra from "../../../assets/team_23-24/Dhyanendra_Tripathi.jpg";
-import Swasti_Srivastava from "../../../assets/team_23-24/Swasti_Srivastava.jpeg";
-import Manav_Raj from "../../../assets/team_23-24/Manav_Raj_Singh.jpg";
-import Ashutosh_Jaiswal from "../../../assets/team_23-24/Ashutosh_Jaiswal.jpeg";
+import { tsoc } from "../../../data/TechnicalClubCrew";
 
 // import events
 import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
@@ -68,7 +61,7 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
             pb: 6,
           }}
         >
-          <Crew props={crew} />
+          <Crew props={tsoc} />
           <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
@@ -78,70 +71,12 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
 
 export default TSOC;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Shivaibhav,
-    name: "Shivaibhav Dewangan",
-    post: "Club Secretary",
-  },
-  {
-    img: Gaurish,
-    name: "Gaurish Ojha",
-    post: "Vice Secretary",
-  },
-  {
-    img: Dhyanendra,
-    name: "Dhyaanendra Tripathi",
-    post: "Core Member",
-  },
-  {
-    img: Swasti_Srivastava,
-    name: "Swasti Srivastava",
-    post: "Core Member",
-  },
-  {
-    img: Manav_Raj,
-    name: "Manav Raj Singh",
-    post: "Core Member",
-  },
-  {
-    img: Ashutosh_Jaiswal,
-    name: "Ashutosh Jaiswal",
-    post: "Core Member",
-  },
-  {
-    img: Dhyanendra,
-    name: "Dhyaanendra Tripathi",
-    post: "Core Member",
-  },
-  {
-    img: Swasti_Srivastava,
-    name: "Swasti Srivastava",
-    post: "Core Member",
-  },
-  {
-    img: Manav_Raj,
-    name: "Manav Raj Singh",
-    post: "Core Member",
-  },
-  {
-    img: Ashutosh_Jaiswal,
-    name: "Ashutosh Jaiswal",
-    post: "Core Member",
-  },
-];
 const gallery: GalleryProps[] = [
   {
     name: "Bit-2-Byte",

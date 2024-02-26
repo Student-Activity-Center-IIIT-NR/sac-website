@@ -10,14 +10,7 @@ import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { StaticImageData } from "next/image";
-
-// import crew
-import V_Jaswanth from "../../../assets/team_23-24/Vemula_Jashwanth.jpeg";
-import Alankrit from "../../../assets/team_23-24/Alankrit_Sharma.jpg"
-import Shreyansh_Kushwaha from "../../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
-import Venkata_surya from "../../../assets/team_23-24/Venkata_Surya_Sundar_Vadali.jpg"
-import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg"
-import Priyanshu_shri from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg"
+import { ciphercell } from "../../../data/TechnicalClubCrew";
 
 // import events
 import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
@@ -66,7 +59,7 @@ const Ciphercell = () => {
             pb: 6,
           }}
         >
-          <Crew props={crew} />
+          <Crew props={ciphercell} />
           <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
@@ -76,50 +69,11 @@ const Ciphercell = () => {
 
 export default Ciphercell;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: V_Jaswanth,
-    name: "Jaswanth Vemula",
-    post: "Club Secretary",
-  },
-  {
-    img: Alankrit,
-    name: "Alankrit Sharma",
-    post: "Vice Secretary",
-  },
-  {
-    img:Priyanshu_shri ,
-    name: "Priyanshi Srivastava",
-    post: "Core Member",
-  },
-  {
-    img: Shreyansh_Kushwaha,
-    name: "Shreyansh Kushwaha",
-    post: "Core Member",
-  },
-  {
-    img: Venkata_surya,
-    name: "Venkata Surya Sundar Vadali",
-    post: "Core Member",
-  },
-  {
-    img: Vishal_Sharma,
-    name: "Vishal Sharma",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

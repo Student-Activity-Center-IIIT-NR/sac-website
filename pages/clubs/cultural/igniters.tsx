@@ -8,17 +8,8 @@ import Gallery from "../../../features/club/common/Gallery";
 import ignitersBg from "../../../assets/cultural_clubs_bg/igniters.png";
 import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Niharika_Murmu from "../../../assets/team_23-24/Niharika_Murmu.jpg";
-import Satvik_Yadav from "../../../assets/team_23-24/Satvik_Yadav.jpg";
-import RamaR_Katta from "../../../assets/team_23-24/Male-member.jpeg";
-import Aryan_Kumar_Baghel from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
-import Anuja_Singh from "../../../assets/team_23-24/Female-member.jpeg";
-import Eluri_Rithwik from "../../../assets/team_23-24/Eluri_Rithwik.jpg";
-import Muskan_Dewangan from "../../../assets/team_23-24/Muskan_Dewangan.jpg";
-
 import Crew from "../../../features/club/common/Crew";
+import { igniters } from "../../../data/CulturalClubCrew";
 
 // import events
 import dance1 from "../../../assets/club_event_pics/cultural/dance1.jpeg";
@@ -50,7 +41,7 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
           let the art of dance bring them joy and expression.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={igniters} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -59,55 +50,11 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
 
 export default Igniters;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Niharika_Murmu,
-    name: "Niharika Murmu",
-    post: "Club Secretary",
-  },
-  {
-    img: Satvik_Yadav,
-    name: "Satvik Yadav",
-    post: "Co-Vice Secretary",
-  },
-  {
-    img: RamaR_Katta,
-    name: "Rama Rakshith Katta",
-    post: "Co-Vice Secretary",
-  },
-  {
-    img: Aryan_Kumar_Baghel,
-    name: "Aryan Kumar Baghel",
-    post: "core member",
-  },
-  {
-    img: Anuja_Singh,
-    name: "Anuja Singh Pandaw",
-    post: "core member",
-  },
-  {
-    img: Eluri_Rithwik,
-    name: "Elluri Rithwik",
-    post: "core member",
-  },
-  {
-    img: Muskan_Dewangan,
-    name: "Muskan Dewangan",
-    post: "core member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

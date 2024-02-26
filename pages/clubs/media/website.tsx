@@ -7,13 +7,7 @@ import WebsiteBg from "../../../assets/media_cell_bg/website.jpg";
 import WebsiteLogo from "../../../assets/media_cell_bg/Media.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-
-import Manu_Sai from "../../../assets/team_23-24/Manu_Sai.jpg";
-import Ojas_Dubey1 from "../../../assets/team_23-24/Ojas_Dubey.jpg";
-import Yashraj from "../../../assets/team_23-24/Yash_Raj.jpeg";
-import Shreyansh_Kushwaha from "../../../assets/team_23-24/Shreyansh_Kushwaha.jpg";
+import { website } from "../../../data/MediaClubCrew";
 
 interface WebsiteProps {}
 
@@ -32,7 +26,7 @@ const Website: FunctionComponent<WebsiteProps> = () => {
           knowledge in an actual deploy website.They try to update about all the
           events that happen in our institute on this website.
         </ClubDescription>
-        <Crew props={crew} />
+        <Crew props={website} />
         <br />
       </ClubsLayout>
     </>
@@ -41,37 +35,8 @@ const Website: FunctionComponent<WebsiteProps> = () => {
 
 export default Website;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Ojas_Dubey1,
-    name: "Ojas Dubey",
-    post: "Head",
-  },
-  {
-    img: Manu_Sai,
-    name: "Manu Sai",
-    post: "Core Member",
-  },
-  {
-    img: Shreyansh_Kushwaha,
-    name: "Shreyansh Kushwaha",
-    post: "Core Member",
-  },
-  {
-    img: Yashraj,
-    name: "Yashraj",
-    post: "Core Member",
-  },
-];

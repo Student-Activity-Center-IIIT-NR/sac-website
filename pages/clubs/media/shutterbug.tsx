@@ -9,17 +9,8 @@ import shutterbugBg from "../../../assets/cultural_clubs_bg/shutterbug.png";
 import shutterbugLogo from "../../../assets/cultural_clubs_bg/shutterbug_logo.jpeg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
+import { shutterbug } from "../../../data/MediaClubCrew";
 
-// import crew
-import Abhijeet_Jharbade from "../../../assets/team_23-24/Male-member.jpeg";
-import ACHANTA_SATYA_KARTHIK from "../../../assets/team_23-24/Satya_Karthik_Achanta.jpg";
-import ANKITAN_KUMAR from "../../../assets/team_23-24/Ankitan_Kumar.jpg";
-import ANUJA_SINGH_PANDAW from "../../../assets/team_23-24/Female-member.jpeg";
-import APURVA_SAHU from "../../../assets/team_23-24/Apurva_Sahu.jpg";
-import KARTHIKEYA_PRACHODRAN from "../../../assets/team_23-24/Male-member.jpeg";
-import RIMJHIM_SHARMA from "../../../assets/team_23-24/Female-member.jpeg";
-import AAYUSH_KULKARNI from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import ARYAN_KUMAR_BAGHEL from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
 import bharat3 from "../../../assets/club_event_pics/cultural/bharat3.jpeg";
@@ -50,7 +41,7 @@ const ShutterBug: FunctionComponent<ShutterBugProps> = () => {
           exhibitions etc.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={shutterbug} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -59,65 +50,11 @@ const ShutterBug: FunctionComponent<ShutterBugProps> = () => {
 
 export default ShutterBug;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Abhijeet_Jharbade,
-    name: "Abhijeet Jharbade",
-    post: "Head",
-  },
-  {
-    img: ACHANTA_SATYA_KARTHIK,
-    name: "Achanta Satya Karthik",
-    post: "Core member",
-  },
-  {
-    img: ANKITAN_KUMAR,
-    name: "Ankitan Kumar",
-    post: "Core member",
-  },
-  {
-    img: ANUJA_SINGH_PANDAW,
-    name: "Anuja Singh Pandaw",
-    post: "Core member",
-  },
-  {
-    img: APURVA_SAHU,
-    name: "Apurva Sahu",
-    post: "Core member",
-  },
-  {
-    img: KARTHIKEYA_PRACHODRAN,
-    name: "Karthikeya Prachodran",
-    post: "Core member",
-  },
-  {
-    img: RIMJHIM_SHARMA,
-    name: "Rimjhim Sharma",
-    post: "Core member",
-  },
-  {
-    img: AAYUSH_KULKARNI,
-    name: "Aayush Kulkarni",
-    post: "Core member",
-  },
-  {
-    img: ARYAN_KUMAR_BAGHEL,
-    name: "Aryan Kumar Baghel",
-    post: "Core member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

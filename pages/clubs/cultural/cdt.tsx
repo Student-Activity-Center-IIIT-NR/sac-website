@@ -9,15 +9,7 @@ import cdtBg from "../../../assets/cultural_clubs_bg/cdt.png";
 import cdtLogo from "../../../assets/cultural_clubs_bg/cdt_logo.png";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-
-// import crew
-import Swastika_Satya from "../../../assets/team_23-24/Swastika_Satya.jpg";
-import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg";
-import Kanika_Malhotra from "../../../assets/team_23-24/Kanika_Malhotra -.jpg";
-import Juttuka_Saaketh from "../../../assets/team_23-24/Male-member.jpeg";
-import Anshu_kashyap from "../../../assets/team_23-24/Female-member.jpeg";
-import Krishna_aggarwal from "../../../assets/team_23-24/Krishna_Agrawal.jpg";
-
+import { cdt } from "../../../data/CulturalClubCrew";
 
 // import events
 import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
@@ -46,7 +38,7 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
           express themselves, and working in a team.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={cdt} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -55,51 +47,11 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
 
 export default ClubDeTheatre;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Swastika_Satya,
-    name: "Swastika Satya",
-    post: "Club Secretary",
-  },
-  {
-    img: Vishal_Sharma,
-    name: "Vishal Sharma",
-    post: "Vice Secretary",
-  },
-  {
-    img: Kanika_Malhotra,
-    name: "Kanika Malhotra",
-    post: "Core member",
-  },
-  {
-    img: Juttuka_Saaketh,
-    name: "Juttuka Saaketh",
-    post: "Core Member",
-  },
-  {
-    img: Anshu_kashyap,
-    name: "Anhsu Kashyap",
-    post: "Core Member",
-  },
-  {
-    img: Krishna_aggarwal,
-    name: "Krishna Aggarwal",
-    post: "Core Member",
-  },
-  
-];
 
 const gallery: GalleryProps[] = [
   {

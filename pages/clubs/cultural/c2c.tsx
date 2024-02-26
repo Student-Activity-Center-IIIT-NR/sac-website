@@ -8,16 +8,8 @@ import c2cBg from "../../../assets/cultural_clubs_bg/c2c.png";
 import c2cLogo from "../../../assets/cultural_clubs_bg/c2c_logo.png";
 import Gallery from "../../../features/club/common/Gallery";
 import Crew from "../../../features/club/common/Crew";
+import { c2c } from "../../../data/CulturalClubCrew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Panshul_Senapati from "../../../assets/team_23-24/Panshul_Senapati.jpg";
-import Aseem_Rai from "../../../assets/team_23-24/Aseem_Rai.jpg";
-import Ashutosh_Jaiswal from "../../../assets/team_23-24/Ashutosh_Jaiswal.jpeg";
-import Arman_Singh_Kshatri from "../../../assets/team_23-24/Male-member.jpeg";
-import Ojash_Verma from "../../../assets/team_23-24/Male-member.jpeg";
-import Simmi_Baghel from "../../../assets/team_23-24/Simmi_Baghel.jpg";
-
 
 // import events
 import ramp1 from "../../../assets/club_event_pics/cultural/ramp1.jpeg";
@@ -48,7 +40,7 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
           transformative way.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={c2c} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -57,50 +49,11 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
 
 export default CoverToCover;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img:Panshul_Senapati ,
-    name: "Panshul Senapati",
-    post: "Club Secretary",
-  },
-  {
-    img: Aseem_Rai,
-    name: "Aseem Rai",
-    post: "Vice Secretary",
-  },
-  {
-    img: Ashutosh_Jaiswal,
-    name: "Ashutosh Jaiswal",
-    post: "Core Member",
-  },
-  {
-    img: Ojash_Verma,
-    name: "Ojash Verma",
-    post: "Core Member",
-  },
-  {
-    img: Arman_Singh_Kshatri,
-    name: "Arman Singh Kshatri",
-    post: "Core Member",
-  },
-  {
-    img: Simmi_Baghel,
-    name: "Simmi Baghel",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

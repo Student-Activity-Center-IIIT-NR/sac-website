@@ -8,15 +8,9 @@ import Gallery from "../../../features/club/common/Gallery";
 import capriccioBg from "../../../assets/cultural_clubs_bg/capriccio.png";
 import capriccioLogo from "../../../assets/cultural_clubs_bg/capriccio_logo.png";
 import Crew from "../../../features/club/common/Crew";
+import {capriccio} from "../../../data/CulturalClubCrew"
 import { StaticImageData } from "next/image";
 
-// import crew
-import Priyanshu_Srivastava from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg";
-import Anoushka_Koul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
-import Tanisi_Jha from "../../../assets/team_23-24/Female-member.jpeg";
-import Varsha_Sri_Narla from "../../../assets/team_23-24/Varsha_Sri_Narla.jpg";
-import Akhilesh_Vajrala from "../../../assets/team_23-24/Male-member.jpeg";
-import Mohd_Kaif from "../../../assets/team_23-24/Male-member.jpeg";
 
 
 // import events
@@ -47,7 +41,7 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
           companion throughout life&apos;s journey.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={capriccio} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -56,50 +50,13 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
 
 export default Capriccio;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Priyanshu_Srivastava,
-    name: "Priyanshu Srivastava",
-    post: "Club Secretary",
-  },
-  {
-    img: Anoushka_Koul,
-    name: "Anoushka Koul",
-    post: "Vice Secretary",
-  },
-  {
-    img: Tanisi_Jha,
-    name: "Tanisi Jha",
-    post: "Core Member",
-  },
-  {
-    img: Varsha_Sri_Narla,
-    name: "Varsha Sri Narla",
-    post: "Core Member",
-  },
-  {
-    img: Akhilesh_Vajrala,
-    name: "Akhilesh Vajrala",
-    post: "Core Member",
-  },
-  {
-    img: Mohd_Kaif,
-    name: "Mohd Kaif",
-    post: "Core Member",
-  },
-];
+
 
 const gallery: GalleryProps[] = [
   {

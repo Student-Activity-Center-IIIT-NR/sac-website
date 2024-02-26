@@ -9,15 +9,7 @@ import munBg from "../../../assets/cultural_clubs_bg/mun.png";
 import munLogo from "../../../assets/cultural_clubs_bg/mun_logo.png";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-
-// import crew
-import Kanika_Malhotra from "../../../assets/team_23-24/Kanika_Malhotra -.jpg";
-import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
-import Shreya_Tiwari from "../../../assets/team_23-24/Shreya_Tiwari.jpg";
-import Ayush_Yadav from "../../../assets/team_23-24/Ayush_Yadav.jpg";
-import Muskan_dewangan from "../../../assets/team_23-24/Muskan_Dewangan.jpg";
-import Apurva_Sahu from "../../../assets/team_23-24/Apurva_Sahu.jpg";
-
+import { mun } from "../../../data/CulturalClubCrew";
 // import events
 import chai1 from "../../../assets/club_event_pics/cultural/chai1.jpeg";
 import chai2 from "../../../assets/club_event_pics/cultural/chai2.jpeg";
@@ -57,7 +49,7 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
           provide a platform to step into the shoes of UN ambassadors.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={mun} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -66,50 +58,11 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
 
 export default ModelUnitedNation;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Kanika_Malhotra,
-    name: "Kanika Malhotra",
-    post: "Club Secretary",
-  },
-  {
-    img: Aniket_Pandey,
-    name: "Aniket Pandey",
-    post: "Vice Secretary",
-  },
-  {
-    img: Shreya_Tiwari,
-    name: "Shreya Tiwari",
-    post: "Core Member",
-  },
-  {
-    img: Ayush_Yadav,
-    name: "Ayush Yadav",
-    post: "Core Member",
-  },
-  {
-    img: Muskan_dewangan,
-    name: "Muskan Dewangan",
-    post: "Core Member",
-  },
-  {
-    img: Apurva_Sahu,
-    name: "Apurva Sahu",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

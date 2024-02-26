@@ -9,14 +9,7 @@ import indradhanushBg from "../../../assets/cultural_clubs_bg/indradhanush.png";
 import indradhanushLogo from "../../../assets/cultural_clubs_bg/indradhanush_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Thanisha_Dewangan from "../../../assets/team_23-24/Thanisha _Dewangan..jpg";
-import Shalini_Singh from "../../../assets/team_23-24/Shalini_Singh.jpg";
-import Sanjana_Sori from "../../../assets/team_23-24/Sanjana_Sori.jpg";
-import Vajrala_Akhilesh from "../../../assets/team_23-24/Male-member.jpeg";
-import P_Punit from "../../../assets/team_23-24/Male-member.jpeg";
-import Anjali_Daheriya from "../../../assets/team_23-24/Female-member.jpeg";
+import { indradhanush } from "../../../data/CulturalClubCrew";
 
 // import events
 import canva1 from "../../../assets/club_event_pics/cultural/canva1.jpeg";
@@ -43,7 +36,7 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
           living standards.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={indradhanush} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -51,12 +44,6 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
 };
 
 export default Indradhanush;
-
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
 
 interface GalleryProps {
   name: string;
@@ -70,39 +57,6 @@ interface EventProps {
   desc: string;
   link: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Thanisha_Dewangan,
-    name: "Thanisha Dewangan",
-    post: "Club Secretary",
-  },
-  {
-    img: Shalini_Singh,
-    name: "Shalini Singh",
-    post: "Vice Secretary",
-  },
-  {
-    img: Sanjana_Sori,
-    name: "Sanjana Sori",
-    post: "Core Member",
-  },
-  {
-    img: Vajrala_Akhilesh,
-    name: "Vajrala Akhilesh",
-    post: "Core Member",
-  },
-  {
-    img: P_Punit,
-    name: "P Punit",
-    post: "Core Member",
-  },
-  {
-    img: Anjali_Daheriya,
-    name: "Anjali Daheriya",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

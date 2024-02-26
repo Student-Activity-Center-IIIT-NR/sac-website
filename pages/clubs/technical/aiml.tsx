@@ -10,15 +10,7 @@ import aimlBg from "../../../assets/technical_clubs_bg/aiml.jpeg";
 import aimlBgTop from "../../../assets/technical_clubs_bg/bg_aiml_top.svg";
 import aimlBgBottom from "../../../assets/technical_clubs_bg/bg_aiml_bottom.svg";
 import aimlLogo from "../../../assets/technical_clubs_bg/aiml_logo.svg";
-
-// import team members
-import YashV_Gautum from "../../../assets/team_23-24/Yash_Vardhan_Gautam.jpg";
-import Sanskar_Singh from "../../../assets/team_23-24/Sanskar_Singh.jpeg";
-import Shaurya_Malhan from "../../../assets/team_23-24/Shaurya_Malhan.jpeg";
-import Arya_Mahesh from "../../../assets/team_23-24/Arya_Mahesh_Bhiwapurkar.jpg";
-import Vaibhav_Suntwal from "../../../assets/team_23-24/Vaibhav_Suntwal.jpg";
-import Swastika_Satya from "../../../assets/team_23-24/Swastika_Satya.jpg";
-
+import { aiml } from "../../../data/TechnicalClubCrew";
 // import events
 import intro_aiml1 from "../../../assets/club_event_pics/technical/intro_aiml1.jpeg";
 import intro_aiml2 from "../../../assets/club_event_pics/technical/intro_aiml2.jpeg";
@@ -71,7 +63,7 @@ const Aiml = () => {
             pb: 6,
           }}
         >
-          <Crew props={crew} />
+          <Crew props={aiml} />
           <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
@@ -81,50 +73,11 @@ const Aiml = () => {
 
 export default Aiml;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: YashV_Gautum,
-    name: "Yash Vardhan Gautam",
-    post: "Club Secretary",
-  },
-  {
-    img: Sanskar_Singh,
-    name: "Sanskar Singh",
-    post: "Vice Secretary",
-  },
-  {
-    img: Shaurya_Malhan,
-    name: "Shaurya Malhan",
-    post: "Core Member",
-  },
-  {
-    img: Arya_Mahesh,
-    name: "Arya Mahesh Bhiwapurkar",
-    post: "Core Member",
-  },
-  {
-    img: Vaibhav_Suntwal,
-    name: "Vaibhav Suntwal",
-    post: "Core Member",
-  },
-  {
-    img: Swastika_Satya,
-    name: "Swastika Satya",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

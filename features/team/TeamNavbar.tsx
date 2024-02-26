@@ -3,7 +3,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "./ScrollContainer";
-import { TeamData } from "./TeamData";
+import { TeamData } from "../../data/TeamData";
 import { SessionContext } from "../../contexts/TeamContext";
 import { StaticImageData } from "next/image";
 

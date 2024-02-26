@@ -9,15 +9,7 @@ import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Shreya_Tiwari from "../../../assets/team_23-24/Shreya_Tiwari.jpg";
-import Aayush_Kulkarni from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
-import Anoushka_Kaul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
-import Trisul from "../../../assets/team_23-24/Trisul.jpeg";
-import Shaurya_Malhan from "../../../assets/team_23-24/Shaurya_Malhan.jpeg";
-
+import { tdb } from "../../../data/CulturalClubCrew";
 // import events
 import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
 import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
@@ -48,7 +40,7 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           equipped to be informed citizens and future leaders.
         </ClubDescription>
         <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <Crew props={tdb} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -57,50 +49,11 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
 
 export default TakeDaBait;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Shreya_Tiwari,
-    name: "Shreya Tiwari",
-    post: "Club Secretary",
-  },
-  {
-    img: Aayush_Kulkarni,
-    name: "Aayush Kulkarni",
-    post: "Vice Secretary",
-  },
-  {
-    img: Anoushka_Kaul,
-    name: "Anoushka Kaul",
-    post: "Core Member",
-  },
-  {
-    img: Trisul,
-    name: "Trisul",
-    post: "Core Member",
-  },
-  {
-    img: Shaurya_Malhan,
-    name: "Shaurya Malhan",
-
-    post: "Core Member",
-  },{
-    img: Aniket_Pandey,
-    name: "Aniket Pandey",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {
