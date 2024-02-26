@@ -316,7 +316,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "08-04-2024",
     eventName: "Quiz",
     icon: starIcon,
-    club: "shutterbug",
+    club: "Shutterbug",
     desc: ""
   },
   {
@@ -393,7 +393,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "18-04-2024",
     eventName: "Competition",
     icon: starIcon,
-    club: "shutterbug",
+    club: "Shutterbug",
     desc: ""
   },
   {
