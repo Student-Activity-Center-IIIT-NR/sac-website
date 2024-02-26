@@ -30,6 +30,41 @@ import munc8 from "../../../assets/club_event_pics/cultural/munc8.jpeg";
 
 interface ModelUnitedNationProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Indradhanush"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
 const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
   return (
     <>
@@ -48,7 +83,7 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
           From having heated debates to forming alliances, this club will
           provide a platform to step into the shoes of UN ambassadors.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
+        <ClubEvents props={earliestTwoEvents} />
         <Crew props={mun} />
         <Gallery props={gallery} />
       </ClubsLayout>
@@ -79,27 +114,5 @@ const gallery: GalleryProps[] = [
     name: "What If",
     date: "09 Sept 2022",
     img: [whatif1, whatif2, whatif3, whatif4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Political Drama",
-    date: "February 2, 2023",
-    desc: "Combined Event of MUN and CDT",
-    link: "",
-  },
-  {
-    name: "Inter College MUN",
-    date: "15-16 April 2023",
-    desc: "MUN Conference",
-    link: "",
   },
 ];

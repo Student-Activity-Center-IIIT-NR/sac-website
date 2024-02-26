@@ -18,6 +18,48 @@ import quiz2 from "../../../assets/club_event_pics/technical/quiz2.jpeg";
 import quiz3 from "../../../assets/club_event_pics/technical/quiz3.jpeg";
 import quiz4 from "../../../assets/club_event_pics/technical/quiz4.jpeg";
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const filteredEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Inquizitive"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (filteredEvents.length >= 2) {
+  earliestTwoEvents = filteredEvents.slice(0, 2);
+} else if (filteredEvents.length === 1) {
+  earliestTwoEvents = [
+    ...filteredEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
+const event1Name = earliestTwoEvents[0].eventName;
+const event1Date = earliestTwoEvents[0].date;
+const event1Desc = earliestTwoEvents[0].desc;
+const event2Name = earliestTwoEvents[1].eventName;
+const event2Date = earliestTwoEvents[1].date;
+const event2Desc = earliestTwoEvents[1].desc;
+
 const Inquizitive = () => {
   return (
     <>
@@ -28,12 +70,12 @@ const Inquizitive = () => {
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"
-          event1Name="Fun Quiz"
-          event1Date="February 12, 2023"
-          event1Desc="Fun based quiz competition"
-          event2Name="Treasure Hunt"
-          event2Date="March 26, 2023"
-          event2Desc="Combined event of Inquizitive and Comet"
+          event1Name={event1Name}
+          event1Date={event1Date}
+          event1Desc={event1Desc}
+          event2Name={event2Name}
+          event2Date={event2Date}
+          event2Desc={event2Desc}
         />
         <ClubDescription bg={inquizitiveBg}>
           True to its name, Inquisitive is the abode of the most curious minds

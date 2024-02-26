@@ -19,6 +19,41 @@ import ramp4 from "../../../assets/club_event_pics/cultural/ramp4.jpeg";
 
 interface CoverToCoverProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "C2C"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
 const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
   return (
     <>
@@ -39,7 +74,7 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
           connect with literature and each other in a meaningful and
           transformative way.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
+        <ClubEvents props={earliestTwoEvents} />
         <Crew props={c2c} />
         <Gallery props={gallery} />
       </ClubsLayout>
@@ -60,21 +95,5 @@ const gallery: GalleryProps[] = [
     name: "Rampage",
     date: "12 Sept 2022",
     img: [ramp1, ramp2, ramp3, ramp4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Zhark Tank",
-    date: "March 31, 2023",
-    desc: "Event based on Shark Tank",
-    link: "",
   },
 ];

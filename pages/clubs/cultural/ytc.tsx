@@ -23,6 +23,41 @@ import ganraya4 from "../../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
 interface YTCProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Indradhanush"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
 const YTC: FunctionComponent<YTCProps> = () => {
   return (
     <>
@@ -39,7 +74,7 @@ const YTC: FunctionComponent<YTCProps> = () => {
           become aware of tourism possibilities in India, appreciate our rich
           cultural heritage and develop an interest and passion for tourism.
         </ClubDescription>
-        {/* <ClubEvents props={eventDetails} /> */}
+        {/* <ClubEvents props={earliestTwoEvents} /> */}
         {/* <Crew props={crew} /> */}
         {/* <Gallery props={gallery} /> */}
       </ClubsLayout>
@@ -66,27 +101,5 @@ const gallery: GalleryProps[] = [
     name: "Jai Ganraya",
     date: "31 Aug 2022",
     img: [ganraya1, ganraya2, ganraya3, ganraya4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Photography Contest",
-    date: "January 26, 2023",
-    desc: "Photography Contest",
-    link: "",
-  },
-  {
-    name: "Picturesque",
-    date: "February 22, 2023",
-    desc: "Photography Contest",
-    link: "",
   },
 ];

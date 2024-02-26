@@ -18,6 +18,41 @@ import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
 
 interface TakeDaBaitProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "TDB"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
 const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
   return (
     <>
@@ -39,7 +74,7 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           discussing and debating important issues, members will be better
           equipped to be informed citizens and future leaders.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
+        <ClubEvents props={earliestTwoEvents} />
         <Crew props={tdb} />
         <Gallery props={gallery} />
       </ClubsLayout>
@@ -60,27 +95,5 @@ const gallery: GalleryProps[] = [
     name: "Yet to be Decided",
     date: "20 Jan 2023",
     img: [yet1, yet2, yet3, yet4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Picture Perception & Discussion",
-    date: "February 6, 2023",
-    desc: "Story making based on given picture",
-    link: "",
-  },
-  {
-    name: "Swaying with Sniggers Debate",
-    date: "February 17, 2023",
-    desc: "Debate Competition",
-    link: "",
   },
 ];

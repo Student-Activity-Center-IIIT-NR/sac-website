@@ -11,8 +11,6 @@ import Crew from "../../../features/club/common/Crew";
 import {capriccio} from "../../../data/CulturalClubCrew"
 import { StaticImageData } from "next/image";
 
-
-
 // import events
 import mellow1 from "../../../assets/club_event_pics/cultural/mellow_cap1.jpeg";
 import mellow2 from "../../../assets/club_event_pics/cultural/mellow_cap2.jpeg";
@@ -20,6 +18,41 @@ import mellow3 from "../../../assets/club_event_pics/cultural/mellow_cap3.jpeg";
 import mellow4 from "../../../assets/club_event_pics/cultural/mellow_cap4.jpeg";
 
 interface CapriccioProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Capriccio"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const Capriccio: FunctionComponent<CapriccioProps> = () => {
   return (
@@ -40,7 +73,7 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
           which can be an essential form of self-expression and a valuable
           companion throughout life&apos;s journey.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
+        <ClubEvents props={earliestTwoEvents} />
         <Crew props={capriccio} />
         <Gallery props={gallery} />
       </ClubsLayout>
@@ -63,21 +96,5 @@ const gallery: GalleryProps[] = [
     name: "Mellow Response",
     date: "9 May 2022",
     img: [mellow1, mellow2, mellow3, mellow4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Funtakshari",
-    date: "March 24, 2023",
-    desc: "Antakshari with fun",
-    link: "",
   },
 ];

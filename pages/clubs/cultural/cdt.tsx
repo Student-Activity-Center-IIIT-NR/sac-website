@@ -19,6 +19,40 @@ import nukkad4 from "../../../assets/club_event_pics/cultural/nukkad4.jpeg";
 
 interface ClubDeTheatreProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "CDT"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
   return (
     <>
@@ -37,7 +71,7 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
           helps in developing the students&apos; self-confidence, ability to
           express themselves, and working in a team.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
+        <ClubEvents props={earliestTwoEvents} />
         <Crew props={cdt} />
         <Gallery props={gallery} />
       </ClubsLayout>
@@ -58,21 +92,5 @@ const gallery: GalleryProps[] = [
     name: "Nukkad Natak",
     date: "2 Nov 2022",
     img: [nukkad1, nukkad2, nukkad3, nukkad4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Political Drama",
-    date: "February 2, 2023",
-    desc: "Combined Event of CDT and MUN",
-    link: "",
   },
 ];
