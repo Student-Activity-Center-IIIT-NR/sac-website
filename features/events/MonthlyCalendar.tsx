@@ -17,6 +17,7 @@ interface MonthlyCalendarProps {
   date: string;
   eventName: string;
   icon: StaticImageData;
+  club:string
 }
 
 interface ItemProps {
@@ -139,7 +140,7 @@ const MonthlyCalendar: NextPage = () => {
                           <Grid2 xs={2} key={index}>
                             <SingleDate
                               date={data.date}
-                              name={data.eventName}
+                              name={data.club+" : "+data.eventName}
                               icon={data.icon}
                               flag={true}
                             />

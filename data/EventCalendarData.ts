@@ -381,6 +381,6 @@ export const calendarData: CalendarDataProps[] = [
     date: "15-08-2024",
     eventName: "Independence Day",
     icon: circleIcon,
-    club: "Ciphercell"
+    club: "SAC"
   }
 ];
