@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import { TeamData } from "../features/team/TeamData";
+import { TeamData } from "../data/TeamData";
 
 type SessionProps = {
   year: number;

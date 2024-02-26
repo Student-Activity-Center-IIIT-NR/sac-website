@@ -9,15 +9,7 @@ import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Shreya_Tiwari from "../../../assets/team_23-24/Shreya_Tiwari.jpg";
-import Aayush_Kulkarni from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Aniket_Pandey from "../../../assets/team_23-24/Aniket_Pandey.jpg";
-import Anoushka_Kaul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
-import Trisul from "../../../assets/team_23-24/Trisul.jpeg";
-import Shaurya_Malhan from "../../../assets/team_23-24/Shaurya_Malhan.jpeg";
-
+import { tdb } from "../../../data/CulturalClubCrew";
 // import events
 import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
 import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
@@ -25,6 +17,41 @@ import yet3 from "../../../assets/club_event_pics/cultural/yet3.jpeg";
 import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
 
 interface TakeDaBaitProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "TDB"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
   return (
@@ -47,8 +74,8 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           discussing and debating important issues, members will be better
           equipped to be informed citizens and future leaders.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <ClubEvents props={earliestTwoEvents} />
+        <Crew props={tdb} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -57,77 +84,16 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
 
 export default TakeDaBait;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Shreya_Tiwari,
-    name: "Shreya Tiwari",
-    post: "Club Secretary",
-  },
-  {
-    img: Aayush_Kulkarni,
-    name: "Aayush Kulkarni",
-    post: "Vice Secretary",
-  },
-  {
-    img: Anoushka_Kaul,
-    name: "Anoushka Kaul",
-    post: "Core Member",
-  },
-  {
-    img: Trisul,
-    name: "Trisul",
-    post: "Core Member",
-  },
-  {
-    img: Shaurya_Malhan,
-    name: "Shaurya Malhan",
-
-    post: "Core Member",
-  },{
-    img: Aniket_Pandey,
-    name: "Aniket Pandey",
-    post: "Core Member",
-  },
-];
-
 const gallery: GalleryProps[] = [
   {
     name: "Yet to be Decided",
     date: "20 Jan 2023",
     img: [yet1, yet2, yet3, yet4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Picture Perception & Discussion",
-    date: "February 6, 2023",
-    desc: "Story making based on given picture",
-    link: "",
-  },
-  {
-    name: "Swaying with Sniggers Debate",
-    date: "February 17, 2023",
-    desc: "Debate Competition",
-    link: "",
   },
 ];

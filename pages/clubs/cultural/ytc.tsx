@@ -9,17 +9,7 @@ import YTCBg from "../../../assets/cultural_clubs_bg/YTC.jpg";
 import YTCLogo from "../../../assets/cultural_clubs_bg/YTC_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Abhijeet_Jharbade from "../../../assets/team_23-24/Male-member.jpeg";
-import ACHANTA_SATYA_KARTHIK from "../../../assets/team_23-24/Satya_Karthik_Achanta.jpg";
-import ANKITAN_KUMAR from "../../../assets/team_23-24/Ankitan_Kumar.jpg";
-import ANUJA_SINGH_PANDAW from "../../../assets/team_23-24/Female-member.jpeg";
-import APURVA_SAHU from "../../../assets/team_23-24/Apurva_Sahu.jpg";
-import KARTHIKEYA_PRACHODRAN from "../../../assets/team_23-24/Male-member.jpeg";
-import RIMJHIM_SHARMA from "../../../assets/team_23-24/Female-member.jpeg";
-import AAYUSH_KULKARNI from "../../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import ARYAN_KUMAR_BAGHEL from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
+import {ytc} from "../../../data/CulturalClubCrew";
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
 import bharat3 from "../../../assets/club_event_pics/cultural/bharat3.jpeg";
@@ -32,6 +22,41 @@ import ganraya3 from "../../../assets/club_event_pics/cultural/ganraya3.jpeg";
 import ganraya4 from "../../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
 interface YTCProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Indradhanush"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const YTC: FunctionComponent<YTCProps> = () => {
   return (
@@ -49,7 +74,7 @@ const YTC: FunctionComponent<YTCProps> = () => {
           become aware of tourism possibilities in India, appreciate our rich
           cultural heritage and develop an interest and passion for tourism.
         </ClubDescription>
-        {/* <ClubEvents props={eventDetails} /> */}
+        {/* <ClubEvents props={earliestTwoEvents} /> */}
         {/* <Crew props={crew} /> */}
         {/* <Gallery props={gallery} /> */}
       </ClubsLayout>
@@ -59,65 +84,12 @@ const YTC: FunctionComponent<YTCProps> = () => {
 
 export default YTC;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Abhijeet_Jharbade,
-    name: "Abhijeet Jharbade",
-    post: "Head",
-  },
-  {
-    img: ACHANTA_SATYA_KARTHIK,
-    name: "Achanta Satya Karthik",
-    post: "Core member",
-  },
-  {
-    img: ANKITAN_KUMAR,
-    name: "Ankitan Kumar",
-    post: "Core member",
-  },
-  {
-    img: ANUJA_SINGH_PANDAW,
-    name: "Anuja Singh Pandaw",
-    post: "Core member",
-  },
-  {
-    img: APURVA_SAHU,
-    name: "Apurva Sahu",
-    post: "Core member",
-  },
-  {
-    img: KARTHIKEYA_PRACHODRAN,
-    name: "Karthikeya Prachodran",
-    post: "Core member",
-  },
-  {
-    img: RIMJHIM_SHARMA,
-    name: "Rimjhim Sharma",
-    post: "Core member",
-  },
-  {
-    img: AAYUSH_KULKARNI,
-    name: "Aayush Kulkarni",
-    post: "Core member",
-  },
-  {
-    img: ARYAN_KUMAR_BAGHEL,
-    name: "Aryan Kumar Baghel",
-    post: "Core member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {
@@ -129,27 +101,5 @@ const gallery: GalleryProps[] = [
     name: "Jai Ganraya",
     date: "31 Aug 2022",
     img: [ganraya1, ganraya2, ganraya3, ganraya4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Photography Contest",
-    date: "January 26, 2023",
-    desc: "Photography Contest",
-    link: "",
-  },
-  {
-    name: "Picturesque",
-    date: "February 22, 2023",
-    desc: "Photography Contest",
-    link: "",
   },
 ];

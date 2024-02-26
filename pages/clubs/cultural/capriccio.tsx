@@ -8,16 +8,8 @@ import Gallery from "../../../features/club/common/Gallery";
 import capriccioBg from "../../../assets/cultural_clubs_bg/capriccio.png";
 import capriccioLogo from "../../../assets/cultural_clubs_bg/capriccio_logo.png";
 import Crew from "../../../features/club/common/Crew";
+import {capriccio} from "../../../data/CulturalClubCrew"
 import { StaticImageData } from "next/image";
-
-// import crew
-import Priyanshu_Srivastava from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg";
-import Anoushka_Koul from "../../../assets/team_23-24/Anoushka_koul.jpeg";
-import Tanisi_Jha from "../../../assets/team_23-24/Female-member.jpeg";
-import Varsha_Sri_Narla from "../../../assets/team_23-24/Varsha_Sri_Narla.jpg";
-import Akhilesh_Vajrala from "../../../assets/team_23-24/Male-member.jpeg";
-import Mohd_Kaif from "../../../assets/team_23-24/Male-member.jpeg";
-
 
 // import events
 import mellow1 from "../../../assets/club_event_pics/cultural/mellow_cap1.jpeg";
@@ -26,6 +18,41 @@ import mellow3 from "../../../assets/club_event_pics/cultural/mellow_cap3.jpeg";
 import mellow4 from "../../../assets/club_event_pics/cultural/mellow_cap4.jpeg";
 
 interface CapriccioProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Capriccio"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const Capriccio: FunctionComponent<CapriccioProps> = () => {
   return (
@@ -46,8 +73,8 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
           which can be an essential form of self-expression and a valuable
           companion throughout life&apos;s journey.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <ClubEvents props={earliestTwoEvents} />
+        <Crew props={capriccio} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -56,71 +83,18 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
 
 export default Capriccio;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Priyanshu_Srivastava,
-    name: "Priyanshu Srivastava",
-    post: "Club Secretary",
-  },
-  {
-    img: Anoushka_Koul,
-    name: "Anoushka Koul",
-    post: "Vice Secretary",
-  },
-  {
-    img: Tanisi_Jha,
-    name: "Tanisi Jha",
-    post: "Core Member",
-  },
-  {
-    img: Varsha_Sri_Narla,
-    name: "Varsha Sri Narla",
-    post: "Core Member",
-  },
-  {
-    img: Akhilesh_Vajrala,
-    name: "Akhilesh Vajrala",
-    post: "Core Member",
-  },
-  {
-    img: Mohd_Kaif,
-    name: "Mohd Kaif",
-    post: "Core Member",
-  },
-];
+
 
 const gallery: GalleryProps[] = [
   {
     name: "Mellow Response",
     date: "9 May 2022",
     img: [mellow1, mellow2, mellow3, mellow4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Funtakshari",
-    date: "March 24, 2023",
-    desc: "Antakshari with fun",
-    link: "",
   },
 ];

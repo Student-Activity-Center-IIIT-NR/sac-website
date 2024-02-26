@@ -9,15 +9,7 @@ import cdtBg from "../../../assets/cultural_clubs_bg/cdt.png";
 import cdtLogo from "../../../assets/cultural_clubs_bg/cdt_logo.png";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-
-// import crew
-import Swastika_Satya from "../../../assets/team_23-24/Swastika_Satya.jpg";
-import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg";
-import Kanika_Malhotra from "../../../assets/team_23-24/Kanika_Malhotra -.jpg";
-import Juttuka_Saaketh from "../../../assets/team_23-24/Male-member.jpeg";
-import Anshu_kashyap from "../../../assets/team_23-24/Female-member.jpeg";
-import Krishna_aggarwal from "../../../assets/team_23-24/Krishna_Agrawal.jpg";
-
+import { cdt } from "../../../data/CulturalClubCrew";
 
 // import events
 import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
@@ -27,6 +19,40 @@ import nukkad4 from "../../../assets/club_event_pics/cultural/nukkad4.jpeg";
 
 interface ClubDeTheatreProps {}
 
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "CDT"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
   return (
     <>
@@ -45,8 +71,8 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
           helps in developing the students&apos; self-confidence, ability to
           express themselves, and working in a team.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <ClubEvents props={earliestTwoEvents} />
+        <Crew props={cdt} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -55,72 +81,16 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
 
 export default ClubDeTheatre;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Swastika_Satya,
-    name: "Swastika Satya",
-    post: "Club Secretary",
-  },
-  {
-    img: Vishal_Sharma,
-    name: "Vishal Sharma",
-    post: "Vice Secretary",
-  },
-  {
-    img: Kanika_Malhotra,
-    name: "Kanika Malhotra",
-    post: "Core member",
-  },
-  {
-    img: Juttuka_Saaketh,
-    name: "Juttuka Saaketh",
-    post: "Core Member",
-  },
-  {
-    img: Anshu_kashyap,
-    name: "Anhsu Kashyap",
-    post: "Core Member",
-  },
-  {
-    img: Krishna_aggarwal,
-    name: "Krishna Aggarwal",
-    post: "Core Member",
-  },
-  
-];
-
 const gallery: GalleryProps[] = [
   {
     name: "Nukkad Natak",
     date: "2 Nov 2022",
     img: [nukkad1, nukkad2, nukkad3, nukkad4],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Political Drama",
-    date: "February 2, 2023",
-    desc: "Combined Event of CDT and MUN",
-    link: "",
   },
 ];

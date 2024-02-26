@@ -10,20 +10,55 @@ import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { StaticImageData } from "next/image";
-
-// import crew
-import V_Jaswanth from "../../../assets/team_23-24/Vemula_Jashwanth.jpeg";
-import Alankrit from "../../../assets/team_23-24/Alankrit_Sharma.jpg"
-import Shreyansh_Kushwaha from "../../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
-import Venkata_surya from "../../../assets/team_23-24/Venkata_Surya_Sundar_Vadali.jpg"
-import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg"
-import Priyanshu_shri from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg"
+import { ciphercell } from "../../../data/TechnicalClubCrew";
 
 // import events
 import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
 import ctf2 from "../../../assets/club_event_pics/technical/ctf2.jpeg";
 import ctf3 from "../../../assets/club_event_pics/technical/ctf3.jpeg";
 import ctf4 from "../../../assets/club_event_pics/technical/ctf4.jpeg";
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Ciphercell"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
+
+const event1Name = earliestTwoEvents[0].eventName;
+const event1Date = earliestTwoEvents[0].date;
+const event1Desc = earliestTwoEvents[0].desc;
+const event2Name = earliestTwoEvents[1].eventName;
+const event2Date = earliestTwoEvents[1].date;
+const event2Desc = earliestTwoEvents[1].desc;
 
 const Ciphercell = () => {
   return (
@@ -35,12 +70,12 @@ const Ciphercell = () => {
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
-          event1Name="Cryptic Hunt"
-          event1Date="February 19, 2023"
-          event1Desc="Introduction to Cryptography"
-          event2Name="CTF Workshop"
-          event2Date="April 2, 20233"
-          event2Desc="Workshop on Capture The Flag"
+          event1Name={event1Name}
+          event1Date={event1Date}
+          event1Desc={event1Desc}
+          event2Name={event2Name}
+          event2Date={event2Date}
+          event2Desc={event2Desc}
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of
@@ -66,7 +101,7 @@ const Ciphercell = () => {
             pb: 6,
           }}
         >
-          <Crew props={crew} />
+          <Crew props={ciphercell} />
           <Gallery props={gallery} />
         </Box>
       </ClubsLayout>
@@ -76,50 +111,11 @@ const Ciphercell = () => {
 
 export default Ciphercell;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: V_Jaswanth,
-    name: "Jaswanth Vemula",
-    post: "Club Secretary",
-  },
-  {
-    img: Alankrit,
-    name: "Alankrit Sharma",
-    post: "Vice Secretary",
-  },
-  {
-    img:Priyanshu_shri ,
-    name: "Priyanshi Srivastava",
-    post: "Core Member",
-  },
-  {
-    img: Shreyansh_Kushwaha,
-    name: "Shreyansh Kushwaha",
-    post: "Core Member",
-  },
-  {
-    img: Venkata_surya,
-    name: "Venkata Surya Sundar Vadali",
-    post: "Core Member",
-  },
-  {
-    img: Vishal_Sharma,
-    name: "Vishal Sharma",
-    post: "Core Member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {

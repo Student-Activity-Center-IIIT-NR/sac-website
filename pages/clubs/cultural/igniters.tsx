@@ -8,17 +8,8 @@ import Gallery from "../../../features/club/common/Gallery";
 import ignitersBg from "../../../assets/cultural_clubs_bg/igniters.png";
 import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Niharika_Murmu from "../../../assets/team_23-24/Niharika_Murmu.jpg";
-import Satvik_Yadav from "../../../assets/team_23-24/Satvik_Yadav.jpg";
-import RamaR_Katta from "../../../assets/team_23-24/Male-member.jpeg";
-import Aryan_Kumar_Baghel from "../../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
-import Anuja_Singh from "../../../assets/team_23-24/Female-member.jpeg";
-import Eluri_Rithwik from "../../../assets/team_23-24/Eluri_Rithwik.jpg";
-import Muskan_Dewangan from "../../../assets/team_23-24/Muskan_Dewangan.jpg";
-
 import Crew from "../../../features/club/common/Crew";
+import { igniters } from "../../../data/CulturalClubCrew";
 
 // import events
 import dance1 from "../../../assets/club_event_pics/cultural/dance1.jpeg";
@@ -30,6 +21,41 @@ import mellow2 from "../../../assets/club_event_pics/cultural/mellow2.jpeg";
 import mellow3 from "../../../assets/club_event_pics/cultural/mellow3.jpeg";
 
 interface IgnitersProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Indradhanush"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const Igniters: FunctionComponent<IgnitersProps> = () => {
   return (
@@ -49,8 +75,8 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
           all skill levels and encourages everyone to join in the journey and
           let the art of dance bring them joy and expression.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <ClubEvents props={earliestTwoEvents} />
+        <Crew props={igniters} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -59,55 +85,11 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
 
 export default Igniters;
 
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
 interface GalleryProps {
   name: string;
   img: StaticImageData[];
   date: string;
 }
-
-const crew: CrewProps[] = [
-  {
-    img: Niharika_Murmu,
-    name: "Niharika Murmu",
-    post: "Club Secretary",
-  },
-  {
-    img: Satvik_Yadav,
-    name: "Satvik Yadav",
-    post: "Co-Vice Secretary",
-  },
-  {
-    img: RamaR_Katta,
-    name: "Rama Rakshith Katta",
-    post: "Co-Vice Secretary",
-  },
-  {
-    img: Aryan_Kumar_Baghel,
-    name: "Aryan Kumar Baghel",
-    post: "core member",
-  },
-  {
-    img: Anuja_Singh,
-    name: "Anuja Singh Pandaw",
-    post: "core member",
-  },
-  {
-    img: Eluri_Rithwik,
-    name: "Elluri Rithwik",
-    post: "core member",
-  },
-  {
-    img: Muskan_Dewangan,
-    name: "Muskan Dewangan",
-    post: "core member",
-  },
-];
 
 const gallery: GalleryProps[] = [
   {
@@ -119,21 +101,5 @@ const gallery: GalleryProps[] = [
     name: "Mellow Response",
     date: "9 May 2022",
     img: [mellow1, mellow2, mellow3],
-  },
-];
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const eventDetails: EventProps[] = [
-  {
-    name: "Intra-College Dance Contest",
-    date: "February 11, 2023",
-    desc: "Dance Competition",
-    link: "",
   },
 ];

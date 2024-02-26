@@ -9,14 +9,7 @@ import indradhanushBg from "../../../assets/cultural_clubs_bg/indradhanush.png";
 import indradhanushLogo from "../../../assets/cultural_clubs_bg/indradhanush_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-
-// import crew
-import Thanisha_Dewangan from "../../../assets/team_23-24/Thanisha _Dewangan..jpg";
-import Shalini_Singh from "../../../assets/team_23-24/Shalini_Singh.jpg";
-import Sanjana_Sori from "../../../assets/team_23-24/Sanjana_Sori.jpg";
-import Vajrala_Akhilesh from "../../../assets/team_23-24/Male-member.jpeg";
-import P_Punit from "../../../assets/team_23-24/Male-member.jpeg";
-import Anjali_Daheriya from "../../../assets/team_23-24/Female-member.jpeg";
+import { indradhanush } from "../../../data/CulturalClubCrew";
 
 // import events
 import canva1 from "../../../assets/club_event_pics/cultural/canva1.jpeg";
@@ -25,6 +18,41 @@ import canva3 from "../../../assets/club_event_pics/cultural/canva3.jpeg";
 import canva4 from "../../../assets/club_event_pics/cultural/canva4.jpeg";
 
 interface IndradhanushProps {}
+
+import { calendarData } from "../../../data/EventCalendarData";
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
+const today = new Date();
+const sortedEvents = calendarData.filter((event) => {
+  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+  return (
+    eventDate.getFullYear() >= today.getFullYear() &&
+    (eventDate.getMonth() > today.getMonth() ||
+      (eventDate.getMonth() === today.getMonth() &&
+        eventDate.getDate() >= today.getDate())) &&
+    event.club === "Indradhanush"
+  );
+});
+let earliestTwoEvents: CalendarDataProps[] = [];
+if (sortedEvents.length >= 2) {
+  earliestTwoEvents = sortedEvents.slice(0, 2);
+} else if (sortedEvents.length === 1) {
+  earliestTwoEvents = [
+    ...sortedEvents,
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+} else {
+  earliestTwoEvents = [
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+  ];
+}
 
 const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
   return (
@@ -42,8 +70,8 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
           The club recognizes the need for humans to express ideas to upgrade
           living standards.
         </ClubDescription>
-        <ClubEvents props={eventDetails} />
-        <Crew props={crew} />
+        <ClubEvents props={earliestTwoEvents} />
+        <Crew props={indradhanush} />
         <Gallery props={gallery} />
       </ClubsLayout>
     </>
@@ -51,12 +79,6 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
 };
 
 export default Indradhanush;
-
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
 
 interface GalleryProps {
   name: string;
@@ -71,39 +93,6 @@ interface EventProps {
   link: string;
 }
 
-const crew: CrewProps[] = [
-  {
-    img: Thanisha_Dewangan,
-    name: "Thanisha Dewangan",
-    post: "Club Secretary",
-  },
-  {
-    img: Shalini_Singh,
-    name: "Shalini Singh",
-    post: "Vice Secretary",
-  },
-  {
-    img: Sanjana_Sori,
-    name: "Sanjana Sori",
-    post: "Core Member",
-  },
-  {
-    img: Vajrala_Akhilesh,
-    name: "Vajrala Akhilesh",
-    post: "Core Member",
-  },
-  {
-    img: P_Punit,
-    name: "P Punit",
-    post: "Core Member",
-  },
-  {
-    img: Anjali_Daheriya,
-    name: "Anjali Daheriya",
-    post: "Core Member",
-  },
-];
-
 const gallery: GalleryProps[] = [
   {
     name: "CanvaKar",
@@ -112,11 +101,3 @@ const gallery: GalleryProps[] = [
   },
 ];
 
-const eventDetails: EventProps[] = [
-  {
-    name: "Scribbles FUN",
-    date: "April 9, 2023",
-    desc: "Fun Scribbling Event",
-    link: "",
-  },
-];

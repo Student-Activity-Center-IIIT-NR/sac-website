@@ -4,27 +4,24 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import starIcon from "../../../assets/icon/icon_star.svg";
 import Stack from "@mui/material/Stack";
-import Link from "next/link";
 
 interface EventProps {
   name: string;
   date: string;
   children: ReactNode;
-  link: string;
 }
 
 interface Props {
-  name: string;
+  eventName: string;
   date: string;
   desc: string;
-  link: string;
 }
 
 interface ClubEventProps {
   props: Props[];
 }
 
-const Event = ({ name, date, children, link }: EventProps) => {
+const Event = ({ name, date, children }: EventProps) => {
   return (
     <>
       <Stack
@@ -82,9 +79,7 @@ const Event = ({ name, date, children, link }: EventProps) => {
           lineHeight="21px"
           textAlign="center"
           color="#000000"
-        >
-          <Link href={link}>Register</Link>
-        </Typography>
+        ></Typography>
       </Stack>
     </>
   );
@@ -117,12 +112,7 @@ function ClubEvents({ props }: ClubEventProps) {
       >
         {props.map((event, key) => {
           return (
-            <Event
-              name={event.name}
-              date={event.date}
-              link={event.link}
-              key={key}
-            >
+            <Event name={event.eventName} date={event.date} key={key}>
               {event.desc}
             </Event>
           );
