@@ -9,470 +9,378 @@ interface CalendarDataProps {
   date: string;
   eventName: string;
   icon: StaticImageData;
+  club: string;
 }
 
 export const calendarData: CalendarDataProps[] = [
-  //Aug
+  //Jan
   {
-    date: "10-08-2023",
-    eventName: "Intro to Competitive ML",
+    date: "04-01-2024",
+    eventName: "Esports",
+    icon: crossIcon,
+    club: "Atharv"
+  },
+  {
+    date: "07-01-2024",
+    eventName: "Cover the song",
+    icon: triangleIcon,
+    club: "Capriccio"
+  },
+  {
+    date: "08-01-2024",
+    eventName: "Gym Inauguration",
+    icon: crossIcon,
+    club: "Atharv"
+  },
+  {
+    date: "08-01-2024",
+    eventName: "Debate Aaj kal",
+    icon: triangleIcon,
+    club: "TDB"
+  },
+  {
+    date: "09-01-2024",
+    eventName: "PictoMania",
+    icon: triangleIcon,
+    club: "Indradhanush"
+  },
+  {
+    date: "12-01-2024",
+    eventName: "National Youth Day",
     icon: rectangleIcon,
+    club: "IIC"
   },
   {
-    date: "12-08-2023",
-    eventName: "Aagaaz",
+    date: "13-01-2024",
+    eventName: "Scintfic 2k24",
+    icon: "",
+    club: "SAC"
+  },
+  {
+    date: "15-01-2024",
+    eventName: "Volleyball",
     icon: crossIcon,
+    club: "Atharv"
   },
   {
-    date: "13-08-2023",
-    eventName: "Aagaaz",
-    icon: crossIcon,
+    date: "18-01-2024",
+    eventName: "Political Drama",
+    icon: triangleIcon,
+    club: "MUN & CDT"
   },
   {
-    date: "14-08-2023",
-    eventName: "Aagaaz",
-    icon: crossIcon,
+    date: "20-01-2024",
+    eventName: "Treasure Hunt",
+    icon: rectangleIcon,
+    club: "Inquizitive&ComEt"
   },
   {
-    date: "15-08-2023",
-    eventName: "Independence Day",
+    date: "21-01-2024",
+    eventName: "IDOR workshop",
+    icon: rectangleIcon,
+    club: "Ciphercell"
+  },
+  {
+    date: "21-01-2024",
+    eventName: "Painting and Sketch",
+    icon: triangleIcon,
+    club: "Indradhanush"
+  },
+  {
+    date: "26-01-2024",
+    eventName: "Republic Day",
     icon: circleIcon,
+    club: "SAC"
   },
   {
-    date: "17-08-2023",
-    eventName: "Workshop",
+    date: "27-01-2024",
+    eventName: "Cognitio",
     icon: rectangleIcon,
+    club: "AIML"
   },
   {
-    date: "18-08-2023",
-    eventName: "CodeConquer",
+    date: "29-01-2024",
+    eventName: "Drink&Code",
     icon: rectangleIcon,
+    club: "TSoC"
   },
+  //Feb
   {
-    date: "19-08-2023",
-    eventName: "Photography day",
-    icon: triangleIcon,
-  },
-  {
-    date: "19-08-2023",
-    eventName: "Workshop",
+    date: "04-02-2024",
+    eventName: "Design Thinking Workshop",
     icon: rectangleIcon,
+    club: "IIC"
   },
   {
-    date: "21-08-2023",
-    eventName: "Workshop",
-    icon: triangleIcon,
+    date: "07-02-2024",
+    eventName: "National Science day",
+    icon: rectangleIcon,
+    club: "IIC"
   },
   {
-    date: "22-08-2023",
-    eventName: "Workshop",
-    icon: triangleIcon,
+    date: "10-02-2024",
+    eventName: "Field/Exposure Visit",
+    icon: rectangleIcon,
+    club: "IIC"
   },
   {
-    date: "23-08-2023",
-    eventName: "Chai Pe Charcha",
-    icon: triangleIcon,
+    date: "14-02-2024",
+    eventName: "Saraswati Puja",
+    icon: starIcon,
+    club: "SAC"
   },
   {
-    date: "24-08-2023",
-    eventName: "E-sports",
+    date: "14-02-2024",
+    eventName: "National Startup day",
+    icon: rectangleIcon,
+    club: "IIC"
+  },
+  {
+    date: "16-02-2024",
+    eventName: "Technovate",
+    icon: starIcon,
+    club: "SAC"
+  },
+  {
+    date: "20-02-2024",
+    eventName: "Online chess",
     icon: crossIcon,
+    club: "Atharv"
   },
   {
-    date: "25-08-2023",
-    eventName: "E-sports",
-    icon: crossIcon,
-  },
-  {
-    date: "26-08-2023",
-    eventName: "Data Crusade",
+    date: "22-02-2024",
+    eventName: "XSS-Cross Site Scripting",
     icon: rectangleIcon,
+    club: "Ciphercell"
   },
   {
-    date: "27-08-2023",
-    eventName: "Data Crusade",
+    date: "23-02-2024",
+    eventName: "PixelQuest",
     icon: rectangleIcon,
+    club: "AIML"
   },
   {
-    date: "28-08-2023",
-    eventName: "Debate Aaj Kal",
-    icon: triangleIcon,
+    date: "24-02-2024",
+    eventName: "Quiz 1",
+    icon: rectangleIcon,
+    club: "Inquizitive"
   },
+  //March
   {
-    date: "28-08-2023",
-    eventName: "National Sports Day",
-    icon: crossIcon,
-  },
-  {
-    date: "29-08-2023",
+    date: "09-03-2024",
     eventName: "Workshop",
-    icon: triangleIcon,
-  },
-  {
-    date: "30-08-2023",
-    eventName: "Fresher Cooker",
     icon: rectangleIcon,
+    club: "Ciphercell"
   },
   {
-    date: "31-08-2023",
-    eventName: "Screening Night",
+    date: "09-03-2024",
+    eventName: "Cricket",
+    icon: crossIcon,
+    club: "Atharv"
+  },
+  {
+    date: "11-03-2024",
+    eventName: "Quiz 2",
+    icon: rectangleIcon,
+    club: "Inquizitive"
+  },
+  {
+    date: "12-03-2024",
+    eventName: "Workshop",
+    icon: rectangleIcon,
+    club: "ComEt"
+  },
+  {
+    date: "13-03-2024",
+    eventName: "B2B Auction",
+    icon: rectangleIcon,
+    club: "TSoC"
+  },
+  {
+    date: "14-03-2024",
+    eventName: "FilmVenture Safari",
     icon: triangleIcon,
+    club: "Indradhanush"
   },
-
-  //Sep
-
   {
-    date: "01-09-2023",
-    eventName: "Jamming Session",
+    date: "15-03-2024",
+    eventName: "Bit2Byte",
+    icon: rectangleIcon,
+    club: "TSoC"
+  },
+  {
+    date: "18-03-2024",
+    eventName: "Election Campaign starts",
     icon: triangleIcon,
+    club: "MUN"
   },
   {
-    date: "02-09-2023",
-    eventName: "Dance Workshop",
+    date: "19-03-2024",
+    eventName: "Campaigning",
     icon: triangleIcon,
+    club: "MUN"
   },
   {
-    date: "03-09-2023",
-    eventName: "Intercollege And School",
+    date: "20-03-2024",
+    eventName: "Election voting & Results",
     icon: triangleIcon,
+    club: "MUN"
   },
   {
-    date: "04-09-2023",
+    date: "21-03-2024",
+    eventName: "B League",
+    icon: crossIcon,
+    club: "Atharv"
+  },
+  {
+    date: "24-03-2024",
+    eventName: "Holika Dahan",
+    icon: starIcon,
+    club: "SAC"
+  },
+  //April
+  {
+    date: "01-04-2024",
+    eventName: "Shuttle Showdown",
+    icon: crossIcon,
+    club: "Atharv"
+  },
+  {
+    date: "02-04-2024",
+    eventName: "ad quest",
+    icon: triangleIcon,
+    club: "CDT"
+  },
+  {
+    date: "03-04-2024",
+    eventName: "Quiz 3",
+    icon: rectangleIcon,
+    club: "Inquizitive"
+  },
+  {
+    date: "05-04-2024",
+    eventName: "Jamming night",
+    icon: triangleIcon,
+    club: "Capriccio"
+  },
+  {
+    date: "06-04-2024",
+    eventName: "Hack-a-Sol 3.0",
+    icon: starIcon,
+    club: "SAC"
+  },
+  {
+    date: "08-04-2024",
+    eventName: "Quiz",
+    icon: starIcon,
+    club: "shutterbug"
+  },
+  {
+    date: "09-04-2024",
     eventName: "JAM",
     icon: rectangleIcon,
+    club: "ComEt"
   },
   {
-    date: "05-09-2023",
-    eventName: "Teacher's Day",
-    icon: starIcon,
-  },
-  {
-    date: "05-09-2023",
-    eventName: "Gaming Night",
-    icon: triangleIcon,
-  },
-  {
-    date: "06-09-2023",
-    eventName: "Gaming Night",
-    icon: triangleIcon,
-  },
-  {
-    date: "07-09-2023",
-    eventName: "Football",
-    icon: crossIcon,
-  },
-  {
-    date: "08-09-2023",
-    eventName: "Football",
-    icon: crossIcon,
-  },
-  {
-    date: "09-09-2023",
-    eventName: "Football",
-    icon: crossIcon,
-  },
-  {
-    date: "10-09-2023",
-    eventName: "Hacking Into Website",
-    icon: rectangleIcon,
-  },
-  {
-    date: "11-09-2023",
-    eventName: "Workshop",
-    icon: triangleIcon,
-  },
-  {
-    date: "12-09-2023",
-    eventName: "Aap Ki Adalat",
-    icon: triangleIcon,
-  },
-  {
-    date: "13-09-2023",
-    eventName: "Bi-Monthly Quiz-1",
-    icon: rectangleIcon,
-  },
-  {
-    date: "14-09-2023",
-    eventName: "Hindi Diwas",
-    icon: rectangleIcon,
-  },
-  {
-    date: "14-09-2023",
+    date: "10-04-2024",
     eventName: "Workshop",
     icon: rectangleIcon,
+    club: "TSoC"
   },
   {
-    date: "15-09-2023",
-    eventName: "Engineer'S Day",
-    icon: rectangleIcon,
-  },
-  {
-    date: "15-09-2023",
-    eventName: "Media Cell Event",
+    date: "11-04-2024",
+    eventName: "News Report Anchoring",
     icon: triangleIcon,
+    club: "TDB"
   },
   {
-    date: "16-09-2023",
-    eventName: "Media Cell Event",
+    date: "12-04-2024",
+    eventName: "Origami Workshop",
     icon: triangleIcon,
+    club: "Indradhanush"
   },
   {
-    date: "17-09-2023",
-    eventName: "CTF",
-    icon: rectangleIcon,
-  },
-  {
-    date: "18-09-2023",
-    eventName: "Table Top Triumph",
+    date: "12-04-2024",
+    eventName: "Aaghaaz",
     icon: crossIcon,
+    club: "Atharv"
   },
   {
-    date: "19-09-2023",
-    eventName: "Ganesh Chaturthi",
-    icon: starIcon,
-  },
-  {
-    date: "20-09-2023",
-    eventName: "Ganesh Chaturthi",
-    icon: starIcon,
-  },
-  {
-    date: "21-09-2023",
-    eventName: "Ganesh Chaturthi",
-    icon: starIcon,
-  },
-  {
-    date: "22-09-2023",
-    eventName: "Ganesh Chaturthi",
-    icon: starIcon,
-  },
-  {
-    date: "23-09-2023",
-    eventName: "Screening Event",
-    icon: triangleIcon,
-  },
-
-  //oct
-  {
-    date: "2-10-2023",
-    eventName: "Gandhi Jayanti and Shashtr",
-    icon: circleIcon,
-  },
-  {
-    date: "5-10-2023",
-    eventName: "Bi-Monthly Quiz-2",
-    icon: rectangleIcon,
-  },
-  {
-    date: "6-10-2023",
-    eventName: "Cover The Song",
-    icon: triangleIcon,
-  },
-  {
-    date: "7-10-2023",
-    eventName: "Workshop 2",
-    icon: rectangleIcon,
-  },
-  {
-    date: "8-10-2023",
-    eventName: "Workshop 1",
-    icon: rectangleIcon,
-  },
-  {
-    date: "9-10-2023",
-    eventName: "Chess",
-    icon: crossIcon,
-  },
-  {
-    date: "10-10-2023",
-    eventName: "Chess",
-    icon: crossIcon,
-  },
-  {
-    date: "14-10-2023",
+    date: "13-04-2024",
     eventName: "Dance Workshop 2",
     icon: triangleIcon,
+    club: "Igniters"
   },
   {
-    date: "15-10-2023",
-    eventName: "Cognitio (AIML)",
+    date: "14-04-2024",
+    eventName: "Local File Inclusion",
     icon: rectangleIcon,
+    club: "Ciphercell"
   },
   {
-    date: "15-10-2023",
-    eventName: "Garba Night",
+    date: "14-04-2024",
+    eventName: "Blood Donation Camp",
     icon: starIcon,
+    club: "NSS"
   },
   {
-    date: "16-10-2023",
-    eventName: "Gram Panchayat",
-    icon: triangleIcon,
-  },
-  {
-    date: "17-10-2023",
-    eventName: "Tricky Circuits",
+    date: "15-04-2024",
+    eventName: "Quiz 4",
     icon: rectangleIcon,
+    club: "Inquizitive"
   },
   {
-    date: "18-10-2023",
-    eventName: "PG Workshop",
-    icon: triangleIcon,
-  },
-  {
-    date: "19-10-2023",
-    eventName: "Aarambh",
-    icon: crossIcon,
-  },
-  {
-    date: "20-10-2023",
-    eventName: "Aarambh",
-    icon: crossIcon,
-  },
-  {
-    date: "21-10-2023",
-    eventName: "Aarambh",
-    icon: crossIcon,
-  },
-  {
-    date: "28-10-2023",
-    eventName: "CFT",
-    icon: rectangleIcon,
-  },
-  {
-    date: "29-10-2023",
-    eventName: "Pixel Quest",
-    icon: rectangleIcon,
-  },
-  {
-    date: "30-10-2023",
-    eventName: "Bi-Monthly Quiz-3",
-    icon: rectangleIcon,
-  },
-  {
-    date: "31-10-2023",
-    eventName: "Unity Day",
-    icon: circleIcon,
-  },
-
-  //Nov
-  {
-    date: "1-11-2023",
-    eventName: "The Ad-venture Quest: Unleashing Creativity",
-    icon: triangleIcon,
-  },
-  {
-    date: "2-11-2023",
-    eventName: "Blindfold Imagination Canvas",
-    icon: triangleIcon,
-  },
-  {
-    date: "3-11-2023",
-    eventName: "CodeNubs",
-    icon: rectangleIcon,
-  },
-  {
-    date: "4-11-2023",
-    eventName: "Hack-A-Sol 3.0",
-    icon: rectangleIcon,
-  },
-  {
-    date: "5-11-2023",
-    eventName: "Hack-A-Sol 3.0",
-    icon: rectangleIcon,
-  },
-  {
-    date: "6-11-2023",
-    eventName: "Badminton",
-    icon: crossIcon,
-  },
-  {
-    date: "7-11-2023",
-    eventName: "Badminton",
-    icon: crossIcon,
-  },
-  {
-    date: "8-11-2023",
-    eventName: "Badminton",
-    icon: crossIcon,
-  },
-  {
-    date: "9-11-2023",
-    eventName: "Power Play: The Journalist- Politician Press Conference",
-    icon: triangleIcon,
-  },
-  {
-    date: "10-11-2023",
+    date: "17-04-2024",
     eventName: "Linguistic Showdown",
     icon: rectangleIcon,
+    club: "AIML"
   },
   {
-    date: "11-11-2023",
-    eventName: "??",
+    date: "18-04-2024",
+    eventName: "Competition",
+    icon: starIcon,
+    club: "shutterbug"
+  },
+  {
+    date: "19-04-2024",
+    eventName: "Funtakshari",
     icon: triangleIcon,
+    club: "Capriccio"
   },
   {
-    date: "13-11-2023",
-    eventName: "PG Workshop",
+    date: "20-04-2024",
+    eventName: "Inter-MUN",
     icon: triangleIcon,
+    club: "MUN"
   },
   {
-    date: "15-11-2023",
-    eventName: "Picturesque",
-    icon: triangleIcon,
-  },
-  {
-    date: "16-11-2023",
-    eventName: "Workshop",
+    date: "23-04-2024",
+    eventName: "Descode",
     icon: rectangleIcon,
+    club: "TSoC"
   },
   {
-    date: "17-11-2023",
-    eventName: "Karaoke Night",
+    date: "24-04-2024",
+    eventName: "Anime Quiz",
     icon: triangleIcon,
+    club: "C2C"
   },
   {
-    date: "18-11-2023",
-    eventName: "Inter College Dance",
-    icon: triangleIcon,
+    date: "25-04-2024",
+    eventName: "Cultural night",
+    icon: starIcon,
+    club: "SAC"
   },
   {
-    date: "19-11-2023",
-    eventName: "Test Your Web Skills",
+    date: "26-04-2024",
+    eventName: "Bug-Hunting",
     icon: rectangleIcon,
+    club: "Ciphercell"
   },
   {
-    date: "21-11-2023",
-    eventName: "Inquizitiive Main Event",
-    icon: rectangleIcon,
-  },
-  {
-    date: "24-11-2023",
-    eventName: "Cricket Tournament",
-    icon: crossIcon,
-  },
-  {
-    date: "25-11-2023",
-    eventName: "Cricket Tournament",
-    icon: crossIcon,
-  },
-  {
-    date: "26-11-2023",
-    eventName: "Constitution Day",
-    icon: rectangleIcon,
-  },
-  {
-    date: "27-11-2023",
-    eventName: "Blood Donation Camp",
-    icon: triangleIcon,
-  },
-  {
-    date: "28-11-2023",
-    eventName: "Farzi Mushaera",
-    icon: triangleIcon,
-  },
-  {
-    date: "29-11-2023",
-    eventName: "Guess The Picture",
-    icon: triangleIcon,
-  },
+    date: "15-08-2024",
+    eventName: "Independence Day",
+    icon: circleIcon,
+    club: "Ciphercell"
+  }
 ];
