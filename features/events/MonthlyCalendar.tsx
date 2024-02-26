@@ -10,7 +10,7 @@ import iconCircle from "../../assets/calendar_icons/circle.svg";
 import Divider from "@mui/material/Divider";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SingleDate from "../../components/EventCalendar/SingleDate";
-import { calendarData } from "../../components/EventCalendar/EventCalendarData";
+import { calendarData } from "../../data/EventCalendarData";
 import { NextPage } from "next";
 
 interface MonthlyCalendarProps {

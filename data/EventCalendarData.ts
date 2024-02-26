@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image";
-import starIcon from "../../assets/calendar_icons/star.svg"; //Festival and Special Events
-import circleIcon from "../../assets/calendar_icons/circle.svg"; // National Events
-import crossIcon from "../../assets/calendar_icons/cross.svg"; // sports
-import rectangleIcon from "../../assets/calendar_icons/rectangle.svg"; // technical
-import triangleIcon from "../../assets/calendar_icons/triangle.svg"; // cultural
+import starIcon from "../assets/calendar_icons/star.svg"; //Festival and Special Events
+import circleIcon from "../assets/calendar_icons/circle.svg"; // National Events
+import crossIcon from "../assets/calendar_icons/cross.svg"; // sports
+import rectangleIcon from "../assets/calendar_icons/rectangle.svg"; // technical
+import triangleIcon from "../assets/calendar_icons/triangle.svg"; // cultural
 
 interface CalendarDataProps {
   date: string;

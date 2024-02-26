@@ -7,7 +7,7 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import { NextPage } from "next";
-import newsData from "./NewsData";
+import newsData from "../../data/NewsData";
 
 interface NewsProps {
   img?: StaticImageData;

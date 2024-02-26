@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
-import scientfic from "../../assets/major_events_poster/scientifc.png";
-import hackmanthan from "../../assets/major_events_poster/hackmanthan.jpeg";
-import technovate from "../../assets/major_events_poster/technovate.jpeg";
-import ganesh from "../../assets/major_events_poster/ganesh.jpeg";
+import scientfic from "../assets/major_events_poster/scientifc.png";
+import hackmanthan from "../assets/major_events_poster/hackmanthan.jpeg";
+import technovate from "../assets/major_events_poster/technovate.jpeg";
+import ganesh from "../assets/major_events_poster/ganesh.jpeg";
 
 interface RecentMajorEventsDataProps {
   poster: StaticImageData;
