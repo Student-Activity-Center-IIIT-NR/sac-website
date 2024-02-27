@@ -9,7 +9,7 @@ import ignitersBg from "../../../assets/cultural_clubs_bg/igniters.png";
 import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-import { igniters } from "../../../data/CulturalClubCrew";
+import { igniters } from "../../../data/Crews/CulturalClubCrew";
 
 // import events
 import dance1 from "../../../assets/club_event_pics/cultural/dance1.jpeg";
@@ -22,7 +22,7 @@ import mellow3 from "../../../assets/club_event_pics/cultural/mellow3.jpeg";
 
 interface IgnitersProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

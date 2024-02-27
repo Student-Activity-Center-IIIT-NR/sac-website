@@ -9,7 +9,7 @@ import YTCBg from "../../../assets/cultural_clubs_bg/YTC.jpg";
 import YTCLogo from "../../../assets/cultural_clubs_bg/YTC_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import {ytc} from "../../../data/CulturalClubCrew";
+import {ytc} from "../../../data/Crews/CulturalClubCrew";
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
 import bharat3 from "../../../assets/club_event_pics/cultural/bharat3.jpeg";
@@ -23,7 +23,7 @@ import ganraya4 from "../../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
 interface YTCProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

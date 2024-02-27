@@ -10,7 +10,7 @@ import IICBgTop from "../../../assets/technical_clubs_bg/bg_IIC_top.png";
 import IICBgBottom from "../../../assets/technical_clubs_bg/bg_IIC_bottom.png";
 import IICLogo from "../../../assets/technical_clubs_bg/IIC_logo.png";
 import { StaticImageData } from "next/image";
-import { iic } from "../../../data/TechnicalClubCrew";
+import { iic } from "../../../data/Crews/TechnicalClubCrew";
 
 // import events
 import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
@@ -24,7 +24,7 @@ import bit8 from "../../../assets/club_event_pics/technical/bit8.jpeg";
 
 interface IICProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

@@ -7,7 +7,7 @@ import WebsiteBg from "../../../assets/media_cell_bg/website.jpg";
 import WebsiteLogo from "../../../assets/media_cell_bg/Media.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import { website } from "../../../data/MediaClubCrew";
+import { website } from "../../../data/Crews/MediaClubCrew";
 
 interface WebsiteProps {}
 

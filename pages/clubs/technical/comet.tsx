@@ -10,7 +10,7 @@ import cometBgTop from "../../../assets/technical_clubs_bg/bg_comet_top.svg";
 import cometBgBottom from "../../../assets/technical_clubs_bg/bg_comet_bottom.svg";
 import cometLogo from "../../../assets/technical_clubs_bg/comet_logo.png";
 import { StaticImageData } from "next/image";
-import { comet } from "../../../data/TechnicalClubCrew";
+import { comet } from "../../../data/Crews/TechnicalClubCrew";
 
 // import events
 import arduino1 from "../../../assets/club_event_pics/technical/arduino1.jpeg";
@@ -18,7 +18,7 @@ import arduino2 from "../../../assets/club_event_pics/technical/arduino2.jpeg";
 import arduino3 from "../../../assets/club_event_pics/technical/arduino3.jpeg";
 import arduino4 from "../../../assets/club_event_pics/technical/arduino4.jpeg";
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

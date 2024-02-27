@@ -404,6 +404,13 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@material-ui/types@^4.0.0":
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/@material-ui/types/-/types-4.1.1.tgz"
+  integrity sha512-AN+GZNXytX9yxGi0JOfxHrRTbhFybjUJ05rnsBVjcB+16e466Z0Xe5IxawuOayVZgTBNDxmPKo5j4V6OnMtaSQ==
+  dependencies:
+    "@types/react" "*"
+
 "@mui/base@5.0.0-alpha.102":
   version "5.0.0-alpha.102"
   resolved "https://registry.npmjs.org/@mui/base/-/base-5.0.0-alpha.102.tgz"
@@ -588,6 +595,22 @@
   version "17.0.3"
   resolved "https://registry.npmjs.org/@types/react-is/-/react-is-17.0.3.tgz"
   integrity sha512-aBTIWg1emtu95bLTLx0cpkxwGW3ueZv71nE2YFBpL8k/z5czEW8yYpOo8Dp+UUAFAtKwNaOsh/ioSeQnWlZcfw==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-swipeable-views-utils@^0.13.7":
+  version "0.13.7"
+  resolved "https://registry.npmjs.org/@types/react-swipeable-views-utils/-/react-swipeable-views-utils-0.13.7.tgz"
+  integrity sha512-ED8pf8dq3S79uWtP8EnSdrg7dUCrxyL9Uapq1dSA2mz+H83SjS8vsqmlFWmmBQoTuEHsQp5Ru9fxxsofQ+bI9Q==
+  dependencies:
+    "@material-ui/types" "^4.0.0"
+    "@types/react" "*"
+    "@types/react-swipeable-views" "*"
+
+"@types/react-swipeable-views@*":
+  version "0.13.5"
+  resolved "https://registry.npmjs.org/@types/react-swipeable-views/-/react-swipeable-views-0.13.5.tgz"
+  integrity sha512-ni6WjO7gBq2xB2Y/ZiRdQOgjGOxIik5ow2s7xKieDq8DxsXTdV46jJslSBVK2yoIJHf6mG3uqNTwxwgzbXRRzg==
   dependencies:
     "@types/react" "*"
 

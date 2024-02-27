@@ -9,7 +9,7 @@ import cdtBg from "../../../assets/cultural_clubs_bg/cdt.png";
 import cdtLogo from "../../../assets/cultural_clubs_bg/cdt_logo.png";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-import { cdt } from "../../../data/CulturalClubCrew";
+import { cdt } from "../../../data/Crews/CulturalClubCrew";
 
 // import events
 import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
@@ -19,7 +19,7 @@ import nukkad4 from "../../../assets/club_event_pics/cultural/nukkad4.jpeg";
 
 interface ClubDeTheatreProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

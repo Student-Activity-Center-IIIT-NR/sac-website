@@ -10,7 +10,7 @@ import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { StaticImageData } from "next/image";
-import { ciphercell } from "../../../data/TechnicalClubCrew";
+import { ciphercell } from "../../../data/Crews/TechnicalClubCrew";
 
 // import events
 import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
@@ -18,7 +18,7 @@ import ctf2 from "../../../assets/club_event_pics/technical/ctf2.jpeg";
 import ctf3 from "../../../assets/club_event_pics/technical/ctf3.jpeg";
 import ctf4 from "../../../assets/club_event_pics/technical/ctf4.jpeg";
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

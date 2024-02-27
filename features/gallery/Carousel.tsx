@@ -6,7 +6,7 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
-import { majorEvents } from "../../data/GalleryData";
+import { majorEvents } from "../../data/EventsAndGallery/GalleryData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

@@ -9,7 +9,7 @@ import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import { tdb } from "../../../data/CulturalClubCrew";
+import { tdb } from "../../../data/Crews/CulturalClubCrew";
 // import events
 import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
 import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
@@ -18,7 +18,7 @@ import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
 
 interface TakeDaBaitProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

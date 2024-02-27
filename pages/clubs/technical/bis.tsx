@@ -10,11 +10,11 @@ import BISBgTop from "../../../assets/technical_clubs_bg/bg_BIS_top.png";
 import BISBgBottom from "../../../assets/technical_clubs_bg/bg_BIS_bottom.png";
 import BISLogo from "../../../assets/technical_clubs_bg/BIS_logo.png";
 import { StaticImageData } from "next/image";
-import { bis } from "../../../data/TechnicalClubCrew";
+import { bis } from "../../../data/Crews/TechnicalClubCrew";
 
 interface BISProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

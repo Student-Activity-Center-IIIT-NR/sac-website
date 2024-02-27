@@ -9,7 +9,7 @@ import shutterbugBg from "../../../assets/cultural_clubs_bg/shutterbug.png";
 import shutterbugLogo from "../../../assets/cultural_clubs_bg/shutterbug_logo.jpeg";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import { shutterbug } from "../../../data/MediaClubCrew";
+import { shutterbug } from "../../../data/Crews/MediaClubCrew";
 
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
@@ -24,7 +24,7 @@ import ganraya4 from "../../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
 interface ShutterBugProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

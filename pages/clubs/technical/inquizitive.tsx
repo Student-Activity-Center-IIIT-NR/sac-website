@@ -10,7 +10,7 @@ import inquizitiveBgTop from "../../../assets/technical_clubs_bg/bg_inquizitive_
 import inquizitiveBgBottom from "../../../assets/technical_clubs_bg/bg_inquizitive_bottom.svg";
 import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo.jpg";
 import { StaticImageData } from "next/image";
-import { inquizitive } from "../../../data/TechnicalClubCrew";
+import { inquizitive } from "../../../data/Crews/TechnicalClubCrew";
 
 // import events
 import quiz1 from "../../../assets/club_event_pics/technical/quiz1.jpeg";
@@ -18,7 +18,7 @@ import quiz2 from "../../../assets/club_event_pics/technical/quiz2.jpeg";
 import quiz3 from "../../../assets/club_event_pics/technical/quiz3.jpeg";
 import quiz4 from "../../../assets/club_event_pics/technical/quiz4.jpeg";
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

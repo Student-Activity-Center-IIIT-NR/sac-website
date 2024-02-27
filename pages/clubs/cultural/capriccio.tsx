@@ -8,7 +8,7 @@ import Gallery from "../../../features/club/common/Gallery";
 import capriccioBg from "../../../assets/cultural_clubs_bg/capriccio.png";
 import capriccioLogo from "../../../assets/cultural_clubs_bg/capriccio_logo.png";
 import Crew from "../../../features/club/common/Crew";
-import {capriccio} from "../../../data/CulturalClubCrew"
+import {capriccio} from "../../../data/Crews/CulturalClubCrew"
 import { StaticImageData } from "next/image";
 
 // import events
@@ -19,7 +19,7 @@ import mellow4 from "../../../assets/club_event_pics/cultural/mellow_cap4.jpeg";
 
 interface CapriccioProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

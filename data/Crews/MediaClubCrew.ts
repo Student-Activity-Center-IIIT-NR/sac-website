@@ -7,28 +7,28 @@ interface CrewProps {
 }
 
 // import crew
-import Ojash_Verma from "../assets/team_23-24/Male-member.jpeg";
-import Aayush_Kulkarni from "../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Trisul from "../assets/team_23-24/Trisul.jpeg";
-import Shreyansh_Kushwaha from "../assets/team_23-24/Shreyansh_Kushwaha.jpg"
-import Ishita_Tegar from "../assets/team_23-24/Ishita_Tegar.jpg";
-import Raj_Bhattacharya from "../assets/team_23-24/Male-member.jpeg";
-import A_Satya_Kartik from "../assets/team_23-24/Male-member.jpeg";
-import S_Chandu from "../assets/team_23-24/Male-member.jpeg";
-import Tanishka from "../assets/team_23-24/Female-member.jpeg";
-import Aryansh_Verma from "../assets/team_23-24/Aryansh_Verma.jpg";
-import Abhijeet_Jharbade from "../assets/team_23-24/Male-member.jpeg";
-import ACHANTA_SATYA_KARTHIK from "../assets/team_23-24/Satya_Karthik_Achanta.jpg";
-import ANKITAN_KUMAR from "../assets/team_23-24/Ankitan_Kumar.jpg";
-import ANUJA_SINGH_PANDAW from "../assets/team_23-24/Female-member.jpeg";
-import APURVA_SAHU from "../assets/team_23-24/Apurva_Sahu.jpg";
-import KARTHIKEYA_PRACHODRAN from "../assets/team_23-24/Male-member.jpeg";
-import RIMJHIM_SHARMA from "../assets/team_23-24/Female-member.jpeg";
-import AAYUSH_KULKARNI from "../assets/team_23-24/Aayush_Kulkarni.jpg";
-import ARYAN_KUMAR_BAGHEL from "../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
-import Manu_Sai from "../assets/team_23-24/Manu_Sai.jpg";
-import Ojas_Dubey1 from "../assets/team_23-24/Ojas_Dubey.jpg";
-import Yashraj from "../assets/team_23-24/Yash_Raj.jpeg";
+import Ojash_Verma from "../../assets/team_23-24/Male-member.jpeg";
+import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
+import Trisul from "../../assets/team_23-24/Trisul.jpeg";
+import Shreyansh_Kushwaha from "../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
+import Ishita_Tegar from "../../assets/team_23-24/Ishita_Tegar.jpg";
+import Raj_Bhattacharya from "../../assets/team_23-24/Male-member.jpeg";
+import A_Satya_Kartik from "../../assets/team_23-24/Male-member.jpeg";
+import S_Chandu from "../../assets/team_23-24/Male-member.jpeg";
+import Tanishka from "../../assets/team_23-24/Female-member.jpeg";
+import Aryansh_Verma from "../../assets/team_23-24/Aryansh_Verma.jpg";
+import Abhijeet_Jharbade from "../../assets/team_23-24/Male-member.jpeg";
+import ACHANTA_SATYA_KARTHIK from "../../assets/team_23-24/Satya_Karthik_Achanta.jpg";
+import ANKITAN_KUMAR from "../../assets/team_23-24/Ankitan_Kumar.jpg";
+import ANUJA_SINGH_PANDAW from "../../assets/team_23-24/Female-member.jpeg";
+import APURVA_SAHU from "../../assets/team_23-24/Apurva_Sahu.jpg";
+import KARTHIKEYA_PRACHODRAN from "../../assets/team_23-24/Male-member.jpeg";
+import RIMJHIM_SHARMA from "../../assets/team_23-24/Female-member.jpeg";
+import AAYUSH_KULKARNI from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
+import ARYAN_KUMAR_BAGHEL from "../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
+import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg";
+import Ojas_Dubey1 from "../../assets/team_23-24/Ojas_Dubey.jpg";
+import Yashraj from "../../assets/team_23-24/Yash_Raj.jpeg";
 
 export const website: CrewProps[] = [
     {

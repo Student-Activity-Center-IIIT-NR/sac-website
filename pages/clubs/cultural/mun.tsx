@@ -9,7 +9,7 @@ import munBg from "../../../assets/cultural_clubs_bg/mun.png";
 import munLogo from "../../../assets/cultural_clubs_bg/mun_logo.png";
 import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-import { mun } from "../../../data/CulturalClubCrew";
+import { mun } from "../../../data/Crews/CulturalClubCrew";
 // import events
 import chai1 from "../../../assets/club_event_pics/cultural/chai1.jpeg";
 import chai2 from "../../../assets/club_event_pics/cultural/chai2.jpeg";
@@ -30,7 +30,7 @@ import munc8 from "../../../assets/club_event_pics/cultural/munc8.jpeg";
 
 interface ModelUnitedNationProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

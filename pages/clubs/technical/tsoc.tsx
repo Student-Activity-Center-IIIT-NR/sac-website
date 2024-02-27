@@ -10,7 +10,7 @@ import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";
 import tsocBgBottom from "../../../assets/technical_clubs_bg/bg_tsoc_bottom.svg";
 import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
 import { StaticImageData } from "next/image";
-import { tsoc } from "../../../data/TechnicalClubCrew";
+import { tsoc } from "../../../data/Crews/TechnicalClubCrew";
 
 // import events
 import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
@@ -24,7 +24,7 @@ import bit8 from "../../../assets/club_event_pics/technical/bit8.jpeg";
 
 interface TSOCProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

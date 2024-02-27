@@ -8,7 +8,7 @@ import c2cBg from "../../../assets/cultural_clubs_bg/c2c.png";
 import c2cLogo from "../../../assets/cultural_clubs_bg/c2c_logo.png";
 import Gallery from "../../../features/club/common/Gallery";
 import Crew from "../../../features/club/common/Crew";
-import { c2c } from "../../../data/CulturalClubCrew";
+import { c2c } from "../../../data/Crews/CulturalClubCrew";
 import { StaticImageData } from "next/image";
 
 // import events
@@ -19,7 +19,7 @@ import ramp4 from "../../../assets/club_event_pics/cultural/ramp4.jpeg";
 
 interface CoverToCoverProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

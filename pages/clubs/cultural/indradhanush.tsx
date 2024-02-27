@@ -9,7 +9,7 @@ import indradhanushBg from "../../../assets/cultural_clubs_bg/indradhanush.png";
 import indradhanushLogo from "../../../assets/cultural_clubs_bg/indradhanush_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import { indradhanush } from "../../../data/CulturalClubCrew";
+import { indradhanush } from "../../../data/Crews/CulturalClubCrew";
 
 // import events
 import canva1 from "../../../assets/club_event_pics/cultural/canva1.jpeg";
@@ -19,7 +19,7 @@ import canva4 from "../../../assets/club_event_pics/cultural/canva4.jpeg";
 
 interface IndradhanushProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

@@ -10,7 +10,7 @@ import aimlBg from "../../../assets/technical_clubs_bg/aiml.jpeg";
 import aimlBgTop from "../../../assets/technical_clubs_bg/bg_aiml_top.svg";
 import aimlBgBottom from "../../../assets/technical_clubs_bg/bg_aiml_bottom.svg";
 import aimlLogo from "../../../assets/technical_clubs_bg/aiml_logo.svg";
-import { aiml } from "../../../data/TechnicalClubCrew";
+import { aiml } from "../../../data/Crews/TechnicalClubCrew";
 // import events
 import intro_aiml1 from "../../../assets/club_event_pics/technical/intro_aiml1.jpeg";
 import intro_aiml2 from "../../../assets/club_event_pics/technical/intro_aiml2.jpeg";
@@ -25,7 +25,7 @@ import kaggle_comp6 from "../../../assets/club_event_pics/technical/kaggle_compe
 import kaggle_comp7 from "../../../assets/club_event_pics/technical/kaggle_competition7.jpeg";
 import kaggle_comp8 from "../../../assets/club_event_pics/technical/kaggle_competition8.jpeg";
 
-import { calendarData } from "../../../data/EventCalendarData";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
   eventName: string;

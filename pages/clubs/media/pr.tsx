@@ -7,7 +7,7 @@ import PRBg from "../../../assets/media_cell_bg/pr.jpg";
 import PRLogo from "../../../assets/media_cell_bg/Media.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import { pr } from  "../../../data/MediaClubCrew";
+import { pr } from  "../../../data/Crews/MediaClubCrew";
 
 interface PRProps {}
 

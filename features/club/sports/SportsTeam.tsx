@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
-import { atharv } from "../../../data/SportsClubCrew";
+import { atharv } from "../../../data/Crews/SportsClubCrew";
 
 interface Props {
   img: StaticImageData;
