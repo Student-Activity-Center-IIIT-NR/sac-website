@@ -35,7 +35,7 @@ const sortedEvents = calendarData.filter((event) => {
     (eventDate.getMonth() > today.getMonth() ||
       (eventDate.getMonth() === today.getMonth() &&
         eventDate.getDate() >= today.getDate())) &&
-    event.club === "Comet"
+    event.club === "ComEt"
   );
 });
 let earliestTwoEvents: CalendarDataProps[] = [];
