@@ -8,51 +8,9 @@ import Gallery from "../../../features/club/common/Gallery";
 import indradhanushBg from "../../../assets/cultural_clubs_bg/indradhanush.png";
 import indradhanushLogo from "../../../assets/cultural_clubs_bg/indradhanush_logo.png";
 import Crew from "../../../features/club/common/Crew";
-import { StaticImageData } from "next/image";
-import { indradhanush } from "../../../data/CulturalClubCrew";
-
-// import events
-import canva1 from "../../../assets/club_event_pics/cultural/canva1.jpeg";
-import canva2 from "../../../assets/club_event_pics/cultural/canva2.jpeg";
-import canva3 from "../../../assets/club_event_pics/cultural/canva3.jpeg";
-import canva4 from "../../../assets/club_event_pics/cultural/canva4.jpeg";
+import { indradhanush } from "../../../data/Crews/CulturalClubCrew";
 
 interface IndradhanushProps {}
-
-import { calendarData } from "../../../data/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Indradhanush"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
 
 const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
   return (
@@ -70,34 +28,12 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
           The club recognizes the need for humans to express ideas to upgrade
           living standards.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="Indradhanush" />
         <Crew props={indradhanush} />
-        <Gallery props={gallery} />
+        <Gallery club="Indradhanush" />
       </ClubsLayout>
     </>
   );
 };
 
 export default Indradhanush;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "CanvaKar",
-    date: "24 Sept 2022",
-    img: [canva1, canva2, canva3, canva4],
-  },
-];
-

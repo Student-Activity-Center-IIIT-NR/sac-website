@@ -7,22 +7,22 @@ interface CrewProps {
 }
 
 // import crew
-import Sanjana_Sori from "../assets/team_23-24/Sanjana_Sori.jpg";
-import Shaurya_Malhan from "../assets/team_23-24/Shaurya_Malhan.jpeg";
-import Suyash_Gupta from "../assets/team_23-24/Suyash_Gupta.jpg";
-import Yash_Raj from "../assets/team_23-24/Yash_Raj.jpeg";
-import Neha_Dhruw from "../assets/team_23-24/Neha_Dhruw.jpg";
-import Ravikant_Shrivas from "../assets/team_23-24/Male-member.jpeg";
-import Aditya_Raj_Banjare from "../assets/team_23-24/Male-member.jpeg";
-import Ravi_Vinayak from "../assets/team_23-24/Ravi_Vinayak.jpeg";
-import Venella_Telli from "../assets/team_23-24/Female-member.jpeg";
-import Ojash_E_Sports from "../assets/team_23-24/Male-member.jpeg";
-import Deependra_Singh_Bhow from "../assets/team_23-24/Deependar.jpeg";
-import Lumani_Verma from "../assets/team_23-24/Female-member.jpeg";
-import Aman_Kumar_Singh from "../assets/team_23-24/Aman_Singh.jpg";
-import Mayank_Chandra from "../assets/team_23-24/Male-member.jpeg";
-import Neha_Dhruw_Volleyball from "../assets/team_23-24/Neha_Dhruw.jpg";
-import Raj_Bhattacharya from "../assets/team_23-24/Male-member.jpeg";
+import Sanjana_Sori from "../../assets/team_23-24/Sanjana_Sori.jpg";
+import Shaurya_Malhan from "../../assets/team_23-24/Shaurya_Malhan.jpeg";
+import Suyash_Gupta from "../../assets/team_23-24/Suyash_Gupta.jpg";
+import Yash_Raj from "../../assets/team_23-24/Yash_Raj.jpeg";
+import Neha_Dhruw from "../../assets/team_23-24/Neha_Dhruw.jpg";
+import Ravikant_Shrivas from "../../assets/team_23-24/Male-member.jpeg";
+import Aditya_Raj_Banjare from "../../assets/team_23-24/Male-member.jpeg";
+import Ravi_Vinayak from "../../assets/team_23-24/Ravi_Vinayak.jpeg";
+import Venella_Telli from "../../assets/team_23-24/Female-member.jpeg";
+import Ojash_E_Sports from "../../assets/team_23-24/Male-member.jpeg";
+import Deependra_Singh_Bhow from "../../assets/team_23-24/Deependar.jpeg";
+import Lumani_Verma from "../../assets/team_23-24/Female-member.jpeg";
+import Aman_Kumar_Singh from "../../assets/team_23-24/Aman_Singh.jpg";
+import Mayank_Chandra from "../../assets/team_23-24/Male-member.jpeg";
+import Neha_Dhruw_Volleyball from "../../assets/team_23-24/Neha_Dhruw.jpg";
+import Raj_Bhattacharya from "../../assets/team_23-24/Male-member.jpeg";
 
 export const atharv: CrewProps[] = [
     {

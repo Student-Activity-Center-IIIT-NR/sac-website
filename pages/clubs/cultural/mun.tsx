@@ -7,63 +7,10 @@ import ClubEvents from "../../../features/club/cultural/ClubEvents";
 import Gallery from "../../../features/club/common/Gallery";
 import munBg from "../../../assets/cultural_clubs_bg/mun.png";
 import munLogo from "../../../assets/cultural_clubs_bg/mun_logo.png";
-import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-import { mun } from "../../../data/CulturalClubCrew";
-// import events
-import chai1 from "../../../assets/club_event_pics/cultural/chai1.jpeg";
-import chai2 from "../../../assets/club_event_pics/cultural/chai2.jpeg";
-import chai3 from "../../../assets/club_event_pics/cultural/chai3.jpeg";
-import chai4 from "../../../assets/club_event_pics/cultural/chai4.jpeg";
-import whatif1 from "../../../assets/club_event_pics/cultural/whatif1.jpeg";
-import whatif2 from "../../../assets/club_event_pics/cultural/whatif2.jpeg";
-import whatif3 from "../../../assets/club_event_pics/cultural/whatif3.jpeg";
-import whatif4 from "../../../assets/club_event_pics/cultural/whatif4.jpeg";
-import munc1 from "../../../assets/club_event_pics/cultural/munc1.jpeg";
-import munc2 from "../../../assets/club_event_pics/cultural/munc2.jpeg";
-import munc3 from "../../../assets/club_event_pics/cultural/munc3.jpeg";
-import munc4 from "../../../assets/club_event_pics/cultural/munc4.jpeg";
-import munc5 from "../../../assets/club_event_pics/cultural/munc5.jpeg";
-import munc6 from "../../../assets/club_event_pics/cultural/munc6.jpeg";
-import munc7 from "../../../assets/club_event_pics/cultural/munc7.jpeg";
-import munc8 from "../../../assets/club_event_pics/cultural/munc8.jpeg";
+import { mun } from "../../../data/Crews/CulturalClubCrew";
 
 interface ModelUnitedNationProps {}
-
-import { calendarData } from "../../../data/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Indradhanush"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
 
 const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
   return (
@@ -83,36 +30,12 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
           From having heated debates to forming alliances, this club will
           provide a platform to step into the shoes of UN ambassadors.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="MUN" />
         <Crew props={mun} />
-        <Gallery props={gallery} />
+        <Gallery club="MUN" />
       </ClubsLayout>
     </>
   );
 };
 
 export default ModelUnitedNation;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "MUN Conference 2022",
-    date: "7-8 May 2022",
-    img: [munc1, munc2, munc3, munc4, munc5, munc6, munc7, munc8],
-  },
-  {
-    name: "Chai Pe Charcha",
-    date: "19 Jan 2023",
-    img: [chai1, chai2, chai3, chai4],
-  },
-  {
-    name: "What If",
-    date: "09 Sept 2022",
-    img: [whatif1, whatif2, whatif3, whatif4],
-  },
-];

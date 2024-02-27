@@ -7,52 +7,11 @@ import ClubEvents from "../../../features/club/cultural/ClubEvents";
 import Gallery from "../../../features/club/common/Gallery";
 import cdtBg from "../../../assets/cultural_clubs_bg/cdt.png";
 import cdtLogo from "../../../assets/cultural_clubs_bg/cdt_logo.png";
-import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
-import { cdt } from "../../../data/CulturalClubCrew";
-
-// import events
-import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
-import nukkad2 from "../../../assets/club_event_pics/cultural/nukkad2.jpeg";
-import nukkad3 from "../../../assets/club_event_pics/cultural/nukkad3.jpeg";
-import nukkad4 from "../../../assets/club_event_pics/cultural/nukkad4.jpeg";
+import { cdt } from "../../../data/Crews/CulturalClubCrew";
 
 interface ClubDeTheatreProps {}
 
-import { calendarData } from "../../../data/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "CDT"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
 const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
   return (
     <>
@@ -71,26 +30,12 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
           helps in developing the students&apos; self-confidence, ability to
           express themselves, and working in a team.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="CDT" />
         <Crew props={cdt} />
-        <Gallery props={gallery} />
+        <Gallery club="CDT" />
       </ClubsLayout>
     </>
   );
 };
 
 export default ClubDeTheatre;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Nukkad Natak",
-    date: "2 Nov 2022",
-    img: [nukkad1, nukkad2, nukkad3, nukkad4],
-  },
-];

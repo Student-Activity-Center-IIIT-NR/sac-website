@@ -10,18 +10,22 @@ import Divider from "@mui/material/Divider";
 import Image, { StaticImageData } from "next/image";
 import Pagination from "@mui/material/Pagination";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { allEvents } from "../../../data/EventsAndGallery/ClubGalleryData";
 
-interface Props {
-  props: GalleryProps[];
+interface allEvents {
+  allEvents: GalleryProps[];
 }
 
 interface GalleryProps {
   name: string;
-  img: StaticImageData[];
-  date: string;
+  date?: string;
+  image: StaticImageData[];
+  club: string;
 }
-
-const Gallery = ({ props }: Props) => {
+interface Props {
+  club: string;
+}
+const Gallery = ({ club }: Props) => {
   const DropDown = () => {
     const [year, setYear] = useState("");
 
@@ -50,18 +54,21 @@ const Gallery = ({ props }: Props) => {
     );
   };
 
+  const events = allEvents.filter((event) => {
+    return event.club === club;
+  });
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("");
-  const [event, setEvent] = useState(props[0]);
+  const [event, setEvent] = useState(events[0]);
 
-  const count = Math.ceil(event.img.length / 4);
+  const count = Math.ceil(event.image.length / 4);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
   };
 
   const handleClickEvent = (index: number) => {
-    setEvent(props[index]);
+    setEvent(events[index]);
     setPage(1);
   };
 
@@ -132,7 +139,7 @@ const Gallery = ({ props }: Props) => {
           </Stack>
           <Stack direction={"row"} mt={"52px"} justifyContent={"space-between"}>
             <Stack direction={"column"} gap={6} width={"30%"}>
-              {props.map((step, index) => {
+              {events.map((step, index) => {
                 return (
                   <Box key={index}>
                     <Typography
@@ -156,7 +163,7 @@ const Gallery = ({ props }: Props) => {
             </Stack>
             <Stack direction={"column"} maxWidth={"50%"}>
               <Grid2 container spacing={3} justifyContent={"space-between"}>
-                {event.img
+                {event.image
                   .slice((page - 1) * 4, (page - 1) * 4 + 4)
                   .map((step) => {
                     return (

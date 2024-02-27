@@ -9,56 +9,7 @@ import inquizitiveBg from "../../../assets/technical_clubs_bg/inquizitive.png";
 import inquizitiveBgTop from "../../../assets/technical_clubs_bg/bg_inquizitive_top.svg";
 import inquizitiveBgBottom from "../../../assets/technical_clubs_bg/bg_inquizitive_bottom.svg";
 import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo.jpg";
-import { StaticImageData } from "next/image";
-import { inquizitive } from "../../../data/TechnicalClubCrew";
-
-// import events
-import quiz1 from "../../../assets/club_event_pics/technical/quiz1.jpeg";
-import quiz2 from "../../../assets/club_event_pics/technical/quiz2.jpeg";
-import quiz3 from "../../../assets/club_event_pics/technical/quiz3.jpeg";
-import quiz4 from "../../../assets/club_event_pics/technical/quiz4.jpeg";
-
-import { calendarData } from "../../../data/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const filteredEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Inquizitive"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (filteredEvents.length >= 2) {
-  earliestTwoEvents = filteredEvents.slice(0, 2);
-} else if (filteredEvents.length === 1) {
-  earliestTwoEvents = [
-    ...filteredEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
-
-const event1Name = earliestTwoEvents[0].eventName;
-const event1Date = earliestTwoEvents[0].date;
-const event1Desc = earliestTwoEvents[0].desc;
-const event2Name = earliestTwoEvents[1].eventName;
-const event2Date = earliestTwoEvents[1].date;
-const event2Desc = earliestTwoEvents[1].desc;
+import { inquizitive } from "../../../data/Crews/TechnicalClubCrew";
 
 const Inquizitive = () => {
   return (
@@ -70,12 +21,6 @@ const Inquizitive = () => {
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"
-          event1Name={event1Name}
-          event1Date={event1Date}
-          event1Desc={event1Desc}
-          event2Name={event2Name}
-          event2Date={event2Date}
-          event2Desc={event2Desc}
         />
         <ClubDescription bg={inquizitiveBg}>
           True to its name, Inquisitive is the abode of the most curious minds
@@ -99,7 +44,7 @@ const Inquizitive = () => {
           }}
         >
           <Crew props={inquizitive} />
-          <Gallery props={gallery} />
+          <Gallery club="Inquizitive" />
         </Box>
       </ClubsLayout>
     </>
@@ -107,17 +52,3 @@ const Inquizitive = () => {
 };
 
 export default Inquizitive;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Quizadry",
-    date: "15 Oct 2022",
-    img: [quiz1, quiz2, quiz3, quiz4],
-  },
-];

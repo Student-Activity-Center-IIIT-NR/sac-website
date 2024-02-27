@@ -8,50 +8,9 @@ import Gallery from "../../../features/club/common/Gallery";
 import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
-import { StaticImageData } from "next/image";
-import { tdb } from "../../../data/CulturalClubCrew";
-// import events
-import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
-import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
-import yet3 from "../../../assets/club_event_pics/cultural/yet3.jpeg";
-import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
+import { tdb } from "../../../data/Crews/CulturalClubCrew";
 
 interface TakeDaBaitProps {}
-
-import { calendarData } from "../../../data/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "TDB"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
 
 const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
   return (
@@ -74,26 +33,12 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           discussing and debating important issues, members will be better
           equipped to be informed citizens and future leaders.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="TDB" />
         <Crew props={tdb} />
-        <Gallery props={gallery} />
+        <Gallery club="TDB" />
       </ClubsLayout>
     </>
   );
 };
 
 export default TakeDaBait;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Yet to be Decided",
-    date: "20 Jan 2023",
-    img: [yet1, yet2, yet3, yet4],
-  },
-];
