@@ -11,48 +11,6 @@ import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
 import { ciphercell } from "../../../data/Crews/TechnicalClubCrew";
 
-import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Ciphercell"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
-
-const event1Name = earliestTwoEvents[0].eventName;
-const event1Date = earliestTwoEvents[0].date;
-const event1Desc = earliestTwoEvents[0].desc;
-const event2Name = earliestTwoEvents[1].eventName;
-const event2Date = earliestTwoEvents[1].date;
-const event2Desc = earliestTwoEvents[1].desc;
-
 const Ciphercell = () => {
   return (
     <>
@@ -63,12 +21,6 @@ const Ciphercell = () => {
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
-          event1Name={event1Name}
-          event1Date={event1Date}
-          event1Desc={event1Desc}
-          event2Name={event2Name}
-          event2Date={event2Date}
-          event2Desc={event2Desc}
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of

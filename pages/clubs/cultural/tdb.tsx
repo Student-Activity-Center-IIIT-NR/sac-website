@@ -12,41 +12,6 @@ import { tdb } from "../../../data/Crews/CulturalClubCrew";
 
 interface TakeDaBaitProps {}
 
-import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "TDB"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
-
 const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
   return (
     <>
@@ -68,9 +33,9 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
           discussing and debating important issues, members will be better
           equipped to be informed citizens and future leaders.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="TDB" />
         <Crew props={tdb} />
-        <Gallery club="CDT" />
+        <Gallery club="TDB" />
       </ClubsLayout>
     </>
   );

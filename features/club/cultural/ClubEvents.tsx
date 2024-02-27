@@ -4,6 +4,14 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import starIcon from "../../../assets/icon/icon_star.svg";
 import Stack from "@mui/material/Stack";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
+
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
 
 interface EventProps {
   name: string;
@@ -12,13 +20,7 @@ interface EventProps {
 }
 
 interface Props {
-  eventName: string;
-  date: string;
-  desc: string;
-}
-
-interface ClubEventProps {
-  props: Props[];
+  club: string;
 }
 
 const Event = ({ name, date, children }: EventProps) => {
@@ -85,7 +87,38 @@ const Event = ({ name, date, children }: EventProps) => {
   );
 };
 
-function ClubEvents({ props }: ClubEventProps) {
+function ClubEvents({ club }: Props) {
+  const today = new Date();
+
+  const sortedEvents = calendarData.filter((event) => {
+    const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+    const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+    return (
+      eventDate.getFullYear() >= today.getFullYear() &&
+      (eventDate.getMonth() > today.getMonth() ||
+        (eventDate.getMonth() === today.getMonth() &&
+          eventDate.getDate() >= today.getDate())) &&
+      event.club === club
+    );
+  });
+
+  let earliestTwoEvents: CalendarDataProps[] = [];
+
+  if (sortedEvents.length >= 2) {
+    earliestTwoEvents = sortedEvents.slice(0, 2);
+  } else if (sortedEvents.length === 1) {
+    earliestTwoEvents = [
+      ...sortedEvents,
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  } else {
+    earliestTwoEvents = [
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  }
+
   return (
     <>
       <Typography
@@ -110,7 +143,7 @@ function ClubEvents({ props }: ClubEventProps) {
           pt: "48px",
         }}
       >
-        {props.map((event, key) => {
+        {earliestTwoEvents.map((event, key) => {
           return (
             <Event name={event.eventName} date={event.date} key={key}>
               {event.desc}

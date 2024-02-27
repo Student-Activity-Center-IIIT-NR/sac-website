@@ -12,41 +12,6 @@ import { mun } from "../../../data/Crews/CulturalClubCrew";
 
 interface ModelUnitedNationProps {}
 
-import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Indradhanush"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
-
 const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
   return (
     <>
@@ -65,7 +30,7 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
           From having heated debates to forming alliances, this club will
           provide a platform to step into the shoes of UN ambassadors.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="MUN" />
         <Crew props={mun} />
         <Gallery club="MUN" />
       </ClubsLayout>

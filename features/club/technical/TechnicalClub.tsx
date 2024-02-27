@@ -5,35 +5,23 @@ import Image, { StaticImageData } from "next/image";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { styled } from "@mui/material";
-import bgTechTop from "../../../assets/bg_tech_top.svg";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
 interface Props {
   name: string;
   desc: string;
   bgTop: StaticImageData;
   logo: StaticImageData;
   color: string;
-  event1Name: string;
-  event2Name: string;
-  event1Date: string;
-  event2Date: string;
-  event1Desc?: string;
-  event2Desc?: string;
 }
 
-const TechnicalClub = ({
-  name,
-  desc,
-  bgTop,
-  logo,
-  color,
-  event1Name,
-  event2Name,
-  event1Date,
-  event2Date,
-  event1Desc,
-  event2Desc,
-}: Props) => {
+const TechnicalClub = ({ name, desc, bgTop, logo, color }: Props) => {
   const StyledLink = styled(Typography)({
     fontFamily: "Rubik",
     fontStyle: "italic",
@@ -139,6 +127,42 @@ const TechnicalClub = ({
       </>
     );
   };
+
+  const today = new Date();
+  const filteredEvents = calendarData.filter((event) => {
+    const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+    const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+    return (
+      eventDate.getFullYear() >= today.getFullYear() &&
+      (eventDate.getMonth() > today.getMonth() ||
+        (eventDate.getMonth() === today.getMonth() &&
+          eventDate.getDate() >= today.getDate())) &&
+      event.club === name
+    );
+  });
+
+  let earliestTwoEvents: CalendarDataProps[] = [];
+  if (filteredEvents.length >= 2) {
+    earliestTwoEvents = filteredEvents.slice(0, 2);
+  } else if (filteredEvents.length === 1) {
+    earliestTwoEvents = [
+      ...filteredEvents,
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  } else {
+    earliestTwoEvents = [
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  }
+
+  const event1Name = earliestTwoEvents[0].eventName;
+  const event1Date = earliestTwoEvents[0].date;
+  const event1Desc = earliestTwoEvents[0].desc;
+  const event2Name = earliestTwoEvents[1].eventName;
+  const event2Date = earliestTwoEvents[1].date;
+  const event2Desc = earliestTwoEvents[1].desc;
 
   return (
     <>

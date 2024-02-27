@@ -10,43 +10,7 @@ import ignitersLogo from "../../../assets/cultural_clubs_bg/igniters_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
 import { igniters } from "../../../data/Crews/CulturalClubCrew";
 
-
 interface IgnitersProps {}
-
-import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
-interface CalendarDataProps {
-  date: string;
-  eventName: string;
-  club: string;
-  desc: string;
-}
-const today = new Date();
-const sortedEvents = calendarData.filter((event) => {
-  const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
-  const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
-
-  return (
-    eventDate.getFullYear() >= today.getFullYear() &&
-    (eventDate.getMonth() > today.getMonth() ||
-      (eventDate.getMonth() === today.getMonth() &&
-        eventDate.getDate() >= today.getDate())) &&
-    event.club === "Indradhanush"
-  );
-});
-let earliestTwoEvents: CalendarDataProps[] = [];
-if (sortedEvents.length >= 2) {
-  earliestTwoEvents = sortedEvents.slice(0, 2);
-} else if (sortedEvents.length === 1) {
-  earliestTwoEvents = [
-    ...sortedEvents,
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-} else {
-  earliestTwoEvents = [
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-    { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
-  ];
-}
 
 const Igniters: FunctionComponent<IgnitersProps> = () => {
   return (
@@ -66,7 +30,7 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
           all skill levels and encourages everyone to join in the journey and
           let the art of dance bring them joy and expression.
         </ClubDescription>
-        <ClubEvents props={earliestTwoEvents} />
+        <ClubEvents club="Igniters" />
         <Crew props={igniters} />
         <Gallery club="Igniters" />
       </ClubsLayout>
