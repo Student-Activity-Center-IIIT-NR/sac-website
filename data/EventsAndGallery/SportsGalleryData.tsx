@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 
-import DSC_0029_min from "../../../assets/atharv/DSC_0029-min.jpg";
-import DSC_0030_min from "../../../assets/atharv/DSC_0163-min.jpg";
-import DSC_0031_min from "../../../assets/atharv/DSC_0415-min.jpg";
-import DSC_0032_min from "../../../assets/atharv/DSC_1027-min.jpg";
-import DSC_0033_min from "../../../assets/atharv/DSC_0029-min.jpg";
+import DSC_0029_min from "../../assets/atharv/DSC_0029-min.jpg";
+import DSC_0030_min from "../../assets/atharv/DSC_0163-min.jpg";
+import DSC_0031_min from "../../assets/atharv/DSC_0415-min.jpg";
+import DSC_0032_min from "../../assets/atharv/DSC_1027-min.jpg";
+import DSC_0033_min from "../../assets/atharv/DSC_0029-min.jpg";
 
 interface CrewProps {
   img: StaticImageData;

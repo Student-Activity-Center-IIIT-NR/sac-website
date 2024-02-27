@@ -9,7 +9,7 @@ import YTCBg from "../../../assets/cultural_clubs_bg/YTC.jpg";
 import YTCLogo from "../../../assets/cultural_clubs_bg/YTC_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import { StaticImageData } from "next/image";
-import {ytc} from "../../../data/Crews/CulturalClubCrew";
+import { ytc } from "../../../data/Crews/CulturalClubCrew";
 // import event
 import bharat1 from "../../../assets/club_event_pics/cultural/bharat1.jpeg";
 import bharat3 from "../../../assets/club_event_pics/cultural/bharat3.jpeg";
@@ -76,30 +76,10 @@ const YTC: FunctionComponent<YTCProps> = () => {
         </ClubDescription>
         {/* <ClubEvents props={earliestTwoEvents} /> */}
         {/* <Crew props={crew} /> */}
-        {/* <Gallery props={gallery} /> */}
+        {/* <Gallery club="YTC" /> */}
       </ClubsLayout>
     </>
   );
 };
 
 export default YTC;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Bharat ke Rang",
-    date: "13 Jan 2023",
-    img: [bharat1, bharat3, bharat4, bharat5, bharat6],
-  },
-  {
-    name: "Jai Ganraya",
-    date: "31 Aug 2022",
-    img: [ganraya1, ganraya2, ganraya3, ganraya4],
-  },
-];

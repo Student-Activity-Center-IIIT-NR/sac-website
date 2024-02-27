@@ -8,14 +8,7 @@ import Gallery from "../../../features/club/common/Gallery";
 import indradhanushBg from "../../../assets/cultural_clubs_bg/indradhanush.png";
 import indradhanushLogo from "../../../assets/cultural_clubs_bg/indradhanush_logo.png";
 import Crew from "../../../features/club/common/Crew";
-import { StaticImageData } from "next/image";
 import { indradhanush } from "../../../data/Crews/CulturalClubCrew";
-
-// import events
-import canva1 from "../../../assets/club_event_pics/cultural/canva1.jpeg";
-import canva2 from "../../../assets/club_event_pics/cultural/canva2.jpeg";
-import canva3 from "../../../assets/club_event_pics/cultural/canva3.jpeg";
-import canva4 from "../../../assets/club_event_pics/cultural/canva4.jpeg";
 
 interface IndradhanushProps {}
 
@@ -72,32 +65,10 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
         </ClubDescription>
         <ClubEvents props={earliestTwoEvents} />
         <Crew props={indradhanush} />
-        <Gallery props={gallery} />
+        <Gallery club="Indradhanush" />
       </ClubsLayout>
     </>
   );
 };
 
 export default Indradhanush;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-interface EventProps {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "CanvaKar",
-    date: "24 Sept 2022",
-    img: [canva1, canva2, canva3, canva4],
-  },
-];
-

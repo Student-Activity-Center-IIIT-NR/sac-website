@@ -9,13 +9,6 @@ import capriccioBg from "../../../assets/cultural_clubs_bg/capriccio.png";
 import capriccioLogo from "../../../assets/cultural_clubs_bg/capriccio_logo.png";
 import Crew from "../../../features/club/common/Crew";
 import {capriccio} from "../../../data/Crews/CulturalClubCrew"
-import { StaticImageData } from "next/image";
-
-// import events
-import mellow1 from "../../../assets/club_event_pics/cultural/mellow_cap1.jpeg";
-import mellow2 from "../../../assets/club_event_pics/cultural/mellow_cap2.jpeg";
-import mellow3 from "../../../assets/club_event_pics/cultural/mellow_cap3.jpeg";
-import mellow4 from "../../../assets/club_event_pics/cultural/mellow_cap4.jpeg";
 
 interface CapriccioProps {}
 
@@ -75,26 +68,10 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
         </ClubDescription>
         <ClubEvents props={earliestTwoEvents} />
         <Crew props={capriccio} />
-        <Gallery props={gallery} />
+        <Gallery club="Capriccio" />
       </ClubsLayout>
     </>
   );
 };
 
 export default Capriccio;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Mellow Response",
-    date: "9 May 2022",
-    img: [mellow1, mellow2, mellow3, mellow4],
-  },
-];

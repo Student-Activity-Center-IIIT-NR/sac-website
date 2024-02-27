@@ -6,7 +6,7 @@ import iconArrow from "../../../assets/icon/icon_arrow.svg";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import { data } from "./SportsGalleryData";
+import { data } from "../../../data/EventsAndGallery/SportsGalleryData";
 
 const StyledTypography = styled(Typography)({
   fontFamily: "Lato",

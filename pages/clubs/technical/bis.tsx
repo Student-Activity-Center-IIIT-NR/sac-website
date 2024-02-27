@@ -100,9 +100,3 @@ const BIS: FunctionComponent<BISProps> = () => {
 };
 
 export default BIS;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}

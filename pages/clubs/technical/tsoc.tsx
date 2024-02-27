@@ -9,18 +9,7 @@ import tsocBg from "../../../assets/technical_clubs_bg/tsoc.png";
 import tsocBgTop from "../../../assets/technical_clubs_bg/bg_tsoc_top.svg";
 import tsocBgBottom from "../../../assets/technical_clubs_bg/bg_tsoc_bottom.svg";
 import tsocLogo from "../../../assets/technical_clubs_bg/tsoc_logo.jpg";
-import { StaticImageData } from "next/image";
 import { tsoc } from "../../../data/Crews/TechnicalClubCrew";
-
-// import events
-import bit1 from "../../../assets/club_event_pics/technical/bit1.jpeg";
-import bit2 from "../../../assets/club_event_pics/technical/bit2.jpeg";
-import bit3 from "../../../assets/club_event_pics/technical/bit3.jpeg";
-import bit4 from "../../../assets/club_event_pics/technical/bit4.jpeg";
-import bit5 from "../../../assets/club_event_pics/technical/bit5.jpeg";
-import bit6 from "../../../assets/club_event_pics/technical/bit6.jpeg";
-import bit7 from "../../../assets/club_event_pics/technical/bit7.jpeg";
-import bit8 from "../../../assets/club_event_pics/technical/bit8.jpeg";
 
 interface TSOCProps {}
 
@@ -104,7 +93,7 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
           }}
         >
           <Crew props={tsoc} />
-          <Gallery props={gallery} />
+          <Gallery club="TSoC" />
         </Box>
       </ClubsLayout>
     </>
@@ -112,17 +101,3 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
 };
 
 export default TSOC;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Bit-2-Byte",
-    date: "9-10 April 2022",
-    img: [bit1, bit2, bit3, bit4, bit5, bit6, bit7, bit8],
-  },
-];

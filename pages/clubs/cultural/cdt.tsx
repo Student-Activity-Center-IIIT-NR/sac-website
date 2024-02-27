@@ -7,15 +7,9 @@ import ClubEvents from "../../../features/club/cultural/ClubEvents";
 import Gallery from "../../../features/club/common/Gallery";
 import cdtBg from "../../../assets/cultural_clubs_bg/cdt.png";
 import cdtLogo from "../../../assets/cultural_clubs_bg/cdt_logo.png";
-import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
 import { cdt } from "../../../data/Crews/CulturalClubCrew";
 
-// import events
-import nukkad1 from "../../../assets/club_event_pics/cultural/nukkad1.jpeg";
-import nukkad2 from "../../../assets/club_event_pics/cultural/nukkad2.jpeg";
-import nukkad3 from "../../../assets/club_event_pics/cultural/nukkad3.jpeg";
-import nukkad4 from "../../../assets/club_event_pics/cultural/nukkad4.jpeg";
 
 interface ClubDeTheatreProps {}
 
@@ -73,24 +67,10 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
         </ClubDescription>
         <ClubEvents props={earliestTwoEvents} />
         <Crew props={cdt} />
-        <Gallery props={gallery} />
+        <Gallery club="CDT" />
       </ClubsLayout>
     </>
   );
 };
 
 export default ClubDeTheatre;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Nukkad Natak",
-    date: "2 Nov 2022",
-    img: [nukkad1, nukkad2, nukkad3, nukkad4],
-  },
-];

@@ -9,14 +9,7 @@ import inquizitiveBg from "../../../assets/technical_clubs_bg/inquizitive.png";
 import inquizitiveBgTop from "../../../assets/technical_clubs_bg/bg_inquizitive_top.svg";
 import inquizitiveBgBottom from "../../../assets/technical_clubs_bg/bg_inquizitive_bottom.svg";
 import inquizitiveLogo from "../../../assets/technical_clubs_bg/inquizitive_logo.jpg";
-import { StaticImageData } from "next/image";
 import { inquizitive } from "../../../data/Crews/TechnicalClubCrew";
-
-// import events
-import quiz1 from "../../../assets/club_event_pics/technical/quiz1.jpeg";
-import quiz2 from "../../../assets/club_event_pics/technical/quiz2.jpeg";
-import quiz3 from "../../../assets/club_event_pics/technical/quiz3.jpeg";
-import quiz4 from "../../../assets/club_event_pics/technical/quiz4.jpeg";
 
 import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
@@ -99,7 +92,7 @@ const Inquizitive = () => {
           }}
         >
           <Crew props={inquizitive} />
-          <Gallery props={gallery} />
+          <Gallery club="Inquizitive" />
         </Box>
       </ClubsLayout>
     </>
@@ -107,17 +100,3 @@ const Inquizitive = () => {
 };
 
 export default Inquizitive;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Quizadry",
-    date: "15 Oct 2022",
-    img: [quiz1, quiz2, quiz3, quiz4],
-  },
-];

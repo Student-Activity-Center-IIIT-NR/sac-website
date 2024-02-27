@@ -7,7 +7,6 @@ import Box from "@mui/material/Box";
 import DesignBg from "../../../assets/media_cell_bg/design.jpg";
 import DesignLogo from "../../../assets/media_cell_bg/Media.png";
 import Crew from "../../../features/club/common/Crew";
-import { StaticImageData } from "next/image";
 import { design } from "../../../data/Crews/MediaClubCrew";
 
 interface DesignProps {}
@@ -55,9 +54,3 @@ const Design: FunctionComponent<DesignProps> = () => {
 };
 
 export default Design;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}

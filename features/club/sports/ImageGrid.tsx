@@ -2,7 +2,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { itemData } from "./SportsGalleryData";
+import { itemData } from "../../../data/EventsAndGallery/SportsGalleryData";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 

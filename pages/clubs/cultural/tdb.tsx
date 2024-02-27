@@ -8,13 +8,7 @@ import Gallery from "../../../features/club/common/Gallery";
 import tbdBg from "../../../assets/cultural_clubs_bg/tbd.png";
 import tbdLogo from "../../../assets/cultural_clubs_bg/tbd_logo.jpg";
 import Crew from "../../../features/club/common/Crew";
-import { StaticImageData } from "next/image";
 import { tdb } from "../../../data/Crews/CulturalClubCrew";
-// import events
-import yet1 from "../../../assets/club_event_pics/cultural/yet1.jpeg";
-import yet2 from "../../../assets/club_event_pics/cultural/yet2.jpeg";
-import yet3 from "../../../assets/club_event_pics/cultural/yet3.jpeg";
-import yet4 from "../../../assets/club_event_pics/cultural/yet4.jpeg";
 
 interface TakeDaBaitProps {}
 
@@ -76,24 +70,10 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
         </ClubDescription>
         <ClubEvents props={earliestTwoEvents} />
         <Crew props={tdb} />
-        <Gallery props={gallery} />
+        <Gallery club="CDT" />
       </ClubsLayout>
     </>
   );
 };
 
 export default TakeDaBait;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Yet to be Decided",
-    date: "20 Jan 2023",
-    img: [yet1, yet2, yet3, yet4],
-  },
-];

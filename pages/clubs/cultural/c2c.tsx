@@ -11,12 +11,6 @@ import Crew from "../../../features/club/common/Crew";
 import { c2c } from "../../../data/Crews/CulturalClubCrew";
 import { StaticImageData } from "next/image";
 
-// import events
-import ramp1 from "../../../assets/club_event_pics/cultural/ramp1.jpeg";
-import ramp2 from "../../../assets/club_event_pics/cultural/ramp2.jpeg";
-import ramp3 from "../../../assets/club_event_pics/cultural/ramp3.jpeg";
-import ramp4 from "../../../assets/club_event_pics/cultural/ramp4.jpeg";
-
 interface CoverToCoverProps {}
 
 import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
@@ -76,24 +70,10 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
         </ClubDescription>
         <ClubEvents props={earliestTwoEvents} />
         <Crew props={c2c} />
-        <Gallery props={gallery} />
+        <Gallery club="C2C" />
       </ClubsLayout>
     </>
   );
 };
 
 export default CoverToCover;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Rampage",
-    date: "12 Sept 2022",
-    img: [ramp1, ramp2, ramp3, ramp4],
-  },
-];

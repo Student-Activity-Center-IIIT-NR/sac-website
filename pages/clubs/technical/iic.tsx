@@ -100,7 +100,7 @@ const IIC: FunctionComponent<IICProps> = () => {
           }}
         >
           {/* <Crew props={iib} />
-          <Gallery props={gallery} /> */}
+          <Gallery club="IIC" /> */}
         </Box>
       </ClubsLayout>
     </>
@@ -108,17 +108,3 @@ const IIC: FunctionComponent<IICProps> = () => {
 };
 
 export default IIC;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Bit-2-Byte",
-    date: "9-10 April 2022",
-    img: [bit1, bit2, bit3, bit4, bit5, bit6, bit7, bit8],
-  },
-];

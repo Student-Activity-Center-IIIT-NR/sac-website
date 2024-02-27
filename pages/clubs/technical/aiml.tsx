@@ -3,7 +3,6 @@ import ClubsLayout from "../../../layouts/ClubsLayout";
 import TechnicalClub from "../../../features/club/technical/TechnicalClub";
 import ClubDescription from "../../../features/club/technical/ClubDescription";
 import Box from "@mui/material/Box";
-import { StaticImageData } from "next/image";
 import Crew from "../../../features/club/common/Crew";
 import Gallery from "../../../features/club/common/Gallery";
 import aimlBg from "../../../assets/technical_clubs_bg/aiml.jpeg";
@@ -11,20 +10,6 @@ import aimlBgTop from "../../../assets/technical_clubs_bg/bg_aiml_top.svg";
 import aimlBgBottom from "../../../assets/technical_clubs_bg/bg_aiml_bottom.svg";
 import aimlLogo from "../../../assets/technical_clubs_bg/aiml_logo.svg";
 import { aiml } from "../../../data/Crews/TechnicalClubCrew";
-// import events
-import intro_aiml1 from "../../../assets/club_event_pics/technical/intro_aiml1.jpeg";
-import intro_aiml2 from "../../../assets/club_event_pics/technical/intro_aiml2.jpeg";
-import intro_aiml3 from "../../../assets/club_event_pics/technical/intro_aiml3.jpeg";
-import intro_aiml4 from "../../../assets/club_event_pics/technical/intro_aiml4.jpeg";
-import kaggle_comp1 from "../../../assets/club_event_pics/technical/kaggle_competition1.jpeg";
-import kaggle_comp2 from "../../../assets/club_event_pics/technical/kaggle_competition2.jpeg";
-import kaggle_comp3 from "../../../assets/club_event_pics/technical/kaggle_competition3.jpeg";
-import kaggle_comp4 from "../../../assets/club_event_pics/technical/kaggle_competition4.jpeg";
-import kaggle_comp5 from "../../../assets/club_event_pics/technical/kaggle_competition5.jpeg";
-import kaggle_comp6 from "../../../assets/club_event_pics/technical/kaggle_competition6.jpeg";
-import kaggle_comp7 from "../../../assets/club_event_pics/technical/kaggle_competition7.jpeg";
-import kaggle_comp8 from "../../../assets/club_event_pics/technical/kaggle_competition8.jpeg";
-
 import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
   date: string;
@@ -109,7 +94,7 @@ const Aiml = () => {
           }}
         >
           <Crew props={aiml} />
-          <Gallery props={gallery} />
+          <Gallery club="AIML" />
         </Box>
       </ClubsLayout>
     </>
@@ -117,31 +102,3 @@ const Aiml = () => {
 };
 
 export default Aiml;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Introduction to AIML",
-    date: "29 Nov 2022",
-    img: [intro_aiml1, intro_aiml2, intro_aiml3, intro_aiml4],
-  },
-  {
-    name: "Kaggle Competition",
-    date: "7 Feb 2023",
-    img: [
-      kaggle_comp1,
-      kaggle_comp2,
-      kaggle_comp3,
-      kaggle_comp4,
-      kaggle_comp5,
-      kaggle_comp6,
-      kaggle_comp7,
-      kaggle_comp8,
-    ],
-  },
-];

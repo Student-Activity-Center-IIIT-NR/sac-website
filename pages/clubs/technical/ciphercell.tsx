@@ -9,14 +9,7 @@ import cipherBg from "../../../assets/technical_clubs_bg/ciphercell.png";
 import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
-import { StaticImageData } from "next/image";
 import { ciphercell } from "../../../data/Crews/TechnicalClubCrew";
-
-// import events
-import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
-import ctf2 from "../../../assets/club_event_pics/technical/ctf2.jpeg";
-import ctf3 from "../../../assets/club_event_pics/technical/ctf3.jpeg";
-import ctf4 from "../../../assets/club_event_pics/technical/ctf4.jpeg";
 
 import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
 interface CalendarDataProps {
@@ -102,7 +95,7 @@ const Ciphercell = () => {
           }}
         >
           <Crew props={ciphercell} />
-          <Gallery props={gallery} />
+          <Gallery club="Ciphercell" />
         </Box>
       </ClubsLayout>
     </>
@@ -110,17 +103,3 @@ const Ciphercell = () => {
 };
 
 export default Ciphercell;
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Intra College CTF",
-    date: "28 March 2022",
-    img: [ctf1, ctf2, ctf3, ctf4],
-  },
-];
