@@ -1,10 +1,12 @@
 import { StaticImageData } from "next/image";
 
-import DSC_0029_min from "../../assets/atharv/DSC_0029-min.jpg";
-import DSC_0030_min from "../../assets/atharv/DSC_0163-min.jpg";
-import DSC_0031_min from "../../assets/atharv/DSC_0415-min.jpg";
-import DSC_0032_min from "../../assets/atharv/DSC_1027-min.jpg";
-import DSC_0033_min from "../../assets/atharv/DSC_0029-min.jpg";
+import IMG_0426 from "../../assets/atharv/IMG_0426.jpg";
+import DSC_0799 from "../../assets/atharv/DSC_0799.jpg";
+import IMG_0023 from "../../assets/atharv/IMG_0023.jpg";
+import IMG20231015181640 from "../../assets/atharv/IMG20231015181640.jpg";
+import IMG_0932 from "../../assets/atharv/IMG_0932.jpg";
+import IMG_7420 from "../../assets/atharv/IMG_7420.jpg";
+
 
 interface CrewProps {
   img: StaticImageData;
@@ -19,7 +21,7 @@ interface dataProps {
 // insert new data at beginning
 export const data: dataProps[] = [
   {
-    name: "Aarambh 4.0",
+    name: "Aarambh 6.0",
     intro:
       "Aarambh which brings together students from across the college to compete in various sports and showcase their skills. The club provides students with opportunities to engage in physical activity, build a sense of community, and represent the college in inter-collegiate competitions. It also helps in promoting a healthy lifestyle, developing discipline and time management skills and fostering a sense of pride among students. Overall, Atharv plays an important role in promoting sports and physical wellness within the IIIT-NR community",
     winner:
@@ -29,21 +31,21 @@ export const data: dataProps[] = [
 
 export const itemData: CrewProps[] = [
   {
-    img: DSC_0029_min,
+    img: IMG_0426,
   },
   {
-    img: DSC_0030_min,
+    img: DSC_0799,
   },
   {
-    img: DSC_0031_min,
+    img: IMG_0023,
   },
   {
-    img: DSC_0032_min,
+    img: IMG20231015181640,
   },
   {
-    img: DSC_0033_min,
+    img: IMG_0932,
   },
   {
-    img: DSC_0030_min,
+    img: IMG_7420,
   },
 ];
