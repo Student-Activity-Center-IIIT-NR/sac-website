@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import IMG_0426 from "../../assets/atharv/IMG_0426.jpg";
+import IMG_0426 from "../../assets/atharv/IMG_0426.jpggit ";
 import DSC_0799 from "../../assets/atharv/DSC_0799.jpg";
 import IMG_0023 from "../../assets/atharv/IMG_0023.jpg";
 import IMG20231015181640 from "../../assets/atharv/IMG20231015181640.jpg";
