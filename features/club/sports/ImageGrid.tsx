@@ -12,7 +12,7 @@ interface CrewProps {
 
 const ImageGrid = () => {
   return (
-    <Stack width="860px" sx={{ transform: "rotateY(180deg)" }}>
+    <Stack width="860px" sx={{ transform: "rotateY(0deg)" }}>
       <Box
         width="100%"
         zIndex={1}
