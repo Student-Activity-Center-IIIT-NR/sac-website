@@ -1,11 +1,11 @@
 import { StaticImageData } from "next/image";
 
-import IMG_0426 from "../../assets/atharv/IMG_0426.jpg";
-import DSC_0799 from "../../assets/atharv/DSC_0799.jpg";
-import IMG_0023 from "../../assets/atharv/IMG_0023.jpg";
+import IMG_0426 from "../../assets/atharv/IMG_0426.JPG";
+import DSC_0799 from "../../assets/atharv/DSC_0799.JPG";
+import IMG_0023 from "../../assets/atharv/IMG_0023.JPG";
 import IMG20231015181640 from "../../assets/atharv/IMG20231015181640.jpg";
-import IMG_0932 from "../../assets/atharv/IMG_0932.jpg";
-import IMG_7420 from "../../assets/atharv/IMG_7420.jpg";
+import IMG_0932 from "../../assets/atharv/IMG_0932.JPG";
+import IMG_7420 from "../../assets/atharv/IMG_7420.JPG";
 
 
 interface CrewProps {
