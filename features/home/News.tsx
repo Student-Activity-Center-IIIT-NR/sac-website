@@ -131,19 +131,19 @@ const News: NextPage = () => {
               >
                 {newsData[0].text}
               </Item>
-              {/* <Divider orientation="horizontal" /> */}
-              {/* <Item
+              {<Divider orientation="horizontal" /> }
+              {<Item
                 img={newsData[1].img}
                 title={newsData[1].title}
                 authorImg={newsData[1].authImg}
                 author={newsData[1].authName}
               >
                 {newsData[1].text}
-              </Item>  */}
+              </Item>  }
             </Grid2>
-            {/* <Divider orientation="vertical" flexItem /> */}
+            { <Divider orientation="vertical" flexItem /> }
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
-              {/* <Item
+              <Item
                 img={newsData[2].img}
                 title={newsData[2].title}
                 authorImg={newsData[2].authImg}
@@ -159,11 +159,11 @@ const News: NextPage = () => {
                 author={newsData[3].authName}
               >
                 {newsData[3].text}
-              </Item> */}
+              </Item>
             </Grid2>
-            {/* <Divider orientation="vertical" flexItem /> */}
+            <Divider orientation="vertical" flexItem />
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
-              {/* <Item
+              <Item
                 img={newsData[4].img}
                 title={newsData[4].title}
                 authorImg={newsData[4].authImg}
@@ -179,27 +179,27 @@ const News: NextPage = () => {
                 author={newsData[5].authName}
               >
                 {newsData[5].text}
-            </Item> */}
+            </Item>
             </Grid2>
-            {/* <Divider orientation="vertical" flexItem />  */}
+            <Divider orientation="vertical" flexItem /> 
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
-              {/* <Item
+              <Item
                 img={newsData[6].img}
                 title={newsData[6].title}
                 authorImg={newsData[6].authImg}
                 author={newsData[6].authName}
               >
                 {newsData[6].text}
-              </Item> */}
-              {/* <Divider orientation="horizontal" /> */}
-              {/* <Item
+              </Item> 
+              { <Divider orientation="horizontal" /> }
+              <Item
                 img={newsData[7].img}
                 title={newsData[7].title}
                 authorImg={newsData[7].authImg}
                 author={newsData[7].authName}
               >
                 {newsData[7].text}
-              </Item> */}
+              </Item>
             </Grid2>
           </Grid2>
         </Box>
