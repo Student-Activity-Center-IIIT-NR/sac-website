@@ -3,6 +3,11 @@ import scientfic from "../../assets/major_events_poster/scientifc.png";
 import hackmanthan from "../../assets/major_events_poster/hackmanthan.jpeg";
 import technovate from "../../assets/major_events_poster/technovate.jpeg";
 import ganesh from "../../assets/major_events_poster/ganesh.jpeg";
+import Saraswati from "../../assets/major_events_poster/Saraswati Puja.png";
+import Technovate5 from "../../assets/major_events_poster/Technovate5.0.jpg";
+import scintfic24 from "../../assets/major_events_poster/scintfic24.jpg";
+import republicday from "../../assets/major_events_poster/republicday.jpg";
+
 
 interface RecentMajorEventsDataProps {
   poster: StaticImageData;
@@ -11,19 +16,19 @@ interface RecentMajorEventsDataProps {
 
 export const recentMajorEventsData: RecentMajorEventsDataProps[] = [
   {
-    poster: scientfic,
-    desc: "Scientific, IIIT-Naya Raipur’s flagship science and technology showcase designed for school students, concluded on January 14. The event boasted 57 projects showcased from schools across the country. Dr. Pradeep K Sinha, Director and Vice Chancellor IIIT-NR; Prof Ram Kumar Kakani, Director of IIM Raipur, Dr Rajarshi Mahapatra, Dean Academics IIIT-NR and Dr. Lakhindar Murmu, Coordinator of SCInTFIC 2k23 inaugurated the event.",
+    poster: Technovate5,
+    desc: "Technovate 5.0 at IIIT Naya Raipur was a whirlwind of innovation, competition, and pure exhilaration! From the electrifying hackathons and coding contests to the mesmerizing cultural showcases and adrenaline-fueled sports tournaments, every moment was packed with excitement. Participants showcased their talents, battled it out on various fronts, and left spectators on the edge of their seats. As the sun set on each day, the atmosphere only intensified, with pulsating music, dazzling lights, and unforgettable performances keeping the energy levels soaring. Technovate 5.0 wasn't just an event; it was a rollercoaster ride of thrills and excitement that left everyone craving for more!",
   },
   {
-    poster: technovate,
-    desc: "Technovate, an annual techno-cultural feast of IIIT Naya Raipur, began on 4th Nov 2022, it is a three-day feast full of enthusiasm and fun with competitions and pronates. Day one marked its beginning with the inaugural session addressed by Dr. Pradeep K Sinha, Vice Chancellor and Director IIIT Naya Raipur. The second day of Technovate was full of cultural activities like Nukkad Natak, a musical event, and a robotics event. The last day was full of enthusiasm and relish events like a fashion show, dance events, and many more.",
+    poster: scintfic24,
+    desc: "SCIηTFIC 2k24 brought together students at IIIT-NR for a celebration of innovation and teamwork. Kicked off by Dr. Alok Sahu, the event was packed with activities like IDEATHON 6.0, where students from various grades showcased their creative projects across three categories. Judges from different academic backgrounds evaluated the entries, sparking enthusiasm. A snack break offered a moment of relaxation before the event continued with tech talks and a captivating TECH EXPO. This event was not just a competition but a gathering that encouraged scientific curiosity, collaboration, and the sharing of new ideas among young minds, fostering a vibrant learning community.",
   },
   {
-    poster: ganesh,
-    desc: "The Ganesh Chaturthi celebrations were held at IIITNR from Aug 31 to Sept 4 with great enthusiasm and devotion. The event was organized by the Student Activity Centre and was attended by a large number of students, faculty members, and staff. The celebrations began with a traditional aarti and puja, followed by the unveiling of a beautifully decorated idol of Lord Ganesha. The idol was placed in a specially designed mandap in the institute auditorium, which was adorned with colorful flowers and lights.",
+    poster: Saraswati,
+    desc: "Saraswati Puja at IIIT Naya Raipur reverberates with a deep reverence for knowledge and academic pursuits. Students gather to invoke the blessings of Goddess Saraswati, seeking guidance and wisdom for their educational endeavors. The atmosphere is charged with intellectual fervor as students engage in prayers and rituals, focusing their aspirations on academic excellence. It's a day where the pursuit of knowledge takes center stage, uniting students in their shared commitment to learning and growth. Saraswati Puja at IIIT Naya Raipur is not just a religious observance but a solemn occasion that underscores the importance of education in shaping the future.",
   },
   {
-    poster: hackmanthan,
-    desc: "To find solutions to the technical problems of the police, Chhattisgarh Police, in collaboration with IIIT-Naya Raipur, organized Hackmanthan. This event was the inaugural part of HackManthan, a joint initiative of the state police and IIIT Naya Raipur to get the best young minds in the IT field working on real-life problems threatening cyber security and resolving to make the internet a safer place. The DIRECTOR General of Police (DGP) Ashok Juneja, Director of IlIT-NR Pradeep Singh, and Additional Director-General of Police (technical services) Pradeep Gupta were present on occasion.",
+    poster: republicday,
+    desc: "The College Republic Day celebration on January 26th, 2024, was a vibrant and patriotic event. The day commenced with the dignified flag hosting ceremony, symbolizing our commitment to the nation. The college director's impassioned speech followed, urging everyone to uphold the values of the Constitution.The cultural program that ensued showcased the diverse talents of the college community, featuring patriotic performances that resonated with the spirit of the day. The event culminated in a brief yet impactful prize distribution ceremony, acknowledging outstanding contributions and achievements. Overall, the Republic Day celebration was a joyous and unifying experience, fostering a deep sense of pride and camaraderie among the students and faculty.",
   },
 ];
