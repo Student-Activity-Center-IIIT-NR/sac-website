@@ -31,12 +31,14 @@ import bit3 from "../../assets/club_event_pics/technical/bit3.jpeg";
 import bit4 from "../../assets/club_event_pics/technical/bit4.jpeg";
 import bit5 from "../../assets/club_event_pics/technical/bit5.jpeg";
 import bit6 from "../../assets/club_event_pics/technical/bit6.jpeg";
-import bit7 from "../../assets/club_event_pics/technical/bit7.jpeg";
-import bit8 from "../../assets/club_event_pics/technical/bit8.jpeg";
+// import bit7 from "../../assets/club_event_pics/technical/bit7.jpeg";
+// import bit8 from "../../assets/club_event_pics/technical/bit8.jpeg";
+
 import ctf1 from "../../assets/club_event_pics/technical/ctf1.jpeg";
 import ctf2 from "../../assets/club_event_pics/technical/ctf2.jpeg";
 import ctf3 from "../../assets/club_event_pics/technical/ctf3.jpeg";
 import ctf4 from "../../assets/club_event_pics/technical/ctf4.jpeg";
+import ctf5 from "../../assets/club_event_pics/technical/ctf5.jpeg";
 import arduino1 from "../../assets/club_event_pics/technical/arduino1.jpeg";
 import arduino2 from "../../assets/club_event_pics/technical/arduino2.jpeg";
 import arduino3 from "../../assets/club_event_pics/technical/arduino3.jpeg";
@@ -124,13 +126,13 @@ export const allEvents: ClubEventsProps[] = [
     {
         name: "Bit-2-Byte",
         date: "9-10 April 2022",
-        image: [bit1, bit2, bit3, bit4, bit5, bit6, bit7, bit8],
+        image: [bit1, bit2, bit3, bit4 , bit5, bit6],
         club: "TSoC"
     },
     {
         name: "Intra College CTF",
         date: "28 March 2022",
-        image: [ctf1, ctf2, ctf3, ctf4],
+        image: [ctf1, ctf2, ctf3, ctf4 , ctf5],
         club: "Ciphercell"
     },
     {
