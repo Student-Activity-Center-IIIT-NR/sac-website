@@ -150,10 +150,10 @@ const StarIcon = ({ fill }: { fill: string }) => {
 const clubs = [
   { name: "Indradhanush", url: "/clubs/cultural/indradhanush" },
   { name: "Capriccio", url: "/clubs/cultural/capriccio" },
-  { name: "ShutterBug", url: "/clubs/cultural/shutterbug" },
   { name: "Club De Theatre", url: "/clubs/cultural/cdt" },
   { name: "Igniters", url: "/clubs/cultural/igniters" },
   { name: "Cover to Cover", url: "/clubs/cultural/c2c" },
   { name: "Take da bait", url: "/clubs/cultural/tdb" },
   { name: "Model United Nations", url: "/clubs/cultural/mun" },
+  { name: "Yuva Tourism Club", url: "/clubs/cultural/ytc" },
 ];

@@ -28,7 +28,7 @@ const ScrollContainer = ({
 
   return (
     <>
-      <Box mb={"108px"}>
+      <Box mb={"58px"}>
         {teamName && (
           <Typography
             m={"auto"}

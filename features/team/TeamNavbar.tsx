@@ -3,7 +3,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "./ScrollContainer";
-import { TeamData } from "./TeamData";
+import { TeamData } from "../../data/TeamData";
 import { SessionContext } from "../../contexts/TeamContext";
 import { StaticImageData } from "next/image";
 
@@ -14,7 +14,7 @@ interface TabPanelProps {
 }
 
 // need to update on every data add
-type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324 ;
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
@@ -61,7 +61,7 @@ const TeamNavbar = () => {
           },
         }}
         sx={{
-          maxWidth: "939px",
+          maxWidth: "1500px",
           bgcolor: "#f6f6f6",
           borderRadius: "1000px",
           m: "auto",
@@ -79,7 +79,9 @@ const TeamNavbar = () => {
             <Tab
               disableRipple
               disabled={!item}
-              label={item === "core" ? "All" : item}
+              label={
+                item === "core" ? "All" : item === "pur" ? "PG & UG" : item
+              }
               value={item}
               key={index}
               sx={{
@@ -100,7 +102,6 @@ const TeamNavbar = () => {
           );
         })}
       </Tabs>
-
       <TabPanel value={value} index={Object.keys(session)[0]}>
         {session.core && (
           <ScrollContainer
@@ -109,49 +110,28 @@ const TeamNavbar = () => {
             teamData={session.core}
           />
         )}
-
         {session.web && (
-          year ===23 ? (
           <ScrollContainer
-            teamName="Website Management Team (Media & IT Cell)"
-            gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-            teamData={session.web}
-          />):( <ScrollContainer
             teamName="Website Management Team"
             gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
             teamData={session.web}
-          />)
+          />
         )}
-      {session.design && (
-        year ===23 ? (
-      <ScrollContainer
-      teamName="Design & Documentation Team (Media & IT Cell)"
-      gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-      teamData={session.design}
-    />
-  ) : (
-    <ScrollContainer
-      teamName="Design Team"
-      gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-      teamData={session.design}
-    />
-  )
-)}
+        {session.design && (
+          <ScrollContainer
+            teamName="Design Team"
+            gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+            teamData={session.design}
+          />
+        )}
         {session.documentation && (
-          year ===23 ? (null
-          ):(<ScrollContainer
+          <ScrollContainer
             teamName="Documentation Team"
             gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
             teamData={session.documentation}
-          />)
+          />
         )}
-        {}
         {session.social && (
-          year===23?(<ScrollContainer
-            teamName="Social Media Management Team (Media & IT Cell)"
-            gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-            teamData={session.social}
-          />):
           <ScrollContainer
             teamName="Social Media Management Team"
             gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
@@ -159,51 +139,104 @@ const TeamNavbar = () => {
           />
         )}
       </TabPanel>
-      <TabPanel value={value} index={Object.keys(session)[1]}>
-        {year ===23 ? (
-        <ScrollContainer
-          teamName="Website Management Team (Media & IT Cell)"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={session.web}
-        />):(<ScrollContainer
-          teamName="Website Management Team"
-          gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
-          teamData={session.web}
-        />)}
-      </TabPanel>
-      <TabPanel value={value} index={Object.keys(session)[2]}>
-        {year===23 ? (
-        <ScrollContainer
-          teamName="Design & Documentation Team (Media & IT Cell)"
-          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={session.design}
-        />):( <ScrollContainer
-          teamName="Design Team"
-          gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
-          teamData={session.design}
-        />)}
-      </TabPanel>
-      <TabPanel value={value} index={Object.keys(session)[3]}>
-      {year === 23 ? ( // Check if it's the year 2023
-    <ScrollContainer
-      teamName="Social Media Management Team (Media & IT Cell) " // Show Social Media directly
-      gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-      teamData={session.social}
-    />
-  ) : (
-    <ScrollContainer
-      teamName="Documentation Team"
-      gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
-      teamData={session.documentation}
-    />)}
-      </TabPanel>
-      <TabPanel value={value} index={Object.keys(session)[4]}>
-        <ScrollContainer
-          teamName="Social Media Management Team"
-          gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-          teamData={session.social}
-        />
-      </TabPanel>
+      {year < 23 && (
+        <>
+          {session.web && (
+            <TabPanel value={value} index={Object.keys(session)[1]}>
+              <ScrollContainer
+                teamName="Website Management Team"
+                gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+                teamData={session.web}
+              />
+            </TabPanel>
+          )}
+          {session.design && (
+            <TabPanel value={value} index={Object.keys(session)[2]}>
+              <ScrollContainer
+                teamName="Design Team"
+                gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+                teamData={session.design}
+              />
+            </TabPanel>
+          )}
+          {session.documentation && (
+            <TabPanel value={value} index={Object.keys(session)[3]}>
+              <ScrollContainer
+                teamName="Documentation Team"
+                gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+                teamData={session.documentation}
+              />
+            </TabPanel>
+          )}
+          {session.social && (
+            <TabPanel value={value} index={Object.keys(session)[4]}>
+              <ScrollContainer
+                teamName="Social Media Management Team"
+                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                teamData={session.social}
+              />
+            </TabPanel>
+          )}
+        </>
+      )}
+      {year >= 23 && (
+        <>
+          {session.president && (
+            <TabPanel value={value} index={Object.keys(session)[1]}>
+              <ScrollContainer
+                teamName="SAC President"
+                gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+                teamData={session.president}
+              />
+            </TabPanel>
+          )}
+          {session.pur && (
+            <TabPanel value={value} index={Object.keys(session)[2]}>
+              <ScrollContainer
+                teamName="PG & UG Representatives"
+                gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
+                teamData={session.pur}
+              />
+            </TabPanel>
+          )}
+          {session.technical && (
+            <TabPanel value={value} index={Object.keys(session)[3]}>
+              <ScrollContainer
+                teamName="Science and Technology Secretary"
+                gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
+                teamData={session.technical}
+              />
+            </TabPanel>
+          )}
+          {session.cultural && (
+            <TabPanel value={value} index={Object.keys(session)[4]}>
+              <ScrollContainer
+                teamName="Arts, Cultural and Literary Secretary"
+                gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
+                teamData={session.cultural}
+              />
+            </TabPanel>
+          )}
+          {session.sports && (
+            <TabPanel value={value} index={Object.keys(session)[5]}>
+              <ScrollContainer
+                teamName="Sports Secretary"
+                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                teamData={session.sports}
+              />
+            </TabPanel>
+          )}
+          {session.media && (
+            <TabPanel value={value} index={Object.keys(session)[6]}>
+              <ScrollContainer
+                teamName="Media and IT Cell Secretary"
+                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                teamData={session.media}
+              />
+            </TabPanel>
+          )}
+        </>
+      )}
     </>
   );
 };

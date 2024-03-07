@@ -4,27 +4,26 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import starIcon from "../../../assets/icon/icon_star.svg";
 import Stack from "@mui/material/Stack";
-import Link from "next/link";
+import { calendarData } from "../../../data/EventsAndGallery/EventCalendarData";
+
+interface CalendarDataProps {
+  date: string;
+  eventName: string;
+  club: string;
+  desc: string;
+}
 
 interface EventProps {
   name: string;
   date: string;
   children: ReactNode;
-  link: string;
 }
 
 interface Props {
-  name: string;
-  date: string;
-  desc: string;
-  link: string;
+  club: string;
 }
 
-interface ClubEventProps {
-  props: Props[];
-}
-
-const Event = ({ name, date, children, link }: EventProps) => {
+const Event = ({ name, date, children }: EventProps) => {
   return (
     <>
       <Stack
@@ -82,15 +81,44 @@ const Event = ({ name, date, children, link }: EventProps) => {
           lineHeight="21px"
           textAlign="center"
           color="#000000"
-        >
-          <Link href={link}>Register</Link>
-        </Typography>
+        ></Typography>
       </Stack>
     </>
   );
 };
 
-function ClubEvents({ props }: ClubEventProps) {
+function ClubEvents({ club }: Props) {
+  const today = new Date();
+
+  const sortedEvents = calendarData.filter((event) => {
+    const [eventDay, eventMonth, eventYear] = event.date.split("-").map(Number);
+    const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+    return (
+      eventDate.getFullYear() >= today.getFullYear() &&
+      (eventDate.getMonth() > today.getMonth() ||
+        (eventDate.getMonth() === today.getMonth() &&
+          eventDate.getDate() >= today.getDate())) &&
+      event.club === club
+    );
+  });
+
+  let earliestTwoEvents: CalendarDataProps[] = [];
+
+  if (sortedEvents.length >= 2) {
+    earliestTwoEvents = sortedEvents.slice(0, 2);
+  } else if (sortedEvents.length === 1) {
+    earliestTwoEvents = [
+      ...sortedEvents,
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  } else {
+    earliestTwoEvents = [
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+      { date: "", eventName: "No Upcoming Event", club: "", desc: "" },
+    ];
+  }
+
   return (
     <>
       <Typography
@@ -115,14 +143,9 @@ function ClubEvents({ props }: ClubEventProps) {
           pt: "48px",
         }}
       >
-        {props.map((event, key) => {
+        {earliestTwoEvents.map((event, key) => {
           return (
-            <Event
-              name={event.name}
-              date={event.date}
-              link={event.link}
-              key={key}
-            >
+            <Event name={event.eventName} date={event.date} key={key}>
               {event.desc}
             </Event>
           );

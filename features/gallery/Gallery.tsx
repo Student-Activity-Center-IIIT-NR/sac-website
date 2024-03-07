@@ -13,7 +13,7 @@ import Divider from "@mui/material/Divider";
 import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { ClubEvents } from "./GalleryData";
+import { ClubEvents } from "../../data/EventsAndGallery/GalleryData";
 
 const StyledButton = styled(Button)({
   fontFamily: "Rubik",
@@ -50,7 +50,7 @@ const StyledTypography = styled(Typography)({
   maxWidth: "fit-content",
 });
 
-type Name = "cultural" | "technical" | "sports";
+type Name = "cultural" | "technical" | "sports" | "media";
 
 const Gallery = () => {
   const [page, setPage] = useState(1);
@@ -66,7 +66,7 @@ const Gallery = () => {
     setEvent(ClubEvents[name][index]);
   };
 
-  const count = Math.ceil(event.img.length / 6);
+  const count = Math.ceil(event.image.length / 6);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
@@ -111,7 +111,7 @@ const Gallery = () => {
           mt={"24px"}
           justifyContent={"space-between"}
         >
-          {event.img.slice((page - 1) * 6, (page - 1) * 6 + 6).map((step) => {
+          {event.image.slice((page - 1) * 6, (page - 1) * 6 + 6).map((step) => {
             return (
               <>
                 <Grid2 xs={4} maxWidth={"fit-content"}>
@@ -200,6 +200,13 @@ const Gallery = () => {
               }}
             >
               Sports
+            </StyledButton>
+            <StyledButton
+              onClick={() => {
+                handleClickName("media");
+              }}
+            >
+              Media & IT Cell
             </StyledButton>
           </Stack>
         </Box>

@@ -10,13 +10,14 @@ import iconCircle from "../../assets/calendar_icons/circle.svg";
 import Divider from "@mui/material/Divider";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SingleDate from "../../components/EventCalendar/SingleDate";
-import { calendarData } from "../../components/EventCalendar/EventCalendarData";
+import { calendarData } from "../../data/EventsAndGallery/EventCalendarData";
 import { NextPage } from "next";
 
 interface MonthlyCalendarProps {
   date: string;
   eventName: string;
   icon: StaticImageData;
+  club:string
 }
 
 interface ItemProps {
@@ -139,7 +140,7 @@ const MonthlyCalendar: NextPage = () => {
                           <Grid2 xs={2} key={index}>
                             <SingleDate
                               date={data.date}
-                              name={data.eventName}
+                              name={data.club+" : "+data.eventName}
                               icon={data.icon}
                               flag={true}
                             />

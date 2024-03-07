@@ -1,7 +1,7 @@
 import Image from "next/image";
 import AtharvLogo from "../../../assets/sports_icons/atharv_logo.png";
 import UpcomingEvents from "./UpcomingEvents";
-import { EventData } from "./EventData";
+import { earliestTwoEvents } from "./EventData";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -74,15 +74,15 @@ const SportsHeading = () => {
           >
             <UpcomingEvents
               icon={require("../../../assets/sports_icons/icon_knight.svg")}
-              date={EventData[0].Date}
-              name={EventData[0].event}
-              content={EventData[0].Info}
+              date={earliestTwoEvents[0].date}
+              name={earliestTwoEvents[0].eventName}
+              content={earliestTwoEvents[0].desc}
             />
             <UpcomingEvents
               icon={require("../../../assets/sports_icons/icon_knight.svg")}
-              date={EventData[1].Date}
-              name={EventData[1].event}
-              content={EventData[1].Info}
+              date={earliestTwoEvents[1].date}
+              name={earliestTwoEvents[1].eventName}
+              content={earliestTwoEvents[1].desc}
             />
           </Box>
         </Stack>

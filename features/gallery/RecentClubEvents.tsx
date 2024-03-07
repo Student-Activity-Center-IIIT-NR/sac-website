@@ -6,7 +6,7 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
-import { recentClubEvents } from "./GalleryData";
+import { recentClubEvents } from "../../data/EventsAndGallery/GalleryData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -69,8 +69,8 @@ const RecentClubEvents = () => {
                     <Image
                       src={
                         index === 0
-                          ? recentClubEvents[len - 1].img
-                          : recentClubEvents[index - 1].img
+                          ? recentClubEvents[len - 1].image[0]
+                          : recentClubEvents[index - 1].image[0]
                       }
                       alt={""}
                       height={"270px"}
@@ -107,7 +107,7 @@ const RecentClubEvents = () => {
                     }}
                   >
                     <Image
-                      src={step.img}
+                      src={step.image[0]}
                       alt={step.name}
                       height={"356px"}
                       width={"356px"}
@@ -145,8 +145,8 @@ const RecentClubEvents = () => {
                     <Image
                       src={
                         index === len - 1
-                          ? recentClubEvents[0].img
-                          : recentClubEvents[index + 1].img
+                          ? recentClubEvents[0].image[0]
+                          : recentClubEvents[index + 1].image[0]
                       }
                       alt={""}
                       height={"270px"}
@@ -184,7 +184,7 @@ const RecentClubEvents = () => {
           color={"#000000"}
           mt={"10px"}
         >
-          {recentClubEvents[activeStep].clubName}
+          {recentClubEvents[activeStep].club}
         </Typography>
         <Typography
           fontFamily={"Rubik"}

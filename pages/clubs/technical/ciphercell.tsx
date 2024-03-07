@@ -9,21 +9,7 @@ import cipherBg from "../../../assets/technical_clubs_bg/ciphercell.png";
 import cipherBgTop from "../../../assets/technical_clubs_bg/bg_cipher_top.svg";
 import cipherBgBottom from "../../../assets/technical_clubs_bg/bg_cipher_bottom.svg";
 import cipherLogo from "../../../assets/technical_clubs_bg/ciphercell_logo.png";
-import { StaticImageData } from "next/image";
-
-// import crew
-import V_Jaswanth from "../../../assets/team_23-24/Vemula_Jashwanth.jpeg";
-import Alankrit from "../../../assets/team_23-24/Alankrit_Sharma.jpg"
-import Shreyansh_Kushwaha from "../../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
-import Venkata_surya from "../../../assets/team_23-24/Venkata_Surya_Sundar_Vadali.jpg"
-import Vishal_Sharma from "../../../assets/team_23-24/Vishal_Sharma.jpg"
-import Priyanshu_shri from "../../../assets/team_23-24/Priyanshu_Srivastava.jpg"
-
-// import events
-import ctf1 from "../../../assets/club_event_pics/technical/ctf1.jpeg";
-import ctf2 from "../../../assets/club_event_pics/technical/ctf2.jpeg";
-import ctf3 from "../../../assets/club_event_pics/technical/ctf3.jpeg";
-import ctf4 from "../../../assets/club_event_pics/technical/ctf4.jpeg";
+import { ciphercell } from "../../../data/Crews/TechnicalClubCrew";
 
 const Ciphercell = () => {
   return (
@@ -35,12 +21,6 @@ const Ciphercell = () => {
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
-          event1Name="Cryptic Hunt"
-          event1Date="February 19, 2023"
-          event1Desc="Introduction to Cryptography"
-          event2Name="CTF Workshop"
-          event2Date="April 2, 20233"
-          event2Desc="Workshop on Capture The Flag"
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of
@@ -66,8 +46,8 @@ const Ciphercell = () => {
             pb: 6,
           }}
         >
-          <Crew props={crew} />
-          <Gallery props={gallery} />
+          <Crew props={ciphercell} />
+          <Gallery club="Ciphercell" />
         </Box>
       </ClubsLayout>
     </>
@@ -75,56 +55,3 @@ const Ciphercell = () => {
 };
 
 export default Ciphercell;
-
-interface CrewProps {
-  img: StaticImageData;
-  name: string;
-  post: string;
-}
-
-interface GalleryProps {
-  name: string;
-  img: StaticImageData[];
-  date: string;
-}
-
-const crew: CrewProps[] = [
-  {
-    img: V_Jaswanth,
-    name: "Jaswanth Vemula",
-    post: "Club Secretary",
-  },
-  {
-    img: Alankrit,
-    name: "Alankrit Sharma",
-    post: "Vice Secretary",
-  },
-  {
-    img:Priyanshu_shri ,
-    name: "Priyanshi Srivastava",
-    post: "Core Member",
-  },
-  {
-    img: Shreyansh_Kushwaha,
-    name: "Shreyansh Kushwaha",
-    post: "Core Member",
-  },
-  {
-    img: Venkata_surya,
-    name: "Venkata Surya Sundar Vadali",
-    post: "Core Member",
-  },
-  {
-    img: Vishal_Sharma,
-    name: "Vishal Sharma",
-    post: "Core Member",
-  },
-];
-
-const gallery: GalleryProps[] = [
-  {
-    name: "Intra College CTF",
-    date: "28 March 2022",
-    img: [ctf1, ctf2, ctf3, ctf4],
-  },
-];

@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import PaperItem from "./PaperItem";
 import SingleDate from "./SingleDate";
-import { calendarData } from "./EventCalendarData";
+import { calendarData } from "../../data/EventsAndGallery/EventCalendarData";
 
 const Calendar = () => {
   const currDate = new Date();
