@@ -211,7 +211,7 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Quiz 2",
     icon: rectangleIcon,
     club: "Inquizitive",
-    desc: ""
+    desc: "Monthly Quiz"
   },
   {
     date: "12-03-2024",
@@ -225,49 +225,49 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "B2B Auction",
     icon: rectangleIcon,
     club: "TSoC",
-    desc: ""
+    desc: "Bit2Byte : Where Innovation Meets Opportunity"
   },
   {
     date: "14-03-2024",
     eventName: "FilmVenture Safari",
     icon: triangleIcon,
     club: "Indradhanush",
-    desc: ""
+    desc: "A holistic cinematic journey fostering teamwork, creativity, problem-solving, and cultural appreciation, creating memorable experiences for all participants."
   },
   {
     date: "15-03-2024",
     eventName: "Bit2Byte",
     icon: rectangleIcon,
     club: "TSoC",
-    desc: ""
+    desc: "Bit2Byte: A Journey of Innovation Across Three Days"
   },
   {
     date: "18-03-2024",
-    eventName: "Election Campaign starts",
+    eventName: "MUN Election Day-1",
     icon: triangleIcon,
     club: "MUN",
-    desc: ""
+    desc: "Election Campaign starts"
   },
   {
     date: "19-03-2024",
-    eventName: "Campaigning",
+    eventName: "MUN Election Day-2",
     icon: triangleIcon,
     club: "MUN",
-    desc: ""
+    desc: "Electiion Campaigning"
   },
   {
     date: "20-03-2024",
-    eventName: "Election voting & Results",
+    eventName: "MUN Election Day-3",
     icon: triangleIcon,
     club: "MUN",
-    desc: ""
+    desc: "Election voting & Results"
   },
   {
     date: "21-03-2024",
     eventName: "B League",
     icon: crossIcon,
     club: "Atharv",
-    desc: ""
+    desc: "Basketball Tournament"
   },
   {
     date: "24-03-2024",
@@ -282,147 +282,147 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Shuttle Showdown",
     icon: crossIcon,
     club: "Atharv",
-    desc: ""
+    desc: "Badminton Tournament"
   },
   {
     date: "02-04-2024",
-    eventName: "ad quest",
+    eventName: "Ad quest",
     icon: triangleIcon,
     club: "CDT",
-    desc: ""
+    desc: "Event by CDT "
   },
   {
     date: "03-04-2024",
     eventName: "Quiz 3",
     icon: rectangleIcon,
     club: "Inquizitive",
-    desc: ""
+    desc: "Monthly Quiz"
   },
   {
     date: "05-04-2024",
     eventName: "Jamming night",
     icon: triangleIcon,
     club: "Capriccio",
-    desc: ""
+    desc: "Musical Event"
   },
   {
     date: "06-04-2024",
     eventName: "Hack-a-Sol 3.0",
     icon: starIcon,
     club: "SAC",
-    desc: ""
+    desc: "28-hours intense hackathon"
   },
   {
     date: "08-04-2024",
     eventName: "Quiz",
     icon: starIcon,
     club: "Shutterbug",
-    desc: ""
+    desc: "Quiz on Photography"
   },
   {
     date: "09-04-2024",
     eventName: "JAM",
     icon: rectangleIcon,
     club: "ComEt",
-    desc: ""
+    desc: "Event by ComEt."
   },
   {
     date: "10-04-2024",
     eventName: "Workshop",
     icon: rectangleIcon,
     club: "TSoC",
-    desc: ""
+    desc: "Workshop for Tech Enthusiasts"
   },
   {
     date: "11-04-2024",
     eventName: "News Report Anchoring",
     icon: triangleIcon,
     club: "TDB",
-    desc: ""
+    desc: "Debate of News Report"
   },
   {
     date: "12-04-2024",
     eventName: "Origami Workshop",
     icon: triangleIcon,
     club: "Indradhanush",
-    desc: ""
+    desc: "Unfold your creativity with our Origami Workshop, a captivating exploration into the art of paper folding.x"
   },
   {
     date: "12-04-2024",
     eventName: "Aaghaaz",
     icon: crossIcon,
     club: "Atharv",
-    desc: ""
+    desc: "Inter-college Cricket Tournament"
   },
   {
     date: "13-04-2024",
     eventName: "Dance Workshop 2",
     icon: triangleIcon,
     club: "Igniters",
-    desc: ""
+    desc: "Learning New Dance moves"
   },
   {
     date: "14-04-2024",
     eventName: "Local File Inclusion",
     icon: rectangleIcon,
     club: "Ciphercell",
-    desc: ""
+    desc: "Event by Ciphercell."
   },
   {
     date: "14-04-2024",
     eventName: "Blood Donation Camp",
     icon: starIcon,
     club: "NSS",
-    desc: ""
+    desc: "Donating Blood to needy one"
   },
   {
     date: "15-04-2024",
     eventName: "Quiz 4",
     icon: rectangleIcon,
     club: "Inquizitive",
-    desc: ""
+    desc: "Monthly Quiz"
   },
   {
     date: "17-04-2024",
     eventName: "Linguistic Showdown",
     icon: rectangleIcon,
     club: "AIML",
-    desc: ""
+    desc: "Workshop of NLP"
   },
   {
     date: "18-04-2024",
     eventName: "Competition",
     icon: starIcon,
     club: "Shutterbug",
-    desc: ""
+    desc: "Competition for photography enthusiasts"
   },
   {
     date: "19-04-2024",
     eventName: "Funtakshari",
     icon: triangleIcon,
     club: "Capriccio",
-    desc: ""
+    desc: "A fun twists to usual Antakshari"
   },
   {
     date: "20-04-2024",
     eventName: "Inter-MUN",
     icon: triangleIcon,
     club: "MUN",
-    desc: ""
+    desc: "Inter College MUN conference"
   },
   {
     date: "23-04-2024",
     eventName: "Descode",
     icon: rectangleIcon,
     club: "TSoC",
-    desc: ""
+    desc: "CP contest"
   },
   {
     date: "24-04-2024",
     eventName: "Anime Quiz",
     icon: triangleIcon,
     club: "C2C",
-    desc: ""
+    desc: "Quiz for Anime Lovers"
   },
   {
     date: "25-04-2024",
@@ -436,7 +436,7 @@ export const calendarData: CalendarDataProps[] = [
     eventName: "Bug-Hunting",
     icon: rectangleIcon,
     club: "Ciphercell",
-    desc: ""
+    desc: "Finding Bug(errors)"
   },
   {
     date: "15-08-2024",
