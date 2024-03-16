@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Stack, Box, Typography } from "@mui/material";
-import Map from "../../assets/campustour/map.jpeg";
+import Map from "../../assets/campustour/map-iiitnr.png";
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
@@ -38,7 +38,7 @@ const LandingPage = () => {
           <DynamicReactPlayer
             url={googleDriveVideoUrl}
             controls={true}
-            width="800px"
+            width="700px"
             height="470px"
           />
         </div>
@@ -49,12 +49,12 @@ const LandingPage = () => {
           overflow: "hidden",
           boxShadow: " -7px -7px 35px #c9c8c5 ,  7px 7px 35px #ffffff",
           marginTop: "100px",
-          marginRight: "150px",
+          marginRight: "110px",
           height: "470px",
-          width: "470px",
+          width: "596px",
         }}
       >
-        <Image src={Map} alt="Map" />
+        <Image src={Map} alt="Map" width={596} height={470} objectFit="cover"  />
       </Box>
     </Stack>
   );
