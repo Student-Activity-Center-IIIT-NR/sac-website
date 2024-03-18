@@ -20,6 +20,10 @@ const navLinks = [
     url: "/events",
   },
   {
+    name: "Campus Tour",
+    url: "/campus",
+  },
+  {
     name: "Gatepass",
     url: "/gatepass",
   },
