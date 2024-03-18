@@ -11,7 +11,7 @@ const DynamicReactPlayer = dynamic(() => import("react-player"), {
 
 const LandingPage = () => {
   const [isClient, setIsClient] = useState(false);
-  const googleDriveVideoUrl = "https://www.youtube.com/watch?v=lj98IwHsGoM";
+  const googleDriveVideoUrl = "https://youtu.be/YpxA0tJVJLA";
   useEffect(() => {
     setIsClient(true);
   }, []);
