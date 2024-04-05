@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
-import { autoPlay } from "react-swipeable-views-utils-react-18-fix";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 import { useState } from "react";
 import Image from "next/image";
 import { Button, Stack, useTheme } from "@mui/material";
