@@ -197,61 +197,85 @@ export const TeamData: TeamDataProps = {
         img: manoj_SacP,
         name: "Dr. MANOJ KUMAR MAJUMDER",
         post: "SAC President",
+        linkedin:"https://in.linkedin.com/in/manoj-kuamr-majumder-3b15b823",
+        mail:"manoj@iiitnr.edu.in"
       },
       {
         img: Kamal,
         name: "Kamal Solanki",
         post: "PG Representative",
+        linkedin:"https://in.linkedin.com/in/kamal-solanki-9b8901aa",
+        mail:"kamal@iiitnr.edu.in"
       },
       {
         img: Aditya_Oza,
         name: "Aditya Oza",
         post: "UG Representative (Boys)",
+        linkedin:"https://in.linkedin.com/in/aditya-oza-abcd",
+        mail:"aditya21102@iiitnr.edu.in"
       },
       {
         img: Kanika,
         name: "Kanika Chaurasia",
         post: "UG Representative (Girls)",
+        linkedin:"https://in.linkedin.com/in/kanika-chaurasia-a13868257",
+        mail:"kanika22100@iiitnr.edu.in"
       },
       {
         img: Shivam_Kushwaha,
         name: "Shivam Kushwaha",
         post: "Science and Technology Secretary (Boys)",
+        linkedin:"https://in.linkedin.com/in/shivam-kushwaha21",
+        mail:"shivam21102@iiitnr.edu.in"
       },
       {
         img: Ch_Swati,
         name: "Ch Swati",
         post: "Science and Technology Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/ch-swati-a01a80257",
+        mail:"ch22102@iiitnr.edu.in"
       },
       {
         img: Akshat_Shree_Mishra,
         name: "Akshat Shree Mishra",
         post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin:"https://in.linkedin.com/in/akshat-shree-mishra-4171512b6",
+        mail:"akshatm22102@iiitnr.edu.in"
       },
       {
         img: Rimjhim_Sharma,
         name: "Rimjhim Sharma",
         post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/rimjhim-sharma-966b38257",
+        mail:"rimjhim22100@iiitnr.edu.in"
       },
       {
         img: Deependra_Singh_Bhow,
         name: "Deependra Singh Bhow",
         post: "Sports Secretary (Boys)",
+        linkedin:"https://in.linkedin.com/in/deependra-singh-bhow-956864238",
+        mail:"deependra21102@iiitnr.edu.in"
       },
       {
         img: Kusum_Patel,
         name: "Kusum Patel",
         post: "Sports Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/kusum-patel",
+        mail:"kusum22102@iiitnr.edu.in"
       },
       {
         img: Jay_Padia,
         name: "Jay Padia",
         post: "Media and IT Cell Secretary (Boys)",
+        linkedin:"https://in.linkedin.com/in/jay-padia",
+        mail:"jay21101@iiitnr.edu.in"
       },
       {
         img: R_Sai_Shivani,
         name: "R.Sai Shivani",
         post: "Media and IT Cell Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/rsaishivani",
+        mail:"r22102@iiitnr.edu.in"
       },
     ],
 
