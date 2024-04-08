@@ -29,10 +29,34 @@ interface RecentClubEventsProps {
 }
 
 interface ClubEventsProps {
-  cultural: { name: string; date?: string; image: StaticImageData[], club: string }[];
-  technical: { name: string; date?: string; image: StaticImageData[], club: string }[];
-  sports: { name: string; date?: string; image: StaticImageData[], club: string }[];
-  media: { name: string; date?: string; image: StaticImageData[], club: string }[];
+  cultural: {
+    name: string;
+    date?: string;
+    image: StaticImageData[];
+    club: string;
+    year: string;
+  }[];
+  technical: {
+    name: string;
+    date?: string;
+    image: StaticImageData[];
+    club: string;
+    year: string;
+  }[];
+  sports: {
+    name: string;
+    date?: string;
+    image: StaticImageData[];
+    club: string;
+    year: string;
+  }[];
+  media: {
+    name: string;
+    date?: string;
+    image: StaticImageData[];
+    club: string;
+    year: string;
+  }[];
 }
 
 /*
@@ -65,32 +89,46 @@ export const majorEvents: MajorEventsProps[] = [
   },
 ];
 
-export const recentClubEvents: RecentClubEventsProps[] = allEvents.filter((event) =>
-  event.name === "Chai Pe Charcha"
-  || event.name === "Yet to be Decided"
-  || event.name === "CanvaKar"
-  || event.name === "Quizadry"
-  || event.name === "Yet to be Decided"
-  || event.name === "Bit-2-Byte")
+export const recentClubEvents: RecentClubEventsProps[] = allEvents.filter(
+  (event) =>
+    event.name === "Chai Pe Charcha" ||
+    event.name === "Yet to be Decided" ||
+    event.name === "CanvaKar" ||
+    event.name === "Quizadry" ||
+    event.name === "Yet to be Decided" ||
+    event.name === "Bit-2-Byte"
+);
 
 export const ClubEvents: ClubEventsProps = {
-  cultural: allEvents.filter((event) =>
-    event.club === "TDB" || event.club === "CDT" ||
-    event.club === "MUN" || event.club === "Igniters" ||
-    event.club === "YTC" || event.club === "Indradhanush" ||
-    event.club === "Capriccio" || event.club === "C2C"),
-  technical: allEvents.filter((event) =>
-    event.club === "TSoC" || event.club === "AIML" ||
-    event.club === "Inquizitive" || event.club === "ComEt" ||
-    event.club === "BIS" || event.club === "IIC" || event.club === "Ciphercell"),
-  media: allEvents.filter((event) =>
-    event.club === "Shutterbug"),
+  cultural: allEvents.filter(
+    (event) =>
+      event.club === "TDB" ||
+      event.club === "CDT" ||
+      event.club === "MUN" ||
+      event.club === "Igniters" ||
+      event.club === "YTC" ||
+      event.club === "Indradhanush" ||
+      event.club === "Capriccio" ||
+      event.club === "C2C"
+  ),
+  technical: allEvents.filter(
+    (event) =>
+      event.club === "TSoC" ||
+      event.club === "AIML" ||
+      event.club === "Inquizitive" ||
+      event.club === "ComEt" ||
+      event.club === "BIS" ||
+      event.club === "IIC" ||
+      event.club === "Ciphercell"
+  ),
+  media: allEvents.filter((event) => event.club === "Shutterbug"),
   sports: [
     {
       name: "Lakshya",
       date: "",
       image: [lakshya1, lakshya2, lakshya3, lakshya4, lakshya5, lakshya6],
-      club: "Atharv"
+      club: "Atharv",
+      year: "2023",
     },
   ],
 };

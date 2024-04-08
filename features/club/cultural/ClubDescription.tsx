@@ -7,9 +7,10 @@ import Link from "next/link";
 interface Props {
   children: ReactNode;
   img: StaticImageData;
+  insta: string;
 }
 
-function ClubDescription({ children, img }: Props) {
+function ClubDescription({ children, img, insta }: Props) {
   return (
     <>
       <Box
@@ -64,10 +65,10 @@ function ClubDescription({ children, img }: Props) {
               marginTop: "20px",
             }}
           >
-            {["Instagram", "Linkedin", "Youtube"].map((item, index) => {
+            {["Instagram"].map((item, index) => {
               return (
                 <>
-                  <Link href={""} key={index}>
+                  <a href={insta} key={index} target="_blank">
                     <Typography
                       fontFamily={"Baskervville"}
                       fontStyle={"italic"}
@@ -81,7 +82,7 @@ function ClubDescription({ children, img }: Props) {
                     >
                       {item}
                     </Typography>
-                  </Link>
+                  </a>
                 </>
               );
             })}

@@ -16,7 +16,7 @@ const Website: FunctionComponent<WebsiteProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Website" bg={WebsiteBg} />
-        <ClubDescription img={WebsiteLogo}>
+        <ClubDescription img={WebsiteLogo} insta="">
           Website Team is SAC-IIITNR&apos;s official team for maintainance of
           its Website.
           <br /> This team intends to help interested students of web

@@ -18,7 +18,7 @@ const TakeDaBait: FunctionComponent<TakeDaBaitProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Take da Bait" bg={tbdBg} />
-        <ClubDescription img={tbdLogo}>
+        <ClubDescription img={tbdLogo} insta="https://www.instagram.com/take_da_bait/">
           Take da Bait is a debate club at IIIT-Naya Raipur that was officially
           sanctioned under the Student Activity Council on January 5th, 2020.
           The club&apos;s purpose is to provide a platform for students to

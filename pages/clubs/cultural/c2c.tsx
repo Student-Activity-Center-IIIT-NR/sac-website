@@ -18,7 +18,7 @@ const CoverToCover: FunctionComponent<CoverToCoverProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Cover to Cover" bg={c2cBg} />
-        <ClubDescription img={c2cLogo}>
+        <ClubDescription img={c2cLogo} insta="https://www.instagram.com/c2c_iiitnr/">
           C2C is a literature club at IIIT Naya Raipur, that aims to promote the
           love and appreciation of literature among its members. The club
           creates a nurturing environment that encourages creativity and

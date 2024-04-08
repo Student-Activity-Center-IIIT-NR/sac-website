@@ -66,9 +66,9 @@ const LandingPage = () => {
               cursor: "pointer",
             }}
           >
-            <Link href={"https://hms.iiitnr.edu.in:3000/#/"}>
+            <a href={"https://hms.iiitnr.edu.in:3000/#/"} target="_blank">
               <Image src={lan} alt="" height={"100px"} width={"200px"} />
-            </Link>
+            </a>
           </Box>
           <Box
             sx={{

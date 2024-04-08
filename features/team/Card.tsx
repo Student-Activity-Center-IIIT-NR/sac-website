@@ -101,7 +101,7 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
               />
             </a>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               width: "22px",
               height: "22px",
@@ -116,7 +116,7 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
                 objectFit="cover"
               />
             </a>
-          </Box>
+          </Box> */}
           <Box
             sx={{
               height: "22px",

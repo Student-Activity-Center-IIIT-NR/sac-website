@@ -21,6 +21,7 @@ const Aiml = () => {
           bgTop={aimlBgTop}
           logo={aimlLogo}
           color="#73DACA"
+          instagram="https://www.instagram.com/aiml_iiitnr/"
         />
         <ClubDescription bg={aimlBg}>
           The AI/ML club is focused on helping individuals evolve from admirers

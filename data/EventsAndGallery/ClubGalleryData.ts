@@ -96,130 +96,163 @@ import ganraya3 from "../../assets/club_event_pics/cultural/ganraya3.jpeg";
 import ganraya4 from "../../assets/club_event_pics/cultural/ganraya4.jpeg";
 
 interface ClubEventsProps {
-    name: string; date?: string; image: StaticImageData[]; club: string
+  name: string;
+  date?: string;
+  image: StaticImageData[];
+  club: string;
+  year: string;
 }
 export const allEvents: ClubEventsProps[] = [
-    {
-        name: "Bharat ke Rang",
-        date: "13 Jan 2023",
-        image: [bharat1, bharat3, bharat4, bharat5, bharat6],
-        club: "Shutterbug"
-    },
-    {
-        name: "Jai Ganraya",
-        date: "31 Aug 2022",
-        image: [ganraya1, ganraya2, ganraya3, ganraya4],
-        club: "Shutterbug"
-    },
-    {
-        name: "Quizadry",
-        date: "",
-        image: [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6],
-        club: "Inquizitive"
-    },
-    {
-        name: "Arduino Workshop",
-        date: "Jan 2023",
-        image: [arduino2, arduino1, arduino4, arduino3],
-        club: "ComEt"
-    },
-    {
-        name: "Bit-2-Byte",
-        date: "9-10 April 2022",
-        image: [bit1, bit2, bit3, bit4 , bit5, bit6],
-        club: "TSoC"
-    },
-    {
-        name: "Intra College CTF",
-        date: "28 March 2022",
-        image: [ctf1, ctf2, ctf3, ctf4 , ctf5],
-        club: "Ciphercell"
-    },
-    {
-        name: "Hacknovate",
-        date: "",
-        image: [hack1, hack2, hack3, hack4, hack5, hack6],
-        club: ""
-    },
-    {
-        name: "Rampage",
-        date: "12 Sept 2022",
-        image: [ramp1, ramp2, ramp3, ramp4],
-        club: "C2C"
-    },
-    {
-        name: "CanvaKar",
-        date: "24 Sept 2022",
-        image: [canva1, canva2, canva3, canva4],
-        club: "Indradhanush"
-    },
-    {
-        name: "Mellow Response",
-        date: "9 May 2022",
-        image: [mellow1, mellow2, mellow3, mellow4],
-        club: "Capriccio"
-    },
-    {
-        name: "Nukkad Natak",
-        date: "2 Nov 2022",
-        image: [nukkad1, nukkad2, nukkad3, nukkad4],
-        club: "CDT"
-    },
-    {
-        name: "Dance Workshop",
-        date: "7 Jan 2023",
-        image: [dance1, dance2, dance3, dance4],
-        club: "Igniters"
-    },
-    {
-        name: "Mellow Response",
-        date: "9 May 2022",
-        image: [mellow1, mellow2, mellow3],
-        club: "Igniters"
-    },
-    {
-        name: "Yet to be Decided",
-        date: "20 Jan 2023",
-        image: [yet1, yet2, yet3, yet4],
-        club: "TDB"
-    },
-    {
-        name: "MUN Conference 2022",
-        date: "7-8 May 2022",
-        image: [munc1, munc2, munc3, munc4, munc5, munc6, munc7, munc8],
-        club: "MUN"
-    },
-    {
-        name: "Chai Pe Charcha",
-        date: "19 Jan 2023",
-        image: [chai1, chai2, chai3, chai4],
-        club: "MUN"
-    },
-    {
-        name: "What If",
-        date: "09 Sept 2022",
-        image: [whatif1, whatif2, whatif3, whatif4],
-        club: "MUN"
-    },
-    {
-        name: "Introduction to AIML",
-        date: "29 Nov 2022",
-        image: [intro_aiml1, intro_aiml2, intro_aiml3, intro_aiml4],
-        club: "AIML"
-    },
-    {
-        name: "Kaggle Competition",
-        date: "7 Feb 2023",
-        image: [
-            kaggle_comp1,
-            kaggle_comp2,
-            kaggle_comp3,
-            kaggle_comp4,
-            kaggle_comp5,
-            kaggle_comp6,
-            kaggle_comp7,
-            kaggle_comp8,
-        ],
-        club: "AIML"
-    },
-]
+  //Term 2022-23
+  {
+    name: "Bharat ke Rang",
+    date: "13 Jan 2023",
+    image: [bharat1, bharat3, bharat4, bharat5, bharat6],
+    club: "Shutterbug",
+    year: "2022",
+  },
+  {
+    name: "Jai Ganraya",
+    date: "31 Aug 2022",
+    image: [ganraya1, ganraya2, ganraya3, ganraya4],
+    club: "Shutterbug",
+    year: "2022",
+  },
+  {
+    name: "Quizadry",
+    date: "",
+    image: [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6],
+    club: "Inquizitive",
+    year: "2022",
+  },
+  {
+    name: "Arduino Workshop",
+    date: "Jan 2023",
+    image: [arduino2, arduino1, arduino4, arduino3],
+    club: "ComEt",
+    year: "2022",
+  },
+  {
+    name: "Bit-2-Byte",
+    date: "9-10 April 2022",
+    image: [bit1, bit2, bit3, bit4, bit5, bit6],
+    club: "TSoC",
+    year: "2022",
+  },
+  {
+    name: "Intra College CTF",
+    date: "28 March 2022",
+    image: [ctf1, ctf2, ctf3, ctf4, ctf5],
+    club: "Ciphercell",
+    year: "2022",
+  },
+  {
+    name: "Hacknovate",
+    date: "",
+    image: [hack1, hack2, hack3, hack4, hack5, hack6],
+    club: "",
+    year: "2022",
+  },
+  {
+    name: "Rampage",
+    date: "12 Sept 2022",
+    image: [ramp1, ramp2, ramp3, ramp4],
+    club: "C2C",
+    year: "2022",
+  },
+  {
+    name: "CanvaKar",
+    date: "24 Sept 2022",
+    image: [canva1, canva2, canva3, canva4],
+    club: "Indradhanush",
+    year: "2022",
+  },
+  {
+    name: "Mellow Response",
+    date: "9 May 2022",
+    image: [mellow1, mellow2, mellow3, mellow4],
+    club: "Capriccio",
+    year: "2022",
+  },
+  {
+    name: "Nukkad Natak",
+    date: "2 Nov 2022",
+    image: [nukkad1, nukkad2, nukkad3, nukkad4],
+    club: "CDT",
+    year: "2022",
+  },
+  {
+    name: "Dance Workshop",
+    date: "7 Jan 2023",
+    image: [dance1, dance2, dance3, dance4],
+    club: "Igniters",
+    year: "2022",
+  },
+  {
+    name: "Mellow Response",
+    date: "9 May 2022",
+    image: [mellow1, mellow2, mellow3],
+    club: "Igniters",
+    year: "2022",
+  },
+  {
+    name: "Yet to be Decided",
+    date: "20 Jan 2023",
+    image: [yet1, yet2, yet3, yet4],
+    club: "TDB",
+    year: "2022",
+  },
+  {
+    name: "MUN Conference 2022",
+    date: "7-8 May 2022",
+    image: [munc1, munc2, munc3, munc4, munc5, munc6, munc7, munc8],
+    club: "MUN",
+    year: "2022",
+  },
+  {
+    name: "Chai Pe Charcha",
+    date: "19 Jan 2023",
+    image: [chai1, chai2, chai3, chai4],
+    club: "MUN",
+    year: "2022",
+  },
+  {
+    name: "What If",
+    date: "09 Sept 2022",
+    image: [whatif1, whatif2, whatif3, whatif4],
+    club: "MUN",
+    year: "2022",
+  },
+  {
+    name: "Introduction to AIML",
+    date: "29 Nov 2022",
+    image: [intro_aiml1, intro_aiml2, intro_aiml3, intro_aiml4],
+    club: "AIML",
+    year: "2022",
+  },
+  {
+    name: "Kaggle Competition",
+    date: "7 Feb 2023",
+    image: [
+      kaggle_comp1,
+      kaggle_comp2,
+      kaggle_comp3,
+      kaggle_comp4,
+      kaggle_comp5,
+      kaggle_comp6,
+      kaggle_comp7,
+      kaggle_comp8,
+    ],
+    club: "AIML",
+    year: "2022",
+  },
+
+  // Term 2023-24
+  // {
+  //   name: "Intra College CTF",
+  //   date: "28 March 2022",
+  //   image: [ctf1, ctf2, ctf3, ctf4, ctf5],
+  //   club: "Ciphercell",
+  //   year: "2023",
+  // },
+];

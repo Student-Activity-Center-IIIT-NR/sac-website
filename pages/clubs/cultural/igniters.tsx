@@ -18,7 +18,7 @@ const Igniters: FunctionComponent<IgnitersProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Igniters" bg={ignitersBg} />
-        <ClubDescription img={ignitersLogo}>
+        <ClubDescription img={ignitersLogo} insta="https://www.instagram.com/igniters_iiitnr_">
           Igniters is a dance club at a technical college that aims to create
           excitement and energy through the art of dance. The club was founded
           two years ago and has already had success on and off campus. The goal

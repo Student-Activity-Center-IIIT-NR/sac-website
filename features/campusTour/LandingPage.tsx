@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Stack, Box, Typography } from "@mui/material";
 import Map from "../../assets/campustour/map-iiitnr.png";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
 const DynamicReactPlayer = dynamic(() => import("react-player"), {
