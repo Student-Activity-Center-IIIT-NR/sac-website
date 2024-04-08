@@ -21,6 +21,7 @@ const Comet = () => {
           bgTop={cometBgTop}
           logo={cometLogo}
           color="#FF9E64"
+          instagram="https://www.instagram.com/comet.iiitnr/"
         />
         <ClubDescription bg={cometBg}>
           The club was established in 2018 under the name CECoT (Community of

@@ -21,6 +21,7 @@ const Inquizitive = () => {
           bgTop={inquizitiveBgTop}
           logo={inquizitiveLogo}
           color="#BB9AF7"
+          instagram="https://www.instagram.com/inquizitive_iiitnr/"
         />
         <ClubDescription bg={inquizitiveBg}>
           True to its name, Inquisitive is the abode of the most curious minds

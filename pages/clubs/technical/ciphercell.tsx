@@ -21,6 +21,7 @@ const Ciphercell = () => {
           bgTop={cipherBgTop}
           logo={cipherLogo}
           color="#F7768E"
+          instagram="https://www.instagram.com/c1ph3rc3ll_iiitnr/"
         />
         <ClubDescription bg={cipherBg}>
           CipherCell is an official cybersecurity club at IIIT-NR. The goal of

@@ -24,6 +24,7 @@ const BIS: FunctionComponent<BISProps> = () => {
           bgTop={BISBgTop}
           logo={BISLogo}
           color={"#CA50F5"}
+          instagram=""
         />
         <ClubDescription bg={BISBg}>
           The Bureau of Indian Standards (BIS) has a program called Standards

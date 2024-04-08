@@ -23,6 +23,7 @@ const TSOC: FunctionComponent<TSOCProps> = () => {
           bgTop={tsocBgTop}
           logo={tsocLogo}
           color={"#7AA2F7"}
+          instagram="https://www.instagram.com/tsoc_iiitnr/"
         />
         <ClubDescription bg={tsocBg}>
           The Society of Coders at IIIT-Naya Raipur is a student-run club that

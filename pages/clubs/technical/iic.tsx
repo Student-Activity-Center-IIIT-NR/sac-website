@@ -24,6 +24,7 @@ const IIC: FunctionComponent<IICProps> = () => {
           bgTop={IICBgTop}
           logo={IICLogo}
           color={"#BEA000"}
+          instagram=""
         />
         <ClubDescription bg={IICBg}>
           Institution&apos;s Innovation Council (IIC) program is initiative of
