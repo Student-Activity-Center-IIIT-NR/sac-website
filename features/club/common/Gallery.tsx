@@ -21,46 +21,42 @@ interface GalleryProps {
   date?: string;
   image: StaticImageData[];
   club: string;
+  year: string;
 }
 interface Props {
   club: string;
 }
 const Gallery = ({ club }: Props) => {
-  const DropDown = () => {
-    const [year, setYear] = useState("");
+  const [year, setYear] = useState("2023");
 
+  const DropDown = ({ year }: { year: string }) => {
     const handleChange = (event: SelectChangeEvent) => {
-      setYear(event.target.value as string);
+      setYear(event.target.value);
     };
 
     return (
       <>
         <FormControl
-          disabled
           sx={{
             width: "128px",
           }}
         >
           <InputLabel>Year</InputLabel>
           <Select value={year} label="Age" onChange={handleChange}>
-            <MenuItem value={2018}>2018</MenuItem>
-            <MenuItem value={2019}>2019</MenuItem>
-            <MenuItem value={2020}>2020</MenuItem>
-            <MenuItem value={2021}>2021</MenuItem>
-            <MenuItem value={2022}>2022</MenuItem>
+            <MenuItem value={"2022"}>2022</MenuItem>
+            <MenuItem value={"2023"}>2023</MenuItem>
           </Select>
         </FormControl>
       </>
     );
   };
 
-  const events = allEvents.filter((event) => {
-    return event.club === club;
-  });
   const [page, setPage] = useState(1);
-  const [year, setYear] = useState("");
-  const [event, setEvent] = useState(events[0]);
 
+  const events = allEvents.filter((event) => {
+    return event.club === club && event.year === year;
+  });
+  const [event, setEvent] = useState(events[0]);
   const count = Math.ceil(event.image.length / 4);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
@@ -73,7 +69,7 @@ const Gallery = ({ club }: Props) => {
   };
 
   const handleChange = (event: SelectChangeEvent) => {
-    setYear(event.target.value as string);
+    setYear(event.target.value);
   };
 
   return (
@@ -109,7 +105,7 @@ const Gallery = ({ club }: Props) => {
             justifyContent={"space-between"}
             mt={"21px"}
           >
-            <DropDown />
+            <DropDown year={year} />
             <Stack
               direction={"row"}
               justifyContent={"space-between"}
