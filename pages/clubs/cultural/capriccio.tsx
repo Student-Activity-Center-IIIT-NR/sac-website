@@ -18,7 +18,7 @@ const Capriccio: FunctionComponent<CapriccioProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Capriccio" bg={capriccioBg} />
-        <ClubDescription img={capriccioLogo}>
+        <ClubDescription img={capriccioLogo} insta="https://www.instagram.com/capriccio_iiit_nr">
           Capriccio is a music club under SAC that encourages students to become
           immersed in the art and science of music. The club focuses on the
           creation and performance of music, emphasizing the importance of

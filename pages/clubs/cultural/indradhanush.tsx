@@ -18,7 +18,7 @@ const Indradhanush: FunctionComponent<IndradhanushProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Indradhanush" bg={indradhanushBg} />
-        <ClubDescription img={indradhanushLogo}>
+        <ClubDescription img={indradhanushLogo} insta="https://www.instagram.com/indradhanush_iiitnr/">
           Indradhanush as the name suggests is a club made to add colors to the
           routine college life. So that creativity follows right behind logic,
           symmetry, and expression. Indradhanush is a cultural club of the
