@@ -57,7 +57,8 @@ const Gallery = ({ club }: Props) => {
     return event.club === club && event.year === year;
   });
   const [event, setEvent] = useState(events[0]);
-  const count = Math.ceil(event.image.length / 4);
+
+  const count = Math.ceil((event?.image?.length ?? 0) / 4);
 
   const handleChangePage = (event: ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
@@ -119,7 +120,7 @@ const Gallery = ({ club }: Props) => {
                 lineHeight="28px"
                 color="#565A6E"
               >
-                {event.name}
+                {event?.name ?? ""}
               </Typography>
               <Typography
                 fontFamily="Rubik"
@@ -129,7 +130,7 @@ const Gallery = ({ club }: Props) => {
                 lineHeight="28px"
                 color="#565A6E"
               >
-                {event.date}
+                {event?.date ?? ""}
               </Typography>
             </Stack>
           </Stack>
@@ -159,8 +160,8 @@ const Gallery = ({ club }: Props) => {
             </Stack>
             <Stack direction={"column"} maxWidth={"50%"}>
               <Grid2 container spacing={3} justifyContent={"space-between"}>
-                {event.image
-                  .slice((page - 1) * 4, (page - 1) * 4 + 4)
+                {event?.image
+                  ?.slice((page - 1) * 4, (page - 1) * 4 + 4)
                   .map((step) => {
                     return (
                       <>
