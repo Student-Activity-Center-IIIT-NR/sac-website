@@ -54,7 +54,7 @@ type Name = "cultural" | "technical" | "sports" | "media";
 
 const Gallery = () => {
   const [page, setPage] = useState(1);
-  const [year, setYear] = useState("");
+  const [year, setYear] = useState("2023");
   const [name, setName] = useState<Name>("cultural");
   const [event, setEvent] = useState(ClubEvents[name][0]);
 
@@ -73,7 +73,7 @@ const Gallery = () => {
   };
 
   const handleChange = (event: SelectChangeEvent) => {
-    setYear(event.target.value as string);
+    setYear(event.target.value);
   };
 
   return (
@@ -217,18 +217,17 @@ const Gallery = () => {
           columnGap={"24px"}
         >
           <FormControl
-            disabled
             sx={{
               width: "166px",
             }}
           >
             <InputLabel>Year</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
-              <MenuItem value={2022}>2022</MenuItem>
-              <MenuItem value={2023}>2023</MenuItem>
+              <MenuItem value={"2022"}>2022</MenuItem>
+              <MenuItem value={"2023"}>2023</MenuItem>
             </Select>
           </FormControl>
-          <FormControl
+          {/* <FormControl
             disabled
             sx={{
               width: "166px",
@@ -242,7 +241,7 @@ const Gallery = () => {
               <MenuItem value={2019}>Inquizitive</MenuItem>
               <MenuItem value={2019}>Comet</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
         </Stack>
         <Grid2
           container
@@ -250,7 +249,7 @@ const Gallery = () => {
           mt={"42px"}
           justifyContent={"space-between"}
         >
-          {ClubEvents[name].map((step, index) => {
+          {ClubEvents[name].filter((event: { year: string }) => event.year === year).map((step, index) => {
             return (
               <Grid2 xs={4} key={index}>
                 <StyledTypography
