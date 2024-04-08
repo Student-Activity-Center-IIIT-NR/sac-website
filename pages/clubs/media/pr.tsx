@@ -16,7 +16,7 @@ const PR: FunctionComponent<PRProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="PR and Social Media Team" bg={PRBg} />
-        <ClubDescription img={PRLogo}>
+        <ClubDescription img={PRLogo} insta="">
           PR Team is SAC-IIITNR&apos;s official team for handling all of its
           Social media Accounts. This team intends to help interested students
           to learn about digital contetn creation and provides a supportive

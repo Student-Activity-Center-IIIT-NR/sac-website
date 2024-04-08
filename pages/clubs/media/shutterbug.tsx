@@ -18,7 +18,7 @@ const ShutterBug: FunctionComponent<ShutterBugProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Shutterbug" bg={shutterbugBg} />
-        <ClubDescription img={shutterbugLogo}>
+        <ClubDescription img={shutterbugLogo} insta="https://www.instagram.com/shutterbug_iiitnr/">
           Shutterbug is IIIT Naya Raipur&apos;s official photography club.
           <br /> This club intends to help interested students of photography to
           learn about the fundamentals of this field. It provides a supportive
