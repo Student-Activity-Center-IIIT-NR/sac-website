@@ -56,14 +56,20 @@ const Gallery = () => {
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("2023");
   const [name, setName] = useState<Name>("cultural");
-  const [event, setEvent] = useState(ClubEvents[name][0]);
+  const [event, setEvent] = useState(
+    ClubEvents[name].filter((event: { year: string }) => event.year === year)[0]
+  );
 
   const handleClickName = (name: Name) => {
     setName(name);
   };
 
   const handleClickEvent = (index: number) => {
-    setEvent(ClubEvents[name][index]);
+    setEvent(
+      ClubEvents[name].filter((event: { year: string }) => event.year === year)[
+        index
+      ]
+    );
   };
 
   const count = Math.ceil(event.image.length / 6);
