@@ -8,12 +8,12 @@ import ganesh_chaturthi from "../../assets/major_events_pics/ganesh_chaturthi.jp
 import technovate from "../../assets/major_events_pics/technovate.jpeg";
 
 // Sports
-import lakshya1 from "../../assets/club_event_pics/sports/lakshya1.jpeg";
-import lakshya2 from "../../assets/club_event_pics/sports/lakshya2.jpeg";
-import lakshya3 from "../../assets/club_event_pics/sports/lakshya3.jpeg";
-import lakshya4 from "../../assets/club_event_pics/sports/lakshya4.jpeg";
-import lakshya5 from "../../assets/club_event_pics/sports/lakshya5.jpeg";
-import lakshya6 from "../../assets/club_event_pics/sports/lakshya6.jpeg";
+import lakshya1 from "../../assets/club_event_pics/2022/sports/lakshya1.jpeg";
+import lakshya2 from "../../assets/club_event_pics/2022/sports/lakshya2.jpeg";
+import lakshya3 from "../../assets/club_event_pics/2022/sports/lakshya3.jpeg";
+import lakshya4 from "../../assets/club_event_pics/2022/sports/lakshya4.jpeg";
+import lakshya5 from "../../assets/club_event_pics/2022/sports/lakshya5.jpeg";
+import lakshya6 from "../../assets/club_event_pics/2022/sports/lakshya6.jpeg";
 
 interface MajorEventsProps {
   label: string;
