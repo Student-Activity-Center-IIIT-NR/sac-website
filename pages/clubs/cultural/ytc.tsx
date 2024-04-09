@@ -30,7 +30,7 @@ const YTC: FunctionComponent<YTCProps> = () => {
         </ClubDescription>
         {/* <ClubEvents club="YTC"  /> */}
         {/* <Crew props={crew} /> */}
-        {/* <Gallery club="YTC" /> */}
+        <Gallery club="YTC" />
       </ClubsLayout>
     </>
   );

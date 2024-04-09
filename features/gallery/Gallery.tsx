@@ -56,14 +56,20 @@ const Gallery = () => {
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("2023");
   const [name, setName] = useState<Name>("cultural");
-  const [event, setEvent] = useState(ClubEvents[name][0]);
+  const [event, setEvent] = useState(
+    ClubEvents[name].filter((event: { year: string }) => event.year === year)[0]
+  );
 
   const handleClickName = (name: Name) => {
     setName(name);
   };
 
   const handleClickEvent = (index: number) => {
-    setEvent(ClubEvents[name][index]);
+    setEvent(
+      ClubEvents[name].filter((event: { year: string }) => event.year === year)[
+        index
+      ]
+    );
   };
 
   const count = Math.ceil(event.image.length / 6);
@@ -223,6 +229,7 @@ const Gallery = () => {
           >
             <InputLabel>Year</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
+              <MenuItem value={"2021"}>2021</MenuItem>
               <MenuItem value={"2022"}>2022</MenuItem>
               <MenuItem value={"2023"}>2023</MenuItem>
             </Select>
@@ -249,21 +256,23 @@ const Gallery = () => {
           mt={"42px"}
           justifyContent={"space-between"}
         >
-          {ClubEvents[name].filter((event: { year: string }) => event.year === year).map((step, index) => {
-            return (
-              <Grid2 xs={4} key={index}>
-                <StyledTypography
-                  onClick={() => {
-                    handleClickEvent(index);
-                    scrollTo(0, 1830);
-                  }}
-                >
-                  {step.name}
-                </StyledTypography>
-                <Divider color={"#C0CAF5"} />
-              </Grid2>
-            );
-          })}
+          {ClubEvents[name]
+            .filter((event: { year: string }) => event.year === year)
+            .map((step, index) => {
+              return (
+                <Grid2 xs={4} key={index}>
+                  <StyledTypography
+                    onClick={() => {
+                      handleClickEvent(index);
+                      scrollTo(0, 1830);
+                    }}
+                  >
+                    {step.name}
+                  </StyledTypography>
+                  <Divider color={"#C0CAF5"} />
+                </Grid2>
+              );
+            })}
         </Grid2>
       </Box>
     </>
