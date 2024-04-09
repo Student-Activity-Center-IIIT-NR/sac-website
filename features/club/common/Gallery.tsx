@@ -43,6 +43,7 @@ const Gallery = ({ club }: Props) => {
         >
           <InputLabel>Year</InputLabel>
           <Select value={year} label="Age" onChange={handleChange}>
+            <MenuItem value={"2021"}>2021</MenuItem>
             <MenuItem value={"2022"}>2022</MenuItem>
             <MenuItem value={"2023"}>2023</MenuItem>
           </Select>
