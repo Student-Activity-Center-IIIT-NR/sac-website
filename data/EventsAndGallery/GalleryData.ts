@@ -20,6 +20,10 @@ import MUNC from "../../assets/major_events_pics/MUNC.jpg";
 import MUNC2 from "../../assets/major_events_pics/MUNC2.jpg";
 import scintfic from "../../assets/major_events_pics/scintfic.jpg";
 import scintfic2 from "../../assets/major_events_pics/scintfic2.jpg";
+import tech24_1 from "../../assets/major_events_pics/tech24_1.jpg"
+import tech24_2 from "../../assets/major_events_pics/tech24_2.jpg"
+import tech24_3 from "../../assets/major_events_pics/tech24_3.jpg"
+import tech24_4 from "../../assets/major_events_pics/tech24_4.jpg"
 
 // Sports
 import lakshya1 from "../../assets/club_event_pics/2022/sports/lakshya1.jpeg";
@@ -81,6 +85,29 @@ interface ClubEventsProps {
 */
 
 export const majorEvents: MajorEventsProps[] = [
+  {
+    label: "Technovate 2024",
+    img: tech24_1,
+    date: "16-18 Feb 2024",
+  },
+
+  {
+    label: "Technovate 2024",
+    img: tech24_2,
+    date: "16-18 Feb 2024",
+  },
+
+  {
+    label: "Technovate 2024",
+    img: tech24_3,
+    date: "16-18 Feb 2024",
+  },
+
+  {
+    label: "Technovate 2024",
+    img: tech24_4,
+    date: "16-18 Feb 2024",
+  },
   {
     label: "Republic Day",
     img: Jan26,
