@@ -43,6 +43,9 @@ import arduino1 from "../../assets/club_event_pics/2022/technical/arduino1.jpeg"
 import arduino2 from "../../assets/club_event_pics/2022/technical/arduino2.jpeg";
 import arduino3 from "../../assets/club_event_pics/2022/technical/arduino3.jpeg";
 import arduino4 from "../../assets/club_event_pics/2022/technical/arduino4.jpeg";
+import arduino5 from "../../assets/club_event_pics/2022/technical/arduino5.jpeg";
+import arduino6 from "../../assets/club_event_pics/2022/technical/arduino6.jpeg";
+
 //Cultural
 // 2022
 import ramp1 from "../../assets/club_event_pics/2022/cultural/ramp1.jpeg";
@@ -53,6 +56,7 @@ import canva1 from "../../assets/club_event_pics/2022/cultural/canva1.jpeg";
 import canva2 from "../../assets/club_event_pics/2022/cultural/canva2.jpeg";
 import canva3 from "../../assets/club_event_pics/2022/cultural/canva3.jpeg";
 import canva4 from "../../assets/club_event_pics/2022/cultural/canva4.jpeg";
+import canva5 from "../../assets/club_event_pics/2022/cultural/canva5.jpeg";
 import mellow1 from "../../assets/club_event_pics/2022/cultural/mellow_cap1.jpeg";
 import mellow2 from "../../assets/club_event_pics/2022/cultural/mellow_cap2.jpeg";
 import mellow3 from "../../assets/club_event_pics/2022/cultural/mellow_cap3.jpeg";
@@ -226,7 +230,7 @@ export const allEvents: ClubEventsProps[] = [
   {
     name: "Arduino Workshop",
     date: "Jan 2023",
-    image: [arduino2, arduino1, arduino4, arduino3],
+    image: [arduino2, arduino1, arduino4, arduino3, arduino5, arduino6],
     club: "ComEt",
     year: "2022",
   },
@@ -247,7 +251,7 @@ export const allEvents: ClubEventsProps[] = [
   {
     name: "CanvaKar",
     date: "24 Sept 2022",
-    image: [canva1, canva2, canva3, canva4],
+    image: [canva1, canva2, canva3, canva4], canva5,
     club: "Indradhanush",
     year: "2022",
   },
