@@ -24,23 +24,22 @@ interface dataProps {
 }
 
 const SportsGallery = () => {
-  const [values, setValues] = useState<dataProps>(data[0]);
+  const [index, setIndex] = useState(0);
 
   const len = data.length;
-  const index = len - 1;
 
   const yearDecrement = () => {
     if (index <= 0) {
       return;
     }
-    setValues(data[index - 1]);
+    setIndex(index - 1);
   };
 
   const yearIncrement = () => {
     if (index >= len - 1) {
       return;
     }
-    setValues(data[index + 1]);
+    setIndex(index + 1);
   };
 
   return (
@@ -58,7 +57,7 @@ const SportsGallery = () => {
           fontWeight={400}
           fontSize={"64px"}
           color="#000000"
-          textAlign="left"
+          textAlign="center"
         >
           GALLERY
         </Typography>
@@ -67,7 +66,7 @@ const SportsGallery = () => {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
           }}
         >
           <Image
@@ -88,9 +87,9 @@ const SportsGallery = () => {
             fontSize="32px"
             lineHeight="58px"
             color="#000000"
-            mx={"20px"}
+            textAlign="center"
           >
-            {values.name}
+            {data[index].name}
           </Typography>
           <Image
             src={iconArrow}
@@ -104,11 +103,16 @@ const SportsGallery = () => {
             }}
           />
         </Box>
-        <StyledTypography pr={"20px"}>{values.intro}</StyledTypography>
-        <StyledTypography>
+
+        <StyledTypography textAlign="justify">
+          {data[index].intro}
+        </StyledTypography>
+        <StyledTypography textAlign="justify">
           <strong>WINNER</strong>
         </StyledTypography>
-        <StyledTypography pr={"20px"}>{values.winner}</StyledTypography>
+        <StyledTypography textAlign="justify">
+          {data[index].winner}
+        </StyledTypography>
       </Stack>
       <ImageGrid />
     </Stack>

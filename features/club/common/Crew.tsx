@@ -3,7 +3,9 @@ import Stack from "@mui/system/Stack";
 import Typography from "@mui/material/Typography";
 import Image, { StaticImageData } from "next/image";
 import iconArrow from "../../../assets/icon/icon_arrow_long.svg";
+import iconArrowR from "../../../assets/icon/icon_arrow_long_reverse.svg";
 import Styles from "../../../styles/Clubs.module.css";
+import { useState } from "react";
 
 interface CrewProps {
   name: string;
@@ -62,6 +64,17 @@ const Crew = ({ props }: Props) => {
       </>
     );
   };
+  
+  const handleClick = (direction: "left" | "right") => {
+    const container = document.querySelector(`.${Styles.items}`);
+    if (container) {
+      const scrollAmount = 500; // Adjust this value as needed
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
 
   return (
     <>
@@ -72,42 +85,67 @@ const Crew = ({ props }: Props) => {
             flexDirection: "row",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              rowGap: "16px",
-              ml: "110px",
-              mr: "90px",
-            }}
-          >
-            <Typography
-              fontFamily="Rubik"
-              fontStyle="normal"
-              fontWeight="400"
-              fontSize="48px"
-              lineHeight="57px"
-              textAlign="center"
-              color="#565A6E"
-            >
-              Meet the Crew
-            </Typography>
-            <Box
-              sx={{
-                width: "129px",
-                height: "72px",
-                border: "1px solid #C0CAF5",
-                borderRadius: "24px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Image src={iconArrow} alt="" />
-            </Box>
-          </Box>
+         <Box
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    rowGap: "16px",
+    ml: "110px",
+    mr: "90px",
+  }}
+>
+  <Typography
+    fontFamily="Rubik"
+    fontStyle="normal"
+    fontWeight="400"
+    fontSize="48px"
+    lineHeight="57px"
+    textAlign="center"
+    color="#565A6E"
+  >
+    Meet the Crew
+  </Typography>
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: "row", // Change to "row"
+      justifyContent: "center",
+      columnGap: "16px", // Change to "columnGap" for horizontal gap
+    }}
+  >
+    <Box
+      sx={{
+        width: "129px",
+        height: "72px",
+        border: "1px solid #C0CAF5",
+        borderRadius: "24px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      onClick={() => handleClick("left")}
+    >
+      <Image src={iconArrow} alt="" />
+    </Box>
+    <Box
+      sx={{
+        width: "129px",
+        height: "72px",
+        border: "1px solid #C0CAF5",
+        borderRadius: "24px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      onClick={() => handleClick("right")}
+    >
+      <Image src={iconArrowR} alt="" />
+    </Box>
+  </Box>
+</Box>
+
           <Box>
             <div className={Styles.grid_container}>
               <main className={`${Styles.grid_item} ${Styles.main}`}>
@@ -152,23 +190,6 @@ const Crew = ({ props }: Props) => {
             </div>
           </Box>
         </Box>
-
-        {/* <Typography
-          fontFamily="Rubik"
-          fontStyle="italic"
-          fontWeight="700"
-          fontSize="16px"
-          lineHeight="28px"
-          textAlign="center"
-          color="#565A6E"
-          maxWidth={"744px"}
-          mx={"auto"}
-          mt={"196px"}
-        >
-          “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh
-          mi, pellentesque sit amet ullamcorper id, varius nec nisi. Donec
-          posuere euismod diam, eget scelerisque est finibus ac. ” - Name
-        </Typography> */}
       </Stack>
     </>
   );

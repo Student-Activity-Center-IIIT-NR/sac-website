@@ -23,6 +23,11 @@ import Aman_Kumar_Singh from "../../assets/team_23-24/Aman_Singh.jpg";
 import Mayank_Chandra from "../../assets/team_23-24/Male-member.jpeg";
 import Neha_Dhruw_Volleyball from "../../assets/team_23-24/Neha_Dhruw.jpg";
 import Raj_Bhattacharya from "../../assets/team_23-24/Male-member.jpeg";
+import Aman from "../../assets/team_23-24/Aman.png"
+import Khuman from "../../assets/team_23-24/Khuman.jpg"
+import Neeraj from "../../assets/team_23-24/Neeraj.jpeg"
+import Shresth from "../../assets/team_23-24/Shresth.jpeg"
+import Taniska from "../../assets/team_23-24/Taniskha.jpg"
 
 export const atharv: CrewProps[] = [
     {
@@ -110,4 +115,30 @@ export const atharv: CrewProps[] = [
         name: "Raj Bhattacharya",
         post: "Atharv Mini Golf InCharge",
     },
+    {
+        img: Khuman,
+        name: "Khuman Singh Sonwani",
+        post: "Gym In-Charge",
+    },
+    {
+        img: Taniska,
+        name: "Tanishka Chauhan",
+        post: "Gym In-Charge",
+    },
+    {
+        img: Shresth,
+        name: "Shresht Mishra",
+        post: "Gym Commitee Meber",
+    },
+    {
+        img: Neeraj,
+        name: "Neeraj Manhar",
+        post: "Gym Commitee Meber",
+    },
+    {
+        img: Aman,
+        name: "Aman Sahu",
+        post: "Gym Commitee Meber",
+    },
+
 ];
