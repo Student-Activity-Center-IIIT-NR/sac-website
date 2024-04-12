@@ -7,7 +7,6 @@ import IMG20231015181640 from "../../assets/atharv/IMG20231015181640.jpg";
 import IMG_0932 from "../../assets/atharv/IMG_0932.jpg";
 import IMG_7420 from "../../assets/atharv/IMG_7420.jpg";
 
-
 interface CrewProps {
   img: StaticImageData;
 }
@@ -20,6 +19,34 @@ interface dataProps {
 
 // insert new data at beginning
 export const data: dataProps[] = [
+  {
+    name: "SpikeFest Showdown",
+    intro:
+      "The 2024 Volleyball League Tournament brought together five enthusiastic teams with total of 50 players in an exciting display of skill, teamwork, and sportsmanship. The league format allowed each team to face off against one another, resulting in thrilling matches and intense competition.The tournament followed a round-robin league format, with each team playing against every other team. Matches were played in a best-of-three sets format, with rally scoring. The point system awarded three points for a win and one point for a loss. The teams accumulated points throughout the tournament, and the team with the highest total points at the end was declared the overall winner.",
+    winner:
+      "Team consisting of Adarsh, Keshav, Himanshu, Yogi, Chaitanya, Nitish, Aditya, Anuj, Sakshi and Ananya emerged victorious",
+  },
+  {
+    name: "Table Top Triump",
+    intro:
+      "Four teams, Team Aryan Kishore, Team Yash Vardhan Gautam, Team Ojas Dubey, Team Aditya Oza, competed in the competition on the dates of September 18 - 21. The Team Aryan Kishore vs. Team Yash Vardhan Gautam and Team Ojas Dubey vs. Team Aditya Oza league games were planned for September 18 and 19, respectively .Finals between Team Yash Vardhan Gautam and Team Ojas Dubey were held on the 21 September .The Table Tennis Tournament's stated regulations were carried out to in full. Each League included Boys singles matches - 2, Boys doubles - 2 , Girls singles - 1 , Girls doubles - 1 , Mixed doubles - 1, Open - 1 in total. Singles matches were played for three sets and doubles and mixed doubles for 5 sets each.",
+    winner:
+      "Team Yash Vardhan Gautam with Members: Yash Vardhan Gautam, Gautam Sarawagi, Vikalp Tripathi, Yash Joshi, Lumani Verma, Sakshi Sonker, Anushka ekka",
+  },
+  {
+    name: "League of Leagues",
+    intro:
+      "This thrilling event brought together 60 enthusiastic students from for a weekend of fierce competition and camaraderie on the football field. A total of 4 teams participated in the tournament whose names are as Gladiators , Supreme OG’s , Purkhoti Phoenix , Synergy.",
+    winner:
+      "The finalists demonstrated exceptional skills, teamwork, and sportsmanship. After a closely contested game, Gladiators emerged victorious, securing the title of the League of Leagues Football Tournament champions.",
+  },
+  {
+    name: "E-Sports Tournament",
+    intro:
+      "The Tournament was of the exciting and thrilling game of valorant, the players entered as teams and played on their own laptops the Tournament was of single elimination type where 8 teams participated each team of 5 players so a total of 40 participants. It consisted of a total of 7 matches. On day 1 from 7pm onwards the matches started each of 40 min duration all the elimination rounds ended on day 1 and the semi finals, finals were held on Day 2 these matches were best of 3 and were also streamed on youtube so the whole college could watch and cheer for their favorites.",
+    winner:
+      "Team Grandfather Og’s- (AMMOX36 - Amogh Dubey) (Pinspy- Tushar Tirkey) (DeathAdder- Saatvik Sharma) (Slowsloth- Anand Bachker) (Benedict - Abhishekh Kerketta)",
+  },
   {
     name: "Aarambh 6.0",
     intro:

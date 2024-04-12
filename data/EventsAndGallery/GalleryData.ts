@@ -20,18 +20,42 @@ import MUNC from "../../assets/major_events_pics/MUNC.jpg";
 import MUNC2 from "../../assets/major_events_pics/MUNC2.jpg";
 import scintfic from "../../assets/major_events_pics/scintfic.jpg";
 import scintfic2 from "../../assets/major_events_pics/scintfic2.jpg";
-import tech24_1 from "../../assets/major_events_pics/tech24_1.jpg"
-import tech24_2 from "../../assets/major_events_pics/tech24_2.jpg"
-import tech24_3 from "../../assets/major_events_pics/tech24_3.jpg"
-import tech24_4 from "../../assets/major_events_pics/tech24_4.jpg"
+import tech24_1 from "../../assets/major_events_pics/tech24_1.jpg";
+import tech24_2 from "../../assets/major_events_pics/tech24_2.jpg";
+import tech24_3 from "../../assets/major_events_pics/tech24_3.jpg";
+import tech24_4 from "../../assets/major_events_pics/tech24_4.jpg";
 
 // Sports
+//2022
 import lakshya1 from "../../assets/club_event_pics/2022/sports/lakshya1.jpeg";
 import lakshya2 from "../../assets/club_event_pics/2022/sports/lakshya2.jpeg";
 import lakshya3 from "../../assets/club_event_pics/2022/sports/lakshya3.jpeg";
 import lakshya4 from "../../assets/club_event_pics/2022/sports/lakshya4.jpeg";
 import lakshya5 from "../../assets/club_event_pics/2022/sports/lakshya5.jpeg";
 import lakshya6 from "../../assets/club_event_pics/2022/sports/lakshya6.jpeg";
+import IMG_0426 from "../../assets/atharv/IMG_0426.jpg";
+import DSC_0799 from "../../assets/atharv/DSC_0799.jpg";
+import IMG_0023 from "../../assets/atharv/IMG_0023.jpg";
+import IMG20231015181640 from "../../assets/atharv/IMG20231015181640.jpg";
+import IMG_0932 from "../../assets/atharv/IMG_0932.jpg";
+import IMG_7420 from "../../assets/atharv/IMG_7420.jpg";
+//2023
+import ESports_1 from "../../assets/club_event_pics/2023/sports/ESports_1.png";
+import ESports_2 from "../../assets/club_event_pics/2023/sports/ESports_2.png";
+import ESports_3 from "../../assets/club_event_pics/2023/sports/ESports_3.png";
+import LOL_1 from "../../assets/club_event_pics/2023/sports/LOL_1.jpg";
+import LOL_2 from "../../assets/club_event_pics/2023/sports/LOL_2.jpg";
+import LOL_3 from "../../assets/club_event_pics/2023/sports/LOL_3.jpg";
+import LOL_4 from "../../assets/club_event_pics/2023/sports/LOL_4.jpg";
+import LOL_5 from "../../assets/club_event_pics/2023/sports/LOL_5.jpg";
+import LOL_6 from "../../assets/club_event_pics/2023/sports/LOL_6.jpg";
+import Spikedown_1 from "../../assets/club_event_pics/2023/sports/Spikedown_1.jpg";
+import Spikedown_2 from "../../assets/club_event_pics/2023/sports/Spikedown_2.jpg";
+import Spikedown_3 from "../../assets/club_event_pics/2023/sports/Spikedown_3.jpg";
+import Spikedown_4 from "../../assets/club_event_pics/2023/sports/Spikedown_4.jpg";
+import Table_Top_1 from "../../assets/club_event_pics/2023/sports/Table_Top_1.png";
+import Table_Top_2 from "../../assets/club_event_pics/2023/sports/Table_Top_2.png";
+import Table_Top_3 from "../../assets/club_event_pics/2023/sports/Table_Top_3.png";
 
 interface MajorEventsProps {
   label: string;
@@ -238,6 +262,48 @@ export const ClubEvents: ClubEventsProps = {
       name: "Lakshya",
       date: "",
       image: [lakshya1, lakshya2, lakshya3, lakshya4, lakshya5, lakshya6],
+      club: "Atharv",
+      year: "2022",
+    },
+    {
+      name: "Aarambh 6.0",
+      date: "",
+      image: [
+        IMG_0426,
+        DSC_0799,
+        IMG_0023,
+        IMG20231015181640,
+        IMG_0932,
+        IMG_7420,
+      ],
+      club: "Atharv",
+      year: "2023",
+    },
+    {
+      name: "E-Sports Tournament",
+      date: "",
+      image: [ESports_1, ESports_2, ESports_3],
+      club: "Atharv",
+      year: "2023",
+    },
+    {
+      name: "League Of Leagues",
+      date: "",
+      image: [LOL_1, LOL_2, LOL_3, LOL_4, LOL_5, LOL_6],
+      club: "Atharv",
+      year: "2023",
+    },
+    {
+      name: "SpikeFest Showdown",
+      date: "",
+      image: [Spikedown_1, Spikedown_2, Spikedown_3, Spikedown_4],
+      club: "Atharv",
+      year: "2023",
+    },
+    {
+      name: "Table Top Triump",
+      date: "",
+      image: [Table_Top_1, Table_Top_2, Table_Top_3],
       club: "Atharv",
       year: "2023",
     },

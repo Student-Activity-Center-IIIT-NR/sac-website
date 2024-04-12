@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import { data } from "../../../data/EventsAndGallery/SportsGalleryData";
-import Year from "../../team/TeamHeader/YearCard"
 
 const StyledTypography = styled(Typography)({
   fontFamily: "Lato",
@@ -26,7 +25,6 @@ interface dataProps {
 
 const SportsGallery = () => {
   const [index, setIndex] = useState(0);
-  const [values, setValues] = useState<dataProps>(data[0]);
 
   const len = data.length;
 
@@ -35,7 +33,6 @@ const SportsGallery = () => {
       return;
     }
     setIndex(index - 1);
-    setValues(data[index]);
   };
 
   const yearIncrement = () => {
@@ -43,7 +40,6 @@ const SportsGallery = () => {
       return;
     }
     setIndex(index + 1);
-    setValues(data[index]);
   };
 
   return (
@@ -63,7 +59,7 @@ const SportsGallery = () => {
           color="#000000"
           textAlign="center"
         >
-          GALLERY <Year/>
+          GALLERY
         </Typography>
         <Box
           sx={{
@@ -93,7 +89,7 @@ const SportsGallery = () => {
             color="#000000"
             textAlign="center"
           >
-            {values.name}
+            {data[index].name}
           </Typography>
           <Image
             src={iconArrow}
@@ -108,11 +104,15 @@ const SportsGallery = () => {
           />
         </Box>
 
-        <StyledTypography textAlign="justify">{values.intro}</StyledTypography>
+        <StyledTypography textAlign="justify">
+          {data[index].intro}
+        </StyledTypography>
         <StyledTypography textAlign="justify">
           <strong>WINNER</strong>
         </StyledTypography>
-        <StyledTypography textAlign="justify">{values.winner}</StyledTypography>
+        <StyledTypography textAlign="justify">
+          {data[index].winner}
+        </StyledTypography>
       </Stack>
       <ImageGrid />
     </Stack>
