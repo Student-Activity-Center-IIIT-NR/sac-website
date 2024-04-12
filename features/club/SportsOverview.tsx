@@ -200,6 +200,7 @@ const SportsOverview = () => {
             <Stack direction={"row"} gap={"24px"}>
               <Pill>Cricket</Pill>
               <Pill>Football</Pill>
+              <Pill>Gym</Pill>
             </Stack>
             <Stack direction={"row"} gap={"24px"}>
               <Pill>ESPORTS</Pill>
