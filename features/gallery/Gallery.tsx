@@ -58,13 +58,15 @@ const Gallery = () => {
   const [year, setYear] = useState("2023");
   const [name, setName] = useState<Name>("major");
   const [event, setEvent] = useState(
-    (ClubEvents[name] as { name: string;
-      date?: string;
-      image: StaticImageData[];
-      club: string;
-      year: string; }[]).filter(
-      (event) => event.year === year
-    )[0]
+    (
+      ClubEvents[name] as {
+        name: string;
+        date?: string;
+        image: StaticImageData[];
+        club: string;
+        year: string;
+      }[]
+    ).filter((event) => event.year === year)[0]
   );
 
   const handleClickName = (name: Name) => {
@@ -73,15 +75,15 @@ const Gallery = () => {
 
   const handleClickEvent = (index: number) => {
     setEvent(
-      (ClubEvents[name] as { name: string;
-        date?: string;
-        image: StaticImageData[];
-        club: string;
-        year: string; }[]).filter(
-        (event) => event.year === year
-      )[
-        index
-      ]
+      (
+        ClubEvents[name] as {
+          name: string;
+          date?: string;
+          image: StaticImageData[];
+          club: string;
+          year: string;
+        }[]
+      ).filter((event) => event.year === year)[index]
     );
   };
 
@@ -269,8 +271,16 @@ const Gallery = () => {
           mt={"42px"}
           justifyContent={"space-between"}
         >
-          {ClubEvents[name]
-            .filter((event: { year: string }) => event.year === year)
+          {(
+            ClubEvents[name] as {
+              name: string;
+              date?: string;
+              image: StaticImageData[];
+              club: string;
+              year: string;
+            }[]
+          )
+            .filter((event) => event.year === year)
             .map((step, index) => {
               return (
                 <Grid2 xs={4} key={index}>
