@@ -50,12 +50,12 @@ const StyledTypography = styled(Typography)({
   maxWidth: "fit-content",
 });
 
-type Name = "cultural" | "technical" | "sports" | "media";
+type Name = "cultural" | "technical" | "sports" | "media" | "major";
 
 const Gallery = () => {
   const [page, setPage] = useState(1);
   const [year, setYear] = useState("2023");
-  const [name, setName] = useState<Name>("cultural");
+  const [name, setName] = useState<Name>("major");
   const [event, setEvent] = useState(
     ClubEvents[name].filter((event: { year: string }) => event.year === year)[0]
   );
@@ -181,7 +181,7 @@ const Gallery = () => {
             />
             <StyledButton
               onClick={() => {
-                scrollTo(0, 280);
+                handleClickName("major");
               }}
             >
               Major Events

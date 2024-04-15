@@ -39,7 +39,7 @@ const MajorEvents = () => {
             color={"#000000"}
             mt={"102px"}
           >
-            Major Events
+            Recent Major Events
           </Typography>
         </Stack>
         <Box my={"48px"} mx="80px">
