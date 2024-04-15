@@ -14,6 +14,7 @@ import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { ClubEvents } from "../../data/EventsAndGallery/GalleryData";
+import { StaticImageData } from "next/image";
 
 const StyledButton = styled(Button)({
   fontFamily: "Rubik",
@@ -57,7 +58,13 @@ const Gallery = () => {
   const [year, setYear] = useState("2023");
   const [name, setName] = useState<Name>("major");
   const [event, setEvent] = useState(
-    ClubEvents[name].filter((event: { year: string }) => event.year === year)[0]
+    (ClubEvents[name] as { name: string;
+      date?: string;
+      image: StaticImageData[];
+      club: string;
+      year: string; }[]).filter(
+      (event) => event.year === year
+    )[0]
   );
 
   const handleClickName = (name: Name) => {
@@ -66,7 +73,13 @@ const Gallery = () => {
 
   const handleClickEvent = (index: number) => {
     setEvent(
-      ClubEvents[name].filter((event: { year: string }) => event.year === year)[
+      (ClubEvents[name] as { name: string;
+        date?: string;
+        image: StaticImageData[];
+        club: string;
+        year: string; }[]).filter(
+        (event) => event.year === year
+      )[
         index
       ]
     );
