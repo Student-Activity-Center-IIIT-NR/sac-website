@@ -206,5 +206,4 @@ const clubs = [
   },
   { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
   { name: "// BIS", url: "/clubs/technical/bis", color: "#CA50F5" },
-  { name: "// IIC", url: "/clubs/technical/iic", color: "#FFDE31" },
 ];
