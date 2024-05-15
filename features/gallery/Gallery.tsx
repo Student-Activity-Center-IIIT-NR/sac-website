@@ -14,6 +14,7 @@ import layerIcon from "../../assets/icon/icon_layer.svg";
 import Button from "@mui/material/Button";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { ClubEvents } from "../../data/EventsAndGallery/GalleryData";
+import { StaticImageData } from "next/image";
 
 const StyledButton = styled(Button)({
   fontFamily: "Rubik",
@@ -50,20 +51,40 @@ const StyledTypography = styled(Typography)({
   maxWidth: "fit-content",
 });
 
-type Name = "cultural" | "technical" | "sports" | "media";
+type Name = "cultural" | "technical" | "sports" | "media" | "major";
 
 const Gallery = () => {
   const [page, setPage] = useState(1);
-  const [year, setYear] = useState("");
-  const [name, setName] = useState<Name>("cultural");
-  const [event, setEvent] = useState(ClubEvents[name][0]);
+  const [year, setYear] = useState("2023");
+  const [name, setName] = useState<Name>("major");
+  const [event, setEvent] = useState(
+    (
+      ClubEvents[name] as {
+        name: string;
+        date?: string;
+        image: StaticImageData[];
+        club: string;
+        year: string;
+      }[]
+    ).filter((event) => event.year === year)[0]
+  );
 
   const handleClickName = (name: Name) => {
     setName(name);
   };
 
   const handleClickEvent = (index: number) => {
-    setEvent(ClubEvents[name][index]);
+    setEvent(
+      (
+        ClubEvents[name] as {
+          name: string;
+          date?: string;
+          image: StaticImageData[];
+          club: string;
+          year: string;
+        }[]
+      ).filter((event) => event.year === year)[index]
+    );
   };
 
   const count = Math.ceil(event.image.length / 6);
@@ -73,7 +94,7 @@ const Gallery = () => {
   };
 
   const handleChange = (event: SelectChangeEvent) => {
-    setYear(event.target.value as string);
+    setYear(event.target.value);
   };
 
   return (
@@ -175,7 +196,7 @@ const Gallery = () => {
             />
             <StyledButton
               onClick={() => {
-                scrollTo(0, 280);
+                handleClickName("major");
               }}
             >
               Major Events
@@ -217,18 +238,18 @@ const Gallery = () => {
           columnGap={"24px"}
         >
           <FormControl
-            disabled
             sx={{
               width: "166px",
             }}
           >
             <InputLabel>Year</InputLabel>
             <Select value={year} label="Age" onChange={handleChange}>
-              <MenuItem value={2022}>2022</MenuItem>
-              <MenuItem value={2023}>2023</MenuItem>
+              <MenuItem value={"2021"}>2021</MenuItem>
+              <MenuItem value={"2022"}>2022</MenuItem>
+              <MenuItem value={"2023"}>2023</MenuItem>
             </Select>
           </FormControl>
-          <FormControl
+          {/* <FormControl
             disabled
             sx={{
               width: "166px",
@@ -242,7 +263,7 @@ const Gallery = () => {
               <MenuItem value={2019}>Inquizitive</MenuItem>
               <MenuItem value={2019}>Comet</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
         </Stack>
         <Grid2
           container
@@ -250,21 +271,31 @@ const Gallery = () => {
           mt={"42px"}
           justifyContent={"space-between"}
         >
-          {ClubEvents[name].map((step, index) => {
-            return (
-              <Grid2 xs={4} key={index}>
-                <StyledTypography
-                  onClick={() => {
-                    handleClickEvent(index);
-                    scrollTo(0, 1830);
-                  }}
-                >
-                  {step.name}
-                </StyledTypography>
-                <Divider color={"#C0CAF5"} />
-              </Grid2>
-            );
-          })}
+          {(
+            ClubEvents[name] as {
+              name: string;
+              date?: string;
+              image: StaticImageData[];
+              club: string;
+              year: string;
+            }[]
+          )
+            .filter((event) => event.year === year)
+            .map((step, index) => {
+              return (
+                <Grid2 xs={4} key={index}>
+                  <StyledTypography
+                    onClick={() => {
+                      handleClickEvent(index);
+                      scrollTo(0, 1830);
+                    }}
+                  >
+                    {step.name}
+                  </StyledTypography>
+                  <Divider color={"#C0CAF5"} />
+                </Grid2>
+              );
+            })}
         </Grid2>
       </Box>
     </>

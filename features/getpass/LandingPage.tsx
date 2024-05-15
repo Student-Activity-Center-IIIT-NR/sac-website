@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Stack, Box, Typography } from "@mui/material";
 import Landingpg from "../../assets/gatepass/gatepass.svg";
 import Google from "../../assets/gatepass/google.svg";
-import Apple from "../../assets/gatepass/apple.svg";
+import lan from "../../assets/gatepass/lan.svg";
 import Link from "next/link";
 
 const LandingPage = () => {
@@ -66,13 +66,9 @@ const LandingPage = () => {
               cursor: "pointer",
             }}
           >
-            <Link
-              href={
-                "https://drive.google.com/drive/folders/1EgHvarOl68TiMNuvLFSbPV1buuKR_PUE?usp=share_link"
-              }
-            >
-              <Image src={Apple} alt="" height={"100px"} width={"200px"} />
-            </Link>
+            <a href={"https://hms.iiitnr.edu.in:3000/#/"} target="_blank">
+              <Image src={lan} alt="" height={"100px"} width={"200px"} />
+            </a>
           </Box>
           <Box
             sx={{

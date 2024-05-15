@@ -18,7 +18,7 @@ const ClubDeTheatre: FunctionComponent<ClubDeTheatreProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Club De Théâtre" bg={cdtBg} />
-        <ClubDescription img={cdtLogo}>
+        <ClubDescription img={cdtLogo} insta="https://www.instagram.com/clubdetheatre_iiitnr/">
           Club De Théâtre is the drama club at IIIT-Naya Raipur that encourages
           students to participate in dramatic presentations such as skits, mime,
           plays, and street theatre. The club promotes the culture of drama,

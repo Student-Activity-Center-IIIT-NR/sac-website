@@ -18,7 +18,7 @@ const YTC: FunctionComponent<YTCProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Yuva Tourism Club ( YTC )" bg={YTCBg} />
-        <ClubDescription img={YTCLogo}>
+        <ClubDescription img={YTCLogo} insta="">
           Following the directions of Hon&apos;aposble Prime Minister of India,
           Ministry of Tourism launched the campaign focusing on “YUVA Tourism
           Club” with the strategic objective of creating interest, awareness and
@@ -30,7 +30,7 @@ const YTC: FunctionComponent<YTCProps> = () => {
         </ClubDescription>
         {/* <ClubEvents club="YTC"  /> */}
         {/* <Crew props={crew} /> */}
-        {/* <Gallery club="YTC" /> */}
+        <Gallery club="YTC" />
       </ClubsLayout>
     </>
   );

@@ -39,7 +39,7 @@ const Design: FunctionComponent<DesignProps> = () => {
             Design and Doc Team
           </Typography>
         </Box>
-        <ClubDescription img={DesignLogo}>
+        <ClubDescription img={DesignLogo} insta="">
           Design and Documentation Team is repsonsible for Designing all the
           Digital Content that SAC requires, may it be Posters, Flexes or
           website. Apart for this, the team also functions as the documentation

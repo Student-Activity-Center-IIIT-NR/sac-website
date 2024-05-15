@@ -18,7 +18,7 @@ const ModelUnitedNation: FunctionComponent<ModelUnitedNationProps> = () => {
       <ClubsLayout>
         <ClubHeader />
         <ClubBanner clubName="Model United Nations" bg={munBg} />
-        <ClubDescription img={munLogo}>
+        <ClubDescription img={munLogo} insta="https://www.instagram.com/mun_iiitnr/">
           The IIIT NR MUN is a Model United Nations conference that provides
           delegates with a platform to discuss current global issues and to
           develop a range of skills such as public speaking, debate, writing,
