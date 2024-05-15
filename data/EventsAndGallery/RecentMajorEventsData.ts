@@ -17,7 +17,7 @@ interface RecentMajorEventsDataProps {
 export const recentMajorEventsData: RecentMajorEventsDataProps[] = [
   {
     poster: Technovate5,
-    desc: "Technovate 5.0 at IIIT Naya Raipur was a whirlwind of innovation, competition, and pure exhilaration! From the electrifying hackathons and coding contests to the mesmerizing cultural showcases and adrenaline-fueled sports tournaments, every moment was packed with excitement. Participants showcased their talents, battled it out on various fronts, and left spectators on the edge of their seats. As the sun set on each day, the atmosphere only intensified, with pulsating music, dazzling lights, and unforgettable performances keeping the energy levels soaring. Technovate 5.0 wasn't just an event; it was a rollercoaster ride of thrills and excitement that left everyone craving for more!",
+    desc: "Technovate 5 at IIIT Naya Raipur was a whirlwind of innovation, competition, and pure exhilaration! From the electrifying hackathons and coding contests to the mesmerizing cultural showcases and adrenaline-fueled sports tournaments, every moment was packed with excitement. Participants showcased their talents, battled it out on various fronts, and left spectators on the edge of their seats. As the sun set on each day, the atmosphere only intensified, with pulsating music, dazzling lights, and unforgettable performances keeping the energy levels soaring. Technovate 5.0 wasn't just an event; it was a rollercoaster ride of thrills and excitement that left everyone craving for more!",
   },
   {
     poster: scintfic24,
