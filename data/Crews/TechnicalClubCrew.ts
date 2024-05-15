@@ -70,7 +70,6 @@ export const inquizitive: CrewProps[] = [
     },
 ];
 
-export const iic: CrewProps[] = []
 export const comet: CrewProps[] = [
     {
         img: Ishita_Tegar,
