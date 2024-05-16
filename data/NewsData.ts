@@ -49,8 +49,8 @@ const newsData: NewsDataProps[] = [
 
   {
     img: republic_day,
-    title: "Republic Day",
-    text: "The Republic Day celebration at IIIT Naya Raipur is a significant event that brings together students, faculty, and staff in a vibrant display of patriotism and unity. Marking the day the Constitution of India came into effect, the celebration begins with the hoisting of the national flag and the singing of the National Anthem, instilling a deep sense of national pride. ",
+    title: "Republic Day ",
+    text: "The Republic Day celebration at IIIT Naya Raipur is a significant event that brings together students, faculty, and staff in a vibrant display of patriotism and unity. Marking the day the Constitution of India came into effect, the celebration begins with the hoisting of the national flag and the singing of the National Anthem, instilling a deep sense of national pride.",
     authImg: aditya,
     authName: "Aditya",
   },
