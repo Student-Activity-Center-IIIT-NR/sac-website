@@ -10,7 +10,6 @@ import IICBgTop from "../../../assets/technical_clubs_bg/bg_IIC_top.png";
 import IICBgBottom from "../../../assets/technical_clubs_bg/bg_IIC_bottom.png";
 import IICLogo from "../../../assets/technical_clubs_bg/IIC_logo.png";
 import { StaticImageData } from "next/image";
-import { iic } from "../../../data/Crews/TechnicalClubCrew";
 
 interface IICProps {}
 
