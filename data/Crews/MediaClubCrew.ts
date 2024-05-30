@@ -29,28 +29,44 @@ import ARYAN_KUMAR_BAGHEL from "../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
 import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg";
 import Ojas_Dubey1 from "../../assets/team_23-24/Ojas_Dubey.jpg";
 import Yashraj from "../../assets/team_23-24/Yash_Raj.jpeg";
+import Yash from "../../assets/team_24-25/yash_1.jpg";
+import Priyadarshi from "../../assets/team_24-25/priyadarshi.jpg"
+import Male from "../../assets/team_24-25/Male-member.jpeg"
+import Female from "../../assets/team_24-25/Female-member.jpeg"
 
 export const website: CrewProps[] = [
     {
-        img: Ojas_Dubey1,
-        name: "Ojas Dubey",
+        img: Priyadarshi,
+        name: "Priyadarshi Satyakam",
         post: "Head",
     },
     {
-        img: Manu_Sai,
-        name: "Manu Sai",
+        img: Yash,
+        name: "Yash Joshi",
+        post: "Vice Head",
+    },
+    {
+        img: Male,
+        name: "Kushagra Verma",
         post: "Core Member",
     },
     {
-        img: Shreyansh_Kushwaha,
-        name: "Shreyansh Kushwaha",
+        img: Female,
+        name: "Alisha Tripathi",
         post: "Core Member",
     },
     {
-        img: Yashraj,
-        name: "Yashraj",
-        post: "Core Member",
+        img: Male,
+        name: "Mohit Sharma",
+        post: "Core Member"
+
     },
+    {
+        img: Male,
+        name: "Anish Kumar",
+        post: "Core Member"
+
+    }
 ];
 
 export const shutterbug: CrewProps[] = [
