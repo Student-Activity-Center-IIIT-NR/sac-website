@@ -98,7 +98,7 @@ export default MediaOverview;
 
 const clubs = [
   { name: "-> Shutterbug Club", url: "/clubs/media/shutterbug" },
-  { name: "-> Website Team", url: "/clubs/media/website" },
+  { name: "-> Website Development Club", url: "/clubs/media/website" },
   {
     name: "-> Design and Documentation Team",
     url: "/clubs/media/design",
