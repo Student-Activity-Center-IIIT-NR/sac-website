@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
         <Typography textAlign={"center"} fontWeight={700} fontSize={"1.5rem"}>
           PRIVACY POLICY
         </Typography>
-        <StyledTypography>Last updated May 01, 2023</StyledTypography>
+        <StyledTypography>Last updated June 19, 2024</StyledTypography>
         <StyledTypography mt={2}>
           This privacy notice for IIITNR (<strong> &apos;Company&apos;</strong>,{" "}
           <strong>&apos;we&apos;</strong> , <strong>&apos;us&apos;</strong> , or{" "}
@@ -517,6 +517,16 @@ const PrivacyPolicy = () => {
           troubleshoot problems, assist with any investigations, enforce our
           legal terms and/or comply with applicable legal requirements.
         </StyledTypography>
+        <Typography fontWeight={500} fontSize={"1rem"} mt={2}>
+        To delete your account fill the following form:
+        </Typography>
+        <StyledTypography>
+  <a target="_main" href="https://hms.iiitnr.edu.in/contactHTML/delete-form" style={{ color: 'blue', textDecoration: 'underline' }}>
+    https://hms.iiitnr.edu.in/contactHTML/delete-form
+  </a>
+</StyledTypography>
+
+
         <StyledTypography>
           If you have questions or want to contact us mail at hmc@iiitnr.edu.in
         </StyledTypography>
