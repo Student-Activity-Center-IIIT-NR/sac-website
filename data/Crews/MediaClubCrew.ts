@@ -33,7 +33,7 @@ import Yash from "../../assets/team_24-25/yash_1.jpg";
 import Priyadarshi from "../../assets/team_24-25/priyadarshi.jpg"
 import Male from "../../assets/team_24-25/Male-member.jpeg"
 import Female from "../../assets/team_24-25/Female-member.jpeg"
-import R_Shivani from "../../assets/team_24-25/IMG_0614 - R Sai Shivani.jpg"
+import R_Sai_Shivani from "../../assets/team_24-25/IMG_0614 - R Sai Shivani.jpg"
 import Anshul_Lakra from "../../assets/team_24-25/IMG_4342~3 - Anshul Pratap Lakra.jpg"
 import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
 import Jaya_Deep from "../../assets/team_24-25/IMG20240218145308 - Kundrapu Jaya Deep.jpg"
@@ -87,7 +87,7 @@ export const website: CrewProps[] = [
 
 export const shutterbug: CrewProps[] = [
     {
-        img: R_Shivani,
+        img: R_Sai_Shivani,
         name: "R.Sai Shivani",
         post: "Head",
     },
