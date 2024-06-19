@@ -38,6 +38,7 @@ import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135155 - Adya Pand
 import Alisha_Tripathi from "../../assets/team_24-25/IMG-20240523-WA0005 - Alisha Tripathi.jpg"
 import Mohit_Sharma from "../../assets/team_24-25/2024-05-20-16-37-50-202 - Sharma Mohit.jpg"
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg"
+import Kushagra_Verma from "../../assets/team_24-25/WhatsApp Image 2024-06-19 - Kushagra Verma.jpg"
 
 export const website: CrewProps[] = [
     {
@@ -51,7 +52,7 @@ export const website: CrewProps[] = [
         post: "Vice Head",
     },
     {
-        img: Male,
+        img: Kushagra_Verma,
         name: "Kushagra Verma",
         post: "Core Member",
     },
