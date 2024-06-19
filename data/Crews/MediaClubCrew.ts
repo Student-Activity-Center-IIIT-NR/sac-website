@@ -17,18 +17,6 @@ import A_Satya_Kartik from "../../assets/team_23-24/Male-member.jpeg";
 import S_Chandu from "../../assets/team_23-24/Male-member.jpeg";
 import Tanishka from "../../assets/team_23-24/Female-member.jpeg";
 import Aryansh_Verma from "../../assets/team_23-24/Aryansh_Verma.jpg";
-import Abhijeet_Jharbade from "../../assets/team_23-24/Male-member.jpeg";
-import ACHANTA_SATYA_KARTHIK from "../../assets/team_23-24/Satya_Karthik_Achanta.jpg";
-import ANKITAN_KUMAR from "../../assets/team_23-24/Ankitan_Kumar.jpg";
-import ANUJA_SINGH_PANDAW from "../../assets/team_23-24/Female-member.jpeg";
-import APURVA_SAHU from "../../assets/team_23-24/Apurva_Sahu.jpg";
-import KARTHIKEYA_PRACHODRAN from "../../assets/team_23-24/Male-member.jpeg";
-import RIMJHIM_SHARMA from "../../assets/team_23-24/Female-member.jpeg";
-import AAYUSH_KULKARNI from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import ARYAN_KUMAR_BAGHEL from "../../assets/team_23-24/Aryan_Kumar_Baghel.jpg";
-import Manu_Sai from "../../assets/team_23-24/Manu_Sai.jpg";
-import Ojas_Dubey1 from "../../assets/team_23-24/Ojas_Dubey.jpg";
-import Yashraj from "../../assets/team_23-24/Yash_Raj.jpeg";
 import Yash from "../../assets/team_24-25/yash_1.jpg";
 import Priyadarshi from "../../assets/team_24-25/priyadarshi.jpg"
 import Male from "../../assets/team_24-25/Male-member.jpeg"
@@ -49,6 +37,9 @@ import Anshumaan_Karna from "../../assets/team_24-25/IMG_0369 - Anshumaan Karna.
 import Vaishnavi_Shrivastava from "../../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
 import Jayaprakash_Sahu from "../../assets/team_24-25/IMG_20231004_223523 - Jaiprakash Sahu.jpg"
 import Shrawan_Kumar from "../../assets/team_24-25/1705775302364f - Shrawan Kumar Bhagat.jpg"
+import Pulli_Uttam_Reddy from "../../assets/team_24-25/Male-member.jpeg"
+import Sayyed_Rahim_Adnan_Ali from "../../assets/team_24-25/Male-member.jpeg"
+import Tanisha_Jain from "../../assets/team_24-25/IMG20240322120646 - Tanisha Jain.jpg"
 
 export const website: CrewProps[] = [
     {
@@ -167,63 +158,74 @@ export const shutterbug: CrewProps[] = [
         post: "Photographer",
     },
 ];
+// Changing name
 export const pr: CrewProps[] = [
     {
-        img: Aryansh_Verma,
-        name: "Aryansh Verma",
-        post: "Head",
+        img: Virat_Patel,
+        name: "Virat Patel",
+        post: "Head(PR)",
+    },
+    {
+        img: Pulli_Uttam_Reddy,
+        name: "Pulli Uttam Reddy",
+        post: "Head(Social Media)",
+    },
+    {
+        img: Sayyed_Rahim_Adnan_Ali,
+        name: "Sayyed Raahim Adnan Ali",
+        post: "Vice Head",
+    },
+    {
+        img: Tanisha_Jain,
+        name: "Tanisha Jain",
+        post: "Core member",
     },
     {
         img: Aayush_Kulkarni,
-        name: "Aayush Kulkarni",
+        name: "Shashank Mishra",
         post: "Core member",
     },
     {
         img: Raj_Bhattacharya,
-        name: "Raj Bhattacharya",
+        name: "Navneeth",
         post: "Core member",
     },
     {
         img: Ishita_Tegar,
-        name: "Ishita Tegar",
-        post: "Core member",
-    },
-    {
-        img: Trisul,
-        name: "Trishul",
+        name: "Ashritha",
         post: "Core member",
     },
 ];
-
+// Changing name
 export const design: CrewProps[] = [
     {
         img: A_Satya_Kartik,
-        name: "A Satya Karthik",
-        post: "Head",
+        name: "Kaushal Ranjan",
+        post: "Head(Design)",
+    },
+    {
+        img: A_Satya_Kartik,
+        name: "Hritik Routia",
+        post: "Head(Documentation)",
     },
     {
         img: S_Chandu,
-        name: "S.Chandu",
+        name: "Vriddhi Jain",
         post: "Core Member",
     },
     {
         img: Ojash_Verma,
-        name: "Ojash Verma",
+        name: "Parth Patel",
         post: "Core Member",
     },
     {
         img: Tanishka,
-        name: "Tanishka Chauhan",
+        name: "Adya Pandey",
         post: "Core Member",
     },
     {
         img: Shreyansh_Kushwaha,
-        name: "Shreyansh Kushwaha",
-        post: "Core Member",
-    },
-    {
-        img: Trisul,
-        name: "Trishul",
+        name: "Anushka Ekka",
         post: "Core Member",
     },
 ];
