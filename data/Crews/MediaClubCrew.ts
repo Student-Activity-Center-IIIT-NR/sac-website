@@ -26,7 +26,7 @@ import Anushka_Ekka from "../../assets/team_24-25/IMG_20240410_130215 - Anushka 
 import Vaishnavi_Shrivastava from "../../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
 import Jayaprakash_Sahu from "../../assets/team_24-25/IMG_20231004_223523 - Jaiprakash Sahu.jpg"
 import Shrawan_Kumar from "../../assets/team_24-25/1705775302364f - Shrawan Kumar Bhagat.jpg"
-import Sayyed_Rahim_Adnan_Ali from "../../assets/team_24-25/IMG_4711 - Sayyed Raahim Adnan.jpg"
+import Sayyed_Rahim_Adnan_Ali from "../../assets/team_24-25/IMG_4711 - Sayyed Raahim Adnan.JPG"
 import Tanisha_Jain from "../../assets/team_24-25/IMG20240322120646 - Tanisha Jain.jpg"
 import Shashank_Mishra from "../../assets/team_24-25/ppf - Shashank Mishra.jpg"
 import Navneeth from "../../assets/team_24-25/830c251d-5463-4969-ac80-75e644f0394d - Kundrapu Navneeth.jpeg"
