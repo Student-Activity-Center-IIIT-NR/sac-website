@@ -21,7 +21,7 @@ import Yash from "../../assets/team_24-25/yash_1.jpg";
 import Priyadarshi from "../../assets/team_24-25/priyadarshi.jpg"
 import Male from "../../assets/team_24-25/Male-member.jpeg"
 import Female from "../../assets/team_24-25/Female-member.jpeg"
-import R_Shivani from "../../assets/team_24-25/IMG_0614 - R Sai Shivani.jpg"
+import R_Sai_Shivani from "../../assets/team_24-25/Female-member.jpeg"
 import Anshul_Lakra from "../../assets/team_24-25/IMG_4342~3 - Anshul Pratap Lakra.jpg"
 import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
 import Jaya_Deep from "../../assets/team_24-25/IMG20240218145308 - Kundrapu Jaya Deep.jpg"
@@ -33,7 +33,7 @@ import Kritie_Omar from "../../assets/team_24-25/IMG-20240529-WA0012 - Kritie Om
 import Meenal_Patle from "../../assets/team_24-25/IMG-20240524-WA0038 - Meenal Patle.jpg"
 import Karmendra_Dev from "../../assets/team_24-25/IMG-20240412-WA0148-01-01-01 - Karmendra Dev Netam.jpeg"
 import Anushka_Ekka from "../../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka.jpg"
-import Anshumaan_Karna from "../../assets/team_24-25/IMG_0369 - Anshumaan Karna.jpg"
+import Anshumaan_Karna from "../../assets/team_24-25/Male-member.jpeg"
 import Vaishnavi_Shrivastava from "../../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
 import Jayaprakash_Sahu from "../../assets/team_24-25/IMG_20231004_223523 - Jaiprakash Sahu.jpg"
 import Shrawan_Kumar from "../../assets/team_24-25/1705775302364f - Shrawan Kumar Bhagat.jpg"
@@ -78,7 +78,7 @@ export const website: CrewProps[] = [
 
 export const shutterbug: CrewProps[] = [
     {
-        img: R_Shivani,
+        img: R_Sai_Shivani,
         name: "R.Sai Shivani",
         post: "Head",
     },
