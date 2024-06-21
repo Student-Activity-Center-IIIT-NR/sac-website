@@ -51,16 +51,16 @@ import Alisha_Tripathi from "../../assets/team_24-25/IMG-20240523-WA0005 - Alish
 import Priyadarshi_Satyakam from "../../assets/team_24-25/priyadarshi.jpg"
 import ParthSarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
 import Hritik_Routia from "../../assets/team_24-25/20240428_183502 - Hritik Kumar Routia.jpg"
-import Thakur_Mahima from "../../assets/team_24-25/IMG_4481 - Thakur Mahima Nuruti.JPG"
 import Meenal_Patle from "../../assets/team_24-25/IMG-20240524-WA0038 - Meenal Patle.jpg"
 import Ishan_Singh from "../../assets/team_24-25/IMG_20240526_225236 - Ishan Singh.jpg"
-import Sayyed_Raahim from "../../assets/team_24-25/IMG_4711 - Sayyed Raahim Adnan.JPG"
 import Taran_Singh from "../../assets/team_24-25/1000042709 - Taran Pal Singh.jpg"
 import Shubhangi_Chauhan from "../../assets/team_24-25/Female-member.jpeg"
 import Kamya_Hirwani from "../../assets/team_24-25/photo - Kamya Hirwani.jpg"
 import Aditya_Singh from "../../assets/team_24-25/IMG_1096 - Aditya Singh.jpeg"
 import Shriya_Banoth from "../../assets/team_24-25/IMG20240526151628 - Shriya Banoth.jpg"
 import Sanskar_Sharma from "../../assets/team_24-25/Male-member.jpeg"
+import Male from "../../assets/team_24-25/Male-member.jpeg"
+import Female from "../../assets/team_24-25/Female-member.jpeg"
 
 export const ytc: CrewProps[] = [
     {
@@ -106,7 +106,7 @@ export const tdb: CrewProps[] = [
         post: "Club Secretary",
     },
     {
-        img: Thakur_Mahima,
+        img: Female,
         name: "Thakur Mahima Nuruti",
         post: "Vice Secretary",
     },
@@ -138,7 +138,7 @@ export const mun: CrewProps[] = [
         post: "Club Secretary",
     },
     {
-        img: Sayyed_Raahim,
+        img: Male,
         name: "Sayyed Raahim Adnan Ali",
         post: "Vice Secretary",
     },
