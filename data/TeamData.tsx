@@ -1,5 +1,19 @@
 import { StaticImageData } from "next/image";
 
+//2024-2025
+import Amar_Sinha from "../assets/team_24-25/Amar Sinha.jpg"
+import Anjali from "../assets/team_24-25/Anjali_.jpg"
+import Ayush_Yadav from "../assets/team_24-25/IMG_0717-Ayush-Yadav.jpeg"
+import Vaishnavi_Shrivastava from "../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
+import Shreyansh_Kushwaha from "../assets/team_23-24/Shreyansh_Kushwaha.jpg"
+import Anushka_Ekka from "../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka(1).jpg"
+import Shrey_Omar from "../assets/team_24-25/shrey  - Shrey Omer.jpg"
+import Soumya_Dubey from "../assets/team_24-25/Soumya Dubey.jpg"
+import Yash_Raj from "../assets/team_24-25/Yash_Raj.jpeg"
+import Ananya_Rajawat from "../assets/team_24-25/Ananya Rajawat.jpg"
+import Anshumaan_Karna from "../assets/team_24-25/Anshumaan-Karna.jpeg"
+import Kritie_Omar from "../assets/team_24-25/IMG-20240529-WA0012 - Kritie Omar.jpg"
+
 // 2023-2024
 import Aditya_Oza from "../assets/team_23-24/Aditya_Oza.jpg";
 import Kanika from "../assets/team_23-24/Kanika_Chaurasia.jpg";
@@ -108,6 +122,19 @@ interface CrewProps {
 }
 
 interface TeamDataProps {
+  24_25: {
+    president?: CrewProps[];
+    pur?: CrewProps[];
+    technical?: CrewProps[];
+    cultural?: CrewProps[];
+    sports?: CrewProps[];
+    media?: CrewProps[];
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
   23_24: {
     president?: CrewProps[];
     pur?: CrewProps[];
@@ -191,6 +218,176 @@ interface TeamDataProps {
 // Data should follow a order => core, web, design, documentation, social
 
 export const TeamData: TeamDataProps = {
+
+  24_25: {
+    core: [
+      {
+        img: manoj_SacP,
+        name: "Dr. MANOJ KUMAR MAJUMDER",
+        post: "SAC President",
+        linkedin:"https://in.linkedin.com/in/manoj-kuamr-majumder-3b15b823",
+        mail:"manoj@iiitnr.edu.in"
+      },
+      {
+        img: Amar_Sinha,
+        name: "Amar Sinha",
+        post: "PG Representative (Boys)",
+        linkedin:"https://www.linkedin.com/in/amarcrj/",
+        mail:"amar@iiitnr.edu.in"
+      },
+      {
+        img: Anjali,
+        name: "Anjali Manhas",
+        post: "PG Representative (Girls)",
+        linkedin:"https://www.linkedin.com/in/anjali-manhas-b27844273/",
+        mail:"anjali@iiitnr.edu.in"
+      },
+      {
+        img: Ayush_Yadav,
+        name: "Ayush Yadav",
+        post: "UG Representative (Boys)",
+        linkedin:"https://www.linkedin.com/in/ayush-yadav-029884263/",
+        mail:"ayush22100@iiitnr.edu.in"
+      },
+      {
+        img: Vaishnavi_Shrivastava,
+        name: "Vaishnavi Shrivastava",
+        post: "UG Representative (Girls)",
+        linkedin:"https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        mail:"vaishnavi23102@iiitnr.edu.in"
+      },
+      {
+        img: Shreyansh_Kushwaha,
+        name: "Shreyansh Kushwaha",
+        post: "Science and Technology Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/shreyansh-kushwaha-ab3876257/",
+        mail:"shreyansh22101@iiitnr.edu.in"
+      },
+      {
+        img: Anushka_Ekka,
+        name: "Anushka Ekka",
+        post: "Science and Technology Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/anushka-ekka-815821215",
+        mail:"anushka23102@iiitnr.edu.in"
+      },
+      {
+        img: Shrey_Omar,
+        name: "Shrey Omar",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/shrey-omer-71076227a/",
+        mail:"shrey23102@iiitnr.edu.in"
+      },
+      {
+        img: Soumya_Dubey,
+        name: "Soumya Dubey",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/soumya-dubey-208917219",
+        mail:"soumya23101@iiitnr.edu.in"
+      },
+      {
+        img: Yash_Raj,
+        name: "Yash Raj",
+        post: "Sports Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/yash-raj-164222290/",
+        mail:"yash22101@iiitnr.edu.in"
+      },
+      {
+        img: Ananya_Rajawat,
+        name: "Ananya Rajawat",
+        post: "Sports Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        mail:"ananya23101@iiitnr.edu.in"
+      },
+      {
+        img: Anshumaan_Karna,
+        name: "Anshumaan Karna",
+        post: "Media and IT Cell Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/anshumaankarna/",
+        mail:"anshumaan23100@iiitnr.edu.in"
+      },
+      {
+        img: Kritie_Omar,
+        name: "Kritie Omar",
+        post: "Media and IT Cell Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/kritie-omar-108291290",
+        mail:"kritie23101@iiitnr.edu.in"
+      },
+    ],
+
+    president: [
+      {
+        img: manoj_SacP,
+        name: "Dr. MANOJ KUMAR MAJUMDER",
+        post: "SAC President",
+      },
+    ],
+    pur: [
+      {
+        img: Kamal,
+        name: "Kamal Solanki",
+        post: "PG Representative",
+      },
+      {
+        img: Aditya_Oza,
+        name: "Aditya Oza",
+        post: "UG Representative (Boys)",
+      },
+      {
+        img: Kanika,
+        name: "Kanika Chaurasia",
+        post: "UG Representative (Girls)",
+      },
+    ],
+    technical: [
+      {
+        img: Shivam_Kushwaha,
+        name: "Shivam Kushwaha",
+        post: "Science and Technology Secretary (Boys)",
+      },
+      {
+        img: Ch_Swati,
+        name: "Ch Swati",
+        post: "Science and Technology Secretary (Girls)",
+      },
+    ],
+    cultural: [
+      {
+        img: Akshat_Shree_Mishra,
+        name: "Akshat Shree Mishra",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+      },
+      {
+        img: Rimjhim_Sharma,
+        name: "Rimjhim Sharma",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+      },
+    ],
+    sports: [
+      {
+        img: Deependra_Singh_Bhow,
+        name: "Deependra Singh Bhow",
+        post: "Sports Secretary (Boys)",
+      },
+      {
+        img: Kusum_Patel,
+        name: "Kusum Patel",
+        post: "Sports Secretary (Girls)",
+      },
+    ],
+    media: [
+      {
+        img: Jay_Padia,
+        name: "Jay Padia",
+        post: "Media and IT Cell Secretary (Boys)",
+      },
+      {
+        img: R_Sai_Shivani,
+        name: "R.Sai Shivani",
+        post: "Media and IT Cell Secretary (Girls)",
+      },
+    ],
+  },
+
   23_24: {
     core: [
       {
