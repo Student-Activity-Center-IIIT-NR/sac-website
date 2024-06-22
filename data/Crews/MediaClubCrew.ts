@@ -10,8 +10,7 @@ interface CrewProps {
 import Male from "../../assets/team_24-25/Male-member.jpeg"
 import Female from "../../assets/team_24-25/Female-member.jpeg"
 import Yash from "../../assets/team_24-25/yash_1.jpg";
-import Priyadarshi from "../../assets/team_24-25/priyadarshi.jpg"
-import R_Sai_Shivani from "../../assets/team_24-25/Female-member.jpeg"
+import Priyadarshi from "../../assets/team_24-25/Screenshot_2023-11-29-20-07-35-72_965bbf4d18d205f782c6b8409c5773a4~3 - Priyadarshi Satyakam(1).jpg"
 import Anshul_Lakra from "../../assets/team_24-25/IMG_4342~3 - Anshul Pratap Lakra.jpg"
 import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
 import Jaya_Deep from "../../assets/team_24-25/IMG20240218145308 - Kundrapu Jaya Deep.jpg"
@@ -22,7 +21,7 @@ import Kaushal_Ranjan from "../../assets/team_24-25/Kaushal Ranjan (7) - Kaushal
 import Kritie_Omar from "../../assets/team_24-25/IMG-20240529-WA0012 - Kritie Omar(1).jpg"
 import Meenal_Patle from "../../assets/team_24-25/IMG-20240524-WA0038 - Meenal Patle.jpg"
 import Karmendra_Dev from "../../assets/team_24-25/IMG-20240412-WA0148-01-01-01 - Karmendra Dev Netam.jpeg"
-import Anushka_Ekka from "../../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka.jpg"
+import Anushka_Ekka from "../../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka(1).jpg"
 import Vaishnavi_Shrivastava from "../../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
 import Jayaprakash_Sahu from "../../assets/team_24-25/IMG_20231004_223523 - Jaiprakash Sahu.jpg"
 import Shrawan_Kumar from "../../assets/team_24-25/1705775302364f - Shrawan Kumar Bhagat.jpg"
@@ -38,6 +37,9 @@ import Alisha_Tripathi from "../../assets/team_24-25/IMG-20240523-WA0005 - Alish
 import Mohit_Sharma from "../../assets/team_24-25/2024-05-20-16-37-50-202 - Sharma Mohit.jpg"
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg"
 import Kushagra_Verma from "../../assets/team_24-25/WhatsApp Image 2024-06-19 - Kushagra Verma.jpg"
+import R_Sai_Shivani from "../../assets/team_24-25/IMG_0614-R-Sai-Shivani.jpeg"
+import Anshumaan from "../../assets/team_24-25/IMG_0369-Anshumaan-Karna.jpeg"
+import Adnan from "../../assets/team_24-25/IMG_4711-Sayyed-Raahim-Adnan_1_.jpeg"
 
 export const website: CrewProps[] = [
     {
@@ -109,7 +111,7 @@ export const shutterbug: CrewProps[] = [
         post: "Operations",
     },
     {
-        img: Male,
+        img: Anshumaan,
         name: "Anshumaan Karna",
         post: "Social Media",
     },
@@ -167,7 +169,7 @@ export const pr: CrewProps[] = [
         post: "Head(Social Media)",
     },
     {
-        img: Male,
+        img: Adnan,
         name: "Sayyed Raahim Adnan Ali",
         post: "Vice Head",
     },
