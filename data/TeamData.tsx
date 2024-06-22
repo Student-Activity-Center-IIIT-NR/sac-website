@@ -323,67 +323,96 @@ export const TeamData: TeamDataProps = {
     ],
     pur: [
       {
-        img: Kamal,
-        name: "Kamal Solanki",
-        post: "PG Representative",
+        img: Amar_Sinha,
+        name: "Amar Sinha",
+        post: "PG Representative (Boys)",
+        linkedin:"https://www.linkedin.com/in/amarcrj/",
+        mail:"amar@iiitnr.edu.in"
       },
       {
-        img: Aditya_Oza,
-        name: "Aditya Oza",
+        img: Anjali,
+        name: "Anjali Manhas",
+        post: "PG Representative (Girls)",
+        linkedin:"https://www.linkedin.com/in/anjali-manhas-b27844273/",
+        mail:"anjali@iiitnr.edu.in"
+      },
+      {
+        img: Ayush_Yadav,
+        name: "Ayush Yadav",
         post: "UG Representative (Boys)",
+        linkedin:"https://www.linkedin.com/in/ayush-yadav-029884263/",
+        mail:"ayush22100@iiitnr.edu.in"
       },
       {
-        img: Kanika,
-        name: "Kanika Chaurasia",
+        img: Vaishnavi_Shrivastava,
+        name: "Vaishnavi Shrivastava",
         post: "UG Representative (Girls)",
+        linkedin:"https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        mail:"vaishnavi23102@iiitnr.edu.in"
       },
     ],
     technical: [
       {
-        img: Shivam_Kushwaha,
-        name: "Shivam Kushwaha",
+        img: Shreyansh_Kushwaha,
+        name: "Shreyansh Kushwaha",
         post: "Science and Technology Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/shreyansh-kushwaha-ab3876257/",
+        mail:"shreyansh22101@iiitnr.edu.in"
       },
       {
-        img: Ch_Swati,
-        name: "Ch Swati",
+        img: Anushka_Ekka,
+        name: "Anushka Ekka",
         post: "Science and Technology Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/anushka-ekka-815821215",
+        mail:"anushka23102@iiitnr.edu.in"
       },
     ],
     cultural: [
       {
-        img: Akshat_Shree_Mishra,
-        name: "Akshat Shree Mishra",
+        img: Shrey_Omar,
+        name: "Shrey Omar",
         post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/shrey-omer-71076227a/",
+        mail:"shrey23102@iiitnr.edu.in"
       },
       {
-        img: Rimjhim_Sharma,
-        name: "Rimjhim Sharma",
+        img: Soumya_Dubey,
+        name: "Soumya Dubey",
         post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/soumya-dubey-208917219",
+        mail:"soumya23101@iiitnr.edu.in"
       },
     ],
     sports: [
       {
-        img: Deependra_Singh_Bhow,
-        name: "Deependra Singh Bhow",
+        img: Yash_Raj,
+        name: "Yash Raj",
         post: "Sports Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/yash-raj-164222290/",
+        mail:"yash22101@iiitnr.edu.in"
       },
       {
-        img: Kusum_Patel,
-        name: "Kusum Patel",
+        img: Ananya_Rajawat,
+        name: "Ananya Rajawat",
         post: "Sports Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        mail:"ananya23101@iiitnr.edu.in"
       },
     ],
     media: [
       {
-        img: Jay_Padia,
-        name: "Jay Padia",
+        img: Anshumaan_Karna,
+        name: "Anshumaan Karna",
         post: "Media and IT Cell Secretary (Boys)",
+        linkedin:"https://www.linkedin.com/in/anshumaankarna/",
+        mail:"anshumaan23100@iiitnr.edu.in"
       },
       {
-        img: R_Sai_Shivani,
-        name: "R.Sai Shivani",
+        img: Kritie_Omar,
+        name: "Kritie Omar",
         post: "Media and IT Cell Secretary (Girls)",
+        linkedin:"https://in.linkedin.com/in/kritie-omar-108291290",
+        mail:"kritie23101@iiitnr.edu.in"
       },
     ],
   },
