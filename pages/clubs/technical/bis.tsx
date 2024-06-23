@@ -45,7 +45,7 @@ const BIS: FunctionComponent<BISProps> = () => {
             pb: 6,
           }}
         >
-          {/* <Crew props={bis} /> */}
+           <Crew props={bis} /> 
         </Box>
       </ClubsLayout>
     </>
