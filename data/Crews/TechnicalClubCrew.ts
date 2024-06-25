@@ -37,11 +37,10 @@ import Bhavik from "../../assets/team_23-24/Male-member.jpeg";
 import Harsh_Shrivastava from "../../assets/team_23-24/Harsh_Shrivastava.jpg";
 import Lokesh_Harmani from "../../assets/team_23-24/Male-member.jpeg";
 import Shashank from "../../assets/team_24-25/ShashankMishra.jpg";
-import Adnan from "../../assets/team_24-25/Adnan.JPG";
-import Divyansh from "../../assets/team_24-25/DivyanshChauhan.jpg";
+import Adnan from "../../assets/team_23-24/Male-member.jpeg";
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg";
-import Divyansh_Chauhan from "../../assets/team_24-25/IMG_20231020_012132_167 - Divyansh Kumar Singh Chauhan.jpg"
-import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135155 - Adya Pandey.jpg";
+import Divyansh_Chauhan from  "../../assets/team_23-24/Male-member.jpeg";
+import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135551 - Adya Pandey.jpg";
 import Awatansh_Singh from "../../assets/team_24-25/IMG_20240130_234704 - Awatansh Singh.jpg";
 import Sagnik_Mazumdar from "../../assets/team_24-25/IMG20240410162931 - Sagnik Mazumdar.jpg"
 import Naman_Garg from "../../assets/team_24-25/IMG_20240221_231000_055 - Naman Garg.jpg";
@@ -62,7 +61,9 @@ import Tejas_Keshwani from "../../assets/team_24-25/Screenshot_20240524_131623_G
 import Pranjal_Pathak from "../../assets/team_24-25/SAVE_20240308_243847 - Pranjal Pathak.jpg";
 import Venkata_Surya_Sundar_Vadali from "../../assets/team_24-25/Surya - Venkata Surya Sundar Vadali.jpg";
 import Sameer_Yadav from "../../assets/team_24-25/1000029524 - Sameer Yadav.jpg";
-
+import Mohammed_Adeeb from "../../assets/team_24-25/myphoto - Mohammed Adeeb.jpg";
+import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt(1).jpg";
+import Tanisha_Jain from "../../assets/team_24-25/IMG-20240517-WA0017 - Tanisha Jain.jpg";
 export const inquizitive: CrewProps[] = [
     {
         img: Ayush_Yadav,
@@ -90,7 +91,7 @@ export const inquizitive: CrewProps[] = [
         post: "Core Member",
     },
     {
-        img: Divyansh,
+        img: Divyansh_Chauhan,
         name: "Divyansh Kumar Singh Chauhan",
         post: "Core Member",
     },
@@ -99,28 +100,33 @@ export const inquizitive: CrewProps[] = [
 
 export const comet: CrewProps[] = [
     {
-        img: Ishita_Tegar,
-        name: "Ishita Tegar",
+        img: Parthsarthi_Dutt,
+        name: "Parthsarthi Dutt",
         post: "Club Secretary",
     },
     {
-        img: Umesh_Sinha,
-        name: "Umesh Sinha",
+        img: Shivanshu_Vishwakarma,
+        name: "Shivanshu Vishwakarma",
         post: "Vice Secretary",
     },
     {
-        img: Alankar_Saxena,
-        name: "Alankar Saxena",
+        img: Shashank,
+        name: "hashank Mishra",
         post: "Core Member",
     },
     {
-        img: Namita,
-        name: "Namita Shah",
+        img: Abhijeet_Mohapatra,
+        name: "Abhijeet Mohapatra",
         post: "Core Member",
     },
     {
-        img: Krishna_Aggarwal,
-        name: "Krishna Aggarwal",
+        img: Tanisha_Jain,
+        name: "Tanisha Jain",
+        post: "Core Member",
+    },
+    {
+        img: Mohammed_Adeeb,
+        name: "Mohammed Adeeb",
         post: "Core Member",
     },
 ];
