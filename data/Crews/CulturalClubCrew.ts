@@ -34,7 +34,6 @@ import Anjali_Daheriya from "../../assets/team_23-24/Female-member.jpeg";
 import Aniket_Pandey from "../../assets/team_23-24/Aniket_Pandey.jpg";
 import Shreya_Tiwari from "../../assets/team_23-24/Shreya_Tiwari.jpg";
 import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Tanisha_Jain from "../../assets/team_24-25/IMG20240322120646 - Tanisha Jain.jpg";
 import Shashank_Mishra from "../../assets/team_24-25/ppf - Shashank Mishra.jpg"
 import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135551 - Adya Pandey(1).jpg"
 import Kartik_Pandey from "../../assets/team_24-25/MY_photo - Kartik Pandey.jpg"
@@ -53,14 +52,23 @@ import ParthSarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Pa
 import Hritik_Routia from "../../assets/team_24-25/20240428_183502 - Hritik Kumar Routia.jpg"
 import Meenal_Patle from "../../assets/team_24-25/IMG-20240524-WA0038 - Meenal Patle.jpg"
 import Ishan_Singh from "../../assets/team_24-25/IMG_20240526_225236 - Ishan Singh.jpg"
-import Taran_Singh from "../../assets/team_24-25/1000042709 - Taran Pal Singh.jpg"
 import Shubhangi_Chauhan from "../../assets/team_24-25/Female-member.jpeg"
 import Kamya_Hirwani from "../../assets/team_24-25/photo - Kamya Hirwani.jpg"
 import Aditya_Singh from "../../assets/team_24-25/IMG_1096 - Aditya Singh.jpeg"
 import Shriya_Banoth from "../../assets/team_24-25/IMG20240526151628 - Shriya Banoth.jpg"
 import Sanskar_Sharma from "../../assets/team_24-25/Male-member.jpeg"
 import Male from "../../assets/team_24-25/Male-member.jpeg"
-import Female from "../../assets/team_24-25/Female-member.jpeg"
+import Female from "../../assets/team_24-25/Female-member.jpeg";
+import Dharmendra from "../../assets/team_24-25/DharmendraDhruv.jpeg";
+import Tanisha_Jain from "../../assets/team_24-25/IMG20240322120646 - Tanisha Jain.jpg";
+import Yogi from "../../assets/team_24-25/IMG_20231003_125335 - Yogendra Kumar Thakur.jpeg";
+import Paridhi from "../../assets/team_24-25/IMG-20231002-WA0338 - Paridhi Sharma.jpeg";
+import Taran_Singh from "../../assets/team_24-25/1000042709 - Taran Pal Singh.jpg"
+import Vridhi from "../../assets/team_24-25/IMG_20231231_231251_225 - Vriddhi Jain.jpg"
+import Anwita from "../../assets/team_24-25/20231129_211550 - Anwita Chakraborty.jpg"
+import Sujal_goel from "../../assets/team_24-25/IMG_7809_Original - Sujal Goel.jpg"
+import Aditya_Nayak from "../../assets/team_24-25/IMG-20240526-WA0005 - Aditya Kumar Nayak.jpg"
+
 
 export const ytc: CrewProps[] = [
     {
@@ -175,23 +183,23 @@ export const indradhanush: CrewProps[] = [
         post: "Vice Secretary",
     },
     {
-        img: Sanjana_Sori,
-        name: "Sanjana Sori",
+        img: Dharmendra,
+        name: "Dharmendra Dhruv",
         post: "Core Member",
     },
     {
-        img: Vajrala_Akhilesh,
-        name: "Vajrala Akhilesh",
+        img: Tanisha_Jain,
+        name: "Tanisha Jain",
         post: "Core Member",
     },
     {
-        img: P_Punit,
-        name: "P Punit",
+        img: Paridhi,
+        name: "Paridhi Sharma",
         post: "Core Member",
     },
     {
-        img: Anjali_Daheriya,
-        name: "Anjali Daheriya",
+        img: Yogi,
+        name: "Yogendra Kumar Thakur",
         post: "Core Member",
     },
 ];
@@ -274,23 +282,23 @@ export const capriccio: CrewProps[] = [
         post: "Vice Secretary",
     },
     {
-        img: Tanisi_Jha,
-        name: "Tanisi Jha",
+        img: Taran_Singh,
+        name: "Taran Pal Singh",
         post: "Core Member",
     },
     {
-        img: Varsha_Sri_Narla,
-        name: "Varsha Sri Narla",
+        img: Vridhi,
+        name: "Vridhi Jain",
         post: "Core Member",
     },
     {
-        img: Akhilesh_Vajrala,
-        name: "Akhilesh Vajrala",
+        img: Anwita,
+        name: "Anwita Chakraborty",
         post: "Core Member",
     },
     {
-        img: Mohd_Kaif,
-        name: "Mohd Kaif",
+        img: Sujal_goel,
+        name: "Sujal Goel",
         post: "Core Member",
     },
 ];
@@ -306,23 +314,23 @@ export const c2c: CrewProps[] = [
         post: "Vice Secretary",
     },
     {
-        img: Ashutosh_Jaiswal,
-        name: "Ashutosh Jaiswal",
+        img: Vridhi,
+        name: "Vridhi Jain",
         post: "Core Member",
     },
     {
-        img: Ojash_Verma,
-        name: "Ojash Verma",
+        img: Sagnik_Mukherjee,
+        name: "Sagnik Mukherjee",
         post: "Core Member",
     },
     {
-        img: Arman_Singh_Kshatri,
-        name: "Arman Singh Kshatri",
+        img: Aditya_Nayak,
+        name: "Aditya Nayak",
         post: "Core Member",
     },
     {
-        img: Simmi_Baghel,
-        name: "Simmi Baghel",
+        img: Male,
+        name: "Soham Kamble",
         post: "Core Member",
     },
 ];
