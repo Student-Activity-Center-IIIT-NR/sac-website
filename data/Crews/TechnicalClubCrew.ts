@@ -36,6 +36,9 @@ import Krishna_Aggarwal from "../../assets/team_23-24/Krishna_Agrawal.jpg";
 import Bhavik from "../../assets/team_23-24/Male-member.jpeg";
 import Harsh_Shrivastava from "../../assets/team_23-24/Harsh_Shrivastava.jpg";
 import Lokesh_Harmani from "../../assets/team_23-24/Male-member.jpeg";
+import Shashank from "../../assets/team_24-25/ShashankMishra.jpg";
+import Adnan from "../../assets/team_24-25/Adnan.JPG";
+import Divyansh from "../../assets/team_24-25/DivyanshChauhan.jpg";
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg";
 import Divyansh_Chauhan from "../../assets/team_24-25/IMG_20231020_012132_167 - Divyansh Kumar Singh Chauhan.jpg"
 import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135155 - Adya Pandey.jpg";
@@ -72,23 +75,23 @@ export const inquizitive: CrewProps[] = [
         post: "Vice Secretary",
     },
     {
-        img: Aniket_Pandey,
-        name: "Aniket Pandey",
+        img: Shashank,
+        name: "Shashank Mishra",
         post: "Core Member",
     },
     {
-        img: Arman_Singh_Kshatri,
-        name: "Arman Singh Kshatri",
+        img: Adnan,
+        name: "Sayyed Raahim Adnan",
         post: "Core Member",
     },
     {
-        img: Harsh_Shrivastava,
-        name: "Harsh Shrivastava",
+        img: Adya_Pandey,
+        name: "Adya Pandey",
         post: "Core Member",
     },
     {
-        img: Lokesh_Harmani,
-        name: "Lokesh Hariramani",
+        img: Divyansh,
+        name: "Divyansh Kumar Singh Chauhan",
         post: "Core Member",
     },
 ];
