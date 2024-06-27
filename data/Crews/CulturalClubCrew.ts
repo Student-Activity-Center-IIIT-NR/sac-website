@@ -34,7 +34,7 @@ import Anjali_Daheriya from "../../assets/team_23-24/Female-member.jpeg";
 import Aniket_Pandey from "../../assets/team_23-24/Aniket_Pandey.jpg";
 import Shreya_Tiwari from "../../assets/team_23-24/Shreya_Tiwari.jpg";
 import Aayush_Kulkarni from "../../assets/team_23-24/Aayush_Kulkarni.jpg";
-import Shashank_Mishra from "../../assets/team_24-25/ppf - Shashank Mishra.jpg"
+import Shashank_Mishra from "../../assets/team_24-25/ppf - Shashank Mishra(1).jpg"
 import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135551 - Adya Pandey(1).jpg"
 import Kartik_Pandey from "../../assets/team_24-25/MY_photo - Kartik Pandey.jpg"
 import Anushka_Ekka from "../../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka.jpg"

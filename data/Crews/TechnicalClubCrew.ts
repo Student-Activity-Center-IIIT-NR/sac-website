@@ -37,11 +37,11 @@ import Bhavik from "../../assets/team_23-24/Male-member.jpeg";
 import Harsh_Shrivastava from "../../assets/team_23-24/Harsh_Shrivastava.jpg";
 import Lokesh_Harmani from "../../assets/team_23-24/Male-member.jpeg";
 import Shashank from "../../assets/team_24-25/ShashankMishra.jpg";
-import Adnan from "../../assets/team_24-25/Adnan.JPG";
-import Divyansh from "../../assets/team_24-25/DivyanshChauhan.jpg";
+import Adnan from "../../assets/team_24-25/Male-member.jpeg";
+import Divyansh from "../../assets/team_24-25/Male-member.jpeg";
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg";
 import Divyansh_Chauhan from "../../assets/team_24-25/IMG_20231020_012132_167 - Divyansh Kumar Singh Chauhan.jpg"
-import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135155 - Adya Pandey.jpg";
+import Adya_Pandey from "../../assets/team_24-25/Female-member.jpeg";
 import Awatansh_Singh from "../../assets/team_24-25/IMG_20240130_234704 - Awatansh Singh.jpg";
 import Sagnik_Mazumdar from "../../assets/team_24-25/IMG20240410162931 - Sagnik Mazumdar.jpg"
 import Naman_Garg from "../../assets/team_24-25/IMG_20240221_231000_055 - Naman Garg.jpg";
@@ -211,7 +211,7 @@ export const tsoc: CrewProps[] = [
         post: "Core Member",
     },
     {
-        img: Divyansh_Chauhan,
+        img: Divyansh,
         name: "Divyansh Chauhan",
         post: "Core Member",
     },
