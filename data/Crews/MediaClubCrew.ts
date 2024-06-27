@@ -10,7 +10,7 @@ interface CrewProps {
 import Male from "../../assets/team_24-25/Male-member.jpeg"
 import Female from "../../assets/team_24-25/Female-member.jpeg"
 import Yash from "../../assets/team_24-25/yash_1.jpg";
-import Priyadarshi from "../../assets/team_24-25/Screenshot_2023-11-29-20-07-35-72_965bbf4d18d205f782c6b8409c5773a4~3 - Priyadarshi Satyakam(1).jpg"
+import Priyadarshi from "../../assets/team_24-25/Priyadarshi_img.jpg"
 import Anshul_Lakra from "../../assets/team_24-25/IMG_4342~3 - Anshul Pratap Lakra.jpg"
 import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
 import Jaya_Deep from "../../assets/team_24-25/IMG20240218145308 - Kundrapu Jaya Deep.jpg"
@@ -26,7 +26,7 @@ import Vaishnavi_Shrivastava from "../../assets/team_24-25/1000088291-01 - Vaish
 import Jayaprakash_Sahu from "../../assets/team_24-25/IMG_20231004_223523 - Jaiprakash Sahu.jpg"
 import Shrawan_Kumar from "../../assets/team_24-25/1705775302364f - Shrawan Kumar Bhagat.jpg"
 import Tanisha_Jain from "../../assets/team_24-25/IMG20240322120646 - Tanisha Jain.jpg"
-import Shashank_Mishra from "../../assets/team_24-25/ppf - Shashank Mishra.jpg"
+import Shashank_Mishra from "../../assets/team_24-25/ppf-Shashank-Mishra.jpeg"
 import Navneeth from "../../assets/team_24-25/830c251d-5463-4969-ac80-75e644f0394d - Kundrapu Navneeth.jpeg"
 import Ashritha from "../../assets/team_24-25/ash_20240527_073222_0000 - Ashritha Gundu.jpg"
 import Hritik_Routia from "../../assets/team_24-25/20240428_183502 - Hritik Kumar Routia.jpg"

@@ -8,40 +8,11 @@ interface CrewProps {
 
 // import crew
 import Ashutosh_Jaiswal from "../../assets/team_23-24/Ashutosh_Jaiswal.jpeg";
-import Arman_Singh_Kshatri from "../../assets/team_23-24/Male-member.jpeg";
-import Swastika_Satya from "../../assets/team_23-24/Swastika_Satya.jpg";
-import Vishal_Sharma from "../../assets/team_23-24/Vishal_Sharma.jpg";
-import Aniket_Pandey from "../../assets/team_23-24/Aniket_Pandey.jpg";
-import Ayush_Yadav from "../../assets/team_23-24/Ayush_Yadav.jpg";
-import Shaurya_Malhan from "../../assets/team_23-24/Shaurya_Malhan.jpeg";
-import YashV_Gautum from "../../assets/team_23-24/Yash_Vardhan_Gautam.jpg";
-import Sanskar_Singh from "../../assets/team_23-24/Sanskar_Singh.jpeg";
-import Arya_Mahesh from "../../assets/team_23-24/Arya_Mahesh_Bhiwapurkar.jpg";
-import Vaibhav_Suntwal from "../../assets/team_23-24/Vaibhav_Suntwal.jpg";
-import Shivaibhav from "../../assets/team_23-24/Shivaibhav_Dewangan.jpg";
-import Gaurish from "../../assets/team_23-24/Gaurish_Ojha.jpg";
-import Dhyanendra from "../../assets/team_23-24/Dhyanendra_Tripathi.jpg";
-import Swasti_Srivastava from "../../assets/team_23-24/Swasti_Srivastava.jpeg";
 import Manav_Raj from "../../assets/team_23-24/Manav_Raj_Singh.jpg";
-import V_Jaswanth from "../../assets/team_23-24/Vemula_Jashwanth.jpeg";
-import Alankrit from "../../assets/team_23-24/Alankrit_Sharma.jpg"
-import Shreyansh_Kushwaha from "../../assets/team_23-24/Shreyansh_Kushwaha.jpg"
-import Venkata_surya from "../../assets/team_23-24/Venkata_Surya_Sundar_Vadali.jpg"
-import Priyanshu_shri from "../../assets/team_23-24/Priyanshu_Srivastava.jpg"
-import Ishita_Tegar from "../../assets/team_23-24/Ishita_Tegar.jpg";
-import Umesh_Sinha from "../../assets/team_23-24/Umesh_Sinha.jpg";
-import Alankar_Saxena from "../../assets/team_23-24/Alankar_Saxena.jpg";
-import Namita from "../../assets/team_23-24/Namita_shah.jpg";
-import Krishna_Aggarwal from "../../assets/team_23-24/Krishna_Agrawal.jpg";
-import Bhavik from "../../assets/team_23-24/Male-member.jpeg";
 import Harsh_Shrivastava from "../../assets/team_23-24/Harsh_Shrivastava.jpg";
 import Lokesh_Harmani from "../../assets/team_23-24/Male-member.jpeg";
-import Shashank from "../../assets/team_24-25/ShashankMishra.jpg";
-import Adnan from "../../assets/team_24-25/Male-member.jpeg";
-import Divyansh from "../../assets/team_24-25/Male-member.jpeg";
 import Anish_Kumar from "../../assets/team_24-25/20240316_184446 - Anish Kumar.jpg";
-import Divyansh_Chauhan from "../../assets/team_24-25/IMG_20231020_012132_167 - Divyansh Kumar Singh Chauhan.jpg"
-import Adya_Pandey from "../../assets/team_24-25/Female-member.jpeg";
+import Adya_Pandey from "../../assets/team_24-25/IMG_20240526_135155 - Adya Pandey.jpg"
 import Awatansh_Singh from "../../assets/team_24-25/IMG_20240130_234704 - Awatansh Singh.jpg";
 import Sagnik_Mazumdar from "../../assets/team_24-25/IMG20240410162931 - Sagnik Mazumdar.jpg"
 import Naman_Garg from "../../assets/team_24-25/IMG_20240221_231000_055 - Naman Garg.jpg";
@@ -53,7 +24,7 @@ import Kommineni_Akhil_Shivaram from "../../assets/team_23-24/Male-member.jpeg";
 import Aryan_Kumar_Baghel from "../../assets/team_24-25/IMG_20240517_093634_629 - Aryan Kumar Baghel.jpg"
 import Gonthina_Sai_Sriram from "../../assets/team_24-25/sai_kgp_crop - Gonthina Sai Sriram.png";
 import Lakshya_Garg from "../../assets/team_24-25/-rm9edy - Lakshya Garg.jpg";
-import Abhijeet_Mohapatra from "../../assets/team_23-24/Male-member.jpeg";
+import Abhijeet_Mohapatra from "../../assets/team_24-25/IMG_3131_2-Abhijeet-Mohapatra.jpeg"
 import SVS_Aditya from "../../assets/team_24-25/1 - S V S Aditya.jpg";
 import Kundrapu_Navneeth from "../../assets/team_24-25/830c251d-5463-4969-ac80-75e644f0394d - Kundrapu Navneeth.jpeg";
 import Sohel_Pratap_Singh from "../../assets/team_24-25/IMG_20231211_142157 - Sohel Pratap Singh.jpg";
@@ -65,30 +36,35 @@ import Sameer_Yadav from "../../assets/team_24-25/1000029524 - Sameer Yadav.jpg"
 import Mohammed_Adeeb from "../../assets/team_24-25/myphoto - Mohammed Adeeb.jpg";
 import Parthsarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt(1).jpg";
 import Tanisha_Jain from "../../assets/team_24-25/IMG-20240517-WA0017 - Tanisha Jain.jpg";
+import Divyansh_Chauhan from "../../assets/team_24-25/IMG_20231020_012132_167 - Divyansh Kumar Singh Chauhan.jpg"
+import Kartik_Pandey from "../../assets/team_24-25/MY_photo - Kartik Pandey.jpg"
+import Shashank_Mishra from "../../assets/team_24-25/ppf-Shashank-Mishra.jpeg"
+import Raahim_Adnan from "../../assets/team_24-25/IMG_4711-Sayyed-Raahim-Adnan_1_.jpeg"
+
 export const inquizitive: CrewProps[] = [
     {
-        img: Ayush_Yadav,
-        name: "Ayush Yadav",
+        img: Kartik_Pandey,
+        name: "Kartik Pandey",
         post: "Club Secretary",
     },
     {
-        img: Bhavik,
-        name: "Bhavik Sachdev",
+        img: Tanisha_Jain,
+        name: "Tanisha Jain",
         post: "Vice Secretary",
-    },
-    {
-        img: Shashank,
-        name: "Shashank Mishra",
-        post: "Core Member",
-    },
-    {
-        img: Adnan,
-        name: "Sayyed Raahim Adnan",
-        post: "Core Member",
     },
     {
         img: Adya_Pandey,
         name: "Adya Pandey",
+        post: "Core Member",
+    },
+    {
+        img: Shashank_Mishra,
+        name: "Shashank Mishra",
+        post: "Core Member",
+    },
+    {
+        img: Raahim_Adnan,
+        name: "Sayyed Raahim Adnan Ali",
         post: "Core Member",
     },
     {
@@ -111,8 +87,8 @@ export const comet: CrewProps[] = [
         post: "Vice Secretary",
     },
     {
-        img: Shashank,
-        name: "hashank Mishra",
+        img: Shashank_Mishra,
+        name: "Shashank Mishra",
         post: "Core Member",
     },
     {
@@ -218,8 +194,8 @@ export const tsoc: CrewProps[] = [
         post: "Core Member",
     },
     {
-        img: Divyansh,
-        name: "Divyansh Chauhan",
+        img: Divyansh_Chauhan,
+        name: "Divyansh Kumar Singh Chauhan",
         post: "Core Member",
     },
     {
