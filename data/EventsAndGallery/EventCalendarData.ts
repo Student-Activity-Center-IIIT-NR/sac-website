@@ -438,11 +438,69 @@ export const calendarData: CalendarDataProps[] = [
     club: "Ciphercell",
     desc: "Finding Bug(errors)"
   },
+  //august
   {
     date: "15-08-2024",
     eventName: "Independence Day",
     icon: circleIcon,
     club: "SAC",
+    desc: ""
+  },
+  {
+    date: "24-08-2024",
+    eventName: "Quick Escape",
+    icon: triangleIcon,
+    club: "YTC",
+    desc: ""
+  },
+  {
+    date: "25-08-2024",
+    eventName: "Orientation Workshop",
+    icon: rectangleIcon,
+    club: "BIS",
+    desc: ""
+  },
+  {
+    date: "26-08-2024",
+    eventName: "Janmashtami",
+    icon: circleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "27-08-2024",
+    eventName: "Orientation Workshop",
+    icon: rectangleIcon,
+    club: "TSOC",
+    desc: ""
+  },
+  {
+    date: "27-08-2024",
+    eventName: "Club Orientation",
+    icon: rectangleIcon,
+    club: "Ciphercell & Robonyx(formerly Comet)",
+    desc: ""
+  },
+  {
+    date: "29-08-2024",
+    eventName: "Orientation (Arena)",
+    icon: rectangleIcon,
+    club: "Inquizitive and Atharv",
+    desc: ""
+  },
+  {
+    date: "30-08-2024",
+    eventName: "Orientation + Intro to ML & math",
+    icon: rectangleIcon,
+    club: "AIML",
+    desc: ""
+  },
+  {
+    date: "31-04-2024",
+
+    eventName: "Workshop",
+    icon: triangleIcon,
+    club: "Igniters",
     desc: ""
   }
 ];
