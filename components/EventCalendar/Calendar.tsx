@@ -56,7 +56,8 @@ const Calendar = () => {
                 fontSize={"24px"}
                 lineHeight={"28px"}
               >
-                {currDate.toLocaleString("default", { month: "long" })}
+                {/* {currDate.toLocaleString("default", { month: "long" })} */}
+                August
               </Typography>
               <Grid2 container columnSpacing={"45px"}>
                 {filteredData.slice(2, 6).map((event, index) => {

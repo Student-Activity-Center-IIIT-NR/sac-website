@@ -4,6 +4,7 @@ import circleIcon from "../../assets/calendar_icons/circle.svg"; // National Eve
 import crossIcon from "../../assets/calendar_icons/cross.svg"; // sports
 import rectangleIcon from "../../assets/calendar_icons/rectangle.svg"; // technical
 import triangleIcon from "../../assets/calendar_icons/triangle.svg"; // cultural
+import tickIcon from "../../assets/calendar_icons/tick.svg";//Media & IT
 
 interface CalendarDataProps {
   date: string;
@@ -392,7 +393,7 @@ export const calendarData: CalendarDataProps[] = [
   {
     date: "18-04-2024",
     eventName: "Competition",
-    icon: starIcon,
+    icon: tickIcon,
     club: "Shutterbug",
     desc: "Competition for photography enthusiasts"
   },
@@ -438,7 +439,7 @@ export const calendarData: CalendarDataProps[] = [
     club: "Ciphercell",
     desc: "Finding Bug(errors)"
   },
-  //august
+  //August
   {
     date: "15-08-2024",
     eventName: "Independence Day",
@@ -475,7 +476,7 @@ export const calendarData: CalendarDataProps[] = [
     desc: ""
   },
   {
-    date: "27-08-2024",
+    date: "28-08-2024",
     eventName: "Club Orientation",
     icon: rectangleIcon,
     club: "Ciphercell & Robonyx(formerly Comet)",
@@ -496,11 +497,475 @@ export const calendarData: CalendarDataProps[] = [
     desc: ""
   },
   {
-    date: "31-04-2024",
-
+    date: "31-08-2024",
     eventName: "Workshop",
     icon: triangleIcon,
     club: "Igniters",
     desc: ""
-  }
+  },
+  //September
+  {
+    date: "01-09-2024",
+    eventName: "Club Orientation",
+    icon: tickIcon,
+    club: "Media & IT Cell",
+    desc: ""
+  },
+  {
+    date: "02-09-2024",
+    eventName: "Club Orientation",
+    icon: triangleIcon,
+    club: "MUN-TDB",
+    desc: ""
+  }, 
+  {
+    date: "03-09-2024",
+    eventName: "Football Tournament",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "03-09-2024",
+    eventName: "Club Orientation",
+    icon: triangleIcon,
+    club: "C2C, YTC & CDT",
+    desc: ""
+  },
+  {
+    date: "04-09-2024",
+    eventName: "Workshop: CP",
+    icon: rectangleIcon,
+    club: "TSoC",
+    desc: ""
+  },
+  {
+    date: "05-09-2024",
+    eventName: "Quilling paper and free hand art",
+    icon: triangleIcon,
+    club: "Indradhanush",
+    desc: ""
+  },
+  {
+    date: "06-09-2024",
+    eventName: "Aap ki Adalat",
+    icon: triangleIcon,
+    club: "TDB",
+    desc: ""
+  },
+  {
+    date: "07-09-2024",
+    eventName: "Ganesh Chaturthi",
+    icon: circleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "08-09-2024",
+    eventName: "Ganesh Chaturthi",
+    icon: circleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "09-09-2024",
+    eventName: "Ganesh Chaturthi",
+    icon: circleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "10-09-2024",
+    eventName: "Fresher Cooker",
+    icon: rectangleIcon,
+    club: "Inquizitive",
+    desc: ""
+  },
+  {
+    date: "11-09-2024",
+    eventName: "Onboarding",
+    icon: rectangleIcon,
+    club: "Robonyx",
+    desc: ""
+  },
+  {
+    date: "12-09-2024",
+    eventName: "Gaming Night",
+    icon: triangleIcon,
+    club: "C2C",
+    desc: ""
+  },
+  {
+    date: "13-09-2024",
+    eventName: "Chess Tournament",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "14-09-2024",
+    eventName: "Hack-a-Sol Day-1",
+    icon: rectangleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "15-09-2024",
+    eventName: "Hack-a-Sol Day-2",
+    icon: rectangleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "16-09-2024",
+    eventName: "Sell me this pen",
+    icon: tickIcon,
+    club: "PR & Social Media",
+    desc: ""
+  },
+  {
+    date: "17-09-2024",
+    eventName: "Workshop 1",
+    icon: tickIcon,
+    club: "DND",
+    desc: ""
+  },
+  {
+    date: "18-09-2024",
+    eventName: "Cultural and Bollywood Night",
+    icon: triangleIcon,
+    club: "C2C,CDT, SAC",
+    desc: ""
+  },
+  {
+    date: "19-09-2024",
+    eventName: "Chai Pe Charcha",
+    icon: triangleIcon,
+    club: "MUN",
+    desc: ""
+  },
+  {
+    date: "20-09-2024",
+    eventName: "Workshop",
+    icon: rectangleIcon,
+    club: "Ciphercell",
+    desc: ""
+  },
+  {
+    date: "26-09-2024",
+    eventName: "Blood Donation Camp",
+    icon: starIcon,
+    club: "NSS",
+    desc: ""
+  },
+  //October
+  {
+    date: "01-10-2024",
+    eventName: "Garba Workshop",
+    icon: triangleIcon,
+    club: "Igniters",
+    desc: ""
+  },
+  {
+    date: "02-10-2024",
+    eventName: "Garba Workshop",
+    icon: triangleIcon,
+    club: "Igniters",
+    desc: ""
+  },
+  {
+    date: "03-10-2024",
+    eventName: "Garba Night",
+    icon: triangleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "04-10-2024",
+    eventName: "Garba Night",
+    icon: triangleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "05-10-2024",
+    eventName: "YTC Excursion",
+    icon: triangleIcon,
+    club: "YTC",
+    desc: ""
+  },
+  {
+    date: "15-10-2024",
+    eventName: "Tune Trivia",
+    icon: rectangleIcon,
+    club: "Inquizitive & Capriccio",
+    desc: ""
+  },
+  {
+    date: "16-10-2024",
+    eventName: "Workshop:CP",
+    icon: rectangleIcon,
+    club: "TSoC",
+    desc: ""
+  },
+  {
+    date: "17-10-2024",
+    eventName: "Poster Competition(Online)",
+    icon: tickIcon,
+    club: "DND",
+    desc: ""
+  },
+  {
+    date: "18-10-2024",
+    eventName: "Aarambh Day-1",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "19-10-2024",
+    eventName: "Aarambh Day-2",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "20-10-2024",
+    eventName: "Aarambh Day-3",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "22-10-2024",
+    eventName: "Control and Create",
+    icon: rectangleIcon,
+    club: "Robonyx",
+    desc: ""
+  },
+  {
+    date: "23-10-2024",
+    eventName: "Workshop",
+    icon: triangleIcon,
+    club: "Indradhanush",
+    desc: ""
+  },
+  {
+    date: "24-10-2024",
+    eventName: "Kaggle Workshop",
+    icon: rectangleIcon,
+    club: "AIML",
+    desc: ""
+  },
+  {
+    date: "25-10-2024",
+    eventName: "Cultural Night & Jamming Session",
+    icon: triangleIcon,
+    club: "SAC & Capriccio",
+    desc: ""
+  },
+  {
+    date: "26-10-2024",
+    eventName: "CodeNubs",
+    icon: rectangleIcon,
+    club: "TSoC",
+    desc: ""
+  },
+  {
+    date: "27-10-2024",
+    eventName: "Photography Treasure Hunt",
+    icon: tickIcon,
+    club: "Shutterbug",
+    desc: ""
+  },
+  {
+    date: "28-10-2024",
+    eventName: "Closing Remarks",
+    icon: triangleIcon,
+    club: "TDB",
+    desc: ""
+  },
+  {
+    date: "29-10-2024",
+    eventName: "ML Contest(Online)",
+    icon: rectangleIcon,
+    club: "AIML",
+    desc: ""
+  },
+  {
+    date: "30-10-2024",
+    eventName: "Movie Screening",
+    icon: triangleIcon,
+    club: "C2C",
+    desc: ""
+  },
+  {
+    date: "31-10-2024",
+    eventName: "MemeFest",
+    icon: tickIcon,
+    club: "PR & Social Media",
+    desc: ""
+  },
+  //November
+  {
+    date: "02-11-2024",
+    eventName: "Capture the Flag(Online)",
+    icon: rectangleIcon,
+    club: "Ciphercell",
+    desc: ""
+  },
+  {
+    date: "03-11-2024",
+    eventName: "Capture the Flag(Online)",
+    icon: rectangleIcon,
+    club: "Ciphercell",
+    desc: ""
+  },
+  {
+    date: "04-11-2024",
+    eventName: "Workshop: Development",
+    icon: rectangleIcon,
+    club: "TSoC & Website Team",
+    desc: ""
+  },
+  {
+    date: "05-11-2024",
+    eventName: "Workshop II",
+    icon: tickIcon,
+    club: "DND",
+    desc: ""
+  },
+  {
+    date: "06-11-2024",
+    eventName: "HuggingFace Workshop",
+    icon: rectangleIcon,
+    club: "AIML",
+    desc: ""
+  },
+  {
+    date: "07-11-2024",
+    eventName: "Agaaz",
+    icon: crossIcon,
+    club: "Atharv",
+    desc: ""
+  },
+  {
+    date: "07-11-2024",
+    eventName: "Theatrical Tapestry",
+    icon: triangleIcon,
+    club: "CDT",
+    desc: ""
+  },
+  {
+    date: "08-11-2024",
+    eventName: "Reel Making",
+    icon: triangleIcon,
+    club: "Igniters",
+    desc: ""
+  },
+  {
+    date: "09-11-2024",
+    eventName: "Speakers United",
+    icon: triangleIcon,
+    club: "TDB-MUN",
+    desc: ""
+  },
+  {
+    date: "10-11-2024",
+    eventName: "Speakers United",
+    icon: triangleIcon,
+    club: "TDB-MUN",
+    desc: ""
+  },
+  {
+    date: "11-11-2024",
+    eventName: "Doodle Competition(online)",
+    icon: tickIcon,
+    club: "DND",
+    desc: ""
+  },
+  {
+    date: "12-11-2024",
+    eventName: "Workshop",
+    icon: rectangleIcon,
+    club: "Ciphercell",
+    desc: ""
+  },
+  {
+    date: "14-11-2024",
+    eventName: "Cultural Night",
+    icon: triangleIcon,
+    club: "SAC",
+    desc: ""
+  },
+  {
+    date: "15-11-2024",
+    eventName: "Media Matrix",
+    icon: tickIcon,
+    club: "Media & IT",
+    desc: ""
+  },
+  {
+    date: "18-11-2024",
+    eventName: "Fine Tuning Hackathon(Online)",
+    icon: rectangleIcon,
+    club: "AIML",
+    desc: ""
+  },
+  {
+    date: "19-11-2024",
+    eventName: "Geoguesser",
+    icon: triangleIcon,
+    club: "C2C & YTC",
+    desc: ""
+  },
+  {
+    date: "20-11-2024",
+    eventName: "Roboquest",
+    icon: rectangleIcon,
+    club: "Robonyx",
+    desc: ""
+  },
+  {
+    date: "21-11-2024",
+    eventName: "Origami Art",
+    icon: triangleIcon,
+    club: "Indradhanush",
+    desc: ""
+  },
+  {
+    date: "23-11-2024",
+    eventName: "Workshop: Development",
+    icon: rectangleIcon,
+    club: "TSoC & Website Team",
+    desc: ""
+  },
+  {
+    date: "24-11-2024",
+    eventName: "Clash of Campuses",
+    icon: rectangleIcon,
+    club: "Inquizitive",
+    desc: ""
+  },
+  {
+    date: "26-11-2024",
+    eventName: "Workshop",
+    icon: rectangleIcon,
+    club: "Ciphercell",
+    desc: ""
+  },
+  {
+    date: "27-11-2024",
+    eventName: "Design & Code",
+    icon: tickIcon,
+    club: "Website Team & DND",
+    desc: ""
+  },
+  {
+    date: "30-11-2024",
+    eventName: "Plantation Drive",
+    icon: starIcon,
+    club: "NSS",
+    desc: ""
+  },
 ];

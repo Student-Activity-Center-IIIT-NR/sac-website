@@ -7,6 +7,7 @@ import iconCross from "../../assets/calendar_icons/cross.svg";
 import iconRectangle from "../../assets/calendar_icons/rectangle.svg";
 import iconStar from "../../assets/calendar_icons/star.svg";
 import iconCircle from "../../assets/calendar_icons/circle.svg";
+import icontick from "../../assets/calendar_icons/tick.svg"
 import Divider from "@mui/material/Divider";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SingleDate from "../../components/EventCalendar/SingleDate";
@@ -207,6 +208,11 @@ const data = [
     name: "Technical",
     icon: iconRectangle,
     color: "#6D9EEB",
+  },
+  {
+    name: "Media & IT",
+    icon: icontick,
+    color: "#A640FF",
   },
   {
     name: "Sports",

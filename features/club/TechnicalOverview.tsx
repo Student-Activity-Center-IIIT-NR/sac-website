@@ -204,7 +204,7 @@ const clubs = [
     url: "/clubs/technical/inquizitive",
     color: "#BB9AF7",
   },
-  { name: "// Comet", url: "/clubs/technical/comet", color: "#FF9E64" },
+  { name: "// Robonyx", url: "/clubs/technical/comet", color: "#FF9E64" },
   { name: "// BIS", url: "/clubs/technical/bis", color: "#CA50F5" },
 
 
