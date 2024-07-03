@@ -71,7 +71,12 @@ export const website: CrewProps[] = [
         img: Anish_Kumar,
         name: "Anish Kumar",
         post: "Core Member"
-    }
+    },
+    {
+        img: Kaushal_Ranjan,
+        name: "Kaushal Ranjan",
+        post: "UI/UX Designer"
+    },
 ];
 
 export const shutterbug: CrewProps[] = [
