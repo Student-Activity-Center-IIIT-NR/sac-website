@@ -67,7 +67,7 @@ const Footer = () => {
                 <Link href={"clubs"}>Clubs</Link>
                 <Link href={"/gallery"}>Gallery</Link>
                 <Link href={"events"}>Events</Link>
-                <a href="https://mail.google.com/mail/u/1?ui=2&ik=a609489d18&attid=0.1&permmsgid=msg-f:1801900079814615195&th=1901a2936219209b&view=att&disp=inline&realattid=f_lxewx0o90">SAC Calender</a>
+                <a href="https://drive.google.com/file/d/1woAW35mZzdmRfrkGhrqoxquDmflbh6i_/view?usp=drive_link" target="_main">SAC Calender</a>
               </Box>
               <Box
                 sx={{
