@@ -7,7 +7,7 @@ import Ayush_Yadav from "../assets/team_24-25/IMG_0717-Ayush-Yadav.jpeg"
 import Vaishnavi_Shrivastava from "../assets/team_24-25/1000088291-01 - Vaishnavi Shrivastava.jpeg"
 import Shreyansh_Kushwaha from "../assets/team_23-24/Shreyansh_Kushwaha.jpg"
 import Anushka_Ekka from "../assets/team_24-25/IMG_20240410_130215 - Anushka Ekka(1).jpg"
-import Shrey_Omar from "../assets/team_24-25/shrey  - Shrey Omer.jpg"
+import Shrey_Omer from "../assets/team_24-25/shrey  - Shrey Omer.jpg"
 import Soumya_Dubey from "../assets/team_24-25/Soumya Dubey.jpg"
 import Yash_Raj from "../assets/team_24-25/Yash_Raj.jpeg"
 import Ananya_Rajawat from "../assets/team_24-25/Ananya Rajawat.jpg"
@@ -271,8 +271,8 @@ export const TeamData: TeamDataProps = {
         mail:"anushka23102@iiitnr.edu.in"
       },
       {
-        img: Shrey_Omar,
-        name: "Shrey Omar",
+        img: Shrey_Omer,
+        name: "Shrey Omer",
         post: "Arts, Cultural and Literary Secretary (Boys)",
         linkedin:"https://www.linkedin.com/in/shrey-omer-71076227a/",
         mail:"shrey23102@iiitnr.edu.in"
@@ -369,8 +369,8 @@ export const TeamData: TeamDataProps = {
     ],
     cultural: [
       {
-        img: Shrey_Omar,
-        name: "Shrey Omar",
+        img: Shrey_Omer,
+        name: "Shrey Omer",
         post: "Arts, Cultural and Literary Secretary (Boys)",
         linkedin:"https://www.linkedin.com/in/shrey-omer-71076227a/",
         mail:"shrey23102@iiitnr.edu.in"
