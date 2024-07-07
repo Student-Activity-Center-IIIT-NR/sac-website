@@ -17,7 +17,7 @@ import Sagnik_Mukherjee from "../../assets/team_24-25/IMG-20240526-WA0002 - Sagn
 import Shiwani_Banjare from "../../assets/team_24-25/shiwani - Shiwani Banjare.jpg"
 import Vivaan_Bagga from "../../assets/team_24-25/Screenshot_2024-05-26-17-35-55-86_92460851df6f172a4592fca41cc2d2e6 - Vivaan Pradeep Bagga.jpg"
 import Kirti_Painkra from "../../assets/team_24-25/IMG_20240526_204101 - Kirti Painkra.jpg"
-import Kirti_Omar from "../../assets/team_24-25/IMG-20240529-WA0012 - Kritie Omar.jpg"
+import Kritie_Omar from "../../assets/team_24-25/IMG-20240529-WA0012 - Kritie Omar.jpg"
 import Alisha_Tripathi from "../../assets/team_24-25/IMG-20240523-WA0005 - Alisha Tripathi.jpg"
 import Priyadarshi_Satyakam from "../../assets/team_24-25/Priyadarshi_img.jpg"
 import ParthSarthi_Dutt from "../../assets/team_24-25/IMG-20240526-WA0018~2 - Parthsarthi Dutt.jpg"
@@ -205,8 +205,8 @@ export const igniters: CrewProps[] = [
         post: "core member",
     },
     {
-        img: Kirti_Omar,
-        name: "Kirti Omar",
+        img: Kritie_Omar,
+        name: "Kritie Omar",
         post: "core member",
     },
 ];
