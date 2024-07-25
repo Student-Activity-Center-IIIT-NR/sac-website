@@ -44,6 +44,7 @@ import Kartik_Pandey from "../../assets/team_24-25/MY_photo - Kartik Pandey.jpg"
 import Female from "../../assets/team_23-24/Female-member.jpeg"
 import Male from "../../assets/team_23-24/Male-member.jpeg"
 import Aditya_Jha from "../../assets/team_24-25/ad785c51-039b-42ad-beb4-3dacf0c4678c - Aditya Kumar Jha.jpeg";
+import Virat_Patel from "../../assets/team_24-25/Picsart_23-08-29_02-46-57-153 - Virat Patel.jpg"
 
 export const atharv: CrewProps[] = [
     {
@@ -92,8 +93,8 @@ export const atharv: CrewProps[] = [
         post: "Atharv Kabaddi InCharge",
     },
     {
-        img: Aditya_Jha,
-        name: "Aditya Jha",
+        img: Virat_Patel,
+        name: "Virat Patel",
         post: "Atharv Badminton InCharge (Boys)",
     },
     {
