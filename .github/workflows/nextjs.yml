@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,15 +27,16 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies (legacy-peer-deps)
+      - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build and export
+      - name: Build and export static site
         run: npm run build && npx next export
 
-      - name: Upload static site to Pages
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: out
 
   deploy:
@@ -45,6 +47,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
