@@ -13,6 +13,7 @@ import Yash_Raj from "../assets/team_24-25/Yash_Raj.jpeg"
 import Ananya_Rajawat from "../assets/team_24-25/Ananya Rajawat.jpg"
 import Anshumaan_Karna from "../assets/team_24-25/Anshumaan-Karna.jpeg"
 import Kritie_Omar from "../assets/team_24-25/IMG-20240529-WA0012 - Kritie Omar.jpg"
+import Murmu from "../assets/team_24-25/lakhindar.jpg"
 
 // 2023-2024
 import Aditya_Oza from "../assets/team_23-24/Aditya_Oza.jpg";
@@ -222,11 +223,11 @@ export const TeamData: TeamDataProps = {
   24_25: {
     core: [
       {
-        img: manoj_SacP,
-        name: "Dr. MANOJ KUMAR MAJUMDER",
+        img: Murmu,
+        name: "Dr. Lakhindar Murmu",
         post: "SAC President",
-        linkedin:"https://in.linkedin.com/in/manoj-kuamr-majumder-3b15b823",
-        mail:"manoj@iiitnr.edu.in"
+        linkedin:"https://www.linkedin.com/in/lakhindar-murmu-2b76111b/",
+        mail:"lakhindar@iiitnr.edu.in"
       },
       {
         img: Amar_Sinha,
