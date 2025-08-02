@@ -1,43 +1,48 @@
-name: Deploy to GitHub Pages
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Change to your default branch if needed
+    branches: ['main']
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # or 20 if your project uses it
+          node-version: 18
 
-      - name: Install dependencies (with legacy peer deps)
-        run: npm ci --legacy-peer-deps
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - name: Build Next.js app
-        run: npm run build && npm run export
+      - name: Build static site
+        run: |
+          npm run build
+          npx next export
 
-      - name: Upload static files
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: out  # This is where `next export` outputs static files
+          path: out
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
