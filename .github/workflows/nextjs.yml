@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install dependencies (with legacy-peer-deps)
+        run: npm install --legacy-peer-deps
 
       - name: Build static site with Next.js
         run: npm run build && npx next export
