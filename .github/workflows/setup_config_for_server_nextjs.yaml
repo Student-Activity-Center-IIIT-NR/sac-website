@@ -16,10 +16,10 @@ jobs:
       - name: ⚙️ Update Nginx config & reload
         uses: appleboy/ssh-action@v1.0.3
         with:
-            host: ${{ secrets.SERVER_HOST }}
-            username: ${{ secrets.SERVER_USER }}
-            key: ${{ secrets.SERVER_SSH_KEY }}
-            port: ${{ secrets.SERVER_PORT }}
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            port: ${{ secrets.SSH_PORT }}
             script: |
                 echo "Updating Nginx config..."
                 sudo tee /etc/nginx/sites-available/${{ secrets.PROJECT_ID }} > /dev/null <<'EOF'
@@ -37,8 +37,8 @@ jobs:
 
                   server_name ${{ secrets.PROJECT_SUBDOMAIN }}.iiitnr.ac.in;
 
-                  ssl_certificate     /home/${{ secrets.SERVER_USER }}/ssl_certificate/ssl_certificate.crt;
-                  ssl_certificate_key /home/${{ secrets.SERVER_USER }}/ssl_certificate/ssl_key.key;
+                  ssl_certificate     /home/${{ secrets.SSH_USER }}/ssl_certificate/ssl_certificate.crt;
+                  ssl_certificate_key /home/${{ secrets.SSH_USER }}/ssl_certificate/ssl_key.key;
                   ssl_protocols       TLSv1.2 TLSv1.3;
                   ssl_ciphers         HIGH:!aNULL:!MD5;
 
