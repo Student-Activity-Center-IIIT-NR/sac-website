@@ -3,11 +3,10 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { ReactNode } from "react";
-import { StaticImageData } from "next/image";
 import { atharv } from "../../../data/Crews/SportsClubCrew";
 
 interface Props {
-  img: StaticImageData;
+  img: any;
   title: string;
   children: ReactNode;
 }
@@ -25,8 +24,8 @@ const SportsTeam = () => {
           <Image
             src={img}
             alt=""
-            height="394px"
-            width="286px"
+            height={394}
+            width={286}
             objectFit="cover"
           />
         )}

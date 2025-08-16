@@ -73,8 +73,8 @@ const RecentClubEvents = () => {
                           : recentClubEvents[index - 1].image[0]
                       }
                       alt={""}
-                      height={"270px"}
-                      width={"270px"}
+                      height={270}
+                      width={270}
                       objectFit={"cover"}
                       style={{
                         borderRadius: "24px",
@@ -109,8 +109,8 @@ const RecentClubEvents = () => {
                     <Image
                       src={step.image[0]}
                       alt={step.name}
-                      height={"356px"}
-                      width={"356px"}
+                      height={356}
+                      width={356}
                       objectFit={"cover"}
                       style={{
                         borderRadius: "24px",
@@ -149,8 +149,8 @@ const RecentClubEvents = () => {
                           : recentClubEvents[index + 1].image[0]
                       }
                       alt={""}
-                      height={"270px"}
-                      width={"270px"}
+                      height={270}
+                      width={270}
                       objectFit={"cover"}
                       style={{
                         borderRadius: "24px",

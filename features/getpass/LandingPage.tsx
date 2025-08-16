@@ -67,7 +67,7 @@ const LandingPage = () => {
             }}
           >
             <a href={"https://hms.iiitnr.edu.in:3000/#/"} target="_blank">
-              <Image src={lan} alt="" height={"100px"} width={"200px"} />
+              <Image src={lan} alt="" height={100} width={200} />
             </a>
           </Box>
           <Box
@@ -80,7 +80,7 @@ const LandingPage = () => {
                 "https://drive.google.com/drive/folders/1EgHvarOl68TiMNuvLFSbPV1buuKR_PUE?usp=share_link"
               }
             >
-              <Image src={Google} alt="" height={"100px"} width={"200px"} />
+              <Image src={Google} alt="" height={100} width={200} />
             </Link>
           </Box>
         </Box>
@@ -118,7 +118,7 @@ const LandingPage = () => {
         </Typography>
       </Box>
       <Box>
-        <Image src={Landingpg} alt="" height={"900px"} width={"700px"} />
+        <Image src={Landingpg} alt="" height={900} width={700} />
       </Box>
     </Stack>
   );

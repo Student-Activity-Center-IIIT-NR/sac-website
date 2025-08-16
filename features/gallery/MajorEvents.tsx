@@ -25,8 +25,8 @@ const MajorEvents = () => {
             <Image
               src={galleryThubmnail}
               alt=""
-              width={"110px"}
-              height="70px"
+              width={110}
+              height={70}
             />
           </Stack>
           <Typography

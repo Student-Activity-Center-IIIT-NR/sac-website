@@ -21,7 +21,7 @@ const StyledHeader = styled(Stack)({
   zIndex: 1000,
 });
 
-function NavBar({}: Props) {
+function NavBar({ }: Props) {
   const { inView: headInView } = useContext(BrandInViewContext);
   return (
     <StyledHeader justifyContent="center">
@@ -32,8 +32,8 @@ function NavBar({}: Props) {
           justifyContent="space-between"
         >
           <SacBranding
-            width="40px"
-            height="40px"
+            width={40}
+            height={40}
             sx={{
               opacity: headInView ? 0 : 1,
               height: headInView ? "30px" : "40px",

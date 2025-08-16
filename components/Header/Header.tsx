@@ -14,14 +14,14 @@ const StyledHeader = styled(Stack)({
 
 type Props = {};
 
-const Header = React.forwardRef(({}: Props, ref) => {
+const Header = React.forwardRef(({ }: Props, ref) => {
   return (
     <StyledHeader color="white" px="20px">
       <Container maxWidth="xl" disableGutters>
         <Stack height="264px">
           <HeaderTop />
           <Stack gap="19px" ref={ref}>
-            <SacBranding height="125px" />
+            <SacBranding height={125} />
             <Typography alignSelf="center">Since 2018</Typography>
           </Stack>
         </Stack>

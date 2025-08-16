@@ -34,8 +34,8 @@ const Crew = ({ props }: Props) => {
           >
             <Image
               src={img}
-              width={"286px"}
-              height={"394px"}
+              width={286}
+              height={394}
               alt=""
               objectFit="cover"
             />

@@ -26,8 +26,8 @@ const ImageGrid = () => {
               alt={""}
               loading="lazy"
               objectFit={"cover"}
-              width={"357px"}
-              height={"288px"}
+              width={357}
+              height={288}
               style={{
                 borderRadius: "8px",
               }}

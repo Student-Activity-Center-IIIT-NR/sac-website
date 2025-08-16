@@ -71,8 +71,8 @@ const SportsGallery = () => {
         >
           <Image
             src={iconArrow}
-            width="16px"
-            height={"16px"}
+            width={16}
+            height={16}
             alt=""
             onClick={yearDecrement}
             style={{
@@ -93,8 +93,8 @@ const SportsGallery = () => {
           </Typography>
           <Image
             src={iconArrow}
-            width="16px"
-            height={"16px"}
+            width={16}
+            height={16}
             alt=""
             onClick={yearIncrement}
             style={{
