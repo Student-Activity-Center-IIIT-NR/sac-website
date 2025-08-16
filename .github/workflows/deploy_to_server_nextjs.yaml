@@ -1,0 +1,71 @@
+name: 🚀 Deploy to Server (NextJS)
+
+on:
+  push:
+    branches:
+      - prod/iiitnr
+
+concurrency:
+  group: "deploy-prod-iiitnr"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Remote Server
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: 📦 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 📄 Create .env.production file
+        run: |
+          cat <<EOF > .env.production
+            EOF
+
+
+      - name: 🔨 Build project
+        run: CI=false npm run build
+
+      - name: 📤 Upload build to server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          source: ".next,public,package.json,next.config.mjs,.env.production"
+          target: "/home/${{ secrets.SERVER_USER }}/${{ secrets.PROJECT_ID }}" 
+
+      - name: 🚀 Activate release & reload Nginx
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            set -e
+            cd /home/${{ secrets.SERVER_USER }}/${{ secrets.PROJECT_ID }}
+
+            echo \"Installing production dependencies...\"
+            npm install
+
+            echo \"Starting/Restarting app with PM2...\"
+            if pm2 list | grep -q ${{ secrets.PROJECT_ID }}; then
+              pm2 restart ${{ secrets.PROJECT_ID }} --update-env
+            else
+              pm2 start "npm run start" --name ${{ secrets.PROJECT_ID }} --update-env
+            fi
+
+            echo \"Reloading Nginx...\"
+            sudo nginx -t && sudo systemctl reload nginx
