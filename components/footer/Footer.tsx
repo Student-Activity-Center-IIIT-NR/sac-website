@@ -34,8 +34,8 @@ const Footer = () => {
             <Image
               src={sac_branding}
               alt="sac_logo"
-              height="210px"
-              width="210px"
+              height={210}
+              width={210}
               objectFit="contain"
             />
             <Box
@@ -168,8 +168,8 @@ const Footer = () => {
                   <Image
                     src={TwitterIcon}
                     alt={"Twitter"}
-                    height="22px"
-                    width="28px"
+                    height={22}
+                    width={28}
                     objectFit="contain"
                   />
                 </a>
@@ -181,8 +181,8 @@ const Footer = () => {
                   <Image
                     src={FacebookIcon}
                     alt={"Facebook"}
-                    height="22px"
-                    width="28px"
+                    height={22}
+                    width={28}
                     objectFit="contain"
                   />
                 </a>
@@ -194,8 +194,8 @@ const Footer = () => {
                   <Image
                     src={InstagramIcon}
                     alt={"Instagram"}
-                    height="22px"
-                    width="28px"
+                    height={22}
+                    width={28}
                     objectFit="contain"
                   />
                 </a>
@@ -207,8 +207,8 @@ const Footer = () => {
                   <Image
                     src={LinkedInIcon}
                     alt={"LinkedIn"}
-                    height="22px"
-                    width="28px"
+                    height={22}
+                    width={28}
                     objectFit="contain"
                   />
                 </a>

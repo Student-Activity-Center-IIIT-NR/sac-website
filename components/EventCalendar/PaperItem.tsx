@@ -71,7 +71,7 @@ const PaperItem = ({
           <Stack spacing={2}>
             <Stack direction={"row"} spacing={"48px"} alignItems={"center"}>
               {startIcon && (
-                <Image src={startIcon} alt="" height={"24px"} width={"24px"} />
+                <Image src={startIcon} alt="" height={24} width={24} />
               )}
               <Typography variant="body1" maxWidth={"138px"}>
                 {startName}
@@ -79,7 +79,7 @@ const PaperItem = ({
             </Stack>
             <Stack direction={"row"} spacing={"48px"} alignItems={"center"}>
               {endIcon && (
-                <Image src={endIcon} alt="" height={"24px"} width={"24px"} />
+                <Image src={endIcon} alt="" height={24} width={24} />
               )}
               <Typography variant="body1" maxWidth={"138px"}>
                 {endName}
