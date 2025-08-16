@@ -4,7 +4,6 @@ const repo = 'sac-website'; // ← replace with your repo name
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     unoptimized: true,
   },

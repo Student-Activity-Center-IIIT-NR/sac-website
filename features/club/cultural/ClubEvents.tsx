@@ -49,7 +49,7 @@ const Event = ({ name, date, children }: EventProps) => {
           >
             {name}
           </Typography>
-          <Image src={starIcon} alt="" width={"17px"} objectFit="contain" />
+          <Image src={starIcon} alt="" width={17} objectFit="contain" />
           <Typography
             fontFamily="Cotta"
             fontStyle="normal"

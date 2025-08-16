@@ -2,14 +2,14 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 const StyledStack = styled(Stack)({
   justifyContent: "space-between",
 });
 
 interface Props {
-  icon: StaticImageData;
+  icon: any;
   date: string;
   name: string;
   content?: string;
@@ -39,7 +39,7 @@ const UpcomingEvents: React.FC<Props> = ({
             justifyContent: "center",
           }}
         >
-          <Image src={icon} alt="" width={"20px"} objectFit="contain" />
+          <Image src={icon} alt="" width={20} objectFit="contain" />
           <Typography
             fontFamily="Lato"
             fontStyle="normal"

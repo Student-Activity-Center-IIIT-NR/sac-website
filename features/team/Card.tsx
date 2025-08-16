@@ -28,8 +28,8 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
         >
           <Image
             src={img}
-            width="262px"
-            height={"309px"}
+            width={262}
+            height={309}
             alt={Name}
             objectFit="cover"
             objectPosition={"center"}
@@ -94,8 +94,8 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
             <a href={linkedin} rel="noreferrer" target={"_blank"}>
               <Image
                 src={icon_linkedin}
-                width="22px"
-                height="22px"
+                width={22}
+                height={22}
                 alt={"linkedin"}
                 objectFit="cover"
               />
@@ -124,7 +124,7 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
             }}
           >
             <a href={`mailto:${mail}`} rel="noreferrer" target={"_blank"}>
-              <Image src={icon_mail} height="22px" alt={""} objectFit="cover" />
+              <Image src={icon_mail} height={22} alt={""} objectFit="cover" />
             </a>
           </Box>
         </Stack>

@@ -30,8 +30,8 @@ const ToastInfo = ({ title, msg, uri }: ToastProps) => {
         {uri && (
           <Image
             src={uri}
-            width={"80px"}
-            height={"80px"}
+            width={80}
+            height={80}
             alt=""
             priority
             objectFit="cover"

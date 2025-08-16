@@ -66,8 +66,8 @@ const ClubsOverview = () => {
           <Image
             src={img}
             alt="techSvg"
-            height="312px"
-            width="292px"
+            height={312}
+            width={292}
             objectFit="contain"
           />
         </Box>
@@ -101,15 +101,15 @@ const ClubsOverview = () => {
                     isSportHovered ||
                     isMediaHovered ||
                     isNssHovered
-                  ? "55px"
-                  : "133px"
+                    ? "55px"
+                    : "133px"
               }
               fontFamily={"Work Sans"}
               lineHeight={
                 isCultHovered ||
-                isSportHovered ||
-                isMediaHovered ||
-                isNssHovered
+                  isSportHovered ||
+                  isMediaHovered ||
+                  isNssHovered
                   ? "65px"
                   : "156px"
               }
@@ -143,10 +143,10 @@ const ClubsOverview = () => {
           sx={{
             mt:
               isSportHovered ||
-              isTechHovered ||
-              isCultHovered ||
-              isMediaHovered ||
-              isNssHovered
+                isTechHovered ||
+                isCultHovered ||
+                isMediaHovered ||
+                isNssHovered
                 ? 3
                 : 11,
           }}
@@ -172,15 +172,15 @@ const ClubsOverview = () => {
                     isSportHovered ||
                     isMediaHovered ||
                     isNssHovered
-                  ? "55px"
-                  : "133px"
+                    ? "55px"
+                    : "133px"
               }
               fontFamily={"Work Sans"}
               lineHeight={
                 isTechHovered ||
-                isSportHovered ||
-                isMediaHovered ||
-                isNssHovered
+                  isSportHovered ||
+                  isMediaHovered ||
+                  isNssHovered
                   ? "65px"
                   : "156px"
               }
@@ -235,8 +235,8 @@ const ClubsOverview = () => {
                     isCultHovered ||
                     isMediaHovered ||
                     isNssHovered
-                  ? "55px"
-                  : "133px"
+                    ? "55px"
+                    : "133px"
               }
               fontFamily={"Work Sans"}
               lineHeight={
@@ -274,9 +274,9 @@ const ClubsOverview = () => {
             sx={{
               mt:
                 isSportHovered ||
-                isTechHovered ||
-                isCultHovered ||
-                isMediaHovered
+                  isTechHovered ||
+                  isCultHovered ||
+                  isMediaHovered
                   ? 3
                   : 11,
             }}
@@ -295,8 +295,8 @@ const ClubsOverview = () => {
                     isSportHovered ||
                     isCultHovered ||
                     isNssHovered
-                  ? "left"
-                  : "center"
+                    ? "left"
+                    : "center"
               }
             >
               <Typography
@@ -309,15 +309,15 @@ const ClubsOverview = () => {
                       isSportHovered ||
                       isCultHovered ||
                       isNssHovered
-                    ? "55px"
-                    : "133px"
+                      ? "55px"
+                      : "133px"
                 }
                 fontFamily={"Work Sans"}
                 lineHeight={
                   isTechHovered ||
-                  isSportHovered ||
-                  isCultHovered ||
-                  isNssHovered
+                    isSportHovered ||
+                    isCultHovered ||
+                    isNssHovered
                     ? "65px"
                     : "156px"
                 }
@@ -372,15 +372,15 @@ const ClubsOverview = () => {
                     isSportHovered ||
                     isCultHovered ||
                     isMediaHovered
-                  ? "55px"
-                  : "133px"
+                    ? "55px"
+                    : "133px"
               }
               fontFamily={"Work Sans"}
               lineHeight={
                 isTechHovered ||
-                isSportHovered ||
-                isCultHovered ||
-                isMediaHovered
+                  isSportHovered ||
+                  isCultHovered ||
+                  isMediaHovered
                   ? "65px"
                   : "156px"
               }

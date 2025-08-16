@@ -80,8 +80,8 @@ const MajorEvents = () => {
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Image
                     src={step.poster}
-                    height={"358px"}
-                    width={"358px"}
+                    height={358}
+                    width={358}
                     objectFit={"cover"}
                     alt=""
                     style={{
