@@ -14,7 +14,7 @@ interface TabPanelProps {
 }
 
 // need to update on every data add
-type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324;
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324 | 2425 | 2526;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
