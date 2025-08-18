@@ -69,7 +69,7 @@ const BasicMenu = () => {
         <StyledTypography sx={{ textDecorationLine: "underline" }}>
           Technical Clubs
         </StyledTypography>
-        <Image src={BoxIcon} width={"42px"} height={"42px"} alt="" />
+        <Image src={BoxIcon} width={42} height={42} alt="" />
       </Button>
       <Menu
         anchorEl={anchorEl}
@@ -111,9 +111,9 @@ const BasicMenu = () => {
                 onClick={handleClose}
                 disableRipple
                 key={index}
-                // onMouseEnter={(e) =>
-                //   (e.target.style.backgroundColor = "transparent")
-                // }
+              // onMouseEnter={(e) =>
+              //   (e.target.style.backgroundColor = "transparent")
+              // }
               >
                 <Link href={item.url}>
                   <StyledTypographyLink

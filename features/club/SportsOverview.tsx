@@ -115,8 +115,8 @@ const SportsOverview = () => {
                 <Image
                   src={swim}
                   alt=""
-                  width="231px"
-                  height="184px"
+                  width={231}
+                  height={184}
                   objectFit="cover"
                   style={{
                     borderRadius: "24px",
@@ -125,8 +125,8 @@ const SportsOverview = () => {
                 <Image
                   src={cycle}
                   alt=""
-                  width="185px"
-                  height="147px"
+                  width={185}
+                  height={147}
                   objectFit="cover"
                   style={{
                     borderRadius: "24px",
@@ -160,8 +160,8 @@ const SportsOverview = () => {
               <Image
                 src={AtharvLogo}
                 alt="atharv logo"
-                width={"80px"}
-                height={"80px"}
+                width={80}
+                height={80}
               />
             </Box>
             <Divider
@@ -189,10 +189,10 @@ const SportsOverview = () => {
             </Link>
             <Stack direction={"row"} gap={"35px"}>
               <Box sx={{ width: "251px", height: "182px" }}>
-                <Image src={cricket} alt="" width={"251px"} height={"182px"} />
+                <Image src={cricket} alt="" width={251} height={182} />
               </Box>
               <Box sx={{ width: "251px", height: "251px" }}>
-                <Image src={basket} alt="" width={"251px"} height={"251px"} />
+                <Image src={basket} alt="" width={251} height={251} />
               </Box>
             </Stack>
           </Stack>

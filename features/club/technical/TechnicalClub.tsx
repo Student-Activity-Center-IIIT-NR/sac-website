@@ -22,7 +22,7 @@ interface Props {
   instagram: string;
 }
 
-const TechnicalClub = ({ name, desc, bgTop, logo, color,instagram }: Props) => {
+const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => {
   const StyledLink = styled(Typography)({
     fontFamily: "Rubik",
     fontStyle: "italic",
@@ -220,8 +220,8 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color,instagram }: Props) => {
               >
                 <Image
                   src={logo}
-                  width="262px"
-                  height="258px"
+                  width={262}
+                  height={258}
                   alt=""
                   style={{
                     border: "2px solid #C0CAF5",

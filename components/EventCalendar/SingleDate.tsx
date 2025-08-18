@@ -37,8 +37,8 @@ const SingleDate = ({ date, icon, name, flag }: SingleDateProps) => {
             <Image
               src={icon}
               alt=""
-              height={"8px"}
-              width={"8px"}
+              height={8}
+              width={8}
               style={{
                 opacity: flag
                   ? ""

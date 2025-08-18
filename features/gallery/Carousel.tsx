@@ -43,7 +43,7 @@ const Carousel = () => {
               <Image
                 src={step.img}
                 alt={step.label}
-                height={"520px"}
+                height={520}
                 objectFit={"cover"}
                 style={{
                   borderRadius: "24px",

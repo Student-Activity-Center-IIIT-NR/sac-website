@@ -25,8 +25,8 @@ const SportsHeading = () => {
         >
           <Image
             src={AtharvLogo}
-            height="248px"
-            width="248px"
+            height={248}
+            width={248}
             alt="Atharv_IIITNR"
             objectFit="contain"
           />

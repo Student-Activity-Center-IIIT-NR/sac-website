@@ -145,8 +145,8 @@ const Gallery = () => {
                     <Image
                       src={step}
                       alt=""
-                      width={"357px"}
-                      height={"266px"}
+                      width={357}
+                      height={266}
                       objectFit={"cover"}
                       style={{
                         borderRadius: "8px",
@@ -191,7 +191,7 @@ const Gallery = () => {
             <Image
               src={layerIcon}
               alt=""
-              width={"22px"}
+              width={22}
               objectFit={"contain"}
             />
             <StyledButton

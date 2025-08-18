@@ -15,6 +15,7 @@ function DarkMode({ color }: Props) {
         fill: color,
       }}
       src={darkModeIcon}
+      alt="description"
     />
   );
 }

@@ -21,10 +21,10 @@ type Props = {
   alt?: string;
 };
 
-function ElevatedLogo({ src = "", alt }: Props) {
+function ElevatedLogo({ src = "", alt = "" }: Props) {
   return (
     <ElevatedLogoContainer>
-      <Image src={src} width="64px" height="64px" priority={true} alt={alt} />
+      <Image src={src} width={64} height={64} priority={true} alt={alt} />
     </ElevatedLogoContainer>
   );
 }

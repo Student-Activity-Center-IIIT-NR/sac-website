@@ -50,7 +50,7 @@ const Year = () => {
             onClick={resetYear}
           >
             {year !== currentSession ? (
-              <Image src={iconReset} height={"24px"} width={"24px"} alt="" />
+              <Image src={iconReset} height={24} width={24} alt="" />
             ) : null}
           </Box>
           <Box
@@ -71,7 +71,7 @@ const Year = () => {
                 }}
                 onClick={yearDecrement}
               >
-                <Image src={iconArrow} height={""} width={""} alt="" />
+                <Image src={iconArrow} height={20} width={12} alt="" />
               </Box>
             ) : null}
             {year && (
@@ -110,7 +110,7 @@ const Year = () => {
                 }}
                 onClick={yearIncrement}
               >
-                <Image src={iconArrow} height={""} width={""} alt="" />
+                <Image src={iconArrow} height={20} width={12} alt="" />
               </Box>
             ) : null}
           </Box>
@@ -121,4 +121,4 @@ const Year = () => {
 };
 
 export default Year;
-  
+

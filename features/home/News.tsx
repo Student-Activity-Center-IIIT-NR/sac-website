@@ -37,10 +37,10 @@ const News: NextPage = () => {
             <Image
               src={img}
               alt=""
-              height="208px"
-              width="262px"
+              height={208}
+              width={262}
               objectFit="cover"
-              
+
             />
           </Box>
         )}
@@ -73,8 +73,8 @@ const News: NextPage = () => {
             <Image
               src={authorImg}
               alt="author image"
-              height="40px"
-              width="40px"
+              height={40}
+              width={40}
               objectFit="cover"
               style={{ borderRadius: "5px" }}
             />
@@ -131,7 +131,7 @@ const News: NextPage = () => {
               >
                 {newsData[0].text}
               </Item>
-              {<Divider orientation="horizontal" /> }
+              {<Divider orientation="horizontal" />}
               {<Item
                 img={newsData[1].img}
                 title={newsData[1].title}
@@ -139,9 +139,9 @@ const News: NextPage = () => {
                 author={newsData[1].authName}
               >
                 {newsData[1].text}
-              </Item> }
+              </Item>}
             </Grid2>
-            {<Divider orientation="vertical" flexItem /> }
+            {<Divider orientation="vertical" flexItem />}
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
                 img={newsData[2].img}
@@ -179,9 +179,9 @@ const News: NextPage = () => {
                 author={newsData[5].authName}
               >
                 {newsData[5].text}
-            </Item>
+              </Item>
             </Grid2>
-            <Divider orientation="vertical" flexItem /> 
+            <Divider orientation="vertical" flexItem />
             <Grid2 xs={2.99} display="flex" flexDirection={"column"} gap={2}>
               <Item
                 img={newsData[6].img}

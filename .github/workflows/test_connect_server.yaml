@@ -1,0 +1,38 @@
+name: 🧪 Test SSH + SCP Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-ssh-scp:
+    name: Test SSH and SCP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📄 Create test file
+        run: |
+          echo "Hello, world!" > hello.txt
+
+      - name: 🧪 Try connecting to remote server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            echo "✅ SSH connection successful!"
+            whoami
+            hostname
+            uptime
+            mkdir -p ~/scp_test
+
+      - name: 🚀 Upload test file via SCP
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: "hello.txt"
+          target: "~/scp_test/"

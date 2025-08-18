@@ -175,8 +175,8 @@ const Gallery = ({ club }: Props) => {
                           >
                             <Image
                               alt=""
-                              width="311px"
-                              height="232px"
+                              width={311}
+                              height={232}
                               src={step}
                               objectFit={"cover"}
                               style={{
