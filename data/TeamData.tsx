@@ -123,6 +123,19 @@ interface CrewProps {
 }
 
 interface TeamDataProps {
+  25_26: {
+    president?: CrewProps[];
+    pur?: CrewProps[];
+    technical?: CrewProps[];
+    cultural?: CrewProps[];
+    sports?: CrewProps[];
+    media?: CrewProps[];
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
   24_25: {
     president?: CrewProps[];
     pur?: CrewProps[];
@@ -219,6 +232,204 @@ interface TeamDataProps {
 // Data should follow a order => core, web, design, documentation, social
 
 export const TeamData: TeamDataProps = {
+
+  25_26: {
+    core: [
+      {
+        img: Murmu,
+        name: "Dr. Lakhindar Murmu",
+        post: "SAC President",
+        linkedin: "https://www.linkedin.com/in/lakhindar-murmu-2b76111b/",
+        mail: "lakhindar@iiitnr.edu.in"
+      },
+      {
+        img: Amar_Sinha,
+        name: "Om Nath",
+        post: "PG Representative (Boys)",
+        linkedin: "https://www.linkedin.com/in/amarcrj/",
+        mail: "amar@iiitnr.edu.in"
+      },
+      {
+        img: Anjali,
+        name: "Not Found Eligible Candidate",
+        post: "PG Representative (Girls)",
+        linkedin: "https://www.linkedin.com/in/anjali-manhas-b27844273/",
+        mail: "anjali@iiitnr.edu.in"
+      },
+      {
+        img: Ayush_Yadav,
+        name: "Virat Patel",
+        post: "UG Representative (Boys)",
+        linkedin: "https://www.linkedin.com/in/ayush-yadav-029884263/",
+        mail: "ayush22100@iiitnr.edu.in"
+      },
+      {
+        img: Vaishnavi_Shrivastava,
+        name: "Prakriti Thakur",
+        post: "UG Representative (Girls)",
+        linkedin: "https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        mail: "vaishnavi23102@iiitnr.edu.in"
+      },
+      {
+        img: Shreyansh_Kushwaha,
+        name: "Shreyansh Kushwaha",
+        post: "Science and Technology Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/shreyansh-kushwaha-ab3876257/",
+        mail: "shreyansh22101@iiitnr.edu.in"
+      },
+      {
+        img: Anushka_Ekka,
+        name: "Anushka Ekka",
+        post: "Science and Technology Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/anushka-ekka-815821215",
+        mail: "anushka23102@iiitnr.edu.in"
+      },
+      {
+        img: Shrey_Omer,
+        name: "Shrey Omer",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/shrey-omer-71076227a/",
+        mail: "shrey23102@iiitnr.edu.in"
+      },
+      {
+        img: Soumya_Dubey,
+        name: "Soumya Dubey",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/soumya-dubey-208917219",
+        mail: "soumya23101@iiitnr.edu.in"
+      },
+      {
+        img: Yash_Raj,
+        name: "Yash Raj",
+        post: "Sports Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/yash-raj-164222290/",
+        mail: "yash22101@iiitnr.edu.in"
+      },
+      {
+        img: Ananya_Rajawat,
+        name: "Ananya Rajawat",
+        post: "Sports Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        mail: "ananya23101@iiitnr.edu.in"
+      },
+      {
+        img: Anshumaan_Karna,
+        name: "Anshumaan Karna",
+        post: "Media and IT Cell Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/anshumaankarna/",
+        mail: "anshumaan23100@iiitnr.edu.in"
+      },
+      {
+        img: Kritie_Omar,
+        name: "Kritie Omar",
+        post: "Media and IT Cell Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/kritie-omar-108291290",
+        mail: "kritie23101@iiitnr.edu.in"
+      },
+    ],
+
+    president: [
+      {
+        img: Murmu,
+        name: "Dr. Lakhindar Murmu",
+        post: "SAC President",
+      },
+    ],
+    pur: [
+      {
+        img: Amar_Sinha,
+        name: "Om Nath",
+        post: "PG Representative (Boys)",
+        linkedin: "https://www.linkedin.com/in/amarcrj/",
+        mail: "amar@iiitnr.edu.in"
+      },
+      {
+        img: Anjali,
+        name: "Not Found Eligible Candidate",
+        post: "PG Representative (Girls)",
+        linkedin: "https://www.linkedin.com/in/anjali-manhas-b27844273/",
+        mail: "anjali@iiitnr.edu.in"
+      },
+      {
+        img: Ayush_Yadav,
+        name: "Virat Patel",
+        post: "UG Representative (Boys)",
+        linkedin: "https://www.linkedin.com/in/ayush-yadav-029884263/",
+        mail: "ayush22100@iiitnr.edu.in"
+      },
+      {
+        img: Vaishnavi_Shrivastava,
+        name: "Prakriti Thakur",
+        post: "UG Representative (Girls)",
+        linkedin: "https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        mail: "vaishnavi23102@iiitnr.edu.in"
+      },
+    ],
+    technical: [
+      {
+        img: Shreyansh_Kushwaha,
+        name: "Shreyansh Kushwaha",
+        post: "Science and Technology Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/shreyansh-kushwaha-ab3876257/",
+        mail: "shreyansh22101@iiitnr.edu.in"
+      },
+      {
+        img: Anushka_Ekka,
+        name: "Anushka Ekka",
+        post: "Science and Technology Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/anushka-ekka-815821215",
+        mail: "anushka23102@iiitnr.edu.in"
+      },
+    ],
+    cultural: [
+      {
+        img: Shrey_Omer,
+        name: "Shrey Omer",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/shrey-omer-71076227a/",
+        mail: "shrey23102@iiitnr.edu.in"
+      },
+      {
+        img: Soumya_Dubey,
+        name: "Soumya Dubey",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/soumya-dubey-208917219",
+        mail: "soumya23101@iiitnr.edu.in"
+      },
+    ],
+    sports: [
+      {
+        img: Yash_Raj,
+        name: "Yash Raj",
+        post: "Sports Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/yash-raj-164222290/",
+        mail: "yash22101@iiitnr.edu.in"
+      },
+      {
+        img: Ananya_Rajawat,
+        name: "Ananya Rajawat",
+        post: "Sports Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        mail: "ananya23101@iiitnr.edu.in"
+      },
+    ],
+    media: [
+      {
+        img: Anshumaan_Karna,
+        name: "Anshumaan Karna",
+        post: "Media and IT Cell Secretary (Boys)",
+        linkedin: "https://www.linkedin.com/in/anshumaankarna/",
+        mail: "anshumaan23100@iiitnr.edu.in"
+      },
+      {
+        img: Kritie_Omar,
+        name: "Kritie Omar",
+        post: "Media and IT Cell Secretary (Girls)",
+        linkedin: "https://in.linkedin.com/in/kritie-omar-108291290",
+        mail: "kritie23101@iiitnr.edu.in"
+      },
+    ],
+  },
 
   24_25: {
     core: [
