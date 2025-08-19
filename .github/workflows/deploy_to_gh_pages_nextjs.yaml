@@ -39,7 +39,6 @@ jobs:
       - name: 🔨 Build Next.js (static export)
         run: |
           yarn build
-          yarn next export
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
