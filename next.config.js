@@ -6,6 +6,9 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  basePath: "",
+  assetPrefix: "",
+  output: "export"
 };
 
 module.exports = nextConfig;
