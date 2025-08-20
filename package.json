@@ -14,14 +14,13 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
-    "@types/react-swipeable-views-utils": "",
     "next": "^15.4.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.0",
     "react-player": "^2.15.1",
     "react-swipeable": "^7.0.1",
-    "react-swipeable-views": "",
+    "react-swipeable-views-react-18-fix": "^0.14.1",
     "react-toastify": "^9.1.1"
   },
   "devDependencies": {

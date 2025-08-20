@@ -1,11 +1,8 @@
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Box, Typography, Button, Stack, useTheme } from "@mui/material";
 import Image from "next/image";
+import SwipeableViews from "react-swipeable-views-react-18-fix";
+import { autoPlay } from "react-swipeable-views-utils-react-18-fix";
 import { recentClubEvents } from "../../data/EventsAndGallery/GalleryData";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
