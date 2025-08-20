@@ -77,7 +77,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Add CNAME for custom domain
-        run: echo "sac.iiitnr.ac.in" > ./out/CNAME
+        run: echo "sac2.iiitnr.ac.in" > ./out/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
