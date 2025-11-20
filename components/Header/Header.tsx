@@ -20,7 +20,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(({ }: Props, ref) => {
       <Container maxWidth="xl" disableGutters>
         <Stack height="264px">
           <HeaderTop />
-          <Stack gap="19px" ref={ref}>
+          <Stack gap="19px" alignItems="center" ref={ref}>
             <SacBranding height={125} />
             <Typography alignSelf="center">Since 2018</Typography>
           </Stack>
