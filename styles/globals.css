@@ -148,3 +148,14 @@ a {
     @apply bg-background text-foreground;
   }
 }
+
+/* Member photo utility: fills its parent container, preserves aspect ratio,
+   centers and crops the image without stretching. Use on <Image> or <img>
+   Example: <div style="width:286px;height:394px;"><Image className="member-photo" ... /></div> */
+.member-photo {
+  display: block; /* remove inline gap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preserve aspect ratio, crop overflow */
+  object-position: center center; /* center the focal point */
+}

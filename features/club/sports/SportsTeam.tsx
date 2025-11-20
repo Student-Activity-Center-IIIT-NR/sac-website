@@ -21,13 +21,9 @@ const SportsTeam = () => {
         }}
       >
         {img && (
-          <Image
-            src={img}
-            alt=""
-            height={394}
-            width={286}
-            objectFit="cover"
-          />
+          <Box sx={{ width: "262px", height: "309px", overflow: "hidden", borderRadius: "12px" }}>
+            <Image src={img} alt={title} width={262} height={309} className="member-photo" />
+          </Box>
         )}
         <Typography
           fontFamily={"Lato"}
@@ -73,19 +69,23 @@ const SportsTeam = () => {
         <Box
           sx={{
             mt: "80px",
-            display: "flex",
-            flexDirection: "row",
-            gap: "120px 26px",
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "repeat(1, 1fr)",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(4, 262px)",
+            },
+            gap: "24px",
             justifyContent: "center",
-            alignItems: "center",
           }}
         >
           {atharv.map((data, index) => {
             return (
-              <Item img={data.img} title={data.name} key={index}>
-                {data.post}
-              </Item>
+              <Box key={index} sx={{ display: "flex", justifyContent: "center" }}>
+                <Item img={data.img} title={data.name}>
+                  {data.post}
+                </Item>
+              </Box>
             );
           })}
         </Box>

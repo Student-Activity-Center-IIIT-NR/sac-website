@@ -9,7 +9,12 @@ interface Props extends StackProps {
 
 const SacBranding = React.forwardRef((props: Props, ref) => {
   return (
-    <Stack component="div" ref={ref} {...props}>
+    <Stack
+      component="div"
+      ref={ref}
+      {...props}
+      sx={{ display: "flex", alignItems: "center", justifyContent: "center", ...(props.sx as any) }}
+    >
       <Image
         src={props.url ? props.url : sacBranding}
         height={props.height as number}

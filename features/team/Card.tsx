@@ -20,24 +20,8 @@ const Card = ({ Name, Post, img, linkedin, call, mail }: Props) => {
   return (
     <>
       <Stack direction={"column"}>
-        <Box
-          sx={{
-            width: "262px",
-            height: "309px"
-          }}
-        >
-          <Image
-            src={img}
-            width={262}
-            height={309}
-            alt={Name}
-            objectFit="cover"
-            objectPosition={"center"}
-            style={{
-              borderRadius: "12px",
-              height: "309px"
-            }}
-          />
+        <Box sx={{ width: "262px", height: "309px", overflow: "hidden", borderRadius: "12px" }}>
+          <Image src={img} width={262} height={309} alt={Name} className="member-photo" />
         </Box>
         <Typography
           variant="body2"

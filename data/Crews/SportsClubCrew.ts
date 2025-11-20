@@ -53,7 +53,7 @@ import Anmol from "../../assets/team_25-26/Atharv/Anmol Singh.jpg";
 import Annam from "../../assets/team_25-26/Atharv/Annam HemaKumar.webp";
 import Banoth from "../../assets/team_25-26/Atharv/Banoth Digamber.jpg";
 import Chaudhary from "../../assets/team_25-26/Atharv/Chaudhary Malay Rajeshkumar.jpg"; 
-import Darshna from "../../assets/team_25-26/Atharv/Darshna Sharma.jpg";
+import Darshna from "../../assets/team_25-26/Atharv/Darshana Sharma.png";
 import Eishita from "../../assets/team_25-26/Atharv/Eishita Mishra.jpg";
 import Harsh from "../../assets/team_25-26/Atharv/Harsh Kumar Patel.jpg";
 import Janay from "../../assets/team_25-26/Atharv/Janay Bhanushali.jpg";

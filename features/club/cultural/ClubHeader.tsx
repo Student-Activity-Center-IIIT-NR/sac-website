@@ -13,8 +13,13 @@ const StyledTypography = styled(Typography)({
   fontSize: "18px",
   color: "#000000",
   cursor: "pointer",
-  width: "fit-content",
+  width: "auto",
   position: "relative",
+  whiteSpace: "normal", // allow wrapping so long names are fully visible
+  overflow: "visible",
+  textOverflow: "clip",
+  textAlign: "center",
+  lineHeight: 1.2,
   "&::after": {
     content: '""',
     position: "absolute",
@@ -107,15 +112,19 @@ function ClubHeader() {
               <Grid2 container mt={"25px"} rowGap={"30px"}>
                 {clubs.map((item, index) => {
                   return (
-                    <>
-                      <Grid2 xs={3} key={index}>
-                        <Link href={item.url}>
-                          <StyledTypography onClick={handleShow}>
-                            {item.name}
-                          </StyledTypography>
-                        </Link>
-                      </Grid2>
-                    </>
+                    <Grid2
+                      xs={12}
+                      sm={6}
+                      md={3}
+                      key={index}
+                      sx={{ display: "flex", justifyContent: "center", px: 1 }}
+                    >
+                      <Link href={item.url}>
+                        <StyledTypography onClick={handleShow}>
+                          {item.name}
+                        </StyledTypography>
+                      </Link>
+                    </Grid2>
                   );
                 })}
               </Grid2>
@@ -155,5 +164,5 @@ const clubs = [
   { name: "Cover to Cover", url: "/clubs/cultural/c2c" },
   { name: "Take da bait", url: "/clubs/cultural/tdb" },
   { name: "Model United Nations", url: "/clubs/cultural/mun" },
-  { name: "Yuva Tourism Club", url: "/clubs/cultural/ytc" },
+  // { name: "Yuva Tourism Club", url: "/clubs/cultural/ytc" },
 ];

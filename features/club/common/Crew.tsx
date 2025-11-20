@@ -26,19 +26,8 @@ const Crew = ({ props }: Props) => {
     return (
       <>
         <Stack direction={"column"} rowGap={"12px"}>
-          <Box
-            sx={{
-              width: "286px",
-              height: "394px",
-            }}
-          >
-            <Image
-              src={img}
-              width={286}
-              height={394}
-              alt=""
-              objectFit="cover"
-            />
+          <Box sx={{ width: "262px", height: "309px", overflow: "hidden", borderRadius: "12px" }}>
+            <Image src={img} width={262} height={309} alt={name} className="member-photo" />
           </Box>
           <Typography
             fontFamily="JetBrains Mono"

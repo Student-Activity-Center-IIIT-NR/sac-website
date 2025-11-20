@@ -13,7 +13,7 @@ const NavRightContainer = styled(Stack)({
   background: "white",
   height: "60px",
   alignItems: "center",
-  paddingLeft: "124px",
+  paddingLeft: "8px",
 });
 type Props = {
   wideSpacing?: boolean;
@@ -24,14 +24,11 @@ function NavRight({ wideSpacing }: Props) {
     <NavRightContainer minWidth={wideSpacing ? "100%" : "45%"} direction="row">
       {navLinks.map((link, index) => {
         return (
-          <NavItem key={index} href={link.url} mx="auto">
+          <NavItem key={index} href={link.url} mx={2}>
             {link.name}
           </NavItem>
         );
       })}
-      {/* <NavItem>
-        <DarkMode />
-      </NavItem> */}
     </NavRightContainer>
   );
 }
