@@ -9,40 +9,34 @@ const MajorEvents = () => {
   return (
     <>
       <Box mt={"-50px"}>
-        <Stack mx={"80px"} mt={"120px"}>
+        <Stack mx={{ xs: 2, sm: 3, md: "40px", lg: "80px" }} mt={{ xs: "60px", sm: "80px", md: "120px" }}>
           <Stack direction={"row"} columnGap={"48px"}>
             <Typography
               fontFamily={"Playfair Display"}
               fontStyle={"normal"}
               fontWeight={400}
-              fontSize={"4rem"}
-              lineHeight={"85px"}
+              fontSize={{ xs: "2.5rem", sm: "3rem", md: "4rem" }}
+              lineHeight={{ xs: "50px", sm: "68px", md: "85px" }}
               letterSpacing={"0.03571em"}
               color={"#000000"}
             >
               Gallery
             </Typography>
-            <Image
-              src={galleryThubmnail}
-              alt=""
-              width={110}
-              height={70}
-            />
           </Stack>
           <Typography
             fontFamily={"Rubik"}
             fontStyle={"normal"}
             fontWeight={500}
-            fontSize={"2rem"}
-            lineHeight={"38px"}
+            fontSize={{ xs: "1.5rem", sm: "1.75rem", md: "2rem" }}
+            lineHeight={{ xs: "32px", sm: "36px", md: "38px" }}
             letterSpacing={"0.0.03571em"}
             color={"#000000"}
-            mt={"102px"}
+            mt={{ xs: "48px", sm: "70px", md: "102px" }}
           >
             Recent Major Events
           </Typography>
         </Stack>
-        <Box my={"48px"} mx="80px">
+        <Box my={{ xs: "32px", md: "48px" }} mx={{ xs: 2, sm: 3, md: "40px", lg: "80px" }}>
           <Carousel />
         </Box>
       </Box>

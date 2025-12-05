@@ -89,8 +89,10 @@ const MonthlyCalendar: NextPage = () => {
             border: "3px solid",
             borderColor: color,
             borderRadius: "20px",
-            width: "200px",
-            py: "19px",
+            width: { xs: "auto", sm: "180px", md: "200px" },
+            minWidth: { xs: "140px" },
+            py: { xs: "14px", md: "19px" },
+            px: { xs: 2, sm: 0 },
           }}
         >
           <Image src={icon} alt="" width={15} height={15} />
@@ -98,8 +100,8 @@ const MonthlyCalendar: NextPage = () => {
             fontFamily={"Rubik"}
             fontStyle={"normal"}
             fontWeight={400}
-            fontSize={"12px"}
-            lineHeight={"21px"}
+            fontSize={{ xs: "10px", sm: "11px", md: "12px" }}
+            lineHeight={{ xs: "18px", sm: "21px" }}
             color={"#000"}
             textAlign={"center"}
           >
@@ -113,7 +115,7 @@ const MonthlyCalendar: NextPage = () => {
   const Month = () => {
     return (
       <>
-        <Stack mt={"80px"}>
+        <Stack mt={{ xs: "40px", sm: "60px", md: "80px" }}>
           {monthWiseData &&
             monthWiseData.map((_item: any, index: number) => {
               return (
@@ -122,8 +124,8 @@ const MonthlyCalendar: NextPage = () => {
                     fontFamily={"Rubik"}
                     fontStyle={"normal"}
                     fontWeight={500}
-                    fontSize={"24px"}
-                    lineHeight={"28px"}
+                    fontSize={{ xs: "20px", sm: "22px", md: "24px" }}
+                    lineHeight={{ xs: "26px", sm: "28px" }}
                     color={"#000"}
                   >
                     {monthsName[index]}
@@ -134,19 +136,22 @@ const MonthlyCalendar: NextPage = () => {
                       border: "1px solid #000000",
                     }}
                   />
-                  <Grid2 container rowGap={"80px"} my={"80px"}>
+                  <Grid2
+                    container
+                    rowGap={{ xs: "40px", sm: "60px", md: "80px" }}
+                    columnSpacing={{ xs: 2, sm: 3 }}
+                    my={{ xs: "40px", sm: "60px", md: "80px" }}
+                  >
                     {monthWiseData[index].map((data, index) => {
                       return (
-                        <>
-                          <Grid2 xs={2} key={index}>
-                            <SingleDate
-                              date={data.date}
-                              name={data.club + " : " + data.eventName}
-                              icon={data.icon}
-                              flag={true}
-                            />
-                          </Grid2>
-                        </>
+                        <Grid2 xs={6} sm={4} md={3} lg={2} key={index}>
+                          <SingleDate
+                            date={data.date}
+                            name={data.club + " : " + data.eventName}
+                            icon={data.icon}
+                            flag={true}
+                          />
+                        </Grid2>
                       );
                     })}
                   </Grid2>
@@ -160,13 +165,13 @@ const MonthlyCalendar: NextPage = () => {
 
   return (
     <>
-      <Stack px={"80px"} mt={"120px"}>
+      <Stack px={{ xs: 2, sm: 3, md: "40px", lg: "80px" }} mt={{ xs: "60px", sm: "80px", md: "120px" }}>
         <Typography
           fontFamily={"Rubik"}
           fontStyle={"normal"}
           fontWeight={500}
-          fontSize={"2rem"}
-          lineHeight={"38px"}
+          fontSize={{ xs: "1.5rem", sm: "1.75rem", md: "2rem" }}
+          lineHeight={{ xs: "32px", sm: "36px", md: "38px" }}
           color={"#000"}
         >
           SAC Calendar
@@ -174,19 +179,19 @@ const MonthlyCalendar: NextPage = () => {
         <Stack
           direction={"row"}
           alignItems={"center"}
-          justifyContent={"space-between"}
-          mt={"40px"}
+          justifyContent={{ xs: "flex-start", md: "space-between" }}
+          mt={{ xs: "24px", md: "40px" }}
+          flexWrap="wrap"
+          gap={{ xs: 2, sm: 2.5, md: 0 }}
         >
           {data.map((item, index) => {
             return (
-              <>
-                <Item
-                  name={item.name}
-                  icon={item.icon}
-                  color={item.color}
-                  key={index}
-                />
-              </>
+              <Item
+                name={item.name}
+                icon={item.icon}
+                color={item.color}
+                key={index}
+              />
             );
           })}
         </Stack>

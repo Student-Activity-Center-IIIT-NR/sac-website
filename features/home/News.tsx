@@ -116,68 +116,124 @@ const News: NextPage = () => {
   return (
     <>
     <Container>
-              <Box sx={{mb:"44px"}}>
+              <Box sx={{ mb: { xs: "24px", md: "44px" }, overflow: "hidden" }}>
           <Typography
             variant="h1"
             fontFamily={"Playfair Display"}
-            letterSpacing={"1em"}
+            letterSpacing={{ xs: "0.2em", sm: "0.5em", md: "1em" }}
             textTransform={"uppercase"}
             fontWeight={400}
-            lineHeight={"115px"}
+            fontSize={{ xs: "48px", sm: "64px", md: "80px" }}
+            lineHeight={{ xs: "56px", sm: "72px", md: "115px" }}
             textAlign={"center"}
+            sx={{ wordBreak: "keep-all" }}
           >
             <Typography variant="title1">&nbsp;</Typography>
             News
           </Typography>
         </Box>
    
-    <Container sx={{alignItems:"center" , height:500}}>
-      <Box sx={{ width:"100%" , display:"flex" , height:"100%" }}>
+    <Container sx={{ alignItems: "center", py: { xs: 3, md: 0 } }}>
+      <Box sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: "center",
+        gap: { xs: 2, md: 0 }
+      }}>
+        {/* Previous Button */}
         <Box sx={{
-          width:"5%",
-          display:"flex",
-          alignItems:"center",
-          justifyContent:"center"
-        }} 
-
-        ><Button onClick={handlePrev}><ArrowBackIcon></ArrowBackIcon></Button>
+          width: { xs: "auto", md: "5%" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          order: { xs: 2, md: 1 }
+        }}>
+          <Button onClick={handlePrev} aria-label="Previous news">
+            <ArrowBackIcon />
+          </Button>
         </Box>
 
-
-        <Box sx={{width:"90%" , display:"flex" , padding:"5px" , alignItems:"center",
-          justifyContent:"center"}}
-        >
-          <Box sx={{width:"50%" , padding:"10px" ,}}>
+        {/* News Content */}
+        <Box sx={{
+          width: { xs: "100%", md: "90%" },
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          padding: { xs: "5px", md: "5px" },
+          alignItems: "center",
+          justifyContent: "center",
+          order: { xs: 1, md: 2 }
+        }}>
+          {/* Image Section */}
+          <Box sx={{
+            width: { xs: "100%", md: "50%" },
+            padding: { xs: "10px", md: "10px" }
+          }}>
             <Box sx={{
-                    width: "100%",     
-                    height: 500,       
-                    objectFit: "cover",
-                    borderRadius: 2,   
+              width: "100%",
+              height: { xs: 300, sm: 400, md: 500 },
+              objectFit: "cover",
+              borderRadius: 2,
+            }}
+            component="img"
+            src={newsData[curr].img?.src || ""}
+            alt={newsData[curr].text?.toString().substring(0, 50) || "News image"}
+            />
+          </Box>
+
+          {/* Text Section */}
+          <Box sx={{
+            width: { xs: "100%", md: "50%" },
+            padding: { xs: "10px", md: "10px" }
+          }}>
+            <Box sx={{
+              fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem" },
+              height: { xs: "auto", md: 500 },
+              padding: 2,
+              overflow: "auto"
+            }}>
+              {newsData[curr].text}
+            </Box>
+            <Box sx={{
+              padding: 2,
+              fontSize: { xs: "1rem", md: "1.1rem" },
+              display: "flex",
+              justifyContent: { xs: "flex-start", md: "flex-end" },
+              alignItems: "center",
+              gap: 1
+            }}>
+              {newsData[curr].authImg && (
+                <Box
+                  component="img"
+                  src={newsData[curr].authImg?.src || ""}
+                  sx={{
+                    height: 40,
+                    width: 40,
+                    borderRadius: "50%",
+                    objectFit: "cover"
                   }}
-                  component="img" src=
-          {newsData[curr].img?.src || ""}>
-            </Box>
-          </Box>
-          <Box sx={{width:"50%" , padding:"10px"}}>
-            <Box sx={{maxheight:"80%", fontSize:"1.3rem" , height: 500 , padding:2}}>{newsData[curr].text}</Box>
-            <Box sx={{minHeight:"20%" , padding:2 , fontSize:"1.1rem" , display:"flex"}}>
-              <Box sx={{minWidth:"70%"}}></Box>
-              <Box sx={{display:"flex" , alignItems:"center" }}>
-                  <Box component="img" src={newsData[curr].authImg?.src || ""} sx={{height:40 , width:40, borderRadius:10 , marginRight:1 }}></Box>
-                  <Box>{newsData[curr].authName}</Box>
-              </Box>
+                  alt={newsData[curr].authName || "Author"}
+                />
+              )}
+              <Box>{newsData[curr].authName}</Box>
             </Box>
           </Box>
         </Box>
 
-
-        <Box sx={{width:"5%" ,display:"flex" ,alignItems:"center", justifyContent:"center"}}>
-          <Button onClick={handleNext}><ArrowForwardIcon></ArrowForwardIcon></Button>
+        {/* Next Button */}
+        <Box sx={{
+          width: { xs: "auto", md: "5%" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          order: 3
+        }}>
+          <Button onClick={handleNext} aria-label="Next news">
+            <ArrowForwardIcon />
+          </Button>
         </Box>
-
-
       </Box>
-      </Container>
+    </Container>
        </Container>
     </>
   );

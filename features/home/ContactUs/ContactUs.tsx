@@ -22,7 +22,7 @@ interface ErrorProps {
   msg: string;
 }
 
-const VectorBoxTop = styled(Box)({
+const VectorBoxTop = styled(Box)(({ theme }) => ({
   position: "absolute",
   top: 0,
   left: 0,
@@ -30,25 +30,46 @@ const VectorBoxTop = styled(Box)({
   width: "361px",
   height: "94px",
   zIndex: -1,
-});
+  [theme.breakpoints.down('md')]: {
+    width: "200px",
+    height: "60px",
+  },
+}));
 
-const VectorBoxBottom = styled(Box)({
+const VectorBoxBottom = styled(Box)(({ theme }) => ({
   position: "absolute",
   top: "82px",
   left: "271px",
   background: "rgba(179, 202, 255, 0.2)",
   width: "361px",
   height: "94px",
-});
+  [theme.breakpoints.down('md')]: {
+    top: "50px",
+    left: "150px",
+    width: "200px",
+    height: "60px",
+  },
+}));
 
-const ContactUsHeading = styled(Typography)({
+const ContactUsHeading = styled(Typography)(({ theme }) => ({
   fontFamily: "Playfair Display",
   fontSize: "80px",
   letterSpacing: "0.2em",
   lineHeight: "107px",
   marginLeft: "22px",
   marginTop: "28.6px",
-});
+  [theme.breakpoints.down('md')]: {
+    fontSize: "48px",
+    lineHeight: "64px",
+    marginLeft: "16px",
+    marginTop: "20px",
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: "36px",
+    lineHeight: "48px",
+    letterSpacing: "0.1em",
+  },
+}));
 
 const ContactUsQuote = styled(Typography)({
   variant: "caption",
@@ -69,13 +90,18 @@ function ContactUs({}: Props) {
           <VectorBoxBottom />
         </Box>
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="space-between"
-          ml="22px"
-          mt="40px"
+          alignItems={{ xs: "center", md: "flex-start" }}
+          ml={{ xs: "0", md: "22px" }}
+          mt={{ xs: "20px", md: "40px" }}
+          gap={{ xs: 4, md: 0 }}
+          px={{ xs: 2, md: 0 }}
         >
           <ContactUsForm />
-          <Image src={artContactus} alt="" />
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Image src={artContactus} alt="Contact us illustration" />
+          </Box>
         </Stack>
         <Stack />
       </Stack>

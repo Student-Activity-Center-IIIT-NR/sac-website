@@ -26,16 +26,31 @@ const Crew = ({ props }: Props) => {
     return (
       <>
         <Stack direction={"column"} rowGap={"12px"}>
-          <Box sx={{ width: "262px", height: "309px", overflow: "hidden", borderRadius: "12px" }}>
-            <Image src={img} width={262} height={309} alt={name} className="member-photo" />
+          <Box
+            sx={{
+              width: { xs: "220px", sm: "240px", md: "262px" },
+              height: { xs: "260px", sm: "280px", md: "309px" },
+              overflow: "hidden",
+              borderRadius: "12px",
+              position: "relative",
+            }}
+          >
+            <Image
+              src={img}
+              fill
+              alt={name}
+              style={{ objectFit: "cover" }}
+              className="member-photo"
+            />
           </Box>
           <Typography
             fontFamily="JetBrains Mono"
             fontStyle="normal"
             fontWeight="700"
-            fontSize="20px"
+            fontSize={{ xs: "16px", sm: "18px", md: "20px" }}
             lineHeight="137.5%"
             color="#565A6E"
+            sx={{ maxWidth: { xs: "220px", sm: "240px", md: "262px" } }}
           >
             {name}
           </Typography>
@@ -43,9 +58,10 @@ const Crew = ({ props }: Props) => {
             fontFamily="JetBrains Mono"
             fontStyle="normal"
             fontWeight="700"
-            fontSize="20px"
+            fontSize={{ xs: "16px", sm: "18px", md: "20px" }}
             lineHeight="137.5%"
             color="#565A6E"
+            sx={{ maxWidth: { xs: "220px", sm: "240px", md: "262px" } }}
           >
             {post}
           </Typography>
@@ -67,11 +83,12 @@ const Crew = ({ props }: Props) => {
 
   return (
     <>
-      <Stack mt={"117px"}>
+      <Stack mt={{ xs: "60px", sm: "80px", md: "117px" }} px={{ xs: 2, sm: 3, md: 0 }}>
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 3, md: 0 },
           }}
         >
          <Box
@@ -80,17 +97,18 @@ const Crew = ({ props }: Props) => {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    rowGap: "16px",
-    ml: "110px",
-    mr: "90px",
+    rowGap: { xs: "12px", md: "16px" },
+    ml: { xs: 0, md: "40px", lg: "110px" },
+    mr: { xs: 0, md: "30px", lg: "90px" },
+    minWidth: { xs: "100%", md: "auto" },
   }}
 >
   <Typography
     fontFamily="Rubik"
     fontStyle="normal"
     fontWeight="400"
-    fontSize="48px"
-    lineHeight="57px"
+    fontSize={{ xs: "32px", sm: "40px", md: "48px" }}
+    lineHeight={{ xs: "42px", sm: "50px", md: "57px" }}
     textAlign="center"
     color="#565A6E"
   >
@@ -98,44 +116,46 @@ const Crew = ({ props }: Props) => {
   </Typography>
   <Box
     sx={{
-      display: "flex",
-      flexDirection: "row", // Change to "row"
+      display: { xs: "none", md: "flex" },
+      flexDirection: "row",
       justifyContent: "center",
-      columnGap: "16px", // Change to "columnGap" for horizontal gap
+      columnGap: "16px",
     }}
   >
     <Box
       sx={{
-        width: "129px",
-        height: "72px",
+        width: { md: "100px", lg: "129px" },
+        height: { md: "60px", lg: "72px" },
         border: "1px solid #C0CAF5",
         borderRadius: "24px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        cursor: "pointer",
       }}
       onClick={() => handleClick("left")}
     >
-      <Image src={iconArrow} alt="" />
+      <Image src={iconArrow} alt="Scroll left" />
     </Box>
     <Box
       sx={{
-        width: "129px",
-        height: "72px",
+        width: { md: "100px", lg: "129px" },
+        height: { md: "60px", lg: "72px" },
         border: "1px solid #C0CAF5",
         borderRadius: "24px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        cursor: "pointer",
       }}
       onClick={() => handleClick("right")}
     >
-      <Image src={iconArrowR} alt="" />
+      <Image src={iconArrowR} alt="Scroll right" />
     </Box>
   </Box>
 </Box>
 
-          <Box>
+          <Box sx={{ width: "100%", overflow: "hidden" }}>
             <div className={Styles.grid_container}>
               <main className={`${Styles.grid_item} ${Styles.main}`}>
                 <div
@@ -160,7 +180,7 @@ const Crew = ({ props }: Props) => {
                     const x = e.pageX - e.currentTarget.offsetLeft;
                     const walk = x - startX; // multiply with constant to scroll-fast (lets say 3)
                     e.currentTarget.scrollLeft = scrollLeft - walk;
-                    console.log(walk);
+                    // Removed console.log for production
                   }}
                 >
                   {props.map((step, index) => {

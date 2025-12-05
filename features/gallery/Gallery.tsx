@@ -99,18 +99,23 @@ const Gallery = () => {
 
   return (
     <>
-      <Box mt={"64px"} mb={"70px"} mx={"80px"}>
+      <Box
+        mt={{ xs: "32px", sm: "48px", md: "64px" }}
+        mb={{ xs: "40px", sm: "56px", md: "70px" }}
+        mx={{ xs: 2, sm: 3, md: "40px", lg: "80px" }}
+      >
         <Stack
-          direction={"row"}
-          alignItems={"center"}
+          direction={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: "flex-start", sm: "center" }}
           justifyContent={"space-between"}
+          gap={{ xs: 1, sm: 0 }}
         >
           <Typography
             fontFamily={"Rubik"}
             fontStyle={"normal"}
             fontWeight={700}
-            fontSize={"24px"}
-            lineHeight={"28px"}
+            fontSize={{ xs: "18px", sm: "20px", md: "24px" }}
+            lineHeight={{ xs: "24px", sm: "26px", md: "28px" }}
             color={"#000000"}
           >
             {event.name}
@@ -119,8 +124,8 @@ const Gallery = () => {
             fontFamily={"Rubik"}
             fontStyle={"normal"}
             fontWeight={700}
-            fontSize={"24px"}
-            lineHeight={"28px"}
+            fontSize={{ xs: "16px", sm: "18px", md: "24px" }}
+            lineHeight={{ xs: "22px", sm: "24px", md: "28px" }}
             color={"#000000"}
           >
             {event.date}
@@ -128,33 +133,31 @@ const Gallery = () => {
         </Stack>
         <Grid2
           container
-          spacing={6}
-          mt={"24px"}
+          spacing={{ xs: 2, sm: 3, md: 6 }}
+          mt={{ xs: "16px", md: "24px" }}
           justifyContent={"space-between"}
         >
-          {event.image.slice((page - 1) * 6, (page - 1) * 6 + 6).map((step) => {
+          {event.image.slice((page - 1) * 6, (page - 1) * 6 + 6).map((step, index) => {
             return (
-              <>
-                <Grid2 xs={4} maxWidth={"fit-content"}>
-                  <Box
-                    sx={{
-                      width: "357px",
-                      height: "266px",
+              <Grid2 xs={12} sm={6} md={4} key={index}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: { xs: "250px", sm: "220px", md: "266px" },
+                    position: "relative",
+                  }}
+                >
+                  <Image
+                    src={step}
+                    alt=""
+                    fill
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "8px",
                     }}
-                  >
-                    <Image
-                      src={step}
-                      alt=""
-                      width={357}
-                      height={266}
-                      objectFit={"cover"}
-                      style={{
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </Box>
-                </Grid2>
-              </>
+                  />
+                </Box>
+              </Grid2>
             );
           })}
         </Grid2>
@@ -176,24 +179,29 @@ const Gallery = () => {
               "-24px 24px 48px rgba(242, 242, 242, 0.2), 24px -24px 48px rgba(242, 242, 242, 0.2), -24px -24px 48px rgba(255, 255, 255, 0.9), 24px 24px 60px rgba(242, 242, 242, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(242, 242, 242, 0.5)",
             borderRadius: "24px",
             mx: "auto",
-            my: "70px",
-            maxWidth: "fit-content",
+            my: { xs: "40px", sm: "56px", md: "70px" },
+            maxWidth: { xs: "100%", md: "fit-content" },
+            overflow: "auto",
           }}
         >
           <Stack
             direction={"row"}
             alignItems={"center"}
-            justifyContent={"center"}
-            height={"80px"}
-            px={"50px"}
-            columnGap={"80px"}
+            justifyContent={{ xs: "flex-start", md: "center" }}
+            height={{ xs: "auto", md: "80px" }}
+            px={{ xs: "16px", sm: "24px", md: "50px" }}
+            py={{ xs: 2, md: 0 }}
+            columnGap={{ xs: "16px", sm: "32px", md: "80px" }}
+            flexWrap={{ xs: "wrap", md: "nowrap" }}
           >
-            <Image
-              src={layerIcon}
-              alt=""
-              width={22}
-              objectFit={"contain"}
-            />
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Image
+                src={layerIcon}
+                alt=""
+                width={22}
+                objectFit={"contain"}
+              />
+            </Box>
             <StyledButton
               onClick={() => {
                 handleClickName("major");
@@ -226,6 +234,7 @@ const Gallery = () => {
               onClick={() => {
                 handleClickName("media");
               }}
+              sx={{ whiteSpace: { xs: "nowrap", md: "normal" } }}
             >
               Media & IT Cell
             </StyledButton>
@@ -267,8 +276,8 @@ const Gallery = () => {
         </Stack>
         <Grid2
           container
-          spacing={6}
-          mt={"42px"}
+          spacing={{ xs: 2, sm: 3, md: 6 }}
+          mt={{ xs: "32px", md: "42px" }}
           justifyContent={"space-between"}
         >
           {(
@@ -283,11 +292,11 @@ const Gallery = () => {
             .filter((event) => event.year === year)
             .map((step, index) => {
               return (
-                <Grid2 xs={4} key={index}>
+                <Grid2 xs={12} sm={6} md={4} key={index}>
                   <StyledTypography
                     onClick={() => {
                       handleClickEvent(index);
-                      scrollTo(0, 1830);
+                      scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     {step.name}

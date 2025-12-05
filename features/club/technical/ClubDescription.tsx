@@ -16,21 +16,22 @@ const ClubDescription = ({ bg, children }: Props) => {
           background: `url(${bg.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "600px",
+          minHeight: { xs: "400px", sm: "500px", md: "600px" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          py: { xs: 4, md: 0 },
         }}
       >
         <Typography
           fontFamily="Rubik"
           fontStyle="normal"
           fontWeight="400"
-          fontSize="20px"
-          lineHeight="28px"
+          fontSize={{ xs: "16px", sm: "18px", md: "20px" }}
+          lineHeight={{ xs: "24px", sm: "26px", md: "28px" }}
           color="#FFFFFF"
-          maxWidth={700}
-          px="80px"
+          maxWidth={{ xs: "100%", sm: "90%", md: 700 }}
+          px={{ xs: 2, sm: 3, md: "40px", lg: "80px" }}
         >
           {children}
         </Typography>

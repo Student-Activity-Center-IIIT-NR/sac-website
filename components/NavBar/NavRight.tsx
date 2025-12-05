@@ -11,20 +11,40 @@ const NavRightContainer = styled(Stack)({
   transitionProperty: "all",
   transitionDuration: "250ms",
   background: "white",
-  height: "60px",
   alignItems: "center",
   paddingLeft: "8px",
 });
+
 type Props = {
   wideSpacing?: boolean;
+  isMobile?: boolean;
+  onLinkClick?: () => void;
 };
 
-function NavRight({ wideSpacing }: Props) {
+function NavRight({ wideSpacing, isMobile, onLinkClick }: Props) {
   return (
-    <NavRightContainer minWidth={wideSpacing ? "100%" : "45%"} direction="row">
+    <NavRightContainer
+      minWidth={isMobile ? "100%" : wideSpacing ? "100%" : "45%"}
+      direction={isMobile ? "column" : "row"}
+      sx={{
+        height: isMobile ? "auto" : "60px",
+        gap: isMobile ? 1 : 0,
+        paddingLeft: isMobile ? 0 : "8px",
+        alignItems: isMobile ? "stretch" : "center",
+      }}
+    >
       {navLinks.map((link, index) => {
         return (
-          <NavItem key={index} href={link.url} mx={2}>
+          <NavItem
+            key={index}
+            href={link.url}
+            mx={isMobile ? 0 : 2}
+            onClick={onLinkClick}
+            sx={{
+              width: isMobile ? "100%" : "auto",
+              justifyContent: isMobile ? "flex-start" : "center",
+            }}
+          >
             {link.name}
           </NavItem>
         );

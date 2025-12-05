@@ -35,18 +35,19 @@ const ClubsOverview = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
             alignItems: "center",
+            gap: { xs: 3, md: 0 },
           }}
         >
-          <Box sx={{ maxWidth: 650 }}>
+          <Box sx={{ maxWidth: { xs: "100%", md: 650 } }}>
             <Typography
               variant="h3"
               fontFamily={"Lato"}
               fontWeight={600}
-              fontSize={"41px"}
-              lineHeight={"49px"}
+              fontSize={{ xs: "28px", sm: "34px", md: "41px" }}
+              lineHeight={{ xs: "34px", sm: "40px", md: "49px" }}
               fontStyle={"normal"}
             >
               {title}
@@ -57,19 +58,28 @@ const ClubsOverview = () => {
               fontWeight={400}
               fontSize={"1rem"}
               lineHeight={"20px"}
-              mt={4}
-              maxWidth={500}
+              mt={{ xs: 2, md: 4 }}
+              maxWidth={{ xs: "100%", md: 500 }}
             >
               {children}
             </Typography>
           </Box>
-          <Image
-            src={img}
-            alt="techSvg"
-            height={312}
-            width={292}
-            objectFit="contain"
-          />
+          <Box
+            sx={{
+              width: { xs: "100%", md: "auto" },
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Image
+              src={img}
+              alt="Club category illustration"
+              height={312}
+              width={292}
+              style={{ maxWidth: "100%", height: "auto" }}
+              objectFit="contain"
+            />
+          </Box>
         </Box>
       </Zoom>
     );
@@ -94,25 +104,47 @@ const ClubsOverview = () => {
             <Typography
               variant={"h1"}
               fontWeight={isTechHovered ? 500 : 100}
-              fontSize={
-                isTechHovered
+              fontSize={{
+                xs: isTechHovered
+                  ? "40px"
+                  : isCultHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "24px"
+                    : "36px",
+                sm: isTechHovered
+                  ? "70px"
+                  : isCultHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "32px"
+                    : "60px",
+                md: isTechHovered
                   ? "150px"
                   : isCultHovered ||
                     isSportHovered ||
                     isMediaHovered ||
                     isNssHovered
                     ? "55px"
-                    : "133px"
-              }
+                    : "133px",
+              }}
               fontFamily={"Work Sans"}
-              lineHeight={
-                isCultHovered ||
+              lineHeight={{
+                xs: isCultHovered ||
+                  isSportHovered ||
+                  isMediaHovered ||
+                  isNssHovered
+                  ? "30px"
+                  : "48px",
+                md: isCultHovered ||
                   isSportHovered ||
                   isMediaHovered ||
                   isNssHovered
                   ? "65px"
-                  : "156px"
-              }
+                  : "156px",
+              }}
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -125,7 +157,7 @@ const ClubsOverview = () => {
           </Divider>
           {/* Hidden Element; Display on Hover */}
           {isTechHovered && (
-            <Box mx={8}>
+            <Box mx={{ xs: 2, sm: 4, md: 8 }}>
               <OverviewData
                 title="Coding, Hacking, Problem Solving, Machine Learning, Circuits"
                 img={artTechnical}
@@ -165,25 +197,47 @@ const ClubsOverview = () => {
             <Typography
               variant={"h1"}
               fontWeight={isCultHovered ? 500 : 100}
-              fontSize={
-                isCultHovered
+              fontSize={{
+                xs: isCultHovered
+                  ? "40px"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "24px"
+                    : "36px",
+                sm: isCultHovered
+                  ? "70px"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "32px"
+                    : "60px",
+                md: isCultHovered
                   ? "150px"
                   : isTechHovered ||
                     isSportHovered ||
                     isMediaHovered ||
                     isNssHovered
                     ? "55px"
-                    : "133px"
-              }
+                    : "133px",
+              }}
               fontFamily={"Work Sans"}
-              lineHeight={
-                isTechHovered ||
+              lineHeight={{
+                xs: isTechHovered ||
+                  isSportHovered ||
+                  isMediaHovered ||
+                  isNssHovered
+                  ? "30px"
+                  : "48px",
+                md: isTechHovered ||
                   isSportHovered ||
                   isMediaHovered ||
                   isNssHovered
                   ? "65px"
-                  : "156px"
-              }
+                  : "156px",
+              }}
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -196,7 +250,7 @@ const ClubsOverview = () => {
           </Divider>
           {/* Hidden Element; Display on Hover */}
           {isCultHovered && (
-            <Box mx={8}>
+            <Box mx={{ xs: 2, sm: 4, md: 8 }}>
               <OverviewData
                 title="Music, Art, Dance, Photography, Debate, Discussions, Poetry and Drama"
                 img={artCultural}
@@ -228,22 +282,41 @@ const ClubsOverview = () => {
             <Typography
               variant={"h1"}
               fontWeight={isSportHovered ? 500 : 100}
-              fontSize={
-                isSportHovered
+              fontSize={{
+                xs: isSportHovered
+                  ? "40px"
+                  : isTechHovered ||
+                    isCultHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "24px"
+                    : "36px",
+                sm: isSportHovered
+                  ? "70px"
+                  : isTechHovered ||
+                    isCultHovered ||
+                    isMediaHovered ||
+                    isNssHovered
+                    ? "32px"
+                    : "60px",
+                md: isSportHovered
                   ? "150px"
                   : isTechHovered ||
                     isCultHovered ||
                     isMediaHovered ||
                     isNssHovered
                     ? "55px"
-                    : "133px"
-              }
+                    : "133px",
+              }}
               fontFamily={"Work Sans"}
-              lineHeight={
-                isTechHovered || isCultHovered || isMediaHovered || isNssHovered
+              lineHeight={{
+                xs: isTechHovered || isCultHovered || isMediaHovered || isNssHovered
+                  ? "30px"
+                  : "48px",
+                md: isTechHovered || isCultHovered || isMediaHovered || isNssHovered
                   ? "65px"
-                  : "156px"
-              }
+                  : "156px",
+              }}
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -256,7 +329,7 @@ const ClubsOverview = () => {
           </Divider>
           {/* Hidden Element; Display on Hover */}
           {isSportHovered && (
-            <Box mx={8}>
+            <Box mx={{ xs: 2, sm: 4, md: 8 }}>
               <OverviewData
                 title="Passion, Commitment, Dedication, Enthusiasm, Team spirit"
                 img={artSports}
@@ -302,25 +375,47 @@ const ClubsOverview = () => {
               <Typography
                 variant={"h1"}
                 fontWeight={isMediaHovered ? 500 : 100}
-                fontSize={
-                  isMediaHovered
+                fontSize={{
+                  xs: isMediaHovered
+                    ? "40px"
+                    : isTechHovered ||
+                      isSportHovered ||
+                      isCultHovered ||
+                      isNssHovered
+                      ? "24px"
+                      : "36px",
+                  sm: isMediaHovered
+                    ? "70px"
+                    : isTechHovered ||
+                      isSportHovered ||
+                      isCultHovered ||
+                      isNssHovered
+                      ? "32px"
+                      : "60px",
+                  md: isMediaHovered
                     ? "150px"
                     : isTechHovered ||
                       isSportHovered ||
                       isCultHovered ||
                       isNssHovered
                       ? "55px"
-                      : "133px"
-                }
+                      : "133px",
+                }}
                 fontFamily={"Work Sans"}
-                lineHeight={
-                  isTechHovered ||
+                lineHeight={{
+                  xs: isTechHovered ||
+                    isSportHovered ||
+                    isCultHovered ||
+                    isNssHovered
+                    ? "30px"
+                    : "48px",
+                  md: isTechHovered ||
                     isSportHovered ||
                     isCultHovered ||
                     isNssHovered
                     ? "65px"
-                    : "156px"
-                }
+                    : "156px",
+                }}
                 textAlign={"center"}
                 textTransform={"uppercase"}
                 fontStyle={"normal"}
@@ -333,7 +428,7 @@ const ClubsOverview = () => {
             </Divider>
             {/* Hidden Element; Display on Hover */}
             {isMediaHovered && (
-              <Box mx={8}>
+              <Box mx={{ xs: 2, sm: 4, md: 8 }}>
                 <OverviewData title="'Not Me But You'" img={NSS}>
                   The NSS wing of IIIT Naya Raipur was initiated in 2019 with a
                   vision of creating community awareness among the students and
@@ -365,25 +460,47 @@ const ClubsOverview = () => {
             <Typography
               variant={"h1"}
               fontWeight={isNssHovered ? 500 : 100}
-              fontSize={
-                isNssHovered
+              fontSize={{
+                xs: isNssHovered
+                  ? "40px"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isCultHovered ||
+                    isMediaHovered
+                    ? "24px"
+                    : "36px",
+                sm: isNssHovered
+                  ? "70px"
+                  : isTechHovered ||
+                    isSportHovered ||
+                    isCultHovered ||
+                    isMediaHovered
+                    ? "32px"
+                    : "60px",
+                md: isNssHovered
                   ? "150px"
                   : isTechHovered ||
                     isSportHovered ||
                     isCultHovered ||
                     isMediaHovered
                     ? "55px"
-                    : "133px"
-              }
+                    : "133px",
+              }}
               fontFamily={"Work Sans"}
-              lineHeight={
-                isTechHovered ||
+              lineHeight={{
+                xs: isTechHovered ||
+                  isSportHovered ||
+                  isCultHovered ||
+                  isMediaHovered
+                  ? "30px"
+                  : "48px",
+                md: isTechHovered ||
                   isSportHovered ||
                   isCultHovered ||
                   isMediaHovered
                   ? "65px"
-                  : "156px"
-              }
+                  : "156px",
+              }}
               textAlign={"center"}
               textTransform={"uppercase"}
               fontStyle={"normal"}
@@ -396,7 +513,7 @@ const ClubsOverview = () => {
           </Divider>
           {/* Hidden Element; Display on Hover */}
           {isNssHovered && (
-            <Box mx={8}>
+            <Box mx={{ xs: 2, sm: 4, md: 8 }}>
               <OverviewData
                 title="Photography, Videography, Design, Socail Media, PR"
                 img={media}

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nul)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command \"$input | Select-Object -First 20\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

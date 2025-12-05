@@ -24,26 +24,35 @@ const Footer = () => {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               justifyContent: "space-between",
-              alignItems: "center",
-              px: "44px",
-              py: "19px",
+              alignItems: { xs: "center", md: "flex-start" },
+              px: { xs: 2, sm: 3, md: "44px" },
+              py: { xs: 3, md: "19px" },
+              gap: { xs: 3, md: 0 },
             }}
           >
-            <Image
-              src={sac_branding}
-              alt="sac_logo"
-              height={210}
-              width={210}
-              objectFit="contain"
-            />
+            <Box sx={{
+              width: { xs: "150px", sm: "180px", md: "210px" },
+              height: "auto",
+              flexShrink: 0
+            }}>
+              <Image
+                src={sac_branding}
+                alt="sac_logo"
+                width={210}
+                height={210}
+                style={{ width: "100%", height: "auto" }}
+                objectFit="contain"
+              />
+            </Box>
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row" },
                 justifyContent: "space-around",
-                gap: "0 143px",
+                gap: { xs: "24px", sm: "40px", md: "80px", lg: "143px" },
+                width: { xs: "100%", md: "auto" },
               }}
             >
               <Box
@@ -128,11 +137,13 @@ const Footer = () => {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: { xs: "center", md: "space-between" },
               alignItems: "center",
-              pb: "28px",
-              ml: 96,
+              pb: { xs: 2, md: "28px" },
+              px: { xs: 2, md: 0 },
+              ml: { xs: 0, md: 12, lg: 96 },
+              gap: { xs: 2, md: 0 },
             }}
           >
             {/* <Typography

@@ -76,14 +76,19 @@ const Gallery = ({ club }: Props) => {
 
   return (
     <>
-      <Box ml={"84px"} mr={"82px"} mt={"164px"} mb={6}>
+      <Box
+        ml={{ xs: 2, sm: 3, md: "42px", lg: "84px" }}
+        mr={{ xs: 2, sm: 3, md: "42px", lg: "82px" }}
+        mt={{ xs: "80px", sm: "120px", md: "164px" }}
+        mb={6}
+      >
         <Stack>
           <Typography
             fontFamily="Rubik"
             fontStyle="normal"
             fontWeight="600"
-            fontSize="48px"
-            lineHeight="57px"
+            fontSize={{ xs: "32px", sm: "40px", md: "48px" }}
+            lineHeight={{ xs: "40px", sm: "48px", md: "57px" }}
             textAlign="right"
             color="#565A6E"
           >
@@ -93,32 +98,34 @@ const Gallery = ({ club }: Props) => {
             fontFamily="Rubik"
             fontStyle="normal"
             fontWeight="700"
-            fontSize="32px"
-            lineHeight="28px"
+            fontSize={{ xs: "24px", sm: "28px", md: "32px" }}
+            lineHeight={{ xs: "32px", sm: "36px", md: "28px" }}
             textAlign="left"
             color="#565A6E"
-            mt={"48px"}
+            mt={{ xs: "32px", md: "48px" }}
           >
             Event log
           </Typography>
           <Stack
-            direction={"row"}
-            alignItems={"center"}
+            direction={{ xs: "column", sm: "row" }}
+            alignItems={{ xs: "flex-start", sm: "center" }}
             justifyContent={"space-between"}
             mt={"21px"}
+            gap={{ xs: 2, sm: 0 }}
           >
             <DropDown year={year} />
             <Stack
-              direction={"row"}
+              direction={{ xs: "column", sm: "row" }}
               justifyContent={"space-between"}
-              width={"50%"}
+              width={{ xs: "100%", sm: "50%", md: "50%" }}
+              gap={{ xs: 1, sm: 0 }}
             >
               <Typography
                 fontFamily="Rubik"
                 fontStyle="normal"
                 fontWeight="700"
-                fontSize="24px"
-                lineHeight="28px"
+                fontSize={{ xs: "18px", sm: "20px", md: "24px" }}
+                lineHeight={{ xs: "24px", sm: "26px", md: "28px" }}
                 color="#565A6E"
               >
                 {event?.name ?? ""}
@@ -127,16 +134,25 @@ const Gallery = ({ club }: Props) => {
                 fontFamily="Rubik"
                 fontStyle="normal"
                 fontWeight="700"
-                fontSize="24px"
-                lineHeight="28px"
+                fontSize={{ xs: "16px", sm: "18px", md: "24px" }}
+                lineHeight={{ xs: "22px", sm: "24px", md: "28px" }}
                 color="#565A6E"
               >
                 {event?.date ?? ""}
               </Typography>
             </Stack>
           </Stack>
-          <Stack direction={"row"} mt={"52px"} justifyContent={"space-between"}>
-            <Stack direction={"column"} gap={6} width={"30%"}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            mt={{ xs: "32px", md: "52px" }}
+            justifyContent={"space-between"}
+            gap={{ xs: 4, md: 0 }}
+          >
+            <Stack
+              direction={"column"}
+              gap={{ xs: 3, md: 6 }}
+              width={{ xs: "100%", md: "30%" }}
+            >
               {events.map((step, index) => {
                 return (
                   <Box key={index}>
@@ -144,8 +160,8 @@ const Gallery = ({ club }: Props) => {
                       fontFamily="Rubik"
                       fontStyle="normal"
                       fontWeight="700"
-                      fontSize="20px"
-                      lineHeight="28px"
+                      fontSize={{ xs: "16px", sm: "18px", md: "20px" }}
+                      lineHeight={{ xs: "24px", sm: "26px", md: "28px" }}
                       color="#565A6E"
                       sx={{ cursor: "pointer" }}
                       onClick={() => {
@@ -159,33 +175,39 @@ const Gallery = ({ club }: Props) => {
                 );
               })}
             </Stack>
-            <Stack direction={"column"} maxWidth={"50%"}>
-              <Grid2 container spacing={3} justifyContent={"space-between"}>
+            <Stack
+              direction={"column"}
+              maxWidth={{ xs: "100%", md: "60%" }}
+              width="100%"
+            >
+              <Grid2
+                container
+                spacing={{ xs: 2, sm: 3 }}
+                justifyContent={"space-between"}
+              >
                 {event?.image
                   ?.slice((page - 1) * 4, (page - 1) * 4 + 4)
-                  .map((step) => {
+                  .map((step, index) => {
                     return (
-                      <>
-                        <Grid2 xs={6} maxWidth={"fit-content"}>
-                          <Box
-                            sx={{
-                              width: "311px",
-                              height: "232px",
+                      <Grid2 xs={12} sm={6} key={index}>
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: { xs: "250px", sm: "200px", md: "232px" },
+                            position: "relative",
+                          }}
+                        >
+                          <Image
+                            alt=""
+                            fill
+                            src={step}
+                            style={{
+                              objectFit: "cover",
+                              borderRadius: "8px",
                             }}
-                          >
-                            <Image
-                              alt=""
-                              width={311}
-                              height={232}
-                              src={step}
-                              objectFit={"cover"}
-                              style={{
-                                borderRadius: "8px",
-                              }}
-                            />
-                          </Box>
-                        </Grid2>
-                      </>
+                          />
+                        </Box>
+                      </Grid2>
                     );
                   })}
               </Grid2>

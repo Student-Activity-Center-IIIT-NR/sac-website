@@ -13,7 +13,7 @@ const StyledTypography = styled(Typography)({
   fontSize: "96px",
 });
 
-const StyledLinkTypography = styled(Typography)({
+const StyledLinkTypography = styled(Typography)(({ theme }) => ({
   fontFamily: "JetBrains Mono",
   fontStyle: "normal",
   fontWeight: "700",
@@ -21,7 +21,13 @@ const StyledLinkTypography = styled(Typography)({
   color: "#565A6E",
   width: "fit-content",
   cursor: "pointer",
-});
+  [theme.breakpoints.down('md')]: {
+    fontSize: "18px",
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: "16px",
+  },
+}));
 
 const TechnicalOverview = () => {
   return (
@@ -37,19 +43,20 @@ const TechnicalOverview = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            columnGap: "95px",
+            flexDirection: { xs: "column", md: "row" },
+            columnGap: { md: "40px", lg: "95px" },
             justifyContent: "space-between",
-            alignItems: "center",
-            mt: "100px",
+            alignItems: { xs: "flex-start", md: "center" },
+            mt: { xs: "40px", md: "100px" },
+            px: { xs: 2, sm: 3, md: 0 },
           }}
         >
-          <Stack ml={"80px"} rowGap={"8px"} width={"738px"}>
+          <Stack ml={{ xs: 0, md: "40px", lg: "80px" }} rowGap={"8px"} width={{ xs: "100%", md: "60%", lg: "738px" }} maxWidth="100%">
             <Typography
               fontFamily={"JetBrains Mono"}
               fontStyle={"normal"}
               fontWeight={800}
-              fontSize={"5rem"}
+              fontSize={{ xs: "2.5rem", sm: "3.5rem", md: "4rem", lg: "5rem" }}
               color={"#343B58"}
             >
               Technical Clubs
@@ -58,7 +65,7 @@ const TechnicalOverview = () => {
               fontFamily={"JetBrains Mono"}
               fontStyle={"normal"}
               fontWeight={700}
-              fontSize={"36px"}
+              fontSize={{ xs: "18px", sm: "24px", md: "30px", lg: "36px" }}
             >
               <span style={{ color: "#7AA2F7" }}>Coding,&nbsp;</span>
               <span style={{ color: "#F7768E" }}>Hacking,&nbsp;</span>
@@ -69,7 +76,7 @@ const TechnicalOverview = () => {
               fontFamily={"Rubik"}
               fontStyle={"normal"}
               fontWeight={400}
-              fontSize={"20px"}
+              fontSize={{ xs: "16px", sm: "18px", md: "20px" }}
               color={"#565A6E"}
             >
               The technical clubs under SAC promote hands-on and cooperative
@@ -81,13 +88,13 @@ const TechnicalOverview = () => {
           </Stack>
           <Box
             sx={{
-              mr: "32px",
-              display: "flex",
+              mr: { xs: 0, md: "32px" },
+              display: { xs: "none", md: "flex" },
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
               flexWrap: "wrap",
-              width: "400px",
+              width: { md: "300px", lg: "400px" },
             }}
           >
             <StyledTypography
@@ -161,11 +168,11 @@ const TechnicalOverview = () => {
             </StyledTypography>
           </Box>
         </Box>
-        <Box m={"110px 0px 180px 100px"}>
-          <Grid2 container rowGap={"92px"}>
+        <Box m={{ xs: "40px 16px 60px", sm: "60px 24px 80px", md: "80px 40px 120px", lg: "110px 0px 180px 100px" }}>
+          <Grid2 container rowGap={{ xs: "32px", sm: "48px", md: "92px" }} columnSpacing={{ xs: 2, sm: 3, md: 4 }}>
             {clubs.map((club, index) => {
               return (
-                <Grid2 xs={3} key={index}>
+                <Grid2 xs={6} sm={4} md={3} key={index}>
                   <Link href={club.url}>
                     <StyledLinkTypography
                       color={"#565A6E"}

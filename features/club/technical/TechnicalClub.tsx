@@ -87,28 +87,28 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
           }}
         >
           <Stack
-            direction={"row"}
+            direction={{ xs: "column", sm: "row" }}
             justifyContent={"space-between"}
-            alignItems={"center"}
+            alignItems={{ xs: "flex-start", sm: "center" }}
             columnGap={"8px"}
+            rowGap={{ xs: "4px", sm: 0 }}
           >
-            <li
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: 700,
-                fontSize: "24px",
-                lineHeight: "28px",
-                color: "#565A6E",
-              }}
+            <Typography
+              component="li"
+              fontFamily="Rubik"
+              fontStyle="normal"
+              fontWeight={700}
+              fontSize={{ xs: "18px", sm: "24px" }}
+              lineHeight={{ xs: "24px", sm: "28px" }}
+              color="#565A6E"
             >
               {name}
-            </li>
+            </Typography>
             <Typography
               fontFamily="Rubik"
               fontStyle="normal"
               fontWeight={700}
-              fontSize="20px"
+              fontSize={{ xs: "16px", sm: "20px" }}
               color="#565A6E"
             >
               {date}
@@ -118,8 +118,8 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
             fontFamily="Rubik"
             fontStyle="italic"
             fontWeight={700}
-            fontSize="16px"
-            lineHeight="28px"
+            fontSize={{ xs: "14px", sm: "16px" }}
+            lineHeight={{ xs: "22px", sm: "28px" }}
             color="#565A6E"
           >
             {desc}
@@ -169,53 +169,62 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
     <>
       <Box
         sx={{
-          height: "670px",
+          minHeight: { xs: "auto", md: "670px" },
           mt: "-50px",
           background: `url(${bgTop.src})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          pb: { xs: 4, md: 0 },
         }}
       >
         <Box
           sx={{
             float: "right",
-            mt: "30px",
-            mr: "50px",
+            mt: { xs: "20px", md: "30px" },
+            mr: { xs: "16px", md: "50px" },
           }}
         >
           <BasicMenu />
         </Box>
         <Stack
-          mt={20}
-          direction={"row"}
-          alignItems={"center"}
+          mt={{ xs: 12, sm: 15, md: 20 }}
+          direction={{ xs: "column", lg: "row" }}
+          alignItems={{ xs: "flex-start", lg: "center" }}
           justifyContent={"space-between"}
-          pl={"150px"}
-          pr={"120px"}
+          pl={{ xs: 2, sm: 3, md: "80px", lg: "150px" }}
+          pr={{ xs: 2, sm: 3, md: "60px", lg: "120px" }}
           columnGap={"25px"}
+          rowGap={{ xs: 4, lg: 0 }}
         >
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              rowGap: "30px",
+              rowGap: { xs: "20px", md: "30px" },
+              width: { xs: "100%", lg: "auto" },
             }}
           >
             <Typography
               fontFamily="Rubik"
               fontStyle="normal"
               fontWeight={700}
-              fontSize="80px"
+              fontSize={{ xs: "40px", sm: "56px", md: "80px" }}
               alignItems="center"
               color="#343B58"
             >
               # {name}
             </Typography>
-            <Stack direction={"row"} justifyContent={"center"} columnGap="24px">
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              justifyContent={"center"}
+              columnGap="24px"
+              rowGap={{ xs: 3, sm: 0 }}
+            >
               <Box
                 sx={{
-                  width: "262px",
-                  height: "258px",
+                  width: { xs: "200px", sm: "220px", md: "262px" },
+                  height: { xs: "auto", md: "258px" },
+                  flexShrink: 0,
                 }}
               >
                 <Image
@@ -224,6 +233,8 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
                   height={258}
                   alt=""
                   style={{
+                    width: "100%",
+                    height: "auto",
                     border: "2px solid #C0CAF5",
                     borderRadius: "24px",
                   }}
@@ -233,16 +244,17 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  rowGap: "24px",
+                  rowGap: { xs: "16px", md: "24px" },
+                  width: { xs: "100%", sm: "auto" },
                 }}
               >
                 <Box
                   sx={{
-                    width: "261px",
-                    height: "106px",
+                    width: { xs: "100%", sm: "261px" },
+                    minHeight: { xs: "80px", md: "106px" },
                     border: "1px solid #C0CAF5",
                     borderRadius: "24px",
-                    p: "10px 14px 12px 20px",
+                    p: { xs: "12px 16px", md: "10px 14px 12px 20px" },
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -252,17 +264,18 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
                     fontFamily="Rubik"
                     fontStyle="italic"
                     fontWeight={700}
-                    fontSize="20px"
-                    lineHeight="28px"
+                    fontSize={{ xs: "16px", md: "20px" }}
+                    lineHeight={{ xs: "24px", md: "28px" }}
                     color="#565A6E"
                   >
                     {desc}
                   </Typography>
                 </Box>
-                <Stack direction={"row"} columnGap={"24px"}>
+                <Stack direction={"row"} columnGap={"24px"} flexWrap="wrap" rowGap={2}>
                   <Box
                     sx={{
-                      width: "166px",
+                      width: { xs: "auto", sm: "166px" },
+                      minWidth: { xs: "140px" },
                       height: "56px",
                       border: `1px solid ${color}`,
                       borderRadius: "24px",
@@ -319,26 +332,26 @@ const TechnicalClub = ({ name, desc, bgTop, logo, color, instagram }: Props) => 
           </Box>
           <Box
             sx={{
-              width: "548px",
-              height: "380px",
+              width: { xs: "100%", lg: "548px" },
+              minHeight: { xs: "auto", lg: "380px" },
               border: "1px solid #C0CAF5",
               borderRadius: "24px",
-              py: "26px",
-              pl: "28px",
-              pr: "44px",
+              py: { xs: "20px", md: "26px" },
+              pl: { xs: "20px", md: "28px" },
+              pr: { xs: "20px", md: "44px" },
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
-              rowGap: "34px",
+              rowGap: { xs: "24px", md: "34px" },
             }}
           >
             <Typography
               fontFamily="Rubik"
               fontStyle="normal"
               fontWeight={700}
-              fontSize="32px"
+              fontSize={{ xs: "24px", sm: "28px", md: "32px" }}
               color="#565A6E"
-              width={400}
+              maxWidth="100%"
             >
               Upcoming Events
             </Typography>

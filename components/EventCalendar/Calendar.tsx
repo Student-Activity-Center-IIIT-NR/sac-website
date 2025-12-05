@@ -19,16 +19,16 @@ const Calendar = () => {
   return (
     <>
       {filteredData.length > 2 && (
-        <Container maxWidth={"lg"} sx={{ mt: "40px" }}>
+        <Container maxWidth={"lg"} sx={{ mt: { xs: "24px", md: "40px" }, px: { xs: 2, md: 3 } }}>
           <Typography
             variant="h1"
             color="#334155"
             textAlign={"left"}
-            fontSize={"96px"}
+            fontSize={{ xs: "48px", sm: "64px", md: "80px", lg: "96px" }}
             fontWeight={800}
-            lineHeight={"114px"}
+            lineHeight={{ xs: "56px", sm: "72px", md: "96px", lg: "114px" }}
             letterSpacing={"0.03571em"}
-            pl={2}
+            pl={{ xs: 0, md: 2 }}
           >
             {currDate.getMonth() <= 9
               ? "0" + (currDate.getMonth() + 1)
@@ -36,8 +36,13 @@ const Calendar = () => {
             {"/"}
             {currDate.getFullYear()}
           </Typography>
-          <Grid2 container columnSpacing={"45px"} rowGap={"94px"} mt={"37px"}>
-            <Grid2 xs={4}>
+          <Grid2
+            container
+            columnSpacing={{ xs: 2, sm: 3, md: "45px" }}
+            rowGap={{ xs: "40px", sm: "60px", md: "94px" }}
+            mt={{ xs: "24px", md: "37px" }}
+          >
+            <Grid2 xs={12} sm={6} md={4}>
               <PaperItem
                 startDate={filteredData[0].date.slice(0, 2)}
                 endDate={filteredData[1].date.slice(0, 2)}
@@ -47,25 +52,27 @@ const Calendar = () => {
                 endIcon={filteredData[1].icon}
               />
             </Grid2>
-            <Grid2 xs={8}>
+            <Grid2 xs={12} sm={6} md={8}>
               <Typography
                 variant="body1"
                 fontFamily={"Rubik"}
                 fontStyle={"normal"}
                 fontWeight={500}
-                fontSize={"24px"}
-                lineHeight={"28px"}
+                fontSize={{ xs: "20px", sm: "22px", md: "24px" }}
+                lineHeight={{ xs: "26px", sm: "28px" }}
               >
                 {/* {currDate.toLocaleString("default", { month: "long" })} */}
                 August
               </Typography>
-              <Grid2 container columnSpacing={"45px"}>
+              <Grid2 container columnSpacing={{ xs: 2, sm: 3, md: "45px" }} rowGap={{ xs: 3, md: 0 }}>
                 {filteredData.slice(2, 6).map((event, index) => {
                   return (
                     <Grid2
-                      xs={3}
+                      xs={6}
+                      sm={6}
+                      md={3}
                       borderTop={"2px solid #272727"}
-                      pt={8}
+                      pt={{ xs: 3, md: 8 }}
                       key={index}
                     >
                       <SingleDate
@@ -80,7 +87,7 @@ const Calendar = () => {
             </Grid2>
             {filteredData.slice(6, 18).map((event, index) => {
               return (
-                <Grid2 xs={2} key={index}>
+                <Grid2 xs={6} sm={4} md={2} key={index}>
                   <SingleDate
                     date={event.date}
                     icon={event.icon}

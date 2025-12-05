@@ -49,11 +49,13 @@ const TeamNavbar = () => {
         value={value}
         onChange={handleChange}
         centered
-        variant="standard"
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
         indicatorColor="primary"
         TabIndicatorProps={{
           sx: {
-            height: "60px",
+            height: { xs: "48px", md: "60px" },
             background: "#ffffff",
             boxShadow:
               "-5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5)",
@@ -61,16 +63,21 @@ const TeamNavbar = () => {
           },
         }}
         sx={{
-          maxWidth: "1500px",
+          maxWidth: { xs: "100%", md: "1500px" },
+          width: { xs: "calc(100% - 32px)", md: "auto" },
           bgcolor: "#f6f6f6",
           borderRadius: "1000px",
           m: "auto",
-          py: "7px",
-          px: "8px",
-          my: "70px",
+          py: { xs: "4px", md: "7px" },
+          px: { xs: "4px", md: "8px" },
+          my: { xs: "24px", md: "70px" },
+          mx: { xs: 2, md: "auto" },
           ".MuiTabs-flexContainer": {
-            justifyContent: "space-between",
-            columnGap: "31px",
+            justifyContent: { xs: "flex-start", md: "space-between" },
+            columnGap: { xs: "8px", sm: "16px", md: "31px" },
+          },
+          ".MuiTabs-scrollButtons": {
+            "&.Mui-disabled": { opacity: 0.3 },
           },
         }}
       >
@@ -85,18 +92,21 @@ const TeamNavbar = () => {
               value={item}
               key={index}
               sx={{
-                width: "160px",
-                height: "60px",
+                minWidth: { xs: "auto", sm: "120px", md: "160px" },
+                width: { xs: "auto", md: "160px" },
+                height: { xs: "48px", md: "60px" },
+                px: { xs: 2, sm: 3 },
                 fontFamily: "Rubik",
                 fontStyle: "normal",
                 fontWeight: 400,
-                fontSize: "14px",
-                lineHeight: "17px",
+                fontSize: { xs: "11px", sm: "12px", md: "14px" },
+                lineHeight: { xs: "14px", md: "17px" },
                 textAlign: "center",
                 letterSpacing: "0.08929em",
                 textTransform: "uppercase",
                 color: "#272727",
                 zIndex: 1,
+                whiteSpace: "nowrap",
               }}
             />
           );

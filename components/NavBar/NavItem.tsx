@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import NextLink from "next/link";
-import { Link as MuiLink, LinkProps } from "@mui/material";
+import { Link as MuiLink, LinkProps, SxProps, Theme } from "@mui/material";
 import { Button } from "@mui/material";
 
 type Props = {
@@ -8,29 +8,33 @@ type Props = {
   href?: string;
   buttonPadding?: string;
   buttonHoverPadding?: string;
+  onClick?: () => void;
+  sx?: SxProps<Theme>;
 };
 
-function NavItem({ href, ...props }: Props & LinkProps) {
+function NavItem({ href, onClick, sx, ...props }: Props & LinkProps) {
   return (
     <>
       {href ? (
-        <NextLink href={href} passHref>
-          <NavLink {...props} />
+        <NextLink href={href} passHref legacyBehavior>
+          <NavLink onClick={onClick} sx={sx} {...props} />
         </NextLink>
       ) : (
-        <NavLink {...props} />
+        <NavLink onClick={onClick} sx={sx} {...props} />
       )}
     </>
   );
 }
 
-function NavLink({ children, href, ...restProps }: Props & LinkProps) {
+function NavLink({ children, href, onClick, sx, ...restProps }: Props & LinkProps) {
   return (
     <MuiLink
       underline="none"
       fontWeight="500"
-      fontSize="0.6px"
+      fontSize="1rem"
       color=""
+      onClick={onClick}
+      sx={sx}
       {...restProps}
     >
       <Button
@@ -40,6 +44,7 @@ function NavLink({ children, href, ...restProps }: Props & LinkProps) {
           marginX: "10px",
           color: "black",
           transition: "all 200ms",
+          width: "100%",
           "&:hover": {
             height: "44px",
             paddingX: "34px",

@@ -5,50 +5,94 @@
     grid-template-rows: auto 1fr auto;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     .grid_container {
       grid-template-columns: 1fr;
       grid-template-areas: "main";
     }
   }
+
   .grid_item {
     padding: 3.5em 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid_item {
+      padding: 1.5em 0;
+    }
   }
 
   .main {
     grid-area: main;
     padding: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .items {
     position: relative;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     transition: all 0.2s;
     transform: scale(0.98);
     will-change: transform;
     user-select: none;
-    cursor: all-scroll;
+    cursor: grab;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  @media screen and (max-width: 768px) {
+    .items {
+      cursor: auto;
+      padding: 10px 0;
+    }
   }
 
   .items.active {
-    cursor: all-scroll;
+    cursor: grabbing;
     transform: scale(1);
+  }
+
+  .items::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .items::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .items::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 
   .item {
     display: inline-block;
     margin-right: 32px;
+    vertical-align: top;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     .item {
-      /* min-height: 200px;
-      min-width: 200px; */
+      margin-right: 20px;
+    }
+
+    .item:first-child {
+      margin-left: 0;
+    }
+
+    .item:last-child {
+      margin-right: 20px;
     }
   }
 }

@@ -25,31 +25,46 @@ const Carousel = () => {
         alignItems: "center",
       }}
     >
-      <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        style={{
-          borderRadius: "24px",
+      <Box
+        sx={{
+          width: "100%",
+          maxWidth: { xs: "100%", sm: "600px", md: "800px", lg: "1000px" },
         }}
       >
-        {majorEvents.map((step, index) => (
-          <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? (
-              <Image
-                src={step.img}
-                alt={step.label}
-                height={520}
-                objectFit={"cover"}
-                style={{
-                  borderRadius: "24px",
-                }}
-              />
-            ) : null}
-          </div>
-        ))}
-      </AutoPlaySwipeableViews>
+        <AutoPlaySwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          enableMouseEvents
+          style={{
+            borderRadius: "24px",
+          }}
+        >
+          {majorEvents.map((step, index) => (
+            <div key={step.label}>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: { xs: "300px", sm: "400px", md: "520px" },
+                    position: "relative",
+                  }}
+                >
+                  <Image
+                    src={step.img}
+                    alt={step.label}
+                    fill
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "24px",
+                    }}
+                  />
+                </Box>
+              ) : null}
+            </div>
+          ))}
+        </AutoPlaySwipeableViews>
+      </Box>
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -61,11 +76,12 @@ const Carousel = () => {
         fontFamily={"Rubik"}
         fontStyle={"normal"}
         fontWeight={500}
-        fontSize={"24px"}
-        lineHeight={"28px"}
+        fontSize={{ xs: "18px", sm: "20px", md: "24px" }}
+        lineHeight={{ xs: "24px", sm: "26px", md: "28px" }}
         textAlign={"center"}
         color={"#000000"}
-        mt={"40px"}
+        mt={{ xs: "24px", md: "40px" }}
+        px={{ xs: 2, md: 0 }}
       >
         {majorEvents[activeStep].label}
       </Typography>
@@ -73,8 +89,8 @@ const Carousel = () => {
         fontFamily={"Rubik"}
         fontStyle={"italic"}
         fontWeight={700}
-        fontSize={"14px"}
-        lineHeight={"17px"}
+        fontSize={{ xs: "12px", sm: "13px", md: "14px" }}
+        lineHeight={{ xs: "16px", sm: "17px" }}
         textAlign={"center"}
         color={"#4B5563"}
         mt={"12px"}
