@@ -13,8 +13,12 @@ const StyledTypography = styled(Typography)({
 const PrivacyPolicy = () => {
   return (
     <>
-      <Stack mx={4} mb={4}>
-        <Typography textAlign={"center"} fontWeight={700} fontSize={"1.5rem"}>
+      <Stack mx={{ xs: 2, sm: 3, md: 4 }} mb={4} my={{ xs: 3, md: 4 }}>
+        <Typography
+          textAlign={"center"}
+          fontWeight={700}
+          fontSize={{ xs: "1.25rem", sm: "1.375rem", md: "1.5rem" }}
+        >
           PRIVACY POLICY
         </Typography>
         <StyledTypography>Last updated June 19, 2024</StyledTypography>
