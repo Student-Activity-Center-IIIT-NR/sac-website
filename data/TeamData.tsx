@@ -258,77 +258,77 @@ export const TeamData: TeamDataProps = {
         img: Om_Nath,
         name: "Om Nath",
         post: "PG Representative (Boys)",
-        linkedin: "https://www.linkedin.com/in/amarcrj/",
+        linkedin: "https://www.linkedin.com/in/eromnath/",
         mail: "amar@iiitnr.edu.in"
       },
       {
         img: Virat,
         name: "Virat Patel",
         post: "UG Representative (Boys)",
-        linkedin: "https://www.linkedin.com/in/ayush-yadav-029884263/",
+        linkedin: "https://www.linkedin.com/in/virat-patel-28ab48285/",
         mail: "ayush22100@iiitnr.edu.in"
       },
       {
         img: Prakarti_Thakur,
         name: "Prakriti Thakur",
         post: "UG Representative (Girls)",
-        linkedin: "https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        linkedin: "https://www.linkedin.com/in/prakriti-thakur-/",
         mail: "vaishnavi23102@iiitnr.edu.in"
       },
       {
         img: Priyadarshi,
         name: "Priyadarshi Satyakam",
         post: "Science and Technology Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/shreyansh-kushwaha-ab3876257/",
+        linkedin: "https://www.linkedin.com/in/priyadarshi-satyakam-688127290/",
         mail: "shreyansh22101@iiitnr.edu.in"
       },
       {
         img: Karishma,
         name: "Karishma Singh Roy",
         post: "Science and Technology Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/anushka-ekka-815821215",
+        linkedin: "https://www.linkedin.com/in/karishma-singha-roy-058b17316/",
         mail: "anushka23102@iiitnr.edu.in"
       },
       {
         img: Aditiya_tiwari,
         name: "Aditya Tiwari",
         post: "Arts, Cultural and Literary Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/shrey-omer-71076227a/",
+        linkedin: "https://www.linkedin.com/in/aditya-tiwari-64b959343/",
         mail: "shrey23102@iiitnr.edu.in"
       },
       {
         img: Stuti,
         name: "P. Stuti Keerthana",
         post: "Arts, Cultural and Literary Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/soumya-dubey-208917219",
+        linkedin: "https://www.linkedin.com/in/p-stuti-keerthana-13771638b/",
         mail: "soumya23101@iiitnr.edu.in"
       },
       {
         img: Mithesh,
         name: "Mithesh Pherwani",
         post: "Sports Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/yash-raj-164222290/",
+        linkedin: "https://www.linkedin.com/in/mitesh-pherwani-7ba63928b/",
         mail: "yash22101@iiitnr.edu.in"
       },
       {
         img: Mouli,
         name: "Mouli Saraf",
         post: "Sports Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        linkedin: "https://www.linkedin.com/in/mouli-saraf-0a48a5278/",
         mail: "ananya23101@iiitnr.edu.in"
       },
       {
         img: Harsh,
         name: "Harsh Dadsena",
         post: "Media and IT Cell Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/anshumaankarna/",
+        linkedin: "https://www.linkedin.com/in/harsh-dadsena-842171325/",
         mail: "anshumaan23100@iiitnr.edu.in"
       },
       {
         img: Anushka_anil,
         name: "Anushka Anil",
         post: "Media and IT Cell Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/kritie-omar-108291290",
+        linkedin: "https://www.linkedin.com/in/anushka-anil-0932a532a/",
         mail: "kritie23101@iiitnr.edu.in"
       },
     ],
@@ -345,21 +345,21 @@ export const TeamData: TeamDataProps = {
         img: Om_Nath,
         name: "Om Nath",
         post: "PG Representative (Boys)",
-        linkedin: "https://www.linkedin.com/in/amarcrj/",
+        linkedin: "https://www.linkedin.com/in/eromnath/",
         mail: "amar@iiitnr.edu.in"
       },
       {
         img: Virat,
         name: "Virat Patel",
         post: "UG Representative (Boys)",
-        linkedin: "https://www.linkedin.com/in/ayush-yadav-029884263/",
+        linkedin: "https://www.linkedin.com/in/virat-patel-28ab48285/",
         mail: "ayush22100@iiitnr.edu.in"
       },
       {
         img: Prakarti_Thakur,
         name: "Prakriti Thakur",
         post: "UG Representative (Girls)",
-        linkedin: "https://in.linkedin.com/in/vaishnavi-shrivastava-b3ba22290",
+        linkedin: "https://www.linkedin.com/in/prakriti-thakur-/",
         mail: "vaishnavi23102@iiitnr.edu.in"
       },
     ],
@@ -375,7 +375,7 @@ export const TeamData: TeamDataProps = {
         img: Karishma,
         name: "Karishma Singh Roy",
         post: "Science and Technology Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/karishma-singh-roy-0000000000",
+        linkedin: "https://www.linkedin.com/in/karishma-singha-roy-058b17316/",
         mail: "karishma23102@iiitnr.edu.in"
       },
     ],
@@ -384,14 +384,14 @@ export const TeamData: TeamDataProps = {
         img: Aditiya_tiwari,
         name: "Aditya Tiwari",
         post: "Arts, Cultural and Literary Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/shrey-omer-71076227a/",
+        linkedin: "https://www.linkedin.com/in/aditya-tiwari-64b959343/",
         mail: "shrey23102@iiitnr.edu.in"
       },
       {
         img: Stuti,
         name: "P. Stuti Keerthana",
         post: "Arts, Cultural and Literary Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/soumya-dubey-208917219",
+        linkedin: "https://www.linkedin.com/in/p-stuti-keerthana-13771638b/",
         mail: "soumya23101@iiitnr.edu.in"
       },
     ],
@@ -400,14 +400,14 @@ export const TeamData: TeamDataProps = {
         img: Mithesh,
         name: "Mithesh",
         post: "Sports Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/yash-raj-164222290/",
+        linkedin: "https://www.linkedin.com/in/mitesh-pherwani-7ba63928b/",
         mail: "yash22101@iiitnr.edu.in"
       },
       {
         img: Mouli,
         name: "Mouli Saraf",
         post: "Sports Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/ananya-rajawat-abb35b29a",
+        linkedin: "https://www.linkedin.com/in/mouli-saraf-0a48a5278/",
         mail: "ananya23101@iiitnr.edu.in"
       },
     ],
@@ -416,14 +416,14 @@ export const TeamData: TeamDataProps = {
         img: Harsh,
         name: "Harsh Dadsena",
         post: "Media and IT Cell Secretary (Boys)",
-        linkedin: "https://www.linkedin.com/in/anshumaankarna/",
+        linkedin: "https://www.linkedin.com/in/harsh-dadsena-842171325/",
         mail: "anshumaan23100@iiitnr.edu.in"
       },
       {
         img: Anushka_anil,
         name: "Anushka Anil",
         post: "Media and IT Cell Secretary (Girls)",
-        linkedin: "https://in.linkedin.com/in/kritie-omar-108291290",
+        linkedin: "https://www.linkedin.com/in/anushka-anil-0932a532a/",
         mail: "kritie23101@iiitnr.edu.in"
       },
     ],
