@@ -52,6 +52,7 @@ import PrachiPriyadarshini from "../../assets/team_25-26/Design & Doc/Prachi Pri
 import Rudra from "../../assets/team_25-26/Design & Doc/Rudraprakash Dahariya.jpg"
 import Sankalp from "../../assets/team_25-26/Design & Doc/Sankalp Gupta.jpg"
 import ShreyashRai from "../../assets/team_25-26/Design & Doc/Shreyash Rai.jpg"
+import Harsh from "../../assets/team_25-26/harsh_media_and_it.jpg"
 
 
 
@@ -95,6 +96,11 @@ export const shutterbug: CrewProps[] = [
         img: kaushal,
         name: "Kaushal Singh Sidar",
         post: "Vice Head",
+    },
+    {
+        img: Harsh,
+        name: "Harsh Dadsena",
+        post: "Core Member",
     },
     {
         img: Ashank,
