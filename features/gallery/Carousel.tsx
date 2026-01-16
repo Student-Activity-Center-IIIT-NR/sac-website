@@ -23,33 +23,63 @@ const Carousel = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        width: "100%",
+        maxWidth: "1200px",
+        mx: "auto",
       }}
     >
-      <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        style={{
-          borderRadius: "24px",
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {majorEvents.map((step, index) => (
-          <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? (
-              <Image
-                src={step.img}
-                alt={step.label}
-                height={520}
-                objectFit={"cover"}
-                style={{
-                  borderRadius: "24px",
-                }}
-              />
-            ) : null}
-          </div>
-        ))}
-      </AutoPlaySwipeableViews>
+        <AutoPlaySwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          enableMouseEvents
+          style={{
+            borderRadius: "24px",
+            width: "100%",
+            maxWidth: "800px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {majorEvents.map((step, index) => (
+            <div
+              key={step.label}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                maxWidth: "800px",
+                margin: "0 auto",
+              }}
+            >
+              {Math.abs(activeStep - index) <= 2 ? (
+                <Image
+                  src={step.img}
+                  alt={step.label}
+                  height={520}
+                  width={800}
+                  objectFit={"cover"}
+                  style={{
+                    borderRadius: "24px",
+                    width: "100%",
+                    maxWidth: "800px",
+                    objectFit: "cover",
+                  }}
+                />
+              ) : null}
+            </div>
+          ))}
+        </AutoPlaySwipeableViews>
+      </Box>
       <MobileStepper
         steps={maxSteps}
         position="static"
