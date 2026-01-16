@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Box, Typography, Button, Stack, useTheme, MobileStepper } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Typography, useTheme, MobileStepper } from "@mui/material";
 import Image from "next/image";
 import SwipeableViews from "react-swipeable-views-react-18-fix";
 import { autoPlay } from "react-swipeable-views-utils-react-18-fix";
@@ -67,7 +67,6 @@ const Carousel = () => {
                   alt={step.label}
                   height={520}
                   width={800}
-                  objectFit={"cover"}
                   style={{
                     borderRadius: "24px",
                     width: "100%",
