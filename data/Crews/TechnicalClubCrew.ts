@@ -76,7 +76,7 @@ import Tanishq from "../../assets/team_25-26/bis/Tanishq Bhattacharjee.jpg"
 import Arpita from "../../assets/team_25-26/tsoc/Arpita Dash.jpg"
 import BedekarAtharva from "../../assets/team_25-26/tsoc/Bedekar Atharva Suresh.jpg"
 import shreyansh from "../../assets/team_25-26/tsoc/Shreyansh Samaddar.jpg"
-import Tarun from "../../assets/team_25-26/tsoc/chatarunkumar.png"
+import Tarun from "../../assets/team_25-26/tsoc/chtarunkumar.png"
 
 
 
