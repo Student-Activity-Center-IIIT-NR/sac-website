@@ -108,6 +108,12 @@ import US_3 from "../../assets/major_events_pics/US_3.jpg";
 import US_4 from "../../assets/major_events_pics/US_4.jpg";
 import US_5 from "../../assets/major_events_pics/US_5.jpg";
 import US_6 from "../../assets/major_events_pics/US_6.jpg";
+import aarambh2025 from "../../assets/major_events_pics/aarambh2025.png";
+import chaipecharecha from "../../assets/major_events_pics/chaipecharecha.jpg";
+import hackasol from "../../assets/major_events_pics/hackasol.jpg";
+import makeinsilicon from "../../assets/major_events_pics/makeinsilicon.jpg";
+import techno2025 from "../../assets/major_events_pics/TECHNO2025.png";
+import videoframe_6359 from "../../assets/major_events_pics/videoframe_6359.png";
 
 // Sports
 //2022
@@ -199,6 +205,36 @@ interface ClubEventsProps {
 */
 
 export const majorEvents: MajorEventsProps[] = [
+  {
+    label: "Technovate 2025",
+    img: techno2025,
+    date: "2025",
+  },
+  {
+    label: "Technovate 2025",
+    img: videoframe_6359,
+    date: "2025",
+  },
+  {
+    label: "Aarambh 2025",
+    img: aarambh2025,
+    date: "2025",
+  },
+  {
+    label: "Chai Pe Charcha",
+    img: chaipecharecha,
+    date: "2025",
+  },
+  {
+    label: "Hackasol 2025",
+    img: hackasol,
+    date: "2025",
+  },
+  {
+    label: "Make in Silicon",
+    img: makeinsilicon,
+    date: "2025",
+  },
   {
     label: "Technovate 2024",
     img: tech24_1,

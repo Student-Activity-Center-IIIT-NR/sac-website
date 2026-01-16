@@ -20,6 +20,12 @@ import hindi from "../assets/major_events_pics/Hindi.png";
 import sci from "../assets/major_events_pics/ScinTfic_3.jpg";
 import republic_day from "../assets/major_events_pics/26_Jan2.jpg";
 import aids_awareness from "../assets/major_events_pics/aids_awareness.png";
+import aarambh2025 from "../assets/major_events_pics/aarambh2025.png";
+import chaipecharecha from "../assets/major_events_pics/chaipecharecha.jpg";
+import hackasol from "../assets/major_events_pics/hackasol.jpg";
+import makeinsilicon from "../assets/major_events_pics/makeinsilicon.jpg";
+import techno2025 from "../assets/major_events_pics/TECHNO2025.png";
+import videoframe_6359 from "../assets/major_events_pics/videoframe_6359.png";
 
 
 interface NewsDataProps {
@@ -39,6 +45,48 @@ interface NewsDataProps {
 */
 
 const newsData: NewsDataProps[] = [
+  {
+    img: techno2025,
+    title: "Technovate 2025",
+    text: "Technovate 2025 at IIIT Naya Raipur reached new heights with the electrifying performance by Seedhe Maut. The hip-hop duo energized the entire campus with their powerful lyrics and dynamic stage presence, creating an unforgettable night that had the audience on their feet. Their performance was the main highlight, transforming the fest into an extraordinary celebration of music and culture.",
+    authImg: aditya,
+    authName: "Aditya",
+  },
+  {
+    img: videoframe_6359,
+    title: "Technovate 2025",
+    text: "Technovate 2025 showcases the best of technology and culture at IIIT Naya Raipur. Students from across the nation participate in various competitions, workshops, and cultural events, making it a memorable experience filled with learning, networking, and celebration of talent and innovation.",
+    authImg: yash,
+    authName: "Yash",
+  },
+  {
+    img: aarambh2025,
+    title: "Aarambh 2025",
+    text: "Aarambh 2025 at IIIT Naya Raipur marks the beginning of a new academic year with enthusiasm and excitement. This grand orientation event welcomes fresh faces to the campus, introducing them to the vibrant culture, academic excellence, and diverse opportunities that await them at the institute.",
+    authImg: aditya,
+    authName: "Aditya",
+  },
+  {
+    img: chaipecharecha,
+    title: "Chai Pe Charcha",
+    text: "Chai Pe Charcha at IIIT Naya Raipur brings together students and faculty in an informal setting over a cup of tea. This engaging event fosters meaningful conversations, idea exchanges, and strengthens the bond between the academic community through relaxed discussions on various topics.",
+    authImg: yash,
+    authName: "Yash",
+  },
+  {
+    img: hackasol,
+    title: "Hackasol 2025",
+    text: "Hackasol 2025 at IIIT Naya Raipur is a premier hackathon that challenges participants to solve real-world problems through innovative coding solutions. This competitive event brings together talented developers, fostering creativity, collaboration, and technical excellence in a dynamic environment.",
+    authImg: vansh,
+    authName: "Vansh",
+  },
+  {
+    img: makeinsilicon,
+    title: "Make in Silicon",
+    text: "Make in Silicon at IIIT Naya Raipur celebrates innovation and entrepreneurship in the tech industry. This event showcases cutting-edge projects, startup ideas, and technological innovations, inspiring students to create impactful solutions and contribute to the growing ecosystem of innovation.",
+    authImg: priyadarshi,
+    authName: "Priyadarshi",
+  },
   {
     img: nano_img,
     title: "Nano Fabrication Workshop",
