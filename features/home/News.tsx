@@ -126,7 +126,7 @@ const News: NextPage = () => {
             lineHeight={"115px"}
             textAlign={"center"}
           >
-            <Typography variant="title1">&nbsp;</Typography>
+            <Typography component="span" variant="title1">&nbsp;</Typography>
             News
           </Typography>
         </Box>

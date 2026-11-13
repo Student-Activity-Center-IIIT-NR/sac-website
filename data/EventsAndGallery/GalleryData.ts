@@ -308,7 +308,7 @@ export const ClubEvents: ClubEventsProps = {
       event.club === "AIML" ||
       event.club === "Inquizitive" ||
       event.club === "ComEt" ||
-      event.club === "BIS" ||
+
       event.club === "IIC" ||
       event.club === "Ciphercell"
   ),

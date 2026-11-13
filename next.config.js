@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
+const path = require("path");
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -8,7 +9,8 @@ const nextConfig = {
   trailingSlash: true,
   basePath: "",
   assetPrefix: "",
-  output: "export"
+  output: "export",
+  outputFileTracingRoot: path.join(__dirname),
 };
 
 module.exports = nextConfig;
