@@ -458,7 +458,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "25-08-2024",
     eventName: "Orientation Workshop",
     icon: rectangleIcon,
-    club: "BIS",
+    club: "Comet",
     desc: ""
   },
   {
@@ -479,7 +479,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "28-08-2024",
     eventName: "Club Orientation",
     icon: rectangleIcon,
-    club: "Ciphercell & Robonyx(formerly Comet)",
+    club: "Ciphercell & Comet",
     desc: ""
   },
   {
@@ -585,7 +585,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "11-09-2024",
     eventName: "Onboarding",
     icon: rectangleIcon,
-    club: "Robonyx",
+    club: "Comet",
     desc: ""
   },
   {
@@ -740,7 +740,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "22-10-2024",
     eventName: "Control and Create",
     icon: rectangleIcon,
-    club: "Robonyx",
+    club: "Comet",
     desc: ""
   },
   {
@@ -923,7 +923,7 @@ export const calendarData: CalendarDataProps[] = [
     date: "20-11-2024",
     eventName: "Roboquest",
     icon: rectangleIcon,
-    club: "Robonyx",
+    club: "Comet",
     desc: ""
   },
   {

@@ -14,7 +14,7 @@ interface TabPanelProps {
 }
 
 // need to update on every data add
-type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324 | 2425 | 2526;
+type CurrYear = 1819 | 1920 | 2021 | 2122 | 2223 | 2324 | 2425 | 2526 | 2627;
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...rest } = props;
@@ -30,7 +30,7 @@ const TeamNavbar = () => {
   const { year } = useContext(SessionContext);
 
   const [value, setValue] = useState("core");
-  const [session, setSession] = useState(TeamData[2324]);
+  const [session, setSession] = useState(TeamData[2627] || TeamData[2526] || TeamData[2324]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -102,7 +102,7 @@ const TeamNavbar = () => {
           );
         })}
       </Tabs>
-      <TabPanel value={value} index={Object.keys(session)[0]}>
+      <TabPanel value={value} index="core">
         {session.core && (
           <ScrollContainer
             teamName="Core Team"
@@ -142,7 +142,7 @@ const TeamNavbar = () => {
       {year < 23 && (
         <>
           {session.web && (
-            <TabPanel value={value} index={Object.keys(session)[1]}>
+            <TabPanel value={value} index="web">
               <ScrollContainer
                 teamName="Website Management Team"
                 gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
@@ -151,7 +151,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.design && (
-            <TabPanel value={value} index={Object.keys(session)[2]}>
+            <TabPanel value={value} index="design">
               <ScrollContainer
                 teamName="Design Team"
                 gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
@@ -160,7 +160,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.documentation && (
-            <TabPanel value={value} index={Object.keys(session)[3]}>
+            <TabPanel value={value} index="documentation">
               <ScrollContainer
                 teamName="Documentation Team"
                 gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
@@ -169,7 +169,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.social && (
-            <TabPanel value={value} index={Object.keys(session)[4]}>
+            <TabPanel value={value} index="social">
               <ScrollContainer
                 teamName="Social Media Management Team"
                 gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
@@ -182,7 +182,7 @@ const TeamNavbar = () => {
       {year >= 23 && (
         <>
           {session.president && (
-            <TabPanel value={value} index={Object.keys(session)[1]}>
+            <TabPanel value={value} index="president">
               <ScrollContainer
                 teamName="SAC President"
                 gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
@@ -191,7 +191,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.pur && (
-            <TabPanel value={value} index={Object.keys(session)[2]}>
+            <TabPanel value={value} index="pur">
               <ScrollContainer
                 teamName="PG & UG Representatives"
                 gradient="linear-gradient(90deg, #C84E89 0%, #F15F79 100%)"
@@ -200,7 +200,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.technical && (
-            <TabPanel value={value} index={Object.keys(session)[3]}>
+            <TabPanel value={value} index="technical">
               <ScrollContainer
                 teamName="Science and Technology Secretary"
                 gradient="linear-gradient(90deg, #1D976C 0%, #93F9B9 100%)"
@@ -209,7 +209,7 @@ const TeamNavbar = () => {
             </TabPanel>
           )}
           {session.cultural && (
-            <TabPanel value={value} index={Object.keys(session)[4]}>
+            <TabPanel value={value} index="cultural">
               <ScrollContainer
                 teamName="Arts, Cultural and Literary Secretary"
                 gradient="linear-gradient(90deg, #D31027 0%, #EA384D 100%)"
@@ -217,21 +217,21 @@ const TeamNavbar = () => {
               />
             </TabPanel>
           )}
-          {session.sports && (
-            <TabPanel value={value} index={Object.keys(session)[5]}>
-              <ScrollContainer
-                teamName="Sports Secretary"
-                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-                teamData={session.sports}
-              />
-            </TabPanel>
-          )}
           {session.media && (
-            <TabPanel value={value} index={Object.keys(session)[6]}>
+            <TabPanel value={value} index="media">
               <ScrollContainer
                 teamName="Media and IT Cell Secretary"
                 gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 teamData={session.media}
+              />
+            </TabPanel>
+          )}
+          {session.sports && (
+            <TabPanel value={value} index="sports">
+              <ScrollContainer
+                teamName="Sports Secretary"
+                gradient="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                teamData={session.sports}
               />
             </TabPanel>
           )}
