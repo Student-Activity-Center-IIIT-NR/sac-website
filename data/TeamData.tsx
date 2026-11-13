@@ -1,4 +1,15 @@
 import { StaticImageData } from "next/image";
+//2026-2027
+import iinesh_jain_ug from "../assets/team_26-27/iinesh_jain_ug.jpg";
+import abhijay from "../assets/team_26-27/abhijay.jpg";
+import Bhavika_Jawrani from "../assets/team_26-27/Bhavika Jawrani.jpeg";
+import sumit from "../assets/team_26-27/sumit.jpeg";
+import sanskar from "../assets/team_26-27/sanskar.jpeg";
+import ojasmita from "../assets/team_26-27/ojasmita.jpeg";
+import niharika from "../assets/team_26-27/niharika.jpeg";
+import Male_member_2627 from "../assets/team_26-27/Male-member.jpeg";
+import Female_member_2627 from "../assets/team_26-27/Female-member.jpeg";
+
 
 //2025-2026
 import Prakarti_Thakur from "../assets/team_25-26/Prakarti_thakur.jpg"
@@ -135,6 +146,19 @@ interface CrewProps {
 }
 
 interface TeamDataProps {
+  26_27: {
+    president?: CrewProps[];
+    pur?: CrewProps[];
+    technical?: CrewProps[];
+    cultural?: CrewProps[];
+    sports?: CrewProps[];
+    media?: CrewProps[];
+    core: CrewProps[];
+    web?: CrewProps[];
+    design?: CrewProps[];
+    social?: CrewProps[];
+    documentation?: CrewProps[];
+  };
   25_26: {
     president?: CrewProps[];
     pur?: CrewProps[];
@@ -244,6 +268,163 @@ interface TeamDataProps {
 // Data should follow a order => core, web, design, documentation, social
 
 export const TeamData: TeamDataProps = {
+
+  26_27: {
+    core: [
+      {
+        img: Murmu,
+        name: "Dr. Lakhindar Murmu",
+        post: "SAC President",
+        linkedin: "https://www.linkedin.com/in/lakhindar-murmu-2b76111b/",
+        mail: "lakhindar@iiitnr.edu.in"
+      },
+      {
+        img: iinesh_jain_ug,
+        name: "Iinesh Jain",
+        post: "UG Representative (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: sumit,
+        name: "Sumit Kumar Sahoo",
+        post: "Science and Technology Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: Bhavika_Jawrani,
+        name: "Bhavika Jawrani",
+        post: "Science and Technology Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: sanskar,
+        name: "Sanskar Mishra",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: ojasmita,
+        name: "Ojaswita Bhaskar",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: abhijay,
+        name: "Abhijay Sharma",
+        post: "Media and IT Cell Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: niharika,
+        name: "Niharika Kujur",
+        post: "Media and IT Cell Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: Male_member_2627,
+        name: "Yadala Srihari",
+        post: "Sports Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: Female_member_2627,
+        name: "Eshita Verma",
+        post: "Sports Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+    president: [
+      {
+        img: Murmu,
+        name: "Dr. Lakhindar Murmu",
+        post: "SAC President",
+        linkedin: "https://www.linkedin.com/in/lakhindar-murmu-2b76111b/",
+        mail: "lakhindar@iiitnr.edu.in"
+      },
+    ],
+    pur: [
+      {
+        img: iinesh_jain_ug,
+        name: "Iinesh Jain",
+        post: "UG Representative (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+    technical: [
+      {
+        img: sumit,
+        name: "Sumit Kumar Sahoo",
+        post: "Science and Technology Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: Bhavika_Jawrani,
+        name: "Bhavika Jawrani",
+        post: "Science and Technology Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+    cultural: [
+      {
+        img: sanskar,
+        name: "Sanskar Mishra",
+        post: "Arts, Cultural and Literary Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: ojasmita,
+        name: "Ojaswita Bhaskar",
+        post: "Arts, Cultural and Literary Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+    media: [
+      {
+        img: abhijay,
+        name: "Abhijay Sharma",
+        post: "Media and IT Cell Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: niharika,
+        name: "Niharika Kujur",
+        post: "Media and IT Cell Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+    sports: [
+      {
+        img: Male_member_2627,
+        name: "Yadala Srihari",
+        post: "Sports Secretary (Boys)",
+        linkedin: "",
+        mail: ""
+      },
+      {
+        img: Female_member_2627,
+        name: "Eshita Verma",
+        post: "Sports Secretary (Girls)",
+        linkedin: "",
+        mail: ""
+      },
+    ],
+  },
 
   25_26: {
     core: [

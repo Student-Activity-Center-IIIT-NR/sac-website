@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "./Card";
-import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import { StaticImageData } from "next/image";
 

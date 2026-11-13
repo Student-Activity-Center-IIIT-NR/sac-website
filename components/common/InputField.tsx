@@ -13,6 +13,7 @@ type Props = {
 };
 
 function InputField(props: Props & TextFieldProps) {
+  const { clear, ...rest } = props;
   const theme = useTheme();
   return (
     <TextField
@@ -28,7 +29,7 @@ function InputField(props: Props & TextFieldProps) {
               pb: 1,
             }}
           >
-            <IconButton onClick={props.clear}>
+            <IconButton onClick={clear}>
               <HighlightOffIcon />
             </IconButton>
           </InputAdornment>
@@ -39,7 +40,7 @@ function InputField(props: Props & TextFieldProps) {
           paddingLeft: "10px",
         },
       }}
-      {...props}
+      {...rest}
     />
   );
 }

@@ -70,8 +70,8 @@ import MayankDixit from "../../assets/team_25-26/cipher cell/Mayank Dixit.jpg"
 import Pranjal from "../../assets/team_25-26/cipher cell/Pranjal Pathak.jpg"
 import Prashil from "../../assets/team_25-26/cipher cell/Prashil Sukhadeorao Thul.png"
 
-import shreyash from "../../assets/team_25-26/bis/Shreyash Rai.jpg"
-import Tanishq from "../../assets/team_25-26/bis/Tanishq Bhattacharjee.jpg"
+
+
 
 import Arpita from "../../assets/team_25-26/tsoc/Arpita Dash.jpg"
 import BedekarAtharva from "../../assets/team_25-26/tsoc/Bedekar Atharva Suresh.jpg"
@@ -183,22 +183,6 @@ export const ciphercell: CrewProps[] = [
         post: "Core Member",
     },
 ];
-
-
-export const bis: CrewProps[] = [
-    {
-        img: Tanishq,
-        name: "Tanishq Bhattacharjee",
-        post: "Club Secretary",
-    },
-    {
-        img: shreyash,
-        name: "Shreyash Rai",
-        post: "core Member",
-    },
-];
-
-
 
 
 export const tsoc: CrewProps[] = [
